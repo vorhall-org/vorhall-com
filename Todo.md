@@ -1,2 +1,3 @@
 - add stylelint
 - run linters before prod build
+- use scss
