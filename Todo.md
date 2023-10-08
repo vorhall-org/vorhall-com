@@ -1,3 +1,3 @@
 - add stylelint
 - run linters before prod build
-- use scss
+- switch to css modules?
