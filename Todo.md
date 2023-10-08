@@ -1,5 +1,2 @@
 - add stylelint
 - run linters before prod build
-- production build has:
-  - css inlined
-  - unminified css
