@@ -206,7 +206,7 @@
         "capitalized-comments": "off",
         "comma-dangle": [
           "error",
-          "never"
+          "always"
         ],
         "comma-spacing": "error",
         "comma-style": "error",
