@@ -13,6 +13,7 @@ import Footer from '../components/Footer.astro';
 const title = 'Vorhall';
 const locale = getLocale(Astro.url);
 const t = useTranslations(locale);
+
 const footerLinks = [
   {
     link: '#',
@@ -34,7 +35,7 @@ const footerLinks = [
       highlight={title}
     />
 
-    <LeadText text='Lorem ipsums'/>
+    <LeadText text='Some fancy lead text'/>
 
     <CardGrid>
       <Card
