@@ -1,0 +1,15 @@
+---
+import FooterLink from './FooterLink.astro';
+
+const {
+  links,
+} = Astro.props;
+---
+
+<footer>
+  <ul>
+    {links.map((link) => (
+      <li><FooterLink link={link.link}>{link.text}</FooterLink></li>
+    ))}
+  </ul>
+</footer>
