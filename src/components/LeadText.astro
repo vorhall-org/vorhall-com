@@ -1,12 +1,16 @@
 ---
-
+const {
+  text,
+} = Astro.props;
 ---
 
 <p class='lead'>
-  Lorem ipsum
+  {text}
 </p>
 
-<style>
+<style lang='scss'>
+  @use '../styles/functions' as fn;
+
   .lead {
     margin-bottom: fn.to-rem(32);
   }

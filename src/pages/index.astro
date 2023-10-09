@@ -16,8 +16,14 @@ const t = useTranslations(locale);
 <Layout title={title}>
   <main>
     <Logo />
-    <PageTitle text={t('welcome')} highlight='Vorhall' />
-    <LeadText />
+
+    <PageTitle
+      text={t('welcome')}
+      highlight='Vorhall'
+    />
+
+    <LeadText text='Lorem ipsums'/>
+
     <ul class='card-grid'>
       <Card
         title='What we do'
