@@ -5,9 +5,9 @@ import { defaultLocale, locales, } from './src/i18n/utils';
 
 export default defineConfig({
   site: "https://vorhall.com/",
-  trailingSlash: "never",
+  trailingSlash: "always",
   build: {
-    format: "file",
+    format: "directory",
   },
   integrations: [
     i18n({
