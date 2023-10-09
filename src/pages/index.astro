@@ -1,24 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getLocale, } from 'astro-i18n-aut';
-import { useTranslations, } from '../i18n/utils';
+import { getLocale } from 'astro-i18n-aut';
+import { useTranslations } from '../i18n/utils';
 import Container from '../components/Container.astro';
 import LeadText from '../components/LeadText.astro';
 import PageTitle from '../components/PageTitle.astro';
 import Logo from '../components/Logo.astro';
 
 const title = 'Vorhall';
-const locale = getLocale(Astro.url,);
-const t = useTranslations(locale,);
+const locale = getLocale(Astro.url);
+const t = useTranslations(locale);
 
 ---
 
 <Layout title={title}>
   <main>
     <Logo />
-    <PageTitle text={t('welcome',)} highlight='Vorhall' />
+    <PageTitle text={t('welcome')} highlight='Vorhall' />
     <LeadText />
-    <!-- <h1>{t('welcome',)} <span class='text-gradient'>{title}</span></h1> -->
     <ul class='container-grid'>
       <Container
         title='What we do'
