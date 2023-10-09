@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { getLocale } from 'astro-i18n-aut';
 import { useTranslations } from '../i18n/utils';
-import Container from '../components/Container.astro';
+import Card from '../components/Card.astro';
 import LeadText from '../components/LeadText.astro';
 import PageTitle from '../components/PageTitle.astro';
 import Logo from '../components/Logo.astro';
@@ -18,12 +18,12 @@ const t = useTranslations(locale);
     <Logo />
     <PageTitle text={t('welcome')} highlight='Vorhall' />
     <LeadText />
-    <ul class='container-grid'>
-      <Container
+    <ul class='card-grid'>
+      <Card
         title='What we do'
         body='Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.'
       />
-      <Container
+      <Card
         title='How we are'
         body='Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.'
       />
@@ -46,7 +46,7 @@ const t = useTranslations(locale);
     line-height: 1.6;
   }
 
-  .container-grid {
+  .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: fn.to-rem(32);
