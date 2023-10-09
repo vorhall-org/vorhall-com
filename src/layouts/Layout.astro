@@ -1,11 +1,13 @@
 ---
+import { getLocale, } from 'astro-i18n-aut';
+
 const {
   title,
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang={getLocale(Astro.url,)}>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content='About vorhall' />
