@@ -9,7 +9,7 @@ const title = 'Vorhall';
   <main>
     <img src = '/favicon.svg' alt='Vorhall Logo'/>
     <h1>Welcome to <span class='text-gradient'>{title}</span></h1>
-    <p class='instructions'>
+    <p class='lead'>
       Lorem ipsum
     </p>
     <ul class='container-grid'>
@@ -26,57 +26,49 @@ const title = 'Vorhall';
 </Layout>
 
 <style lang='scss'>
+  @use '../styles/functions' as fn;
+
   main {
+    $main-padding: 16;
+
     margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
+    padding: fn.to-rem($main-padding);
+    width: fn.to-rem(800);
+    max-width: calc(100% - fn.to-rem(2 * $main-padding));
+    color: rgb(var(--foreground-rgb));
+    font-size: fn.to-rem(20);
     line-height: 1.6;
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: fn.to-rem(64);
     font-weight: 700;
     line-height: 1;
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: fn.to-rem(64);
   }
 
   .text-gradient {
     background-image: var(--accent-gradient);
     background-clip: text;
+
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-background-clip: text;
+    /* stylelint-enable property-no-vendor-prefix */
+
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
   }
 
-  .instructions {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light) 25%);
-    background: linear-gradient(rgba(var(--accent-dark) 66%), rgba(var(--accent-dark) 33%));
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-
-  .instructions code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light) 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-
-  .instructions strong {
-    color: rgb(var(--accent-light));
+  .lead {
+    margin-bottom: fn.to-rem(32);
   }
 
   .container-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
+    gap: fn.to-rem(32);
     padding: 0;
   }
 </style>
