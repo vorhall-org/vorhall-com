@@ -7,7 +7,7 @@ const title = 'Vorhall';
 
 <Layout title={title}>
   <main>
-    <img src = '/favicon.svg' alt='Vorhall Logo'/>
+    <img class='logo' src = '/favicon.svg' alt='Vorhall Logo'/>
     <h1>Welcome to <span class='text-gradient'>{title}</span></h1>
     <p class='lead'>
       Lorem ipsum
@@ -38,6 +38,12 @@ const title = 'Vorhall';
     color: rgb(var(--foreground-rgb));
     font-size: fn.to-rem(20);
     line-height: 1.6;
+  }
+
+  .logo {
+    max-width: 50%;
+    margin: 0 auto;
+    display: block;
   }
 
   h1 {
