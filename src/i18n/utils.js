@@ -1,14 +1,10 @@
-import { translations, } from "./translations";
+import { translations } from './translations';
 
 export const defaultLocale = 'en';
 
 export const locales = {
-  en: 'en-US',
   de: 'de-DE',
+  en: 'en-US',
 };
 
-export function useTranslations(lang) {
-  return function t(key) {
-    return translations[lang][key] || translations[defaultLocale][key];
-  }
-}
+export const useTranslations = (lang) => (key) => translations[lang][key] || translations[defaultLocale][key];

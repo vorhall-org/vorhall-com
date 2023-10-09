@@ -1,8 +1,8 @@
 export const translations = {
-  en: {
-    'welcome': 'Welcome to',
-  },
   de: {
-    'welcome': 'Willkommen zu'
+    welcome: 'Willkommen zu',
+  },
+  en: {
+    welcome: 'Welcome to',
   },
 };
