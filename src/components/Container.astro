@@ -1,4 +1,24 @@
-.container {
+---
+const {
+  title,
+  body,
+} = Astro.props;
+---
+
+<li class='container'>
+  <div class='container-wrapper'>
+    <h2>
+      {title}
+      <span>&rarr;</span>
+    </h2>
+    <p>
+      {body}
+    </p>
+  </div>
+</li>
+
+<style>
+  .container {
   list-style: none;
   display: flex;
   padding: 1px;
@@ -36,3 +56,4 @@ p {
 .container:is(:hover, :focus-within) h2 {
   color: rgb(var(--accent-light));
 }
+</style>
