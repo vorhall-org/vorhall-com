@@ -1,0 +1,38 @@
+:root {
+  color-scheme: light dark;
+
+  // font
+  --font-size-base: 16;
+
+  // colors
+  --foreground-rgb: 255, 0, 0;
+  --background-rgb: 255, 255, 255;
+  --accent-gradient: linear-gradient(
+    45deg,
+    rgb(136, 58, 234),
+    rgb(224, 204, 250) 30%,
+    white 60%
+  );
+
+  // breakpoints
+  --breakpoint-zero: 0;
+  --breakpoint-micro: 360;
+  --breakpoint-small: 600;
+  --breakpoint-medium: 840;
+  --breakpoint-large: 1024;
+  --breakpoint-wide: 1280;
+  --breakpoint-ultra: 1440;
+
+  @include mq.color-scheme-dark {
+    // colors
+    --foreground-rgb: 0, 255, 0;
+    --background-rgb: 0, 0, 0;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(136, 58, 234),
+      rgb(49, 10, 101) 30%,
+      white 60%
+    );
+  }
+}
+
