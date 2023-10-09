@@ -1,0 +1,24 @@
+---
+
+---
+
+<main>
+  <slot />
+</main>
+
+<style lang='scss'>
+  @use '../styles/functions' as fn;
+
+  main {
+    $main-padding: 16;
+
+    margin: auto;
+    padding: fn.to-rem($main-padding);
+    width: fn.to-rem(800);
+    max-width: calc(100% - fn.to-rem(2 * $main-padding));
+    color: rgb(var(--foreground-rgb));
+    font-size: fn.to-rem(20);
+    line-height: 1.6;
+  }
+
+</style>

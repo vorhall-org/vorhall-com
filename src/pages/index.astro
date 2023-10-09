@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { getLocale } from 'astro-i18n-aut';
 import { useTranslations } from '../i18n/utils';
+import MainContainer from '../components/MainContainer.astro';
+import CardGrid from '../components/CardGrid.astro';
 import Card from '../components/Card.astro';
 import LeadText from '../components/LeadText.astro';
 import PageTitle from '../components/PageTitle.astro';
@@ -14,7 +16,7 @@ const t = useTranslations(locale);
 ---
 
 <Layout title={title}>
-  <main>
+  <MainContainer>
     <Logo />
 
     <PageTitle
@@ -24,7 +26,7 @@ const t = useTranslations(locale);
 
     <LeadText text='Lorem ipsums'/>
 
-    <ul class='card-grid'>
+    <CardGrid>
       <Card
         title='What we do'
         body='Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.'
@@ -33,29 +35,6 @@ const t = useTranslations(locale);
         title='How we are'
         body='Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.'
       />
-    </ul>
-  </main>
+    </CardGrid>
+  </MainContainer>
 </Layout>
-
-<style lang='scss'>
-  @use '../styles/functions' as fn;
-
-  main {
-    $main-padding: 16;
-
-    margin: auto;
-    padding: fn.to-rem($main-padding);
-    width: fn.to-rem(800);
-    max-width: calc(100% - fn.to-rem(2 * $main-padding));
-    color: rgb(var(--foreground-rgb));
-    font-size: fn.to-rem(20);
-    line-height: 1.6;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: fn.to-rem(32);
-    padding: 0;
-  }
-</style>
