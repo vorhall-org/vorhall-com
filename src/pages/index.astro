@@ -1,14 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
+import { getLocale, } from 'astro-i18n-aut';
+import { useTranslations, } from '../i18n/utils';
 
 const title = 'Vorhall';
+const locale = getLocale(Astro.url,);
+const t = useTranslations(locale,);
+
 ---
 
 <Layout title={title}>
   <main>
     <img class='logo' src = '/favicon.svg' alt='Vorhall Logo'/>
-    <h1>Welcome to <span class='text-gradient'>{title}</span></h1>
+    <h1>{t('welcome',)} <span class='text-gradient'>{title}</span></h1>
     <p class='lead'>
       Lorem ipsum
     </p>
