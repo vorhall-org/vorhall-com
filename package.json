@@ -3,12 +3,12 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "npx stylelint '**/*.astro'",
+    "lint": "npm run lint:styles && npm run lint:js",
+    "lint:styles": "npx stylelint '**/*.astro'",
     "lint:js": "eslint . --ext .js,.astro"
   },
   "dependencies": {
