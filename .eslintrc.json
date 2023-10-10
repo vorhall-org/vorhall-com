@@ -459,7 +459,15 @@
       ],
       "parser": "astro-eslint-parser",
       "rules": {
-        "astro/no-set-html-directive": "error"
+        "astro/no-set-html-directive": "error",
+        "quotes": [
+          "error",
+          "single"
+        ],
+        "jsx-quotes": [
+          "error",
+          "prefer-double"
+        ]
       }
     }
   ]

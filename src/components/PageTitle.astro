@@ -5,9 +5,9 @@ const {
 } = Astro.props;
 ---
 
-<h1>{text}{highlight && <span class='text-gradient'>{` ${highlight}`}</span>}</h1>
+<h1>{text}{highlight && <span class="text-gradient">{` ${highlight}`}</span>}</h1>
 
-<style lang='scss'>
+<style lang="scss">
   @use '../styles/functions' as fn;
 
   h1 {
