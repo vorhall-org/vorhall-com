@@ -1,12 +1,16 @@
 ---
-import Avatar from './Avatar.astro';
+const {
+  title,
+  subtitle,
+  text,
+} = Astro.props;
 ---
 
 <div class="avatar-card">
-  <Avatar />
-  <p>Title</p>
-  <p>Subtitle</p>
-  <p>Text</p>
+  <slot />
+  <p>{title}</p>
+  <p>{subtitle}</p>
+  <p>{text}</p>
 </div>
 
 <style lang="scss">

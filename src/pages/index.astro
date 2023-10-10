@@ -10,6 +10,8 @@ import PageTitle from '../components/PageTitle.astro';
 import Logo from '../components/Logo.astro';
 import Footer from '../components/Footer.astro';
 import AvatarCard from '../components/AvatarCard.astro';
+import Avatar from '../components/Avatar.astro';
+import imageYves from '../images/yves.jpg';
 
 const title = 'Vorhall';
 const locale = getLocale(Astro.url);
@@ -48,7 +50,16 @@ const footerLinks = [
         body="Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
       />
     </CardGrid>
-    <AvatarCard />
+    <AvatarCard
+      title="Some title"
+      subtitle="Some subtitle"
+      text="Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    >
+      <Avatar
+        image={imageYves}
+        alt="Profile image of Yves Tscherry."
+      />
+    </AvatarCard>
   </MainContainer>
   <Footer links={footerLinks}/>
 </Layout>

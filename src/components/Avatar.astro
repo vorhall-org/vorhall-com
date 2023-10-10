@@ -1,11 +1,15 @@
 ---
 import { Image } from 'astro:assets';
-import imageYves from '../images/yves.jpg';
+
+const {
+  image,
+  alt,
+} = Astro.props;
 ---
 
 <Image
-  src={imageYves}
-  alt="A profile pic."
+  src={image}
+  alt={alt}
   class="avatar"
 />
 
