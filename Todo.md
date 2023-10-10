@@ -1,0 +1,1 @@
+- netlify: install lighthouse plugin
