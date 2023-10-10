@@ -9,6 +9,7 @@ import LeadText from '../components/LeadText.astro';
 import PageTitle from '../components/PageTitle.astro';
 import Logo from '../components/Logo.astro';
 import Footer from '../components/Footer.astro';
+import AvatarCard from '../components/AvatarCard.astro';
 
 const title = 'Vorhall';
 const locale = getLocale(Astro.url);
@@ -47,6 +48,7 @@ const footerLinks = [
         body="Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
       />
     </CardGrid>
+    <AvatarCard />
   </MainContainer>
   <Footer links={footerLinks}/>
 </Layout>

@@ -1,0 +1,18 @@
+---
+import Avatar from './Avatar.astro';
+---
+
+<div class="avatar-card">
+  <Avatar />
+  <p>Title</p>
+  <p>Subtitle</p>
+  <p>Text</p>
+</div>
+
+<style lang="scss">
+  @use '../styles/functions' as fn;
+
+  .avatar-card {
+    border: 2px solid red;
+  }
+</style>

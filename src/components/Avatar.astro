@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import imageYves from '../images/yves.jpg';
+---
+
+<Image
+  src={imageYves}
+  alt="A profile pic."
+  class="avatar"
+/>
+
+<style lang="scss">
+  @use '../styles/functions' as fn;
+
+  .avatar {
+    display: block;
+    border-radius: 50%;
+    border: 1px solid green;
+    width: fn.to-rem(64);
+    height: fn.to-rem(64);
+  }
+</style>
