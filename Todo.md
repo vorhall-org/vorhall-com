@@ -1,1 +1,1 @@
-- netlify: install lighthouse plugin
+- fix TODO's in code
