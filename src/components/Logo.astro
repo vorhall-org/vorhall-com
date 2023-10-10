@@ -2,11 +2,20 @@
 
 ---
 
-<img class='logo' src = '/favicon.svg' alt='Vorhall Logo'/>
+<img
+  class='logo'
+  src ='/favicon.svg'
+  alt='Vorhall Logo'
+  width='500'
+  height='500'
+/>
 
 <style lang='scss'>
+  @use '../styles/functions' as fn;
+
   .logo {
-    max-width: 50%;
+    max-width: fn.to-rem(128);
+    max-height: fn.to-rem(128);
     margin: 0 auto;
     display: block;
   }
