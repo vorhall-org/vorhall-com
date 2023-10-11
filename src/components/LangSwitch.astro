@@ -1,0 +1,53 @@
+---
+import { getLocale } from 'astro-i18n-aut';
+import Icon from './Icon.astro';
+const locale = getLocale(Astro.url);
+---
+
+{locale === 'en'
+  ? <a
+    href="/de/"
+    class="link"
+  >
+    <span class="icon">
+      <Icon
+        icon="/germany-flag-icon.svg"
+        alt="Flagge von Deutschland"
+        width="55"
+        height="38"
+        class="icon"
+      />
+    </span>
+    Auf Deutsch welchseln
+  </a>
+
+  : <a
+    href="/"
+    class="link"
+  >
+    <span class="icon">
+      <Icon
+        icon="/united-kingdom-flag-icon.svg"
+        alt="Flag of United Kingdom"
+        width="55"
+        height="38"
+        class="icon"
+      />
+    </span>
+    Switch to English
+  </a>
+}
+
+<style lang="scss">
+  @use '../styles/functions' as fn;
+
+  .link {
+    text-decoration: none;
+  }
+
+  .icon {
+    display: block;
+    width: 200px;
+    height: auto;
+  }
+</style>

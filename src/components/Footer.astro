@@ -1,5 +1,6 @@
 ---
 import FooterLink from './FooterLink.astro';
+import LangSwitch from '../components/LangSwitch.astro';
 
 const {
   links,
@@ -7,6 +8,7 @@ const {
 ---
 
 <footer>
+  <LangSwitch />
   <ul>
     {links.map((link) => (
       <li><FooterLink link={link.link}>{link.text}</FooterLink></li>
