@@ -7,11 +7,11 @@ const {
 
 <li class="card">
   <div class="card-wrapper">
-    <h2>
+    <h3 class="card-title">
       {title}
       <span>&rarr;</span>
-    </h2>
-    <p>
+    </h3>
+    <p class="card-text">
       {body}
     </p>
   </div>
@@ -56,12 +56,12 @@ const {
     }
   }
 
-  h2 {
+  .card-title {
     margin: 0;
     font-size: fn.to-rem(20);
   }
 
-  p {
+  .card-text {
     margin-top: fn.to-rem(8);
     margin-bottom: 0;
   }
