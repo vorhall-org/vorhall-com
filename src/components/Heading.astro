@@ -1,0 +1,10 @@
+---
+const {
+  text,
+  level,
+} = Astro.props;
+
+const TagName = `h${level}`;
+---
+
+<TagName>{text}</TagName>
