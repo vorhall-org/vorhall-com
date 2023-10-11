@@ -1,25 +1,34 @@
 import { defineConfig } from 'astro/config';
-import { i18n, filterSitemapByDefaultLocale } from 'astro-i18n-aut/integration';
+import {
+  filterSitemapByDefaultLocale,
+  i18n,
+} from 'astro-i18n-aut/integration';
 import sitemap from '@astrojs/sitemap';
-import { defaultLocale, locales, } from './src/i18n/utils';
+import {
+  defaultLocale,
+  locales,
+} from './src/i18n/utils';
 
 export default defineConfig({
-  site: "https://vorhall.com/",
-  trailingSlash: "always",
   build: {
-    format: "directory",
+    format: 'directory',
   },
   integrations: [
     i18n({
-      locales,
       defaultLocale,
+      locales,
     }),
     sitemap({
-      i18n: {
-        locales,
+      filter: filterSitemapByDefaultLocale({
         defaultLocale,
+      }),
+      i18n: {
+        defaultLocale,
+        locales,
       },
-      filter: filterSitemapByDefaultLocale({ defaultLocale }),
     }),
   ],
+  scopedStyleStrategy: 'class',
+  site: 'https://vorhall.com/',
+  trailingSlash: 'always',
 });
