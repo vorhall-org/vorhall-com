@@ -1,1 +1,3 @@
 - fix TODO's in code
+- image -> should astro not resize the image automatically?
+- image -> lazyload
