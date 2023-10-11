@@ -9,7 +9,7 @@
     "astro": "astro",
     "lint": "npm run lint:styles && npm run lint:js",
     "lint:styles": "npx stylelint '**/*.astro'",
-    "lint:js": "eslint . --ext .js,.astro"
+    "lint:js": "eslint . --ext .js,.mjs,.astro"
   },
   "dependencies": {
     "astro": "^3.2.3"
