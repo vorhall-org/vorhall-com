@@ -3,11 +3,12 @@ import FooterLinks from './FooterLinks.astro';
 import LangSwitch from '../components/LangSwitch.astro';
 
 const {
+  langSwitch,
   links,
 } = Astro.props;
 ---
 
 <footer>
-  <LangSwitch />
+  <LangSwitch langSwitch={langSwitch} />
   <FooterLinks links={links} />
 </footer>

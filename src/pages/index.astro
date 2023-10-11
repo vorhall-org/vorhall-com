@@ -27,6 +27,27 @@ const footerLinks = [
     text: 'some other link',
   },
 ];
+
+let langSwitch = {
+  alt: 'Image of the german flag',
+  href: '/de/',
+  icon: '/germany-flag-icon.svg',
+  iconHeight: '55',
+  iconWidth: '38',
+  text: 'Auf Deutsch wechseln',
+};
+
+if (locale === 'de') {
+  langSwitch = {
+    alt: 'Bild der englischen Flagge',
+    href: '/',
+    icon: '/united-kingdom-flag-icon.svg',
+    iconHeight: '55',
+    iconWidth: '38',
+    text: 'Change to english',
+  };
+}
+
 ---
 
 <Layout title={title}>
@@ -61,5 +82,8 @@ const footerLinks = [
       />
     </AvatarCard>
   </MainContainer>
-  <Footer links={footerLinks}/>
+  <Footer
+    links={footerLinks}
+    langSwitch={langSwitch}
+  />
 </Layout>

@@ -1,42 +1,29 @@
 ---
-import { getLocale } from 'astro-i18n-aut';
 import Icon from './Icon.astro';
-const locale = getLocale(Astro.url);
+
+const {
+  alt,
+  href,
+  icon,
+  iconHeight,
+  iconWidth,
+  text,
+} = Astro.props.langSwitch;
 ---
 
-{locale === 'en'
-  ? <a
-    href="/de/"
-    class="link"
-  >
-    <span class="icon">
-      <Icon
-        icon="/germany-flag-icon.svg"
-        alt="Flagge von Deutschland"
-        width="55"
-        height="38"
-        class="icon"
-      />
-    </span>
-    Auf Deutsch welchseln
-  </a>
-
-  : <a
-    href="/"
-    class="link"
-  >
-    <span class="icon">
-      <Icon
-        icon="/united-kingdom-flag-icon.svg"
-        alt="Flag of United Kingdom"
-        width="55"
-        height="38"
-        class="icon"
-      />
-    </span>
-    Switch to English
-  </a>
-}
+<a
+  href={href}
+  class="link"
+>
+  <Icon
+    icon={icon}
+    alt={alt}
+    width={iconWidth}
+    height={iconHeight}
+    class="icon"
+  />
+  {text}
+</a>
 
 <style lang="scss">
   @use '../styles/functions' as fn;
