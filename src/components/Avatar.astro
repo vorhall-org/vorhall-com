@@ -4,6 +4,9 @@ import { Image } from 'astro:assets';
 const {
   image,
   alt,
+  width,
+  height,
+
 } = Astro.props;
 ---
 
@@ -11,6 +14,8 @@ const {
   src={image}
   alt={alt}
   class="avatar"
+  width={width}
+  height={height}
 />
 
 <style lang="scss">
