@@ -6,18 +6,35 @@ const {
 } = Astro.props;
 ---
 
-<div class="avatar-card">
+<li class="card">
   <slot />
 
   <p>{title}</p>
   <p>{subtitle}</p>
   <p>{text}</p>
-</div>
+</li>
 
 <style lang="scss">
+  @use '../styles/mediaqueries' as mq;
   @use '../styles/functions' as fn;
 
-  .avatar-card {
-    border: 2px solid red;
+  .card {
+    list-style: none;
+    display: flex;
+    padding: fn.to-rem(1);
+    background-color: #23262d;
+    background-image: none;
+    background-size: 400%;
+    border-radius: fn.to-rem(7);
+    background-position: 100%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 10%);
+
+    @include mq.mouse-only {
+      transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    @include mq.reduced-motion {
+      transition: none;
+    }
   }
 </style>

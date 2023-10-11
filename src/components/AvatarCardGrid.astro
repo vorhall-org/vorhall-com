@@ -1,0 +1,17 @@
+---
+---
+
+<ul class="card-grid">
+  <slot />
+</ul>
+
+<style lang="scss">
+  @use '../styles/functions' as fn;
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: fn.to-rem(32);
+    padding: 0;
+  }
+</style>
