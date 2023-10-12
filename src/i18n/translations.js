@@ -1,8 +1,12 @@
 export const translations = {
   de: {
-    welcome: 'Willkommen zu',
+    'site.description': 'Über Vorhall',
+    'site.title': 'Vorhall',
+    'welcome': 'Willkommen zu',
   },
   en: {
-    welcome: 'Welcome to',
+    'site.description': 'About Vorhall',
+    'site.title': 'Vorhall',
+    'welcome': 'Welcome to',
   },
 };

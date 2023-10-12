@@ -1,16 +1,16 @@
 ---
 import { getLocale } from 'astro-i18n-aut';
+import { useTranslations } from '../i18n/utils';
 
-const {
-  title,
-} = Astro.props;
+const locale = getLocale(Astro.url);
+const t = useTranslations(locale);
 ---
 
 <!doctype html>
-<html lang={getLocale(Astro.url)}>
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="About vorhall" />
+    <meta name="description" content={t('site.description')} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -18,7 +18,7 @@ const {
     <!-- TODO: remove on launch -->
     <meta name="robots" content="noindex">
 
-    <title>{title}</title>
+    <title>{t('site.title')}</title>
   </head>
   <body>
     <slot />
@@ -26,7 +26,6 @@ const {
 </html>
 
 <style is:global lang="scss">
-  @use '../styles/mediaqueries' as mq;
   @use '../styles/functions' as fn;
   @import '../styles/global/variables';
 
