@@ -1,3 +1,2 @@
 - fix TODO's in code
-- image -> should astro not resize the image automatically?
-- image -> lazyload
+- write helper for i18n: link to /about/ should translate to /about/de/ if current locale is de.
