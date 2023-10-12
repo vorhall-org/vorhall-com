@@ -1,14 +1,74 @@
 ---
-import FooterLinks from './FooterLinks.astro';
-import LangSwitch from '../components/LangSwitch.astro';
+import { getLocale } from 'astro-i18n-aut';
+import Icon from './Icon.astro';
 
-const {
-  langSwitch,
-  links,
-} = Astro.props;
+const locale = getLocale(Astro.url);
+
+const links = [
+  {
+    link: '#',
+    text: 'some link',
+  },
+  {
+    link: '#',
+    text: 'some other link',
+  },
+];
+
+let langSwitch = {
+  alt: 'Image of the german flag',
+  href: '/de/',
+  icon: '/germany-flag-icon.svg',
+  text: 'Auf Deutsch wechseln',
+};
+
+if (locale === 'de') {
+  langSwitch = {
+    alt: 'Bild der englischen Flagge',
+    href: '/',
+    icon: '/united-kingdom-flag-icon.svg',
+    text: 'Change to english',
+  };
+}
 ---
 
 <footer>
-  <LangSwitch langSwitch={langSwitch} />
-  <FooterLinks links={links} />
+
+  <!-- Lang-Switch -->
+  <a
+    href={langSwitch.href}
+    class="lang-link"
+  >
+    <Icon
+      icon={langSwitch.icon}
+      alt={langSwitch.alt}
+      width="55"
+      height="38"
+      class="lang-icon"
+    />
+    {langSwitch.text}
+  </a>
+
+  <!-- Links -->
+  <ul>
+    {links.map((link) => (
+      <li>
+        <a href={link.link}>{link.text}</a>
+      </li>
+    ))}
+  </ul>
 </footer>
+
+<style lang="scss">
+  @use '../styles/functions' as fn;
+
+  .lang-link {
+    text-decoration: none;
+  }
+
+  .lang-icon {
+    display: block;
+    width: 200px;
+    height: auto;
+  }
+</style>
