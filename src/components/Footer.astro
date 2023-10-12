@@ -1,33 +1,32 @@
 ---
 import { getLocale } from 'astro-i18n-aut';
+import { useTranslations } from '../i18n/utils';
+
 import Icon from './Icon.astro';
 
 const locale = getLocale(Astro.url);
+const t = useTranslations(locale);
 
 const links = [
   {
-    link: '#',
-    text: 'some link',
+    link: '/impressum',
+    text: t('footer.links.impressum'),
   },
   {
-    link: '#',
-    text: 'some other link',
+    link: '/legal',
+    text: t('footer.links.legal'),
   },
 ];
 
 let langSwitch = {
-  alt: 'Image of the german flag',
   href: '/de/',
   icon: '/germany-flag-icon.svg',
-  text: 'Auf Deutsch wechseln',
 };
 
 if (locale === 'de') {
   langSwitch = {
-    alt: 'Bild der englischen Flagge',
     href: '/',
     icon: '/united-kingdom-flag-icon.svg',
-    text: 'Change to english',
   };
 }
 ---
@@ -41,12 +40,12 @@ if (locale === 'de') {
   >
     <Icon
       icon={langSwitch.icon}
-      alt={langSwitch.alt}
+      alt={t('footer.langSwitch.iconAltText')}
       width="55"
       height="38"
       class="lang-icon"
     />
-    {langSwitch.text}
+    {t('footer.langSwitch.text')}
   </a>
 
   <!-- Links -->

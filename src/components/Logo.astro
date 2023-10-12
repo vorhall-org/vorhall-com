@@ -1,11 +1,16 @@
 ---
+import { getLocale } from 'astro-i18n-aut';
+import { useTranslations } from '../i18n/utils';
+
+const locale = getLocale(Astro.url);
+const t = useTranslations(locale);
 
 ---
 
 <img
   class="logo"
   src ="/favicon.svg"
-  alt="Vorhall Logo"
+  alt={t('page.logo.altText')}
   width="500"
   height="500"
 />

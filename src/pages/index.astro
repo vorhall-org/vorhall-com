@@ -15,7 +15,6 @@ import AvatarCard from '../components/AvatarCard.astro';
 import Avatar from '../components/Avatar.astro';
 import imageYves from '../images/yves.jpg';
 
-const title = 'Vorhall';
 const locale = getLocale(Astro.url);
 const t = useTranslations(locale);
 
@@ -26,14 +25,14 @@ const t = useTranslations(locale);
     <Logo />
 
     <PageTitle
-      text={t('welcome')}
-      highlight={title}
+      text={t('page.title')}
+      highlight={t('site.title')}
     />
 
-    <LeadText text="Some fancy lead text"/>
+    <LeadText text={t('page.leadText')}/>
 
     <Heading
-      text="What we do"
+      text={t('page.whatWeDo.title')}
       level="2"
     />
 
@@ -49,7 +48,7 @@ const t = useTranslations(locale);
     </ContentCardGrid>
 
     <Heading
-      text="Who we are"
+      text={t('page.whoWeAre.title')}
       level="2"
     />
 
