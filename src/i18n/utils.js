@@ -8,3 +8,8 @@ export const locales = {
 };
 
 export const useTranslations = (lang) => (key) => translations[lang][key] || translations[defaultLocale][key];
+
+export const langRoute = (lang, route) => (lang === defaultLocale
+  ? `${route}/`
+  : `/${lang}/${route}/`
+);
