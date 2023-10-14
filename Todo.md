@@ -1,2 +1,1 @@
 - fix TODO's in code
-- write helper for i18n: link to /about/ should translate to /about/de/ if current locale is de.
