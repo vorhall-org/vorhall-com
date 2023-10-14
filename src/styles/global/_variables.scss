@@ -5,7 +5,7 @@
   --font-size-base: 16;
 
   // colors
-  --foreground-rgb: 255, 0, 0;
+  --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
   --accent-gradient: linear-gradient(
     45deg,
@@ -25,8 +25,8 @@
 
   @include mq.color-scheme-dark {
     // colors
-    --foreground-rgb: 0, 255, 0;
-    --background-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 0, 0, 0;  
     --accent-gradient: linear-gradient(
       45deg,
       rgb(136, 58, 234),
