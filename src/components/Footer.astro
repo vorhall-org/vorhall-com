@@ -55,7 +55,7 @@ if (locale === 'de') {
   <ul>
     {links.map((link) => (
       <li>
-        <a href={link.link}>{link.text}</a>
+        <a class="link" href={link.link}>{link.text}</a>
       </li>
     ))}
   </ul>
@@ -64,8 +64,14 @@ if (locale === 'de') {
 <style lang="scss">
   @use '../styles/functions' as fn;
 
+  .link {
+    display: block;
+    height: fn.to-rem(50);
+  }
+
   .lang-link {
     text-decoration: none;
+    display: block;
   }
 
   .lang-icon {
