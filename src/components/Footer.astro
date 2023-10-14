@@ -1,6 +1,9 @@
 ---
 import { getLocale } from 'astro-i18n-aut';
-import { useTranslations } from '../i18n/utils';
+import {
+  langRoute,
+  useTranslations,
+} from '../i18n/utils';
 
 import Icon from './Icon.astro';
 
@@ -9,11 +12,11 @@ const t = useTranslations(locale);
 
 const links = [
   {
-    link: '/impressum',
+    link: langRoute(locale, 'impressum'),
     text: t('footer.links.impressum'),
   },
   {
-    link: '/legal',
+    link: langRoute(locale, 'legal'),
     text: t('footer.links.legal'),
   },
 ];
