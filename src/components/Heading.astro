@@ -2,9 +2,28 @@
 const {
   text,
   level,
+  class: className,
 } = Astro.props;
 
 const TagName = `h${level}`;
 ---
 
-<TagName>{text}</TagName>
+<TagName class={className}>{text}</TagName>
+
+<style lang="scss">
+  @use '../styles/mediaqueries' as mq;
+  @use '../styles/functions' as fn;
+
+  h2, h3 {
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: fn.to-rem(var(--font-size-large));
+  }
+
+  h3 {
+    font-size: fn.to-rem(var(--font-size-medium));
+  }
+</style>

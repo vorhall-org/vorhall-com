@@ -1,19 +1,6 @@
 :root {
   color-scheme: light dark;
 
-  // font
-  --font-size-base: 16;
-
-  // colors
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-  --accent-gradient: linear-gradient(
-    45deg,
-    rgb(136, 58, 234),
-    rgb(224, 204, 250) 30%,
-    white 60%
-  );
-
   // breakpoints
   --breakpoint-zero: 0;
   --breakpoint-micro: 360;
@@ -23,16 +10,52 @@
   --breakpoint-wide: 1280;
   --breakpoint-ultra: 1440;
 
+  // font family
+  --font-family: font-family: system-ui, blinkmacsystemfont, arial, sans-serif;
+  --font-line-height: 1.6;
+
+  // base size unit
+  --base-size-unit: 3;
+
+  // spacings
+  --spacing-xs: calc(var(--base-size-unit) * 1);
+  --spacing-s: calc(var(--base-size-unit) * 3);
+  --spacing-m: calc(var(--base-size-unit) * 5);
+  --spacing-l: calc(var(--base-size-unit) * 7);
+  --spacing-xl: calc(var(--base-size-unit) * 9);
+  --spacing-xxl: calc(var(--base-size-unit) * 16);
+
+  // font scale
+  --font-size-base: calc(var(--base-size-unit) * 5);
+  --font-size-medium: calc(var(--base-size-unit) * 8);
+  --font-size-large: calc(var(--base-size-unit) * 10);
+  --font-size-ultra: calc(var(--base-size-unit) * 16);
+
+  // colors
+  --color-foreground: 0, 0, 0;
+  --color-background: 255, 255, 255;
+  --color-primary: 255, 0, 0;
+
+  // content
+  --content-max-width: 780;
+  --content-padding: calc(var(--base-size-unit) * 6);
+
   @include mq.color-scheme-dark {
-    // colors
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;  
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(136, 58, 234),
-      rgb(49, 10, 101) 30%,
-      white 60%
-    );
+    --color-foreground: 255, 255, 255;
+    --color-background: 0, 0, 0;
+    --color-primary: 200, 255, 100;
+  }
+
+  @include mq.breakpoint($from: micro) {
+    --base-size-unit: 4;
+  }
+
+  @include mq.breakpoint($from: small) {
+    --base-size-unit: 5;
+  }
+
+  @include mq.breakpoint($from: medium) {
+    --content-padding: 0;
   }
 }
 

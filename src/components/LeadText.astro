@@ -12,6 +12,9 @@ const {
   @use '../styles/functions' as fn;
 
   .lead {
-    margin-bottom: fn.to-rem(32);
+    font-size: fn.to-rem(var(--font-size-medium));
+    text-align: center;
+    padding: 0 fn.to-rem(var(--spacing-xxl)) fn.to-rem(var(--spacing-xxl));
   }
+
 </style>

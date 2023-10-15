@@ -1,4 +1,6 @@
 ---
+import Heading from './Heading.astro';
+
 const {
   title,
   body,
@@ -7,9 +9,10 @@ const {
 
 <li class="card">
   <div class="card-wrapper">
-    <h3 class="card-title">
-      {title}
-    </h3>
+    <Heading
+      level="3"
+      text={title}
+    />
     <p class="card-text">
       {body}
     </p>
@@ -20,12 +23,12 @@ const {
   @use '../styles/mediaqueries' as mq;
   @use '../styles/functions' as fn;
 
+  /*
   .card {
     list-style: none;
     display: flex;
     padding: fn.to-rem(1);
-
-    // background-color: rgba(240, 240, 240);
+    background-color: rgba(240, 240, 240);
     background-image: none;
     background-size: 400%;
     border-radius: fn.to-rem(7);
@@ -48,8 +51,7 @@ const {
     padding: fn.to-rem(23);
     border-radius: fn.to-rem(8);
     color: rgb(var(--foreground-rgb));
-
-    // background-color: white;
+    background-color: white;
     opacity: 0.8;
 
     @include mq.breakpoint($from: medium) {
@@ -71,5 +73,6 @@ const {
     background-position: 0;
     background-image: var(--accent-gradient);
   }
+  */
 
 </style>

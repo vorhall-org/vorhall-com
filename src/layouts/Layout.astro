@@ -21,7 +21,9 @@ const t = useTranslations(locale);
     <title>{t('site.title')}</title>
   </head>
   <body>
-    <slot />
+    <div class="layout">
+      <slot />
+    </div>
   </body>
 </html>
 
@@ -30,16 +32,37 @@ const t = useTranslations(locale);
   @use '../styles/functions' as fn;
   @import '../styles/global/variables';
 
+  html {
+    font-size: calc(var(--font-size-base) * 1px);
+  }
+
+  body {
+    font-family: system-ui, BlinkMacSystemFont, Arial, sans-serif;
+    font-size: fn.to-rem(#{var(--font-size-base)});
+    background-color: rbg(var(--color-background));
+    color: rbg(var(--color-background));
+    line-height: var(--font-line-height);
+  }
+
   * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    hyphens: auto;
+
+    @include mq.reduced-motion {
+      transition: none;
+    }
   }
 
-  html {
-    font-family: system-ui, sans-serif;
-    background: rgb(var(--background-rgb));
-    font-size: fn.to-rem(var(--font-size-base));
+  ul {
+    list-style-type: none;
+  }
+
+  .layout {
+    max-width: fn.to-rem(var(--content-max-width));
+    margin: 0 auto;
+    padding: 0 fn.to-rem(var(--content-padding));
   }
 
 </style>
