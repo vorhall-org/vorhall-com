@@ -11,9 +11,6 @@
     "lint:styles": "npx stylelint '**/*.astro'",
     "lint:js": "eslint . --ext .js,.mjs,.astro"
   },
-  "dependencies": {
-    "astro": "^3.2.3"
-  },
   "devDependencies": {
     "@astrojs/sitemap": "^3.0.1",
     "astro-i18n-aut": "^0.4.23",
@@ -25,5 +22,8 @@
     "stylelint": "^15.10.3",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-standard-scss": "^11.0.0"
+  },
+  "dependencies": {
+    "astro": "^3.3.0"
   }
 }
