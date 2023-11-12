@@ -4,6 +4,7 @@
     "stylelint-config-html/astro"
   ],
   "rules": {
-    "color-function-notation": null
+    "color-function-notation": null,
+    "property-no-vendor-prefix": null
   }
 }
