@@ -15,8 +15,8 @@ import MainContainer from '../components/MainContainer.astro';
       <div class="info-wrapper">
         <h2 class="info-title">Additional information</h2>
         <p class="note">Bear with us as we weave the digital tapestry of accessible and sustainable web design, coming soon early 2024!</p>
-        <p>
-          Anyway, don't hesitate to contact us:
+        <p class="contact">
+          <span class="contact-description">Anyway, don't hesitate to contact us:</span>
           <a
             class="mail"
             href="mailto:info@vorhall.com"
@@ -76,17 +76,67 @@ import MainContainer from '../components/MainContainer.astro';
     opacity: 0.8;
   }
 
+  .info-title {
+    @include mx.sr-only;
+  }
+
   .note {
     padding-bottom: fn.to-rem(var(--spacing-m));
   }
 
-  .mail {
-    display: block;
-    color: rgb(var(--color-foreground));
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  .info-title {
-    @include mx.sr-only;
+  .contact-description {
+    flex-basis: 100%;
+  }
+
+  .mail {
+    position: relative;
+    display: inline-block;
+    color: rgb(var(--color-foreground));
+    text-decoration: none;
+    transition-timing-function: var(--transition-default-timing-function);
+    transition-duration: var(--transition-default-duration);
+    transition-property: color;
+
+    @include mq.reduced-motion {
+      transition: none;
+    }
+  }
+
+  .mail:hover {
+    @include mq.mouse-only {
+      color: rgb(var(--color-background));
+    }
+  }
+
+  .mail::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 3px;
+    background-color: rgb(var(--color-foreground));
+    transition-timing-function: var(--transition-default-timing-function);
+    transition-duration: var(--transition-default-duration);
+    transition-property: height, left, right;
+
+    @include mq.reduced-motion {
+      transition: none;
+    }
+  }
+
+  .mail:hover::before {
+    @include mq.mouse-only {
+      height: 100%;
+      left: -3px;
+      right: -3px;
+    }
   }
 </style>
 
