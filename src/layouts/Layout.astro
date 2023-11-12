@@ -18,9 +18,7 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    {!removeNoIndex &&
-      <meta name="robots" content="noindex">
-    }
+    {!removeNoIndex && <meta name="robots" content="noindex">}
 
     <title>{t('site.title')}</title>
   </head>
@@ -42,9 +40,9 @@ const {
 
   body {
     font-family: system-ui, BlinkMacSystemFont, Arial, sans-serif;
-    font-size: fn.to-rem(#{var(--font-size-base)});
-    background-color: rbg(var(--color-background));
-    color: rbg(var(--color-background));
+    font-size: fn.to-rem(var(--font-size-base));
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
     line-height: var(--font-line-height);
   }
 
