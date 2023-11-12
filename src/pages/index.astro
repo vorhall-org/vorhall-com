@@ -13,11 +13,62 @@ const t = useTranslations(locale);
   <MainContainer>
 
     <section>
-      <h1>{t('site.title')}</h1>
-      <p>{t('page.leadText')}</p>
-
+      <h1 class="title">{t('site.title')}</h1>
+      <p class="lead">{t('page.leadText')}</p>
+      <p class="note">{t('page.wipExplanation')}</p>
+      <p class="contact">
+        {t('page.wipContact')}
+        <a
+          class="mail"
+          href="mailto:info@vorhall.com"
+        >info@vorhall.com</a>
+      </p>
     </section>
 
   </MainContainer>
 
 </Layout>
+
+<style lang="scss">
+  @use '../styles/functions' as fn;
+  @use '../styles/mediaqueries' as mq;
+
+  .title {
+    // font-size: 6vw;
+    $min: fn.to-rem(var(--font-size-medium));
+    $max: fn.to-rem(var(--font-size-ultra));
+    $mean: calc(($min + $max) / 2);
+    $desired: calc($mean * 1rem * var(--font-size-base) / (var(--content-max-width) / 100));
+
+    // font-size: clamp($min, $desired, $max);
+    font-size: 20px;
+
+    @include mq.breakpoint($from: small) {
+      font-size: 30px;
+    }
+  }
+
+  .lead {
+
+  }
+
+  .note {
+
+  }
+
+  .contact {
+
+  }
+
+  .mail {
+
+  }
+</style>
+
+<!--
+  todo:
+  - meta description currently is the same as the lead-text. ok?
+  - test on browser-stack
+  - check light/dark mode
+  - check high-contrast
+-->
