@@ -1,28 +1,28 @@
 ---
-import { getLocale } from 'astro-i18n-aut';
-import { useTranslations } from '../i18n/utils';
 import Layout from '../layouts/Layout.astro';
 import MainContainer from '../components/MainContainer.astro';
-
-const locale = getLocale(Astro.url);
-const t = useTranslations(locale);
-
 ---
 
 <Layout removeNoIndex>
   <MainContainer>
 
-    <section>
-      <h1 class="title">{t('site.title')}</h1>
-      <p class="lead">{t('page.leadText')}</p>
-      <p class="note">{t('page.wipExplanation')}</p>
-      <p class="contact">
-        {t('page.wipContact')}
-        <a
-          class="mail"
-          href="mailto:info@vorhall.com"
-        >info@vorhall.com</a>
-      </p>
+    <section class="section-main">
+      <h1 class="title">Vorhall</h1>
+      <p class="lead">We are on a mission to build fast, sustainable digital products that last and can be accessed by everyone.</p>
+    </section>
+
+    <section class="section-info">
+      <div class="info-wrapper">
+        <h2 class="info-title">Additional information</h2>
+        <p class="note">Bear with us as we weave the digital tapestry of accessible and sustainable web design, coming soon early 2024!</p>
+        <p>
+          Anyway, don't hesitate to contact us:
+          <a
+            class="mail"
+            href="mailto:info@vorhall.com"
+          >info@vorhall.com</a>
+        </p>
+      </div>
     </section>
 
   </MainContainer>
@@ -32,36 +32,61 @@ const t = useTranslations(locale);
 <style lang="scss">
   @use '../styles/functions' as fn;
   @use '../styles/mediaqueries' as mq;
+  @use '../styles/mixins' as mx;
+
+  .section-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: fn.to-rem(var(--spacing-xxxl));
+    min-height: 100vh;
+  }
 
   .title {
-    // font-size: 6vw;
-    $min: fn.to-rem(var(--font-size-medium));
-    $max: fn.to-rem(var(--font-size-ultra));
-    $mean: calc(($min + $max) / 2);
-    $desired: calc($mean * 1rem * var(--font-size-base) / (var(--content-max-width) / 100));
-
-    // font-size: clamp($min, $desired, $max);
-    font-size: 20px;
-
-    @include mq.breakpoint($from: small) {
-      font-size: 30px;
-    }
+    font-size: clamp(fn.to-rem(var(--font-size-m)), 12vw, fn.to-rem(var(--font-size-xxl)));
+    line-height: 1;
+    text-align: center;
+    padding: fn.to-rem(var(--spacing-xxl));
   }
 
   .lead {
+    font-size: fn.to-rem(var(--font-size-m));
+    text-align: center;
+  }
 
+  .section-info {
+    padding: fn.to-rem(var(--border-weight-s));
+    background-color: rgb(var(--color-background-dense));
+    background-size: 400%;
+    border-radius: fn.to-rem(var(--border-radius-m));
+    background-position: 0;
+    background-image: var(--accent-gradient);
+    box-shadow: inset 0 0 0 fn.to-rem(var(--border-weight-s)) rgba(var(--color-foreground), 10%);
+    color: rgb(var(--accent-light));
+    margin-bottom: fn.to-rem(var(--spacing-xxxl));
+  }
+
+  .info-wrapper {
+    width: 100%;
+    text-decoration: none;
+    padding: fn.to-rem(calc(var(--spacing-xl) - var(--border-weight-s)));
+    border-radius: fn.to-rem(var(--border-radius-m));
+    background-color: rgb(var(--color-background-dense));
+    opacity: 0.8;
   }
 
   .note {
-
-  }
-
-  .contact {
-
+    padding-bottom: fn.to-rem(var(--spacing-m));
   }
 
   .mail {
+    display: block;
+    color: rgb(var(--color-foreground));
+  }
 
+  .info-title {
+    @include mx.sr-only;
   }
 </style>
 
@@ -71,4 +96,5 @@ const t = useTranslations(locale);
   - test on browser-stack
   - check light/dark mode
   - check high-contrast
+  - check contrast
 -->
