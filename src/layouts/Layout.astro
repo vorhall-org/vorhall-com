@@ -4,6 +4,9 @@ import { useTranslations } from '../i18n/utils';
 
 const locale = getLocale(Astro.url);
 const t = useTranslations(locale);
+const {
+  removeNoIndex,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -15,8 +18,9 @@ const t = useTranslations(locale);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- TODO: remove on launch -->
-    <meta name="robots" content="noindex">
+    {!removeNoIndex &&
+      <meta name="robots" content="noindex">
+    }
 
     <title>{t('site.title')}</title>
   </head>
