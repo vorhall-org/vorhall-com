@@ -3,99 +3,21 @@ import { getLocale } from 'astro-i18n-aut';
 import { useTranslations } from '../i18n/utils';
 import Layout from '../layouts/Layout.astro';
 import MainContainer from '../components/MainContainer.astro';
-import Section from '../components/Section.astro';
-import ContentCardGrid from '../components/ContentCardGrid.astro';
-import ContentCard from '../components/ContentCard.astro';
-import Contact from '../components/Contact.astro';
-import LeadText from '../components/LeadText.astro';
-import PageTitle from '../components/PageTitle.astro';
-import Logo from '../components/Logo.astro';
-import Heading from '../components/Heading.astro';
-import Footer from '../components/Footer.astro';
-import AvatarCardGrid from '../components/AvatarCardGrid.astro';
-import AvatarCard from '../components/AvatarCard.astro';
-import Avatar from '../components/Avatar.astro';
-import imageYves from '../images/yves.jpg';
 
 const locale = getLocale(Astro.url);
 const t = useTranslations(locale);
 
 ---
 
-<Layout>
+<Layout removeNoIndex>
   <MainContainer>
-    <Logo />
 
-    <PageTitle
-      text={t('page.title')}
-      highlight={t('site.title')}
-    />
+    <section>
+      <h1>{t('site.title')}</h1>
+      <p>{t('page.leadText')}</p>
 
-    <LeadText text={t('page.leadText')}/>
-
-    <Section>
-      <Heading
-        text={t('page.whatWeDo.title')}
-        level="2"
-      />
-
-      <ContentCardGrid>
-        <ContentCard
-          title="Some title"
-          body="Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum."
-        />
-        <ContentCard
-          title="Some title"
-          body="Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
-        />
-      </ContentCardGrid>
-    </Section>
-
-    <Section>
-      <Heading
-        text={t('page.contactUs.title')}
-        level="2"
-      />
-
-      <Contact />
-    </Section>
-
-    <Section>
-      <Heading
-        text={t('page.whoWeAre.title')}
-        level="2"
-      />
-
-      <AvatarCardGrid>
-        <AvatarCard
-          title={t('page.whoWeAre.marius.title')}
-          subtitle={t('page.whoWeAre.marius.subtitle')}
-          text={t('page.whoWeAre.marius.description')}
-        >
-          <Avatar
-            image={imageYves}
-            alt={t('page.whoWeAre.marius.imageAlt')}
-            width="64"
-            height="64"
-          />
-        </AvatarCard>
-        <AvatarCard
-          title={t('page.whoWeAre.yves.title')}
-          subtitle={t('page.whoWeAre.yves.subtitle')}
-          text={t('page.whoWeAre.yves.description')}
-        >
-          <Avatar
-            image={imageYves}
-            alt={t('page.whoWeAre.yves.imageAlt')}
-            width="64"
-            height="64"
-          />
-        </AvatarCard>
-      </AvatarCardGrid>
-    </Section>
+    </section>
 
   </MainContainer>
-
-  <Footer />
 
 </Layout>
