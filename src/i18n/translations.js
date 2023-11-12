@@ -19,7 +19,9 @@ export const translations = {
     'page.whoWeAre.yves.imageAlt': 'Bild von Yves Tscherry',
     'page.whoWeAre.yves.subtitle': 'Untertitel für Yves',
     'page.whoWeAre.yves.title': 'Yves Tscherry',
-    'site.description': 'Über Vorhall',
+    'page.wipContact': 'Anyway, don\'t hesitate to contact us:',
+    'page.wipExplanation': 'Bear with us as we weave the digital tapestry of accessible and sustainable web design, coming soon early 2024!',
+    'site.description': 'We are on a mission to build fast, sustainable digital products that last and can be accessed by everyone.',
     'site.title': 'Vorhall',
   },
   en: {
@@ -42,7 +44,9 @@ export const translations = {
     'page.whoWeAre.yves.imageAlt': 'Image of Yves Tscherry',
     'page.whoWeAre.yves.subtitle': 'Subtitle for Yves',
     'page.whoWeAre.yves.title': 'Yves Tscherry',
-    'site.description': 'About Vorhall',
+    'page.wipContact': 'Anyway, don\'t hesitate to contact us:',
+    'page.wipExplanation': 'Bear with us as we weave the digital tapestry of accessible and sustainable web design, coming soon early 2024!',
+    'site.description': 'We are on a mission to build fast, sustainable digital products that last and can be accessed by everyone.',
     'site.title': 'Vorhall',
   },
 };
