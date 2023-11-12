@@ -1,5 +1,5 @@
 :root {
-  // color-scheme: light dark;
+  color-scheme: light dark;
 
   // font family
   --font-family: font-family: system-ui, blinkmacsystemfont, arial, sans-serif;
@@ -10,6 +10,7 @@
 
   // spacings
   --spacing-xs: calc(var(--base-size-unit) * 1);
+  --spacing-xxs: calc(var(--base-size-unit) * 2);
   --spacing-s: calc(var(--base-size-unit) * 3);
   --spacing-m: calc(var(--base-size-unit) * 5);
   --spacing-l: calc(var(--base-size-unit) * 7);
@@ -33,11 +34,11 @@
   --font-size-xxl: calc(var(--base-size-unit) * 20);
 
   // colors
-  --color-foreground: 250, 250, 250;
-  --color-background: 5, 5, 5;
-  --color-background-dense: 35, 38, 45;
-  --accent: 58, 150, 234;
-  --accent-light: 204, 231, 250;
+  --color-background: 240, 240, 240;
+  --color-foreground: 5, 5, 5;
+  --color-background-dense: 220, 220, 220;
+  --accent: 8, 40, 154;
+  --accent-light: 76, 103, 200;
   --accent-gradient: linear-gradient(
     45deg,
     rgb(var(--accent)),
@@ -45,12 +46,19 @@
     white 60%
   );
 
-  /*
   @include mq.color-scheme-dark {
     --color-foreground: 250, 250, 250;
     --color-background: 5, 5, 5;
+    --color-background-dense: 35, 38, 45;
+    --accent: 58, 150, 234;
+    --accent-light: 204, 231, 250;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
   }
-  */
 
   // transition
   --transition-default-duration: 105ms;

@@ -68,7 +68,7 @@ import MainContainer from '../components/MainContainer.astro';
     background-position: 0;
     background-image: var(--accent-gradient);
     box-shadow: inset 0 0 0 fn.to-rem(var(--border-weight-s)) rgba(var(--color-foreground), 10%);
-    color: rgb(var(--accent-light));
+    color: rgb(var(--foreground-color));
     margin-bottom: fn.to-rem(var(--spacing-xxxl));
   }
 
@@ -139,8 +139,8 @@ import MainContainer from '../components/MainContainer.astro';
   .mail:hover::before {
     @include mq.mouse-only {
       height: 100%;
-      left: -3px;
-      right: -3px;
+      left: fn.to-rem(calc(var(--spacing-xs) * -1));
+      right: fn.to-rem(calc(var(--spacing-xs) * -1));
     }
   }
 </style>
