@@ -8,18 +8,6 @@
   // base size unit
   --base-size-unit: 3;
 
-  @include mq.breakpoint($from: micro) {
-    --base-size-unit: 4;
-  }
-
-  @include mq.breakpoint($from: small) {
-    --base-size-unit: 5;
-  }
-
-  @include mq.breakpoint($from: medium) {
-    --content-padding: 0;
-  }
-
   // spacings
   --spacing-xs: calc(var(--base-size-unit) * 1);
   --spacing-s: calc(var(--base-size-unit) * 3);
@@ -31,7 +19,7 @@
 
   // content
   --content-max-width: 780;
-  --content-padding: calc(var(--base-size-unit) * 6);
+  --content-padding: calc(var(--base-size-unit) * 10);
 
   // border
   --border-weight-s: 1;
@@ -67,5 +55,17 @@
   // transition
   --transition-default-duration: 105ms;
   --transition-default-timing-function: ease-in-out;
+
+  @include mq.breakpoint($from: micro) {
+    --base-size-unit: 4;
+  }
+
+  @include mq.breakpoint($from: small) {
+    --base-size-unit: 5;
+  }
+
+  @include mq.breakpoint($from: medium) {
+    --content-padding: 0;
+  }
 }
 
