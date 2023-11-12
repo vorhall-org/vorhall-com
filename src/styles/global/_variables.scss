@@ -1,14 +1,5 @@
 :root {
-  color-scheme: light dark;
-
-  // breakpoints
-  --breakpoint-zero: 0;
-  --breakpoint-micro: 360;
-  --breakpoint-small: 600;
-  --breakpoint-medium: 840;
-  --breakpoint-large: 1024;
-  --breakpoint-wide: 1280;
-  --breakpoint-ultra: 1440;
+  // color-scheme: light dark;
 
   // font family
   --font-family: font-family: system-ui, blinkmacsystemfont, arial, sans-serif;
@@ -24,27 +15,43 @@
   --spacing-l: calc(var(--base-size-unit) * 7);
   --spacing-xl: calc(var(--base-size-unit) * 9);
   --spacing-xxl: calc(var(--base-size-unit) * 16);
-
-  // font scale
-  --font-size-base: calc(var(--base-size-unit) * 5);
-  --font-size-medium: calc(var(--base-size-unit) * 8);
-  --font-size-large: calc(var(--base-size-unit) * 10);
-  --font-size-ultra: calc(var(--base-size-unit) * 16);
-
-  // colors
-  --color-foreground: 0, 0, 0;
-  --color-background: 255, 255, 255;
-  --color-primary: 255, 0, 0;
+  --spacing-xxxl: calc(var(--base-size-unit) * 22);
 
   // content
   --content-max-width: 780;
   --content-padding: calc(var(--base-size-unit) * 6);
 
+  // border
+  --border-weight-s: 1;
+  --border-radius-m: calc(var(--base-size-unit) * 2);
+
+  // font scale
+  --font-size-base: calc(var(--base-size-unit) * 5);
+  --font-size-m: calc(var(--base-size-unit) * 8);
+  --font-size-l: calc(var(--base-size-unit) * 10);
+  --font-size-xl: calc(var(--base-size-unit) * 16);
+  --font-size-xxl: calc(var(--base-size-unit) * 20);
+
+  // colors
+  --color-foreground: 250, 250, 250;
+  --color-background: 5, 5, 5;
+  --color-background-dense: 35, 38, 45;
+  --accent: 136, 58, 234;
+  --accent-light: 224, 204, 250;
+  --accent-dark: 49, 10, 101;
+  --accent-gradient: linear-gradient(
+    45deg,
+    rgb(var(--accent)),
+    rgb(var(--accent-light)) 30%,
+    white 60%
+  );
+
+  /*
   @include mq.color-scheme-dark {
-    --color-foreground: 255, 255, 255;
-    --color-background: 0, 0, 0;
-    --color-primary: 200, 255, 100;
+    --color-foreground: 250, 250, 250;
+    --color-background: 5, 5, 5;
   }
+  */
 
   @include mq.breakpoint($from: micro) {
     --base-size-unit: 4;
