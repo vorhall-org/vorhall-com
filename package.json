@@ -9,7 +9,8 @@
     "astro": "astro",
     "lint": "npm run lint:styles && npm run lint:js",
     "lint:styles": "npx stylelint '**/*.astro'",
-    "lint:js": "eslint . --ext .js,.mjs,.astro"
+    "lint:js": "eslint . --ext .js,.mjs,.astro",
+    "storybook": "storybook dev -p 6006"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.0.4",
