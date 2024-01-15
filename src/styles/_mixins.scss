@@ -1,3 +1,5 @@
+@use '/src/styles/mediaqueries' as mq;
+
 @mixin sr-only() {
   position: absolute;
   left: -10000px;
@@ -5,4 +7,25 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+@mixin default-transition {
+  transition-duration: var(--transition-default-duration);
+  transition-timing-function: var(--transition-default-timing-function);
+
+  @include mq.reduced-motion {
+    transition: none;
+  }
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
