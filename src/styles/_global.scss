@@ -1,0 +1,45 @@
+@use './mediaqueries' as mq;
+@use './functions' as fn;
+@import './variables/variables';
+
+:root {
+  --color-foreground: var(--color-gray-900);
+  --color-background: var(--color-gray-50);
+
+  @include mq.color-scheme-dark {
+    --color-foreground: var(--color-gray-50);
+    --color-background: var(--color-gray-900);
+  }
+}
+
+html {
+  font-size: calc(var(--text-base) * 1px);
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: fn.to-rem(var(--text-base));
+  font-weight: var(--font-weight-normal);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: var(--font-line-height);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  hyphens: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  display: block;
+}
