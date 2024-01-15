@@ -22,10 +22,12 @@ export default {
   component: Comp,
 };
 
+const args = {
+  level: 1,
+  text: 'Heading text',
+  visualLevel: false,
+};
+
 export const Heading = {
-  args: {
-    level: 1,
-    text: 'Heading text',
-    visualLevel: false,
-  },
+  args,
 };
