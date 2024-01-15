@@ -4,8 +4,12 @@ export default {
   component: Comp,
 };
 
+const defaultArgs = {
+  classes: '',
+};
+
 export const Section = {
-  args: {},
+  args: defaultArgs,
   render: (args) => <Comp {...args}>
     <p>some section content</p>
   </Comp>,

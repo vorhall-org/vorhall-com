@@ -22,12 +22,12 @@ export default {
   component: Comp,
 };
 
-const args = {
+const defaultArgs = {
   level: 1,
   text: 'Heading text',
   visualLevel: false,
 };
 
 export const Heading = {
-  args,
+  args: defaultArgs,
 };

@@ -4,6 +4,13 @@ export default {
   component: Comp,
 };
 
+const defaultArgs = {
+  classes: '',
+};
+
 export const MainContainer = {
-  args: {},
+  args: defaultArgs,
+  render: (args) => <Comp {...args}>
+    <p>some main container content</p>
+  </Comp>,
 };

@@ -10,10 +10,7 @@ export default function ContentCard(props) {
       }}
     >
       <div class='card-card-wrapper'>
-        <Heading
-          level='3'
-          text={props.title}
-        />
+        <Heading {...props.heading} />
         <p class='card-card-text'>
           {props.text}
         </p>
