@@ -1,5 +1,6 @@
 import styles from './Icon.module.scss';
-import icons from './Icons';
+import iconsFixed from './IconsFixed';
+import iconsColorizable from './IconsColorizable';
 
 /* eslint-disable solid/no-innerhtml */
 export default function Icon(props) {
@@ -8,8 +9,13 @@ export default function Icon(props) {
       classList={{
         [styles['icon']]: true,
         [props.classes]: props.classes,
+        [styles['icon--colorizable']]: !props.colorFixed,
       }}
-      innerHTML={icons[props.name]}
+      innerHTML={
+        props.colorFixed
+          ? iconsFixed[props.name]
+          : iconsColorizable[props.name]
+      }
     />
   );
 }

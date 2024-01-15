@@ -5,6 +5,14 @@
   align-items: center;
   justify-content: center;
 
+  &--colorizable {
+    color: var(--color-white);
+
+    svg {
+      fill: currentcolor;
+    }
+  }
+
   & svg {
     display: block;
     width: 100%;
