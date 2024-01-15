@@ -5,9 +5,5 @@ export default {
 };
 
 export const Icon = {
-  args: {
-    level: 1,
-    text: 'Heading text',
-    visualLevel: false,
-  },
+  args: {},
 };
