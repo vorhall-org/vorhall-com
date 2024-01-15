@@ -1,0 +1,41 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  --heading-color: var(--color-gray-900);
+
+  @include mq.color-scheme-dark {
+    --heading-color: var(--color-white);
+  }
+}
+
+.heading {
+  color: var(--heading-color);
+  line-height: 100%;
+  font-weight: var(--font-weight-bold);
+
+  &--level-1 {
+    font-size: fn.to-rem(var(--text-5xl));
+  }
+
+  &--level-2 {
+    font-size: fn.to-rem(var(--text-4xl));
+  }
+
+  &--level-3 {
+    font-size: fn.to-rem(var(--text-3xl));
+  }
+
+  &--level-4 {
+    font-size: fn.to-rem(var(--text-2xl));
+  }
+
+  &--level-5 {
+    font-size: fn.to-rem(var(--text-xl));
+  }
+
+  &--level-6 {
+    font-size: fn.to-rem(var(--text-l));
+  }
+}

@@ -1,14 +1,7 @@
----
-const {
-  text,
-} = Astro.props;
----
+.lead-text {
+  border: 1px solid red;
 
-<p class="lead">
-  {text}
-</p>
-
-<style lang="scss">
+  /*
   @use '../styles/functions' as fn;
 
   .lead {
@@ -16,5 +9,5 @@ const {
     text-align: center;
     padding: 0 fn.to-rem(var(--spacing-xxl)) fn.to-rem(var(--spacing-xxl));
   }
-
-</style>
+  */
+}

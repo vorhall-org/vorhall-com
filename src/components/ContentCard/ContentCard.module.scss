@@ -1,27 +1,5 @@
----
-import Heading from './Heading.astro';
-
-const {
-  title,
-  body,
-} = Astro.props;
----
-
-<li class="card">
-  <div class="card-wrapper">
-    <Heading
-      level="3"
-      text={title}
-    />
-    <p class="card-text">
-      {body}
-    </p>
-  </div>
-</li>
-
-<style lang="scss">
-  @use '../styles/mediaqueries' as mq;
-  @use '../styles/functions' as fn;
+.content-card {
+  border: 1px solid red;
 
   /*
   .card {
@@ -74,5 +52,4 @@ const {
     background-image: var(--accent-gradient);
   }
   */
-
-</style>
+}
