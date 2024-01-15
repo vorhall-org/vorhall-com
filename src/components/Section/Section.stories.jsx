@@ -6,4 +6,7 @@ export default {
 
 export const Section = {
   args: {},
+  render: (args) => <Comp {...args}>
+    <p>some section content</p>
+  </Comp>,
 };
