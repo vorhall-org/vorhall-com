@@ -1,0 +1,11 @@
+@use '/src/styles/mixins' as mx;
+
+.fieldset {
+  border: 1px solid red;
+
+  &__legend {
+    &--hidden {
+      @include mx.visually-hidden;
+    }
+  }
+}
