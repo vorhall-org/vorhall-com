@@ -1,6 +1,6 @@
 ---
-import { getLocale } from 'astro-i18n-aut';
-import { useTranslations } from '../i18n/utils';
+// import { getLocale } from 'astro-i18n-aut';
+// import { useTranslations } from '../i18n/utils';
 import Layout from '../layouts/Layout.astro';
 // import MainContainer from '../components/MainContainer.astro';
 // import Section from '../components/Section.astro';
@@ -17,8 +17,8 @@ import Layout from '../layouts/Layout.astro';
 // import Avatar from '../components/Avatar.astro';
 // import imageYves from '../images/yves.jpg';
 
-const locale = getLocale(Astro.url);
-const t = useTranslations(locale);
+// const locale = getLocale(Astro.url);
+// const t = useTranslations(locale);
 
 ---
 
@@ -49,7 +49,7 @@ const t = useTranslations(locale);
         />
         <ContentCard
           title="Some title"
-          body="Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
+          body="foo bar"
         />
       </ContentCardGrid>
     </Section>
