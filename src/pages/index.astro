@@ -108,13 +108,14 @@ import Layout from '../layouts/Layout.astro';
 /** TESTING SEND MAIL WITH RESEND */
 
 window.addEventListener('load', async () => {
-  // const url = 'http://localhost:8888/.netlify/functions/send-mail';
   const url = '/.netlify/functions/send-mail';
 
   const data = {
-    from: 'Acme <onboarding@resend.dev>',
+    // from-address must be on resend.dev domain. Otherwise
+    // we would have to configure a domain on resend, thus
+    // changing the DNS configuration on netlify for our mx-records.
+    from: 'Vorhall.com Contact <vorhall@resend.dev>',
     message: 'Currently testing email from vorhall.com through Resend and Netlify functions',
-    sender: 'vorhall23@gmail.com',
     subject: 'test email',
     to: 'vorhall23@gmail.com',
   };
@@ -131,9 +132,18 @@ window.addEventListener('load', async () => {
 
   try {
     const response = await fetch(url, options);
-    const responseJson = await response.json();
+    const responseData = await response.text();
+    const responseDataParsed = JSON.parse(responseData);
 
-    console.log(responseJson);
+    if (responseDataParsed.statusCode !== 200) {
+      console.log('There was an error sending the mail');
+      console.log(responseDataParsed);
+
+      return;
+    }
+
+    console.log('E-Mail successfully send');
+
   } catch (e) {
     console.log(e);
   }
