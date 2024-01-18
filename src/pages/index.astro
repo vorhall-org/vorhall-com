@@ -25,6 +25,8 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 
   <p>test</p>
+  <input pattern="[^@\s]+@[^@\s]+\.[^@\s]+" />
+
   <!--
   <MainContainer>
     <Logo />
@@ -102,3 +104,13 @@ import Layout from '../layouts/Layout.astro';
   <Footer />
   -->
 </Layout>
+
+<style>
+  input:valid {
+  border: 5px solid green;
+}
+
+input:invalid {
+  border: 5px solid red;
+}
+</style>
