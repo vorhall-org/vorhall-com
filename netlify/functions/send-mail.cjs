@@ -37,5 +37,7 @@ export default async (req, context) => {
     data,
   });
 
-  return new Response('foo');
+  return new Response({
+    statusCode: '200',
+  });
 };
