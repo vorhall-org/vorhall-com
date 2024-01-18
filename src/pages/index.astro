@@ -108,7 +108,8 @@ import Layout from '../layouts/Layout.astro';
 /** TESTING SEND MAIL WITH RESEND */
 
 window.addEventListener('load', async () => {
-  const url = 'http://localhost:8888/.netlify/functions/send-mail';
+  // const url = 'http://localhost:8888/.netlify/functions/send-mail';
+  const url = '/.netlify/functions/send-mail';
 
   const data = {
     from: 'Acme <onboarding@resend.dev>',
