@@ -18,7 +18,6 @@ export default async (req, context) => {
   } = requestDataParsed;
 
   const {
-    data,
     error,
   } = await resend.emails.send({
     from,
@@ -28,16 +27,10 @@ export default async (req, context) => {
   });
 
   if (error) {
-    return console.error({
-      error,
-    });
+    return new Response(JSON.stringify(error));
   }
 
-  console.log({
-    data,
-  });
-
-  return new Response({
-    statusCode: '200',
-  });
+  return new Response(JSON.stringify({
+    statusCode: 200,
+  }));
 };
