@@ -1,4 +1,4 @@
-import Comp from './Contact.jsx';
+import Comp from './ContactForm.jsx';
 
 export default {
   component: Comp,
@@ -8,6 +8,6 @@ const defaultArgs = {
   classes: '',
 };
 
-export const Contact = {
+export const ContactForm = {
   args: defaultArgs,
 };

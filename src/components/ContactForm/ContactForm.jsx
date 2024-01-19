@@ -1,10 +1,10 @@
-import styles from './Contact.module.scss';
+import styles from './ContactForm.module.scss';
 
-export default function Contact(props) {
+export default function ContactForm(props) {
   return (
     <div
       classList={{
-        [styles['contact']]: true,
+        [styles['contact-form']]: true,
         [props.classes]: props.classes,
       }}
     >
