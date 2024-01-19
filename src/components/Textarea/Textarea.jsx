@@ -21,6 +21,7 @@ export default function Textarea(props) {
         name={props.name}
         placeholder={props.placeholder}
         required={props.required}
+        rows={props.rows}
         onChange={(evt) => {
           console.log(evt.srcElement.value);
         }}
