@@ -18,10 +18,25 @@ const defaultArgs = {
   placeholder: 'input placeholder',
   required: false,
   type: 'text',
+  validationPattern: false,
 };
 
 export const InputText = {
   args: defaultArgs,
 };
 
-// e-mail pattern: '[^@s]+@[^@s]+.[^@s]+',
+export const InputRequired = {
+  args: {
+    ...defaultArgs,
+    required: true,
+  },
+};
+
+export const EMailValidation = {
+  args: {
+    ...defaultArgs,
+    required: true,
+    type: 'email',
+    validationPattern: '[^@\\s]+@[^@\\s]+\\.[^@\\s]+',
+  },
+};
