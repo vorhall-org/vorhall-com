@@ -1,9 +1,79 @@
-.input-text {
-  &__label {
-    // border: 1px solid red;
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mixins' as mx;
+@use '/src/styles/mediaqueries' as mq;
+
+:root {
+  --input-placeholder-color: var(--color-gray-500);
+  --input-border-color: var(--color-gray-300);
+  --input-border-color-hover: var(--color-blue-700);
+  --input-background-color: var(--color-gray-50);
+  --input-background-color-error: var(--color-red-50);
+  --input-text-color: var(--color-gray-900);
+  --input-text-color-error: var(--color-red-700);
+
+  @include mq.color-scheme-dark {
+    --input-placeholder-color: var(--color-gray-400);
+    --input-border-color: var(--color-gray-600);
+    --input-border-color-hover: var(--color-blue-600);
+    --input-background-color: var(--color-gray-700);
+    --input-background-color-error: var(--color-gray-700);
+    --input-text-color: var(--color-white);
+    --input-text-color-error: var(--color-red-500);
   }
+}
+
+.input-text {
+  $root: &;
+  display: flex;
+  flex-direction: column;
+  gap: fn.to-rem(var(--spacing-2));
 
   &__input {
-    border: 1px solid blue;
+    border-radius: fn.to-rem(var(--border-radius-l));
+    border: fn.to-rem(var(--spacing-px)) solid var(--input-border-color);
+    background-color: var(--input-background-color);
+    color: var(--input-text-color);
+    padding-left: fn.to-rem(var(--spacing-4));
+    padding-right: fn.to-rem(var(--spacing-4));
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+
+    @include mx.default-transition;
+    transition-property: color, border-color, background-color;
+
+    &::placeholder {
+      color: var(--input-placeholder-color);
+    }
+
+    &:focus-visible,
+    &:hover {
+      border-color: var(--input-border-color-hover);
+    }
+
+    #{$root}--size-small & {
+      font-size: fn.to-rem(var(--text-sm));
+      padding-top: fn.to-rem(var(--spacing-2));
+      padding-bottom: fn.to-rem(var(--spacing-2));
+    }
+
+    #{$root}--size-regular & {
+      font-size: fn.to-rem(var(--text-sm));
+      padding-top: fn.to-rem(var(--spacing-3));
+      padding-bottom: fn.to-rem(var(--spacing-3));
+    }
+
+    #{$root}--size-large & {
+      font-size: fn.to-rem(--text-base);
+      padding-top: fn.to-rem(var(--spacing-3-5));
+      padding-bottom: fn.to-rem(var(--spacing-3-5));
+    }
+
+    #{$root}--error & {
+      color: var(--input-text-color-error);
+      background-color: var(--input-background-color-error);
+      border-color: var(--color-red-500);
+    }
   }
+
 }
