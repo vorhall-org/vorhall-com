@@ -67,7 +67,7 @@ export const ContactForm = {
             ],
           },
         ],
-        legend: fieldsetStories.FieldsetWithLegend.args,
+        legend: fieldsetStories.FieldsetWithLegend.args.legend,
       },
     ],
 
