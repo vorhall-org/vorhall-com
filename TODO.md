@@ -1,1 +1,4 @@
 - https://www.websitecarbon.com/badge/
+- form captcha?
+- disable submit button on submit
+- show success message on successfull submit

@@ -20,11 +20,95 @@ import Layout from '../layouts/Layout.astro';
 // const locale = getLocale(Astro.url);
 // const t = useTranslations(locale);
 
+import Form from '../components/Form/Form';
+
+const formConfig = {
+  button: {
+    click: false,
+    color: 'primary',
+    iconAfter: false,
+    iconBefore: false,
+    label: 'Submit',
+    outline: false,
+    size: 'l',
+    type: 'submit',
+  },
+
+  fieldsets: [
+    {
+      fields: [
+        {
+          element: {
+            name: 'email',
+            props: {
+              classes: '',
+              disabled: false,
+              label: {
+                inputId: 'input-id',
+                text: 'Your e-mail Address',
+              },
+              name: 'email',
+              placeholder: 'e-mail address',
+              required: false,
+              type: 'email',
+            },
+          },
+          name: 'email',
+          validate: [
+            {
+              text: 'Please enter your email.',
+              type: 'required',
+            },
+            {
+              text: 'The email address is badly formatted.',
+              type: 'email',
+            },
+          ],
+        },
+        {
+          element: {
+            name: 'Textarea',
+            props: {
+              cols: '30',
+              disabled: false,
+              id: 'textarea-id',
+              label: {
+                inputId: 'textarea-id',
+                text: 'What do you have to say?',
+              },
+              name: 'textarea-name',
+              placeholder: 'Your comments...',
+              required: true,
+              rows: '5',
+            },
+          },
+          name: 'text',
+          validate: [
+            {
+              text: 'Please enter your request.',
+              type: 'required',
+            },
+          ],
+        },
+      ],
+      legend: {
+        hidden: true,
+        text: 'Contact form',
+      },
+    },
+  ],
+};
+
 ---
 
 <Layout>
 
-  <p>test</p>
+  <h1>Contact Form Test</h1>
+  <Form
+    data-contact-form
+    client:load
+    {...formConfig}
+  />
 
   <!--
   <MainContainer>
@@ -104,12 +188,60 @@ import Layout from '../layouts/Layout.astro';
   -->
 </Layout>
 
-<style>
-  input:valid {
-  border: 5px solid green;
-}
+<script>
+  import formEvents from '../components/Form/Form.events';
 
-input:invalid {
-  border: 5px solid red;
-}
-</style>
+  window.addEventListener(formEvents.submitForm, async (evt) => {
+
+    const {
+      email,
+      text,
+    } = evt.detail;
+
+    const message = `
+    Contact form on vorhall.com filled out.<br><br>
+    from: ${email}<br><br>
+
+    message:
+    ${text}
+    `;
+
+    const url = '/.netlify/functions/send-mail';
+
+    const data = {
+      from: 'Vorhall.com Contact <vorhall@resend.dev>',
+      message,
+      subject: 'Contact form on vorhall.com',
+      to: 'vorhall23@gmail.com',
+    };
+
+    const options = {
+      body: JSON.stringify(data),
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    };
+
+    try {
+      const response = await fetch(url, options);
+      const responseData = await response.text();
+      const responseDataParsed = JSON.parse(responseData);
+
+      if (responseDataParsed.statusCode !== 200) {
+        console.log('There was an error sending the mail');
+        console.log(responseDataParsed);
+
+        return;
+      }
+
+      console.log('E-Mail successfully send');
+
+    } catch (e) {
+      console.log(e);
+    }
+  });
+
+</script>
