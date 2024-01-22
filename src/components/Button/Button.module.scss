@@ -149,6 +149,11 @@
     gap: fn.to-rem(var(--button-icon-gap));
   }
 
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
   &:hover {
     @include mq.mouse-only {
       background-color: var(--button-background-color-hover);
