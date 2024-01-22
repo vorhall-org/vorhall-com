@@ -8,7 +8,6 @@ export default {
 const defaultArgs = {
   classes: '',
   disabled: false,
-  id: 'input-id',
   label: {
     ...formLabel.FormLabel.args,
     inputId: 'input-id',
@@ -18,7 +17,6 @@ const defaultArgs = {
   placeholder: 'input placeholder',
   required: false,
   type: 'text',
-  validationPattern: false,
 };
 
 export const InputText = {
@@ -29,14 +27,5 @@ export const InputRequired = {
   args: {
     ...defaultArgs,
     required: true,
-  },
-};
-
-export const EMailValidation = {
-  args: {
-    ...defaultArgs,
-    required: true,
-    type: 'email',
-    validationPattern: '[^@\\s]+@[^@\\s]+\\.[^@\\s]+',
   },
 };
