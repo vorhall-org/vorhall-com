@@ -14,7 +14,8 @@
   transition-timing-function: var(--transition-default-timing-function);
 
   @include mq.reduced-motion {
-    transition: none;
+    transition-duration: var(--transition-reduced-motion-duration);
+    transition-timing-function: none;
   }
 }
 

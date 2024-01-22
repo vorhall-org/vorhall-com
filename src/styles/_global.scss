@@ -5,15 +5,22 @@
 :root {
   --color-foreground: var(--color-gray-900);
   --color-background: var(--color-gray-50);
+  --scroll-behavior: smooth;
 
   @include mq.color-scheme-dark {
     --color-foreground: var(--color-gray-50);
     --color-background: var(--color-gray-900);
   }
+
+  @include mq.reduced-motion {
+    --scroll-behavior: auto;
+  }
 }
 
 html {
-  font-size: calc(var(--text-base) * 1px);
+  font-size: calc(var(--text-m) * 1px);
+  scroll-behavior: var(--scroll-behavior);
+  scrollbar-gutter: stable;
 }
 
 body {

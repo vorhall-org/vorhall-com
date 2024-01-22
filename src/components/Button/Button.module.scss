@@ -6,12 +6,12 @@
   --button-text-color: var(--color-white);
   --button-text-color-hover: var(--color-white);
 
-  --button-font-size: var(--text-base);
+  --button-font-size: var(--text-sm);
   --button-border-radius: var(--border-radius-l);
-  --button-padding-v: var(--spacing-s);
-  --button-padding-h: var(--spacing-l);
-  --button-icon-height: var(--size-l);
-  --button-icon-gap: var(--spacing-xs);
+  --button-padding-v: var(--spacing-2-5);
+  --button-padding-h: var(--spacing-5);
+  --button-icon-height: var(--spacing-5);
+  --button-icon-gap: var(--spacing-2);
 
   .button--color-primary {
     --button-background-color: var(--color-blue-700);
@@ -84,29 +84,29 @@
 
   .button--size-xs {
     --button-font-size: var(--text-s);
-    --button-padding-v: var(--spacing-xs);
-    --button-padding-h: var(--spacing-2s);
-    --button-icon-height: var(--size-m);
+    --button-padding-v: var(--spacing-2);
+    --button-padding-h: var(--spacing-2-5);
+    --button-icon-height: var(--spacing-4);
   }
 
   .button--size-s {
-    --button-padding-v: var(--spacing-xs);
-    --button-padding-h: var(--spacing-2s);
-    --button-icon-height: var(--size-m);
+    --button-padding-v: var(--spacing-2);
+    --button-padding-h: var(--spacing-2-5);
+    --button-icon-height: var(--spacing-4);
   }
 
   .button--size-l {
     --button-font-size: var(--text-m);
-    --button-padding-v: var(--spacing-2s);
-    --button-padding-h: var(--spacing-l);
-    --button-icon-height: var(--size-xl);
+    --button-padding-v: var(--spacing-2-5);
+    --button-padding-h: var(--spacing-5);
+    --button-icon-height: var(--spacing-6);
   }
 
   .button--size-xl {
     --button-font-size: var(--text-m);
-    --button-padding-v: var(--spacing-3s);
-    --button-padding-h: var(--spacing-xl);
-    --button-icon-height: var(--size-xl);
+    --button-padding-v: var(--spacing-2-5);
+    --button-padding-h: var(--spacing-6);
+    --button-icon-height: var(--spacing-6);
   }
 }
 
@@ -138,8 +138,8 @@
   &__icon-before,
   &__icon-after {
     color: currentcolor;
-    width: fn.to-rem(var(--size-m));
-    flex: 0 0 fn.to-rem(var(--size-m));
+    width: fn.to-rem(var(--spacing-4));
+    flex: 0 0 fn.to-rem(var(--spacing-4));
   }
 
   &--icon {
