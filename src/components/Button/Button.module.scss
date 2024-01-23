@@ -117,6 +117,7 @@
   font-weight: var(--font-weight-normal);
   line-height: 150%;
   border-radius: fn.to-rem(var(--button-border-radius));
+  border: fn.to-rem(1) solid var(--button-background-color);
   padding: fn.to-rem(var(--button-padding-v)) fn.to-rem(var(--button-padding-h));
   color: var(--button-text-color);
   background-color: var(--button-background-color);

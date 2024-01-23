@@ -11,12 +11,15 @@
 }
 
 .heading {
+  line-height: 125%;
+  font-weight: var(--font-weight-bold);
+
   color: var(--heading-color);
-  line-height: 100%;
-  font-weight: var(--font-weight-extra-bold);
+  text-wrap: balance;
 
   &--level-1 {
     font-size: fn.to-rem(var(--text-5xl));
+    line-height: 100%;
   }
 
   &--level-2 {
@@ -25,6 +28,7 @@
 
   &--level-3 {
     font-size: fn.to-rem(var(--text-3xl));
+
   }
 
   &--level-4 {

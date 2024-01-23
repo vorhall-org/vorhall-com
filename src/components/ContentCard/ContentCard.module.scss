@@ -9,6 +9,7 @@
 .content-card {
   @include mx.card;
 
+  justify-content: center;
   padding: fn.to-rem(var(--spacing-6));
 
   /*
@@ -62,4 +63,17 @@
     background-image: var(--accent-gradient);
   }
   */
+}
+
+.content-card--icon {
+  width: fn.to-rem(var(--spacing-10));
+  height: fn.to-rem(var(--spacing-10));
+}
+
+.content-card--title {
+  margin-block-end: fn.to-rem(var(--spacing-2));
+}
+
+.content-card--lead:not(:last-child) {
+  margin-block-end: fn.to-rem(var(--spacing-3));
 }
