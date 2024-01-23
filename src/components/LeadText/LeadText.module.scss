@@ -3,15 +3,21 @@
 
 :root {
   --lead-color: var(--color-gray-500);
+  --lead-font-size: var(--text-l);
 
   @include mq.color-scheme-dark {
     --lead-color: var(--color-gray-400);
   }
+
+  @include mq.breakpoint($from: md) {
+    --lead-font-size: var(--text-xl);
+  }
+
 }
 
 .lead-text {
   color: var(--lead-color);
   font-weight: var(--font-weight-normal);
-  font-size: fn.to-rem(var(--text-2xl));
+  font-size: fn.to-rem(var(--lead-font-size));
   line-height: 150%;
 }
