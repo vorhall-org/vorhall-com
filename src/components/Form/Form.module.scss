@@ -1,3 +1,13 @@
+@use '/src/styles/functions' as fn;
+
 .form {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: fn.to-rem(var(--spacing-8));
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: fn.to-rem(var(--spacing-5));
+  }
 }
