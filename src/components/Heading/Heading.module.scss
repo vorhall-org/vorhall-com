@@ -13,7 +13,7 @@
 .heading {
   color: var(--heading-color);
   line-height: 100%;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extra-bold);
 
   &--level-1 {
     font-size: fn.to-rem(var(--text-5xl));
