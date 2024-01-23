@@ -14,6 +14,7 @@ export default function InputText(props) {
       classList={{
         [styles['input-text']]: true,
         [styles[`input-text--size-${props.size}`]]: props.size,
+        [styles['input-text--disabled']]: props.disabled,
         [styles['input-text--error']]: internalProps.error,
       }}
     >
