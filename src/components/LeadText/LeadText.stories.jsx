@@ -6,9 +6,11 @@ export default {
 
 const defaultArgs = {
   classes: '',
-  text: 'Lead text Aenean lacinia bibendum nulla sed consectetur.',
 };
 
 export const LeadText = {
   args: defaultArgs,
+  render: (args) => <Comp {...args}>
+    Lead text Aenean lacinia bibendum nulla sed consectetur.
+  </Comp>,
 };

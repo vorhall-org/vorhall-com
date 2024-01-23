@@ -8,7 +8,7 @@ export default function LeadText(props) {
         [props.classes]: props.classes,
       }}
     >
-      {props.text}
+      {props.children}
     </p>
   );
 }

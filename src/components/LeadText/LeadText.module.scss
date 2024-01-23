@@ -1,13 +1,17 @@
-.lead-text {
-  border: 1px solid red;
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
 
-  /*
-  @use '../styles/functions' as fn;
+:root {
+  --lead-color: var(--color-gray-500);
 
-  .lead {
-    font-size: fn.to-rem(var(--font-size-m));
-    text-align: center;
-    padding: 0 fn.to-rem(var(--spacing-xxl)) fn.to-rem(var(--spacing-xxl));
+  @include mq.color-scheme-dark {
+    --lead-color: var(--color-gray-400);
   }
-  */
+}
+
+.lead-text {
+  color: var(--lead-color);
+  font-weight: var(--font-weight-normal);
+  font-size: fn.to-rem(var(--text-2xl));
+  line-height: 150%;
 }
