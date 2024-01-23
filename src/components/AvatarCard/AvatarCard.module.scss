@@ -8,10 +8,6 @@
 
 .avatar-card {
   @include mx.card;
-
-  display: flex;
-
-  flex-direction: column;
   align-items: center;
 
   padding: fn.to-rem(var(--spacing-10)) fn.to-rem(var(--spacing-4));

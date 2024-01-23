@@ -57,6 +57,10 @@
 }
 
 @mixin card {
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
   border-radius: fn.to-rem(var(--border-radius-rounded-lg));
   border: fn.to-rem(1) solid var(--card-border-color);
   background: var(--card-bg-color);
