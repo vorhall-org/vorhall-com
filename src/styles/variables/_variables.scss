@@ -53,7 +53,7 @@
   --spacing-96: calc(var(--spacing-base) * 96);
 
   // font sizes
-  --text-s: 12;
+  --text-xs: 12;
   --text-sm: 14;
   --text-base: 16;
   --text-l: 18;
@@ -75,7 +75,7 @@
   --border-radius-rounded-xl: 12;
   --border-radius-rounded-2xl: 16;
   --border-radius-rounded-3xl: 24;
-  --border-radius-rounded-full: 60%;
+  --border-radius-rounded-full: 100%;
 
   // border-weight
   --border-weight-s: 1;

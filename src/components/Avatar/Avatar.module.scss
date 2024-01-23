@@ -1,8 +1,10 @@
 .avatar {
+  contain: content;
   aspect-ratio: 1 / 1;
   border-radius: var(--border-radius-rounded-full);
   background: lightgray;
 
   /* shadow-md */
   box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.05), 0px 4px 6px -1px rgba(0, 0, 0, 0.10);
+
 }

@@ -1,5 +1,15 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  @include mx.card-variables;
+}
+
 .content-card {
-  border: 1px solid red;
+  @include mx.card;
+
+  padding: fn.to-rem(var(--spacing-6));
 
   /*
   .card {
