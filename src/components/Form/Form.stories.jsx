@@ -13,10 +13,6 @@ const defaultArgs = {
 };
 
 export const Form = {
-  args: defaultArgs,
-};
-
-export const ContactForm = {
   args: {
     ...defaultArgs,
     button: {
