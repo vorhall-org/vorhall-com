@@ -9,6 +9,7 @@
   --input-background-color: var(--color-gray-50);
   --input-background-color-error: var(--color-red-50);
   --input-text-color: var(--color-gray-900);
+  --input-text-color-disabled: var(--color-gray-400);
   --input-text-color-error: var(--color-red-700);
 
   @include mq.color-scheme-dark {
@@ -17,6 +18,7 @@
     --input-border-color-hover: var(--color-blue-600);
     --input-background-color: var(--color-gray-700);
     --input-background-color-error: var(--color-gray-700);
+    --input-text-color-disabled: var(--color-gray-500);
     --input-text-color: var(--color-white);
     --input-text-color-error: var(--color-red-500);
   }
@@ -30,7 +32,7 @@
 
   &__input {
     border-radius: fn.to-rem(var(--border-radius-l));
-    border: fn.to-rem(var(--spacing-px)) solid var(--input-border-color);
+    border: fn.to-rem(var(--border-weight-s)) solid var(--input-border-color);
     background-color: var(--input-background-color);
     color: var(--input-text-color);
     padding-left: fn.to-rem(var(--spacing-4));
@@ -46,10 +48,9 @@
       color: var(--input-placeholder-color);
     }
 
-    &:focus-visible,
-    &:hover {
+    @include mx.hover-focus {
       border-color: var(--input-border-color-hover);
-    }
+    };
 
     #{$root}--size-small & {
       font-size: fn.to-rem(var(--text-sm));
@@ -69,11 +70,19 @@
       padding-bottom: fn.to-rem(var(--spacing-3-5));
     }
 
+    #{$root}--disabled & {
+      color: var(--input-text-color-disabled);
+      pointer-events: none;
+
+      &::placeholder {
+        color: var(--input-text-color-disabled);
+      }
+    }
+
     #{$root}--error & {
       color: var(--input-text-color-error);
       background-color: var(--input-background-color-error);
       border-color: var(--color-red-500);
     }
   }
-
 }
