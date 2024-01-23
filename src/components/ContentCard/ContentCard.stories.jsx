@@ -44,7 +44,7 @@ export const ContentCardServiceTeaserWithIcon = {
     ...defaultArgs,
     button: {
       ...button.Button.args,
-      label: 'Discover more',
+      label: 'Discover more about digital accessibility',
     },
     heading: {
       ...defaultArgs.heading,
