@@ -7,6 +7,7 @@ import {
 } from '@modular-forms/solid';
 
 import {
+  createSignal,
   For,
   Show,
 } from 'solid-js';
@@ -62,7 +63,14 @@ export default function CustomForm(componentProps) {
     },
   ] = createForm();
 
+  const [
+    submitDisabled,
+    setSubmitDisabled,
+  ] = createSignal(false);
+
   const handleSubmit = (values) => {
+    setSubmitDisabled(true);
+
     const dispatchEvent = new CustomEvent(
       formEvents.submitForm,
       {
@@ -109,7 +117,10 @@ export default function CustomForm(componentProps) {
       </For>
 
       <Show when={componentProps.button}>
-        <Button {...componentProps.button} />
+        <Button
+          {...componentProps.button}
+          disabled={submitDisabled()}
+        />
       </Show>
     </Form>
   );

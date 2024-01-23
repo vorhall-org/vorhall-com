@@ -1,0 +1,73 @@
+@use '../../styles/functions' as fn;
+@use '../../styles/mediaqueries' as mq;
+
+:root {
+  --flying-focus-color: var(--color-red-700);
+
+  @include mq.color-scheme-dark {
+    --flying-focus-color: var(--color-red-500);
+  }
+}
+
+*:focus {
+  outline: none;
+}
+
+.floating-focus {
+  border: 0 solid currentcolor;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  will-change: top, left, width, height;
+  box-sizing: content-box;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999999999;
+
+  &.moving {
+    transition-property: opacity, left, top, width, height, border-width, border-radius;
+    transition-duration: 0.2s, 0.1s, 0.1s, 0.1s, 0.1s, 0.1s, 0.1s;
+    transition-timing-function: linear, ease, ease, ease, ease, ease, ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &.moving {
+      transition: none;
+    }
+  }
+
+  &.enabled.visible {
+    opacity: 1;
+  }
+
+  &::after {
+    content: '';
+    background: currentcolor;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+
+    transition: opacity 0.2s linear;
+  }
+
+  &.helper::after {
+    transition-duration: 0.1s;
+    opacity: 0.3;
+  }
+
+  &-enabled {
+    :focus,
+    .focus {
+      outline: var(--flying-focus-color) dashed fn.to-rem(var(--flying-focus-border-weight));
+      outline-offset: fn.to-rem(var(--flying-focus-outline-offset));
+    }
+  }
+}
+
+.floating-focused {
+  outline-style: none !important;
+
+  &::-moz-focus-inner {
+    border: 0 !important;
+  }
+}

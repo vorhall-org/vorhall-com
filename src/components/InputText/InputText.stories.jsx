@@ -2,6 +2,18 @@ import Comp from './InputText.jsx';
 import * as formLabel from '../FormLabel/FormLabel.stories.jsx';
 
 export default {
+  argTypes: {
+    size: {
+      control: {
+        type: 'select',
+      },
+      options: [
+        'small',
+        'regular',
+        'large',
+      ],
+    },
+  },
   component: Comp,
 };
 
@@ -16,6 +28,7 @@ const defaultArgs = {
   name: 'input-name',
   placeholder: 'input placeholder',
   required: false,
+  size: 'regular',
   type: 'text',
 };
 
@@ -23,9 +36,9 @@ export const InputText = {
   args: defaultArgs,
 };
 
-export const InputRequired = {
+export const Error = {
   args: {
     ...defaultArgs,
-    required: true,
+    error: 'true',
   },
 };

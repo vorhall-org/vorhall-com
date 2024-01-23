@@ -8,9 +8,10 @@
   --font-line-height: 1.6;
 
   // font weight
-  --font-weight-normal: 300;
+  --font-weight-normal: 400;
   --font-weight-thin: 200;
-  --font-weight-bold: 500;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
 
   // spacings
   --spacing-base: 4;
@@ -75,6 +76,14 @@
   --border-radius-rounded-2xl: 1rem;
   --border-radius-rounded-3xl: 1.5rem;
   --border-radius-rounded-full: 60%;
+
+  // border-weight
+  --border-weight-s: 1;
+  --border-weight-l: 4;
+
+  // flying focus
+  --flying-focus-border-weight: var(--border-weight-l);
+  --flying-focus-outline-offset: var(--spacing-2);
 
   // shadows
   --shadow-s: 0 1px 2px 0 rgba(0, 0, 0, 8%);

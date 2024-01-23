@@ -33,7 +33,7 @@ export const ContactForm = {
             element: {
               name: 'InputText',
               props: {
-                ...inputTextStories.InputRequired.args,
+                ...inputTextStories.InputText.args,
                 name: 'email',
                 type: 'email',
               },
@@ -67,7 +67,7 @@ export const ContactForm = {
             ],
           },
         ],
-        legend: fieldsetStories.FieldsetWithLegend.args,
+        legend: fieldsetStories.FieldsetWithHiddenLegend.args.legend,
       },
     ],
 

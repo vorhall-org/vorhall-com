@@ -19,7 +19,7 @@
   }
 }
 
-@mixin visually-hidden() {
+@mixin visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -29,4 +29,16 @@
   margin: -1px;
   padding: 0;
   border: 0;
+}
+
+@mixin hover-focus {
+  &:hover {
+    @include mq.mouse-only {
+      @content;
+    }
+  }
+
+  &:focus-visible {
+    @content;
+  }
 }

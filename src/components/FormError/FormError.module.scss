@@ -1,5 +1,7 @@
-.form-error {
-  border: 1px solid green;
+@use '/src/styles/functions' as fn;
 
-  // padding-bottom: fn.to-rem(var(--spacing-xl));
+.form-error {
+  font-size: fn.to-rem(var(--text-sm));
+  color: var(--color-red-600);
+  line-height: 150%;
 }

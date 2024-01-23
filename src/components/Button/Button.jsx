@@ -10,6 +10,7 @@ export default function Button(props) {
         [styles[`button--size-${props.size}`]]: props.size,
         [styles[`button--color-${props.color}`]]: props.color,
         [styles['button--outline']]: props.outline,
+        [styles['button--disabled']]: props.disabled,
         [props.classes]: props.classes,
       }}
       onClick={(evt) => {
@@ -19,6 +20,7 @@ export default function Button(props) {
       }}
       type={props.type}
       aria-label={props.label}
+      disabled={props.disabled}
     >
       {props.iconBefore &&
         <Icon
