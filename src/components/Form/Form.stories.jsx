@@ -12,10 +12,6 @@ const defaultArgs = {
   classes: '',
 };
 
-export const Form = {
-  args: defaultArgs,
-};
-
 export const ContactForm = {
   args: {
     ...defaultArgs,
