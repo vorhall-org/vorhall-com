@@ -11,23 +11,24 @@
   align-items: center;
 
   padding: fn.to-rem(var(--spacing-10)) fn.to-rem(var(--spacing-4));
-}
 
-.avatar-card--image {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin-block-end: fn.to-rem(var(--spacing-3));
-  text-align: center;
-  color: var(--card-bg-color);
-  font-size: fn.to-rem(var(--text-xs));
-}
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-block-end: fn.to-rem(var(--spacing-3));
+    text-align: center;
+    color: var(--card-bg-color);
+    font-size: fn.to-rem(var(--text-xs));
+  }
 
-.avatar-card--title {
-  margin-block-end: fn.to-rem(var(--spacing-1));
-}
+  &__title {
+    margin-block-end: fn.to-rem(var(--spacing-1));
+  }
 
-.avatar-card--lead {
-  font-size: fn.to-rem(var(--text-sm));
-  text-align: center;
+  &__lead {
+    font-size: fn.to-rem(var(--text-sm));
+    text-align: center;
+  }
+
 }

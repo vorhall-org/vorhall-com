@@ -14,7 +14,7 @@ export default function ContentCard(props) {
       {props.icon &&
         <div
           classList={{
-            [styles['content-card--icon']]: true,
+            [styles['content-card__icon']]: true,
           }}
         >
           <Icon {...props.icon} />
@@ -22,14 +22,14 @@ export default function ContentCard(props) {
       }
       <div
         classList={{
-          [styles['content-card--title']]: true,
+          [styles['content-card__title']]: true,
         }}
       >
         <Heading {...props.heading} />
       </div>
       <p
         classList={{
-          [styles['content-card--lead']]: true,
+          [styles['content-card__lead']]: true,
         }}
       >
         {props.text}
