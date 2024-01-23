@@ -67,10 +67,17 @@
   --content-max-width: 780;
   --content-padding: 30;
 
-  // border
+  // border-weight
   --border-weight-s: 1;
+  --border-weight-l: 4;
+
+  // border-radius
   --border-radius-m: 6;
   --border-radius-l: 8;
+
+  // flying focus
+  --flying-focus-border-weight: var(--border-weight-l);
+  --flying-focus-outline-offset: var(--spacing-2);
 
   // shadows
   --shadow-s: 0 1px 2px 0 rgba(0, 0, 0, 8%);
