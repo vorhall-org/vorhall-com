@@ -22,3 +22,29 @@ const defaultArgs = {
 export const AvatarCard = {
   args: defaultArgs,
 };
+
+export const AvatarCardYves = {
+  args: {
+    ...defaultArgs,
+    avatar: avatar.Yves.args,
+    heading: {
+      ...defaultArgs.heading,
+      text: 'Yves Tscherry',
+    },
+    subtitle: 'Expert Frontend Architect',
+    text: 'Avatar Card text',
+  },
+};
+
+export const AvatarCardMarius = {
+  args: {
+    ...defaultArgs,
+    avatar: avatar.Marius.args,
+    heading: {
+      ...defaultArgs.heading,
+      text: 'Marius Bleuer',
+    },
+    subtitle: 'Expert Frontend Architect',
+    text: 'Avatar Card text',
+  },
+};

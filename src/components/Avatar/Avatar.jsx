@@ -3,14 +3,16 @@ import styles from './Avatar.module.scss';
 export default function Avatar(props) {
   return (
     <img
+      alt={props.alt}
+      aria-hidden='true'
       classList={{
         [styles['avatar']]: true,
         [props.classes]: props.classes,
       }}
-      src={props.image}
-      alt={props.alt}
-      width={props.width}
       height={props.height}
+      src={props.image}
+      role='presentation'
+      width={props.width}
     />
   );
 }

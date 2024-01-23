@@ -23,7 +23,7 @@
 
   padding: fn.to-rem(var(--spacing-10)) fn.to-rem(var(--spacing-4));
 
-  border-radius: var(--rounded-lg);
+  border-radius: var(--border-radius-rounded-lg);
   border: fn.to-rem(1) solid var(--card-border-color);
   background: var(--card-bg-color);
 
@@ -41,7 +41,7 @@
 }
 
 .avatar-card--title {
-  border: 1px solid lime;
+  margin-block-end: fn.to-rem(var(--spacing-1));
 }
 
 .avatar-card--lead {

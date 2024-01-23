@@ -15,7 +15,11 @@ export default function AvatarCard(props) {
       }}>
         <Avatar {...props.avatar} />
       </div>
-      <Heading {...props.heading} />
+      <div classList={{
+        [styles['avatar-card--title']]: true,
+      }}>
+        <Heading {...props.heading} />
+      </div>
       <div classList={{
         [styles['avatar-card--lead']]: true,
       }}>

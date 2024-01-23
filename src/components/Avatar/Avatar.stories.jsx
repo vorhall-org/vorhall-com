@@ -15,3 +15,18 @@ const defaultArgs = {
 export const Avatar = {
   args: defaultArgs,
 };
+
+export const Yves = {
+  args: {
+    ...defaultArgs,
+    alt: 'Portrait Yves Tschery',
+  },
+};
+
+export const Marius = {
+  args: {
+    ...defaultArgs,
+    alt: 'Portrait Marius Bleuer',
+    image: '../../src/images/marius.jpg',
+  },
+};

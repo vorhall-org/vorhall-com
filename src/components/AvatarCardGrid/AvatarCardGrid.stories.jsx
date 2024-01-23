@@ -14,7 +14,7 @@ export const AvatarCardGrid = {
   args: defaultArgs,
   render: (args) => <Comp {...args}>
     <AvatarCard {...avatarCard.AvatarCard.args} />
-    <AvatarCard {...avatarCard.AvatarCard.args} />
-    <AvatarCard {...avatarCard.AvatarCard.args} />
+    <AvatarCard {...avatarCard.AvatarCardYves.args} />
+    <AvatarCard {...avatarCard.AvatarCardMarius.args} />
   </Comp>,
 };
