@@ -10,10 +10,18 @@ export default function AvatarCard(props) {
         [props.classes]: props.classes,
       }}
     >
-      <Avatar {...props.avatar} />
+      <div classList={{
+        [styles['avatar-card--image']]: true,
+      }}>
+        <Avatar {...props.avatar} />
+      </div>
       <Heading {...props.heading} />
-      <p>{props.subtitle}</p>
-      <p>{props.text}</p>
+      <div classList={{
+        [styles['avatar-card--lead']]: true,
+      }}>
+        <p>{props.subtitle}</p>
+        <p>{props.text}</p>
+      </div>
     </li>
   );
 }

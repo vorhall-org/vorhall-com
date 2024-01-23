@@ -1,6 +1,6 @@
 .avatar {
   aspect-ratio: 1 / 1;
-  border-radius: 55%;
+  border-radius: var(--border-radius-rounded-full);
   background: lightgray;
 
   /* shadow-md */

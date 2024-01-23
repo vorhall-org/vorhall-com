@@ -11,6 +11,7 @@ const defaultArgs = {
   classes: '',
   heading: {
     ...heading.Heading.args,
+    classes: 'avatar-card--heading',
     level: '4',
     text: 'Avatar Card title',
   },
