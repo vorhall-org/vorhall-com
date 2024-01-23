@@ -1,7 +1,7 @@
 @use '/src/styles/mixins' as mx;
 
 .fieldset {
-  border: 1px solid red;
+  border: none;
 
   &__legend {
     &--hidden {
