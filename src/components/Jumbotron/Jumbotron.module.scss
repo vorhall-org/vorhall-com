@@ -1,0 +1,23 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+
+:root {
+  --jumbotron-heading-font-size: var(--text-4xl);
+
+  @include mq.breakpoint($from: md) {
+    --jumbotron-heading-font-size: var(--text-5xl);
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --jumbotron-heading-font-size: var(--text-6xl);
+  }
+}
+
+.jumbotron {
+  padding: fn.to-rem(var(--spacing-24));
+
+  & &__heading {
+    font-size: fn.to-rem(var(--jumbotron-heading-font-size));
+    margin-bottom: fn.to-rem(var(--spacing-6));
+  }
+}
