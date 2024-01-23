@@ -1,9 +1,14 @@
 @use '/src/styles/functions' as fn;
 
+:root {
+  --form-max-width: 364;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   gap: fn.to-rem(var(--spacing-8));
+  max-width: fn.to-rem(var(--form-max-width));
 
   &__fieldset {
     display: flex;
