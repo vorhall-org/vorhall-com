@@ -47,7 +47,6 @@
 @mixin card-variables {
   --card-bg-color: var(--color-white);
   --card-border-color: var(--color-gray-200);
-  --card-box-shadow: 0 #{fn.to-rem(2)} #{fn.to-rem(4)} #{fn.to-rem(-2)} rgba(0, 0, 0, 0.05), 0 #{fn.to-rem(4)} #{fn.to-rem(6)} #{fn.to-rem(-1)} rgba(0, 0, 0, 0.10);
   --card-color: var(--color-gray-500);
 
   @include mq.color-scheme-dark {
@@ -64,6 +63,5 @@
 
   color: var(--card-color);
 
-  /* shadow-md */
-  box-shadow: var(--card-box-shadow);
+  box-shadow: var(--shadow-md);
 }
