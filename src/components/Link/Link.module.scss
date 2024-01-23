@@ -1,0 +1,26 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  --link-color: var(--color-blue-600);
+  --link-color-hover: var(--color-blue-800);
+
+  @include mq.color-scheme-dark {
+    --link-color: var(--color-blue-500);
+    --link-color-hover: var(--color-blue-300);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: var(--link-color);
+  border-bottom: fn.to-rem(var(--spacing-px)) solid currentcolor;
+
+  @include mx.default-transition;
+  transition-property: color;
+
+  @include mx.hover-focus {
+    color: var(--link-color-hover);
+  };
+}

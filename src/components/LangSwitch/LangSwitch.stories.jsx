@@ -1,5 +1,6 @@
 import Comp from './LangSwitch.jsx';
 import * as icon from '../Icon/Icon.stories.jsx';
+import * as link from '../Link/Link.stories.jsx';
 
 export default {
   component: Comp,
@@ -7,9 +8,9 @@ export default {
 
 const defaultArgs = {
   classes: '',
-  href: '#',
   icon: icon.IconFixedColor.args,
-  text: 'Lang switch text',
+  link: link.Link.args,
+  text: 'Some link content',
 };
 
 export const LangSwitch = {
