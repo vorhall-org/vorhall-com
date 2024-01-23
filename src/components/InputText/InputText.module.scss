@@ -31,7 +31,7 @@
   gap: fn.to-rem(var(--spacing-2));
 
   &__input {
-    border-radius: var(--border-radius-rounded-lg);
+    border-radius: fn.to-rem(var(--border-radius-rounded-lg));
     border: fn.to-rem(var(--border-weight-s)) solid var(--input-border-color);
     background-color: var(--input-background-color);
     color: var(--input-text-color);

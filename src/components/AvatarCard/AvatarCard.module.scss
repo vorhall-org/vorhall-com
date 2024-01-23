@@ -23,7 +23,7 @@
 
   padding: fn.to-rem(var(--spacing-10)) fn.to-rem(var(--spacing-4));
 
-  border-radius: var(--border-radius-rounded-lg);
+  border-radius: fn.to-rem(var(--border-radius-rounded-lg));
   border: fn.to-rem(1) solid var(--card-border-color);
   background: var(--card-bg-color);
 

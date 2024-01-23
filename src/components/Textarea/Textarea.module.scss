@@ -34,7 +34,7 @@
     font-family: var(--font-family);
     font-size: fn.to-rem(var(--text-sm));
 
-    border-radius: fn.to-rem(var(--border-radius-l));
+    border-radius: fn.to-rem(var(--border-radius-rounded-lg));
     border: fn.to-rem(var(--border-weight-s)) solid var(--textarea-border-color);
     background-color: var(--textarea-background-color);
     color: var(--textarea-text-color);
