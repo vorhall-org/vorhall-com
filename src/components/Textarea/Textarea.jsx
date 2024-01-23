@@ -14,12 +14,12 @@ export default function Textarea(props) {
       classList={{
         [styles['textarea']]: true,
         [internalProps.classes]: internalProps.classes,
+        [styles['textarea--disabled']]: props.disabled,
+        [styles['textarea--error']]: internalProps.error,
       }}
     >
-      <FormLabel
-        {...externalProps.label}
-        classes={styles['textarea__label']}
-      />
+      <FormLabel {...externalProps.label} />
+
       <textarea
         {...internalProps}
         class={styles['textarea__input']}

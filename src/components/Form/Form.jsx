@@ -92,7 +92,10 @@ export default function CustomForm(componentProps) {
     >
       <For each={componentProps.fieldsets}>
         {(fieldset) => (
-          <Fieldset legend={fieldset.legend}>
+          <Fieldset
+            legend={fieldset.legend}
+            classes={styles['form__fieldset']}
+          >
             <For each={fieldset.fields}>
               {(fieldItem) => (
                 <Field

@@ -24,3 +24,10 @@ const defaultArgs = {
 export const Textarea = {
   args: defaultArgs,
 };
+
+export const Error = {
+  args: {
+    ...defaultArgs,
+    error: 'Some error message',
+  },
+};

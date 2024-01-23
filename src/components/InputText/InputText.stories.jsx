@@ -20,6 +20,7 @@ export default {
 const defaultArgs = {
   classes: '',
   disabled: false,
+  error: false,
   label: {
     ...formLabel.FormLabel.args,
     inputId: 'input-id',
@@ -39,6 +40,6 @@ export const InputText = {
 export const Error = {
   args: {
     ...defaultArgs,
-    error: 'true',
+    error: 'Some error message',
   },
 };
