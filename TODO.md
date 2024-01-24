@@ -1,4 +1,5 @@
 - https://www.websitecarbon.com/badge/
 - form captcha?
-- disable submit button on submit
 - show success message on successfull submit
+- 404 page
+- Add data-protection link to form
