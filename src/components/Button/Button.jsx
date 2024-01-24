@@ -1,9 +1,63 @@
+import { createEffect, createMemo } from 'solid-js';
+import { Dynamic } from 'solid-js/web';
 import styles from './Button.module.scss';
 import Icon from '../Icon/Icon';
 
+const getAttributesForElement = (props) => {
+
+  const propsToRender = createMemo(() => {
+
+    console.log('getAttributesForElement');
+
+    let modifiedProps = {};
+
+    if (props.href) {
+      let target;
+      let rel;
+
+      if (props.href.indexOf('vorhall.com') === -1) {
+        target = '_blank';
+        rel = 'external noopener nofollow';
+      }
+
+      modifiedProps = {
+        'aria-label': props.label,
+        'href': props.href,
+        rel,
+        target,
+      };
+
+    } else {
+      modifiedProps = {
+        'aria-label': props.label,
+        'disabled': props.disabled,
+        'type': props.type,
+      };
+    }
+
+    return modifiedProps;
+  });
+
+  return propsToRender;
+
+};
+
 export default function Button(props) {
+
+  const propsToRender = getAttributesForElement(props);
+
+  createEffect(() => {
+    getAttributesForElement(props);
+  });
+
   return (
-    <button
+    <Dynamic
+      component={
+        props.href
+          ? 'a'
+          : 'button'
+      }
+      {...propsToRender}
       classList={{
         [styles.button]: true,
         [styles['button--icon']]: props.iconBefore || props.iconAfter,
@@ -13,14 +67,6 @@ export default function Button(props) {
         [styles['button--disabled']]: props.disabled,
         [props.classes]: props.classes,
       }}
-      onClick={(evt) => {
-        if (props.click) {
-          props.click(evt);
-        }
-      }}
-      type={props.type}
-      aria-label={props.label}
-      disabled={props.disabled}
     >
       {props.iconBefore &&
         <Icon
@@ -29,7 +75,7 @@ export default function Button(props) {
         />
       }
 
-      {props.label &&
+      {props.showLabel &&
         <span class={styles['button__label']}>{props.label}</span>
       }
 
@@ -39,6 +85,6 @@ export default function Button(props) {
           classes={styles['button__icon-after']}
         />
       }
-    </button>
+    </Dynamic>
   );
 }
