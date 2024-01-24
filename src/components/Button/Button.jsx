@@ -17,7 +17,7 @@ export default function Button(props) {
     let modifiedProps = {};
 
     if (props.href) {
-      let ariaLabel = `${props.label}. ${props.externalLinkText}`;
+      let ariaLabel = props.label;
       let target;
       let rel;
 
