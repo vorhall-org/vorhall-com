@@ -1,5 +1,4 @@
 import Comp from './Footer.jsx';
-import * as langSwitch from '../LangSwitch/LangSwitch.stories.jsx'
 
 export default {
   component: Comp,
@@ -7,19 +6,29 @@ export default {
 
 const defaultArgs = {
   classes: '',
-  langSwitch: langSwitch.LangSwitch.args,
-  links: [
+  copyright: '©2024 Vorhall KlG',
+  langSwitch: {
+    link: '#',
+    text: 'Switch to English',
+  },
+  legalLinks: [
     {
       link: '#',
-      text: 'Link 1',
+      text: 'Data Privacy',
     },
     {
       link: '#',
-      text: 'Link 2',
+      text: 'Impressum',
+    },
+  ],
+  socialLinks: [
+    {
+      link: '#',
+      icon: 'linkedin',
     },
     {
       link: '#',
-      text: 'Link 3',
+      icon: 'github',
     },
   ],
 };
