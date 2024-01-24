@@ -1,27 +1,34 @@
-import { createEffect, createMemo } from 'solid-js';
+import {
+  createEffect,
+  createSignal,
+} from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import styles from './Button.module.scss';
 import Icon from '../Icon/Icon';
 
-const getAttributesForElement = (props) => {
+export default function Button(props) {
+  const [
+    propsToRender,
+    setPropsToRender,
+  ] = createSignal(props);
 
-  const propsToRender = createMemo(() => {
-
-    console.log('getAttributesForElement');
+  createEffect(() => {
 
     let modifiedProps = {};
 
     if (props.href) {
+      let ariaLabel = `${props.label}. ${props.externalLinkText}`;
       let target;
       let rel;
 
-      if (props.href.indexOf('vorhall.com') === -1) {
+      if (props.href && props.externalLink) {
+        ariaLabel += `. ${props.externalLinkText}`;
         target = '_blank';
         rel = 'external noopener nofollow';
       }
 
       modifiedProps = {
-        'aria-label': props.label,
+        'aria-label': ariaLabel,
         'href': props.href,
         rel,
         target,
@@ -35,19 +42,8 @@ const getAttributesForElement = (props) => {
       };
     }
 
-    return modifiedProps;
-  });
+    setPropsToRender(modifiedProps);
 
-  return propsToRender;
-
-};
-
-export default function Button(props) {
-
-  const propsToRender = getAttributesForElement(props);
-
-  createEffect(() => {
-    getAttributesForElement(props);
   });
 
   return (
@@ -57,7 +53,7 @@ export default function Button(props) {
           ? 'a'
           : 'button'
       }
-      {...propsToRender}
+      {...propsToRender()}
       classList={{
         [styles.button]: true,
         [styles['button--icon']]: props.iconBefore || props.iconAfter,
