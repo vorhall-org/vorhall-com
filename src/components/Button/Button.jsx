@@ -16,6 +16,12 @@ export default function Button(props) {
 
     let modifiedProps = {};
 
+    const handleButtonClick = (evt) => {
+      if (props.click) {
+        props.click(evt);
+      }
+    };
+
     if (props.href) {
       let ariaLabel = props.label;
       let target;
@@ -38,6 +44,7 @@ export default function Button(props) {
       modifiedProps = {
         'aria-label': props.label,
         'disabled': props.disabled,
+        'onclick': handleButtonClick,
         'type': props.type,
       };
     }
