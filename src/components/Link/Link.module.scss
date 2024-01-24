@@ -5,22 +5,36 @@
 :root {
   --link-color: var(--color-blue-600);
   --link-color-hover: var(--color-blue-800);
+  --link-color-secondary: var(--color-gray-500);
 
   @include mq.color-scheme-dark {
     --link-color: var(--color-blue-500);
     --link-color-hover: var(--color-blue-300);
+    --link-color-secondary: var(--color-gray-400);
   }
 }
 
 .link {
+  $root: &;
+  display: inline-block;
   text-decoration: none;
   color: var(--link-color);
   border-bottom: fn.to-rem(var(--spacing-px)) solid currentcolor;
 
+  &--secondary {
+    color: var(--link-color-secondary);
+    border-bottom-color: transparent;
+
+    @include mx.hover-focus {
+      border-bottom-color: currentcolor;
+    }
+  }
+
   @include mx.default-transition;
-  transition-property: color;
+  transition-property: color, border-color;
 
   @include mx.hover-focus {
     color: var(--link-color-hover);
   };
+
 }

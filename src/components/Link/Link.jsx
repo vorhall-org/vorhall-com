@@ -5,6 +5,7 @@ export default function Link(props) {
     <a
       classList={{
         [styles['link']]: true,
+        [styles['link--secondary']]: props.secondary,
         [props.classes]: props.classes,
       }}
       href={props.href}
