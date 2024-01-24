@@ -19,6 +19,7 @@ export default function Footer(props) {
               <Link
                 classes={styles['footer__legal-link']}
                 href={link.link}
+                secondary={true}
               >
                 {link.text}
               </Link>
