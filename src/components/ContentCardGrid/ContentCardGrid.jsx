@@ -3,7 +3,7 @@ import styles from './ContentCardGrid.module.scss';
 export default function ContentCardGrid(props) {
   return (
     <ul
-      aria-labelledby={ props.ariaLabelledBy.length > 0
+      aria-labelledby={ props.ariaLabelledBy
         ? props.ariaLabelledBy
         : undefined
       }

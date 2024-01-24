@@ -83,16 +83,30 @@ const defaultArgs = {
     console.log('button was clicked');
   },
   color: 'primary',
+  externalLink: false,
+  externalLinkText: '',
+  href: '',
   iconAfter: false,
   iconBefore: false,
-  label: 'Button',
+  label: 'Button Text',
   outline: false,
+  showLabel: true,
   size: 's',
   type: 'button',
 };
 
 export const Button = {
   args: defaultArgs,
+};
+
+export const ButtonLink = {
+  args: {
+    ...defaultArgs,
+    externalLink: true,
+    externalLinkText: 'Link target opens in new window.',
+    href: 'https://www.sbb.ch',
+    label: 'Link Text',
+  },
 };
 
 export const IconBefore = {
@@ -121,7 +135,7 @@ export const IconOnly = {
   args: {
     ...defaultArgs,
     iconAfter: iconsAfter.close,
-    label: false,
+    showLabel: false,
   },
 };
 
