@@ -5,4 +5,5 @@
 - Add data-protection link to form
 - check and fix line-heights
 - check and fix letter spacing
-- chech and fix font-weights
+- check and fix font-weights
+- astro build complains about "Unsupported file type general.js found" (and home.js)
