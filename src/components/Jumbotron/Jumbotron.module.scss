@@ -21,6 +21,10 @@
   padding: fn.to-rem(var(--jumbotron-padding-v)) fn.to-rem(var(--jumbotron-padding-h));
 
   & &__heading {
-    margin-bottom: fn.to-rem(var(--spacing-6));
+    margin-bottom: fn.to-rem(var(--spacing-4));
+
+    &--main {
+      margin-bottom: fn.to-rem(var(--spacing-6));
+    }
   }
 }

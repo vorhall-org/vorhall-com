@@ -13,7 +13,12 @@ export default function Jumbotron(props) {
       {props.heading &&
         <Heading
           {...props.heading}
-          classes={styles['jumbotron__heading']}
+          classes={`
+            ${styles['jumbotron__heading']}
+            ${props.mainJumbo
+      ? styles['jumbotron__heading--main']
+      : ''}
+          `}
         />
       }
 
