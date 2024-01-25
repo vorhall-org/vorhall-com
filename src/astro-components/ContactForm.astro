@@ -5,10 +5,13 @@ const formConfig = {
   button: {
     click: false,
     color: 'primary',
+    externalLink: false,
+    href: '',
     iconAfter: false,
     iconBefore: false,
     label: 'Submit',
     outline: false,
+    rawIcon: false,
     size: 'l',
     type: 'submit',
   },
@@ -82,7 +85,6 @@ const formConfig = {
 ---
 
 <Form
-  data-contact-form
   client:load
   {...formConfig}
 />
