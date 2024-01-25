@@ -22,7 +22,7 @@ export default function Jumbotron(props) {
         />
       }
 
-      {props.leadText &&
+      {props.leadTextContent &&
         <LeadText {...props.leadText}>
           {props.leadTextContent}
         </LeadText>
