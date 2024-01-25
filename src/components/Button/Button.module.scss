@@ -65,6 +65,7 @@
       --button-text-color-hover: var(--color-blue-600);
       --button-background-color: var(--color-white);
       --button-background-color-hover: var(--color-white);
+      --button-icon-raw-color: var(--color-gray-700);
     }
   }
 
@@ -108,9 +109,21 @@
     --button-padding-h: var(--spacing-6);
     --button-icon-height: var(--spacing-6);
   }
+
+  .button--icon-raw {
+    --button-text-color: var(--color-gray-500);
+    --button-text-color-hover: var(--color-900);
+
+    @include mq.color-scheme-dark {
+      --button-text-color: var(--color-gray-400);
+      --button-text-color-hover: var(--color-gray-200);
+    }
+  }
 }
 
 .button {
+  $root: &;
+
   font-family: var(--font-family);
   cursor: pointer;
   font-size: fn.to-rem(var(--button-font-size));
@@ -124,16 +137,15 @@
   width: max-content;
 
   @include mx.default-transition;
-  transition-property: color, background-color;
-
-  &--outline {
-    border: fn.to-rem(1) solid var(--button-border-color);
-    transition-property: color, background-color, border-color;
-  }
+  transition-property: color, background-color, border-color;
 
   &__label {
     display: inline-block;
     flex: 1 0 auto;
+
+    &--hidden {
+      @include mx.visually-hidden;
+    }
   }
 
   &__icon-before,
@@ -141,6 +153,11 @@
     color: currentcolor;
     width: fn.to-rem(var(--spacing-4));
     flex: 0 0 fn.to-rem(var(--spacing-4));
+  }
+
+  &--outline {
+    border: fn.to-rem(1) solid var(--button-border-color);
+    transition-property: color, background-color, border-color;
   }
 
   &--icon {
@@ -155,10 +172,32 @@
     opacity: 0.8;
   }
 
+  &--link {
+    display: inline-block;
+  }
+
   @include mx.hover-focus {
     background-color: var(--button-background-color-hover);
     color: var(--button-text-color-hover);
     border-color: var(--button-border-color-hover);
+  }
+
+  &--icon-raw {
+    display: inline-block;
+    width: auto;
+    padding: fn.to-rem(var(--spacing-2-5));
+    background-color: transparent;
+    border-color: transparent;
+
+    #{$root}__icon-before,
+    #{$root}__icon-after {
+      width: fn.to-rem(var(--spacing-6));
+      height: fn.to-rem(var(--spacing-6));
+    }
+
+    @include mx.hover-focus {
+      background-color: transparent;
+    }
   }
 
 }

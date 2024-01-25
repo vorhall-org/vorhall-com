@@ -68,6 +68,8 @@ export default function Button(props) {
         [styles[`button--color-${props.color}`]]: props.color,
         [styles['button--outline']]: props.outline,
         [styles['button--disabled']]: props.disabled,
+        [styles['button--icon-raw']]: props.rawIcon,
+        [styles['button--link']]: props.href,
         [props.classes]: props.classes,
       }}
     >
@@ -78,9 +80,10 @@ export default function Button(props) {
         />
       }
 
-      {props.showLabel &&
-        <span class={styles['button__label']}>{props.label}</span>
-      }
+      <span classList={{
+        [styles['button__label']]: true,
+        [styles['button__label--hidden']]: props.showLabel !== true,
+      }}>{props.label}</span>
 
       {props.iconAfter &&
         <Icon

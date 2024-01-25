@@ -2,7 +2,7 @@ import Comp from './Button.jsx';
 import * as icon from '../Icon/Icon.stories.jsx';
 import { disableArgType } from '../../helpers/storybook/storybook.js';
 
-const iconsBefore = {
+const iconsFixedColor = {
   de: {
     ...icon.IconFixedColor.args,
     name: 'de',
@@ -13,7 +13,7 @@ const iconsBefore = {
   },
 };
 
-const iconsAfter = {
+const iconsColorizable = {
   arrowDown: {
     ...icon.IconColorizable.args,
     name: 'arrowDown',
@@ -21,6 +21,10 @@ const iconsAfter = {
   close: {
     ...icon.IconColorizable.args,
     name: 'close',
+  },
+  github: {
+    ...icon.IconColorizable.args,
+    name: 'github',
   },
 };
 
@@ -43,15 +47,15 @@ export default {
       control: {
         type: 'select',
       },
-      mapping: iconsAfter,
-      options: Object.keys(iconsAfter),
+      mapping: iconsColorizable,
+      options: Object.keys(iconsColorizable),
     },
     iconBefore: {
       control: {
         type: 'select',
       },
-      mapping: iconsBefore,
-      options: Object.keys(iconsBefore),
+      mapping: iconsFixedColor,
+      options: Object.keys(iconsFixedColor),
     },
     size: {
       control: {
@@ -90,6 +94,7 @@ const defaultArgs = {
   iconBefore: false,
   label: 'Button Text',
   outline: false,
+  rawIcon: false,
   showLabel: true,
   size: 's',
   type: 'button',
@@ -112,29 +117,43 @@ export const ButtonLink = {
 export const IconBefore = {
   args: {
     ...defaultArgs,
-    iconBefore: iconsBefore.en,
+    iconBefore: iconsFixedColor.en,
   },
 };
 
 export const IconAfter = {
   args: {
     ...defaultArgs,
-    iconAfter: iconsAfter.close,
+    iconAfter: iconsColorizable.close,
   },
 };
 
 export const BothIcons = {
   args: {
     ...defaultArgs,
-    iconAfter: iconsAfter.close,
-    iconBefore: iconsBefore.en,
+    iconAfter: iconsColorizable.close,
+    iconBefore: iconsFixedColor.en,
   },
 };
 
 export const IconOnly = {
   args: {
     ...defaultArgs,
-    iconAfter: iconsAfter.close,
+    iconAfter: iconsColorizable.close,
+    label: 'Hidden button text',
+    showLabel: false,
+  },
+};
+
+export const IconOnlyRaw = {
+  args: {
+    ...defaultArgs,
+    externalLink: true,
+    externalLinkText: 'Link target opens in new window.',
+    href: 'https://www.sbb.ch',
+    iconBefore: iconsColorizable.github,
+    label: 'Hidden button text',
+    rawIcon: true,
     showLabel: false,
   },
 };
