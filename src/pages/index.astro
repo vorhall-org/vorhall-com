@@ -1,6 +1,5 @@
 ---
-// import { getLocale } from 'astro-i18n-aut';
-// import { useTranslations } from '../i18n/utils';
+import { getLocale } from 'astro-i18n-aut';
 import Layout from '../layouts/Layout.astro';
 import Main from '../components/MainContainer/MainContainer';
 import Section from '../components/Section/Section';
@@ -9,235 +8,37 @@ import ContentCardGrid from '../components/ContentCardGrid/ContentCardGrid';
 import ContentCard from '../components/ContentCard/ContentCard';
 import AvatarCardGrid from '../components/AvatarCardGrid/AvatarCardGrid';
 import AvatarCard from '../components/AvatarCard/AvatarCard';
-import Footer from '../components/Footer/Footer';
+import pageDataGetter from '../content/home';
 
-// const locale = getLocale(Astro.url);
-// const t = useTranslations(locale);
-
-import ContactForm from '../astro-components/ContactForm.astro';
-
-const jumbotronData = {
-  heading: {
-    level: 1,
-    text: 'Vorhall',
-    visualLevel: false,
-  },
-  leadTextContent: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
-  mainJumbo: true,
-};
-
-const jumbotronDataServices = {
-  heading: {
-    level: 2,
-    text: 'Services',
-    visualLevel: false,
-  },
-  leadTextContent: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
-  mainJumbo: false,
-};
-
-const jumbotronDataAbout = {
-  heading: {
-    level: 2,
-    text: 'Who we are',
-    visualLevel: false,
-  },
-  leadTextContent: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
-  mainJumbo: false,
-};
-
-const jumbotronDataContact = {
-  heading: {
-    level: 2,
-    text: 'Contact us',
-    visualLevel: false,
-  },
-  leadTextContent: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
-  mainJumbo: false,
-};
-
-const serviceCardTeaser1 = {
-  button: {
-    click: false,
-    color: 'primary',
-    externalLink: true,
-    externalLinkText: 'Get more info about a11y',
-    href: '#',
-    label: 'a11y',
-    size: 'l',
-    type: 'button',
-  },
-  classes: '',
-  heading: {
-    level: '3',
-    text: 'a11y',
-    visualLevel: '4',
-  },
-  icon: false,
-  text: 'The Internet works like an equality machine. People with disabilities in particular can benefit greatly from independent use of the Internet and lead a self-determined life if we give them the chance to do so. We see it as our obligation to do everything in our power to provide the necessary technical accessibility for every digital product we create.',
-};
-
-const serviceCardTeaser2 = {
-  button: {
-    click: false,
-    color: 'primary',
-    externalLink: true,
-    externalLinkText: 'Get more info about a11y',
-    href: '#',
-    label: 'a11y',
-    size: 'l',
-    type: 'button',
-  },
-  classes: '',
-  heading: {
-    level: '3',
-    text: 'a11y',
-    visualLevel: '4',
-  },
-  icon: false,
-  text: 'The Internet works like an equality machine. People with disabilities in particular can benefit greatly from independent use of the Internet and lead a self-determined life if we give them the chance to do so. We see it as our obligation to do everything in our power to provide the necessary technical accessibility for every digital product we create.',
-};
-
-const serviceCardTeaser3 = {
-  button: {
-    click: false,
-    color: 'primary',
-    externalLink: true,
-    externalLinkText: 'Get more info about a11y',
-    href: '#',
-    label: 'a11y',
-    size: 'l',
-    type: 'button',
-  },
-  classes: '',
-  heading: {
-    level: '3',
-    text: 'a11y',
-    visualLevel: '4',
-  },
-  icon: false,
-  text: 'The Internet works like an equality machine. People with disabilities in particular can benefit greatly from independent use of the Internet and lead a self-determined life if we give them the chance to do so. We see it as our obligation to do everything in our power to provide the necessary technical accessibility for every digital product we create.',
-};
-
-const avatarCardMarius = {
-  avatar: {
-    alt: 'Avatar of Marius',
-    classes: '',
-    height: '100',
-    image: '/images/marius.jpg',
-    width: '100',
-  },
-  heading: {
-    classes: 'avatar-card--heading',
-    level: '3',
-    text: 'Marius Bleuer',
-    visualLevel: '4',
-  },
-  subtitle: 'Avatar Card subtitle',
-  text: 'Avatar Card text',
-};
-
-const avatarCardYves = {
-  avatar: {
-    alt: 'Avatar of Marius',
-    classes: '',
-    height: '100',
-    image: '/images/yves.jpg',
-    width: '100',
-  },
-  heading: {
-    classes: 'avatar-card--heading',
-    level: '3',
-    text: 'Yves Tscherry',
-    visualLevel: '4',
-  },
-  subtitle: 'Avatar Card subtitle',
-  text: 'Avatar Card text',
-};
-
-const footerData = {
-  copyright: '©2024 Vorhall KlG',
-  langSwitch: {
-    link: '#',
-    text: 'Switch to English',
-  },
-  legalLinks: [
-    {
-      link: '#',
-      text: 'Data Privacy',
-    },
-    {
-      link: '#',
-      text: 'Impressum',
-    },
-  ],
-  socialLinks: [
-    {
-      color: 'primary',
-      externalLink: true,
-      externalLinkText: 'Link target opens in new window.',
-      hideLabel: true,
-      href: 'https://www.sbb.ch',
-      iconAfter: false,
-      iconBefore: {
-        colorFixed: false,
-        name: 'github',
-      },
-      label: 'Hidden button text',
-      outline: false,
-      rawIcon: true,
-      size: 's',
-      type: 'button',
-    },
-    {
-      color: 'primary',
-      externalLink: true,
-      externalLinkText: 'Link target opens in new window.',
-      hideLabel: true,
-      href: 'https://www.sbb.ch',
-      iconAfter: false,
-      iconBefore: {
-        colorFixed: false,
-        name: 'github',
-      },
-      label: 'Hidden button text',
-      outline: false,
-      rawIcon: true,
-      size: 's',
-      type: 'button',
-    },
-  ],
-};
+const locale = getLocale(Astro.url);
+const pageData = pageDataGetter(locale);
 
 ---
 
 <Layout>
   <Main>
-    <Jumbotron {...jumbotronData}/>
+    <!-- Header -->
+    <Jumbotron {...pageData.jumbotronData}/>
 
+    <!-- Services -->
     <Section>
-      <Jumbotron {...jumbotronDataServices} />
+      <Jumbotron {...pageData.jumbotronDataServices} />
       <ContentCardGrid>
-        <ContentCard {...serviceCardTeaser1}></ContentCard>
-        <ContentCard {...serviceCardTeaser2}></ContentCard>
-        <ContentCard {...serviceCardTeaser3}></ContentCard>
+        <ContentCard {...pageData.serviceCardTeaser1}></ContentCard>
+        <ContentCard {...pageData.serviceCardTeaser2}></ContentCard>
+        <ContentCard {...pageData.serviceCardTeaser3}></ContentCard>
       </ContentCardGrid>
     </Section>
 
+    <!-- About -->
     <Section>
-      <Jumbotron {...jumbotronDataAbout} />
+      <Jumbotron {...pageData.jumbotronDataAbout} />
       <AvatarCardGrid>
-        <AvatarCard {...avatarCardMarius}></AvatarCard>
-        <AvatarCard {...avatarCardYves}></AvatarCard>
+        <AvatarCard {...pageData.avatarCardMarius}></AvatarCard>
+        <AvatarCard {...pageData.avatarCardYves}></AvatarCard>
       </AvatarCardGrid>
     </Section>
 
-    <Section>
-      <Jumbotron {...jumbotronDataContact} />
-      <ContactForm />
-    </Section>
   </Main>
-
-  <Footer {...footerData}/>
 
 </Layout>

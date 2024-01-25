@@ -1,92 +1,17 @@
 ---
+import { getLocale } from 'astro-i18n-aut';
+import generalDataGetter from '../content/general';
 import Form from '../components/Form/Form';
 
-const formConfig = {
-  button: {
-    click: false,
-    color: 'primary',
-    externalLink: false,
-    href: '',
-    iconAfter: false,
-    iconBefore: false,
-    label: 'Submit',
-    outline: false,
-    rawIcon: false,
-    size: 'l',
-    type: 'submit',
-  },
+const locale = getLocale(Astro.url);
 
-  fieldsets: [
-    {
-      fields: [
-        {
-          element: {
-            name: 'email',
-            props: {
-              classes: '',
-              disabled: false,
-              label: {
-                inputId: 'input-id',
-                text: 'Your e-mail Address',
-              },
-              name: 'email',
-              placeholder: 'e-mail address',
-              required: false,
-              size: 'regular',
-              type: 'email',
-            },
-          },
-          name: 'email',
-          validate: [
-            {
-              text: 'Please enter your email.',
-              type: 'required',
-            },
-            {
-              text: 'The email address is badly formatted.',
-              type: 'email',
-            },
-          ],
-        },
-        {
-          element: {
-            name: 'Textarea',
-            props: {
-              cols: '30',
-              disabled: false,
-              id: 'textarea-id',
-              label: {
-                inputId: 'textarea-id',
-                text: 'What do you have to say?',
-              },
-              name: 'textarea-name',
-              placeholder: 'Your comments...',
-              required: true,
-              rows: '5',
-            },
-          },
-          name: 'text',
-          validate: [
-            {
-              text: 'Please enter your request.',
-              type: 'required',
-            },
-          ],
-        },
-      ],
-      legend: {
-        hidden: true,
-        text: 'Contact form',
-      },
-    },
-  ],
-};
+const generalData = generalDataGetter(locale);
 
 ---
 
 <Form
   client:load
-  {...formConfig}
+  {...generalData.contactFormData}
 />
 
 <script>

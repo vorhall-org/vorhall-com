@@ -1,0 +1,62 @@
+export default {
+  about: {
+    de: {
+      avatarMariusAltText: 'Avatar of Marius',
+      avatarMariusSubtitle: 'Avatar Card subtitle',
+      avatarMariusText: 'Avatar Card text',
+      avatarYvesAltText: 'Avatar of Yves',
+      avatarYvesSubtitle: 'Avatar Card subtitle',
+      avatarYvesText: 'Avatar Card text',
+      lead: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
+      title: 'About',
+    },
+    en: {
+      avatarMariusAltText: 'Avatar of Marius',
+      avatarMariusSubtitle: 'Avatar Card subtitle',
+      avatarMariusText: 'Avatar Card text',
+      avatarYvesAltText: 'Avatar of Yves',
+      avatarYvesSubtitle: 'Avatar Card subtitle',
+      avatarYvesText: 'Avatar Card text',
+      lead: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
+      title: 'About',
+    },
+  },
+  header: {
+    de: {
+      lead: 'We are on a mission to build fast, sustainable digital products that last and can be accessed by everyone.',
+      title: 'Vorhall',
+    },
+    en: {
+      lead: 'We are on a mission to build fast, sustainable digital products that last and can be accessed by everyone.',
+      title: 'Vorhall',
+    },
+  },
+  services: {
+    de: {
+      lead: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
+      serviceCard1ButtonLabel: 'More Info',
+      serviceCard1Text: 'The Internet works like an equality machine. People with disabilities in particular can benefit greatly from independent use of the Internet and lead a self-determined life if we give them the chance to do so. We see it as our obligation to do everything in our power to provide the necessary technical accessibility for every digital product we create.',
+      serviceCard1Title: 'a11y',
+      serviceCard2ButtonLabel: 'More Info',
+      serviceCard2Text: 'some service card text',
+      serviceCard2Title: 'a11y',
+      serviceCard3ButtonLabel: 'More Info',
+      serviceCard3Text: 'some service card text',
+      serviceCard3Title: 'a11y',
+      title: 'Services',
+    },
+    en: {
+      lead: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
+      serviceCard1ButtonLabel: 'More Info',
+      serviceCard1Text: 'The Internet works like an equality machine. People with disabilities in particular can benefit greatly from independent use of the Internet and lead a self-determined life if we give them the chance to do so. We see it as our obligation to do everything in our power to provide the necessary technical accessibility for every digital product we create.',
+      serviceCard1Title: 'a11y',
+      serviceCard2ButtonLabel: 'More Info',
+      serviceCard2Text: 'some service card text',
+      serviceCard2Title: 'a11y',
+      serviceCard3ButtonLabel: 'More Info',
+      serviceCard3Text: 'some service card text',
+      serviceCard3Title: 'a11y',
+      title: 'Services',
+    },
+  },
+};

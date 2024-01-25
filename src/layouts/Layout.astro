@@ -1,9 +1,13 @@
 ---
 import { getLocale } from 'astro-i18n-aut';
-import { useTranslations } from '../i18n/utils';
+import generalDataGetter from '../content/general';
+import Footer from '../components/Footer/Footer';
+import Section from '../components/Section/Section';
+import Jumbotron from '../components/Jumbotron/Jumbotron';
+import ContactForm from '../astro-components/ContactForm.astro';
 
 const locale = getLocale(Astro.url);
-const t = useTranslations(locale);
+const generalData = generalDataGetter(locale);
 const {
   removeNoIndex,
 } = Astro.props;
@@ -13,19 +17,24 @@ const {
 <html lang={locale}>
   <head>
     <meta charset="UTF-8" />
-    <title>{t('site.title')}</title>
+    <title>{generalData.siteData.title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="cyan" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
-    <meta name="description" content={t('site.description')} />
+    <meta name="description" content={generalData.siteData.description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     {!removeNoIndex && <meta name="robots" content="noindex">}
   </head>
   <body>
-    <div>
-      <slot />
-    </div>
+    <slot />
+
+    <Section>
+      <Jumbotron {...generalData.jumbotronContact} />
+      <ContactForm />
+    </Section>
+
+    <Footer {...generalData.footerData}/>
   </body>
 </html>
 
