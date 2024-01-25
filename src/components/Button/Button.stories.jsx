@@ -95,7 +95,7 @@ const defaultArgs = {
   label: 'Button Text',
   outline: false,
   rawIcon: false,
-  showLabel: true,
+  hideLabel: false,
   size: 's',
   type: 'button',
 };
@@ -139,9 +139,9 @@ export const BothIcons = {
 export const IconOnly = {
   args: {
     ...defaultArgs,
+    hideLabel: true,
     iconAfter: iconsColorizable.close,
     label: 'Hidden button text',
-    showLabel: false,
   },
 };
 
@@ -150,11 +150,11 @@ export const IconOnlyRaw = {
     ...defaultArgs,
     externalLink: true,
     externalLinkText: 'Link target opens in new window.',
+    hideLabel: true,
     href: 'https://www.sbb.ch',
     iconBefore: iconsColorizable.github,
     label: 'Hidden button text',
     rawIcon: true,
-    showLabel: false,
   },
 };
 

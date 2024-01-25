@@ -82,7 +82,7 @@ export default function Button(props) {
 
       <span classList={{
         [styles['button__label']]: true,
-        [styles['button__label--hidden']]: props.showLabel !== true,
+        [styles['button__label--hidden']]: props.hideLabel === true,
       }}>{props.label}</span>
 
       {props.iconAfter &&
