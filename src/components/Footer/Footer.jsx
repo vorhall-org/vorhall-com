@@ -1,5 +1,6 @@
 import { For } from 'solid-js';
 import Link from '../Link/Link';
+import Button from '../Button/Button';
 import styles from './Footer.module.scss';
 
 export default function Footer(props) {
@@ -15,9 +16,8 @@ export default function Footer(props) {
       <ul class={styles['footer__legal-link-list']}>
         <For each={props.legalLinks}>
           {(link) => (
-            <li class={styles['footer__legal-link-item']}>
+            <li>
               <Link
-                classes={styles['footer__legal-link']}
                 href={link.link}
                 secondary={true}
               >
@@ -33,13 +33,8 @@ export default function Footer(props) {
         <ul class={styles['footer__social-link-list']}>
           <For each={props.socialLinks}>
             {(link) => (
-              <li class={styles['footer__social-link-item']}>
-                <Link
-                  classes={styles['footer__social-link']}
-                  href={link.link}
-                >
-                  {link.icon}
-                </Link>
+              <li>
+                <Button {...link} />
               </li>
             )}
           </For>

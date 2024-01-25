@@ -1,4 +1,5 @@
 import Comp from './Footer.jsx';
+import * as button from '../Button/Button.stories.jsx';
 
 export default {
   component: Comp,
@@ -23,12 +24,13 @@ const defaultArgs = {
   ],
   socialLinks: [
     {
-      link: '#',
-      icon: 'linkedin',
+      ...button.IconOnlyRaw.args,
     },
     {
-      link: '#',
-      icon: 'github',
+      ...button.IconOnlyRaw.args,
+      iconBefore: {
+        name: 'linkedin',
+      },
     },
   ],
 };
