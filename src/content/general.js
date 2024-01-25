@@ -107,7 +107,7 @@ export default (locale) => {
     copyright: tFooter('copyright'),
     langSwitch: {
       link: '#',
-      text: tFooter('langSwitch.text'),
+      text: tFooter('langSwitchText'),
     },
     legalLinks: [
       {
