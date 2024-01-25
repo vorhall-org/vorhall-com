@@ -2,107 +2,242 @@
 // import { getLocale } from 'astro-i18n-aut';
 // import { useTranslations } from '../i18n/utils';
 import Layout from '../layouts/Layout.astro';
-// import MainContainer from '../components/MainContainer.astro';
-// import Section from '../components/Section.astro';
-// import ContentCardGrid from '../components/ContentCardGrid.astro';
-// import ContentCard from '../components/ContentCard.astro';
-// import Contact from '../components/Contact.astro';
-// import LeadText from '../components/LeadText.astro';
-// import PageTitle from '../components/PageTitle.astro';
-// import Logo from '../components/Logo.astro';
-// import Heading from '../components/Heading.astro';
-// import Footer from '../components/Footer.astro';
-// import AvatarCardGrid from '../components/AvatarCardGrid.astro';
-// import AvatarCard from '../components/AvatarCard.astro';
-// import Avatar from '../components/Avatar.astro';
-// import imageYves from '../images/yves.jpg';
+import Main from '../components/MainContainer/MainContainer';
+import Section from '../components/Section/Section';
+import Jumbotron from '../components/Jumbotron/Jumbotron';
+import ContentCardGrid from '../components/ContentCardGrid/ContentCardGrid';
+import ContentCard from '../components/ContentCard/ContentCard';
+import AvatarCardGrid from '../components/AvatarCardGrid/AvatarCardGrid';
+import AvatarCard from '../components/AvatarCard/AvatarCard';
+import Footer from '../components/Footer/Footer';
 
 // const locale = getLocale(Astro.url);
 // const t = useTranslations(locale);
 
 import ContactForm from '../astro-components/ContactForm.astro';
 
+const jumbotronData = {
+  heading: {
+    level: 1,
+    text: 'Vorhall',
+    visualLevel: false,
+  },
+  leadTextContent: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
+  mainJumbo: true,
+};
+
+const jumbotronDataServices = {
+  heading: {
+    level: 2,
+    text: 'Services',
+    visualLevel: false,
+  },
+  leadTextContent: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
+  mainJumbo: false,
+};
+
+const jumbotronDataAbout = {
+  heading: {
+    level: 2,
+    text: 'Who we are',
+    visualLevel: false,
+  },
+  leadTextContent: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
+  mainJumbo: false,
+};
+
+const jumbotronDataContact = {
+  heading: {
+    level: 2,
+    text: 'Contact us',
+    visualLevel: false,
+  },
+  leadTextContent: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
+  mainJumbo: false,
+};
+
+const serviceCardTeaser1 = {
+  button: {
+    click: false,
+    color: 'primary',
+    externalLink: true,
+    externalLinkText: 'Get more info about a11y',
+    href: '#',
+    label: 'a11y',
+    size: 'l',
+    type: 'button',
+  },
+  classes: '',
+  heading: {
+    level: '3',
+    text: 'a11y',
+    visualLevel: '4',
+  },
+  icon: false,
+  text: 'The Internet works like an equality machine. People with disabilities in particular can benefit greatly from independent use of the Internet and lead a self-determined life if we give them the chance to do so. We see it as our obligation to do everything in our power to provide the necessary technical accessibility for every digital product we create.',
+};
+
+const serviceCardTeaser2 = {
+  button: {
+    click: false,
+    color: 'primary',
+    externalLink: true,
+    externalLinkText: 'Get more info about a11y',
+    href: '#',
+    label: 'a11y',
+    size: 'l',
+    type: 'button',
+  },
+  classes: '',
+  heading: {
+    level: '3',
+    text: 'a11y',
+    visualLevel: '4',
+  },
+  icon: false,
+  text: 'The Internet works like an equality machine. People with disabilities in particular can benefit greatly from independent use of the Internet and lead a self-determined life if we give them the chance to do so. We see it as our obligation to do everything in our power to provide the necessary technical accessibility for every digital product we create.',
+};
+
+const serviceCardTeaser3 = {
+  button: {
+    click: false,
+    color: 'primary',
+    externalLink: true,
+    externalLinkText: 'Get more info about a11y',
+    href: '#',
+    label: 'a11y',
+    size: 'l',
+    type: 'button',
+  },
+  classes: '',
+  heading: {
+    level: '3',
+    text: 'a11y',
+    visualLevel: '4',
+  },
+  icon: false,
+  text: 'The Internet works like an equality machine. People with disabilities in particular can benefit greatly from independent use of the Internet and lead a self-determined life if we give them the chance to do so. We see it as our obligation to do everything in our power to provide the necessary technical accessibility for every digital product we create.',
+};
+
+const avatarCardMarius = {
+  avatar: {
+    alt: 'Avatar of Marius',
+    classes: '',
+    height: '100',
+    image: '../../src/images/marius.jpg',
+    width: '100',
+  },
+  heading: {
+    classes: 'avatar-card--heading',
+    level: '3',
+    text: 'Marius Bleuer',
+    visualLevel: '4',
+  },
+  subtitle: 'Avatar Card subtitle',
+  text: 'Avatar Card text',
+};
+
+const avatarCardYves = {
+  avatar: {
+    alt: 'Avatar of Marius',
+    classes: '',
+    height: '100',
+    image: '../../src/images/yves.jpg',
+    width: '100',
+  },
+  heading: {
+    classes: 'avatar-card--heading',
+    level: '3',
+    text: 'Marius Bleuer',
+    visualLevel: '4',
+  },
+  subtitle: 'Avatar Card subtitle',
+  text: 'Avatar Card text',
+};
+
+const footerData = {
+  copyright: '©2024 Vorhall KlG',
+  langSwitch: {
+    link: '#',
+    text: 'Switch to English',
+  },
+  legalLinks: [
+    {
+      link: '#',
+      text: 'Data Privacy',
+    },
+    {
+      link: '#',
+      text: 'Impressum',
+    },
+  ],
+  socialLinks: [
+    {
+      color: 'primary',
+      externalLink: true,
+      externalLinkText: 'Link target opens in new window.',
+      hideLabel: true,
+      href: 'https://www.sbb.ch',
+      iconAfter: false,
+      iconBefore: {
+        colorFixed: false,
+        name: 'github',
+      },
+      label: 'Hidden button text',
+      outline: false,
+      rawIcon: true,
+      size: 's',
+      type: 'button',
+    },
+    {
+      color: 'primary',
+      externalLink: true,
+      externalLinkText: 'Link target opens in new window.',
+      hideLabel: true,
+      href: 'https://www.sbb.ch',
+      iconAfter: false,
+      iconBefore: {
+        colorFixed: false,
+        name: 'github',
+      },
+      label: 'Hidden button text',
+      outline: false,
+      rawIcon: true,
+      size: 's',
+      type: 'button',
+    },
+  ],
+};
+
 ---
 
 <Layout>
-
-  <h1>Contact Form Test</h1>
-  <ContactForm />
-
-  <!--
-  <MainContainer>
-    <Logo />
-
-    <PageTitle
-      text={t('page.title')}
-      highlight={t('site.title')}
-    />
-
-    <LeadText text={t('page.leadText')}/>
+  <Main>
+    <Jumbotron {...jumbotronData}/>
 
     <Section>
-      <Heading
-        text={t('page.whatWeDo.title')}
-        level="2"
-      />
-
+      <Jumbotron {...jumbotronDataServices} />
       <ContentCardGrid>
-        <ContentCard
-          title="Some title"
-          body="Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum."
-        />
-        <ContentCard
-          title="Some title"
-          body="foo bar"
-        />
+        <ContentCard {...serviceCardTeaser1}></ContentCard>
+        <ContentCard {...serviceCardTeaser2}></ContentCard>
+        <ContentCard {...serviceCardTeaser3}></ContentCard>
       </ContentCardGrid>
     </Section>
 
     <Section>
-      <Heading
-        text={t('page.contactUs.title')}
-        level="2"
-      />
-
-      <Contact />
-    </Section>
-
-    <Section>
-      <Heading
-        text={t('page.whoWeAre.title')}
-        level="2"
-      />
-
+      <Jumbotron {...jumbotronDataAbout} />
       <AvatarCardGrid>
-        <AvatarCard
-          title={t('page.whoWeAre.marius.title')}
-          subtitle={t('page.whoWeAre.marius.subtitle')}
-          text={t('page.whoWeAre.marius.description')}
-        >
-          <Avatar
-            image={imageYves}
-            alt={t('page.whoWeAre.marius.imageAlt')}
-            width="64"
-            height="64"
-          />
-        </AvatarCard>
-        <AvatarCard
-          title={t('page.whoWeAre.yves.title')}
-          subtitle={t('page.whoWeAre.yves.subtitle')}
-          text={t('page.whoWeAre.yves.description')}
-        >
-          <Avatar
-            image={imageYves}
-            alt={t('page.whoWeAre.yves.imageAlt')}
-            width="64"
-            height="64"
-          />
-        </AvatarCard>
+        <AvatarCard {...avatarCardMarius}></AvatarCard>
+        <AvatarCard {...avatarCardYves}></AvatarCard>
       </AvatarCardGrid>
     </Section>
 
-  </MainContainer>
+    <Section>
+      <Jumbotron {...jumbotronDataContact} />
+      <ContactForm />
+    </Section>
+  </Main>
 
-  <Footer />
-  -->
+  <Footer {...footerData}/>
+
 </Layout>
