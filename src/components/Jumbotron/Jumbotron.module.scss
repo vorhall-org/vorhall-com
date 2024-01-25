@@ -2,22 +2,25 @@
 @use '/src/styles/mediaqueries' as mq;
 
 :root {
-  --jumbotron-heading-font-size: var(--text-4xl);
+  --jumbotron-padding-v: var(--spacing-8);
+  --jumbotron-padding-h: var(--spacing-4);
 
   @include mq.breakpoint($from: md) {
-    --jumbotron-heading-font-size: var(--text-5xl);
+    --jumbotron-padding-v: var(--spacing-16);
   }
 
   @include mq.breakpoint($from: lg) {
-    --jumbotron-heading-font-size: var(--text-6xl);
+    --jumbotron-padding-v: var(--spacing-24);
+    --jumbotron-padding-h: var(--spacing-24);
   }
+
 }
 
 .jumbotron {
-  padding: fn.to-rem(var(--spacing-24));
+  text-align: center;
+  padding: fn.to-rem(var(--jumbotron-padding-v)) fn.to-rem(var(--jumbotron-padding-h));
 
   & &__heading {
-    font-size: fn.to-rem(var(--jumbotron-heading-font-size));
     margin-bottom: fn.to-rem(var(--spacing-6));
   }
 }
