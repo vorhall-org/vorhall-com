@@ -106,4 +106,7 @@
 
   // transition reduced motion
   --transition-reduced-motion-duration: 0.01ms;
+
+  // content
+  --content-max-width: calc(var(--spacing-base) * 256);
 }
