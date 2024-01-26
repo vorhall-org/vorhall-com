@@ -13,7 +13,7 @@ export default {
       privacyNote: {
         link: 'Data Policy',
         postLink: 'for more information.',
-        preLink: 'We don\'t share any information. Read our ',
+        preLink: 'We don\'t share any information. Read our',
       },
       submitButtonText: 'Absenden',
       title: 'Contact',
@@ -31,7 +31,7 @@ export default {
       privacyNote: {
         link: 'Data Policy',
         postLink: 'for more information.',
-        preLink: 'We don\'t share any information. Read our ',
+        preLink: 'We don\'t share any information. Read our',
       },
       submitButtonText: 'Absenden',
       title: 'Contact',
