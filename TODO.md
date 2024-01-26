@@ -2,11 +2,12 @@
 - form captcha?
 - show success message on successfull submit
 - 404 page
-- Add data-protection link to form
 - check and fix line-heights
 - check and fix letter spacing
 - check and fix font-weights
 - astro build complains about "Unsupported file type general.js found" (and home.js)
+- integrate tracking
+- translate all content
 
 - Skip to Content link
 - Color schema toggle?
@@ -15,7 +16,6 @@
 - Early hints on Netlify possible?
 - Brotli compression?
 - Custom Performance Marks?
-- GDPR compliant Tracking
 - Data protection declaration
 - Device Testing on Win/Android/iOS
 - PWA?
@@ -24,4 +24,4 @@
 - Reference to https://the-sustainable.dev?
 - Save images as AVIF
 - Meta tags (description, sharing, etc.)
-- Share page button (Native API)
+- Share page button (Native API)?

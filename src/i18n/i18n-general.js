@@ -10,6 +10,11 @@ export default {
       messageErrorRequired: 'Please enter your request.',
       messageLabel: 'What do you have to say?',
       messagePlaceholder: 'Your comments...',
+      privacyNote: {
+        link: 'Data Policy',
+        postLink: 'for more information.',
+        preLink: 'We don\'t share any information. Read our',
+      },
       submitButtonText: 'Absenden',
       title: 'Contact',
     },
@@ -23,6 +28,11 @@ export default {
       messageErrorRequired: 'Please enter your request.',
       messageLabel: 'What do you have to say?',
       messagePlaceholder: 'Your comments...',
+      privacyNote: {
+        link: 'Data Policy',
+        postLink: 'for more information.',
+        preLink: 'We don\'t share any information. Read our',
+      },
       submitButtonText: 'Absenden',
       title: 'Contact',
     },
