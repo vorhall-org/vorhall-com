@@ -23,12 +23,12 @@ export default {
   },
   header: {
     de: {
-      lead: 'We are on a mission to build fast, sustainable digital products that last and can be accessed by everyone.',
-      title: 'Vorhall',
+      lead: '⏤ Vorhall',
+      title: '« We build fast, sustainable digital products that last and can be accessed by everyone. »',
     },
     en: {
-      lead: 'We are on a mission to build fast, sustainable digital products that last and can be accessed by everyone.',
-      title: 'Vorhall',
+      lead: '⏤ Vorhall',
+      title: '« We build fast, sustainable digital products that last and can be accessed by everyone. »',
     },
   },
   services: {
