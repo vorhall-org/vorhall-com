@@ -5,6 +5,7 @@
 .content-card-grid {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: fn.to-rem(var(--spacing-4));
 

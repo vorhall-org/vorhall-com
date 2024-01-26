@@ -4,13 +4,21 @@
 
 :root {
   @include mx.card-variables;
+  --card-width: 100%;
 }
 
 .content-card {
   @include mx.card;
-
-  justify-content: center;
   padding: fn.to-rem(var(--spacing-6));
+
+  @include mq.breakpoint($from: md) {
+    --card-width: 50%;
+    flex: 1 1 calc(var(--card-width) - #{fn.to-rem(var(--spacing-4))});
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --card-width: 33.333333%;
+  }
 
   &__icon {
     width: fn.to-rem(var(--spacing-10));
@@ -22,59 +30,8 @@
   }
 
   &__lead:not(:last-child) {
+    flex-grow: 1;
     margin-block-end: fn.to-rem(var(--spacing-3));
   }
 
-
-  /*
-  .card {
-    list-style: none;
-    display: flex;
-    padding: fn.to-rem(1);
-    background-color: rgba(240, 240, 240);
-    background-image: none;
-    background-size: 400%;
-    border-radius: fn.to-rem(7);
-    background-position: 100%;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 10%);
-
-    @include mq.mouse-only {
-      transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    @include mq.reduced-motion {
-      transition: none;
-    }
-  }
-
-  .card > .card-wrapper {
-    width: 100%;
-    text-decoration: none;
-    line-height: 1.4;
-    padding: fn.to-rem(23);
-    border-radius: fn.to-rem(8);
-    color: rgb(var(--foreground-rgb));
-    background-color: white;
-    opacity: 0.8;
-
-    @include mq.breakpoint($from: medium) {
-      color: red;
-    }
-  }
-
-  .card-title {
-    margin: 0;
-    font-size: fn.to-rem(20);
-  }
-
-  .card-text {
-    margin-top: fn.to-rem(8);
-    margin-bottom: 0;
-  }
-
-  .card:is(:hover, :focus-within) {
-    background-position: 0;
-    background-image: var(--accent-gradient);
-  }
-  */
 }

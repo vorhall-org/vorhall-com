@@ -8,3 +8,19 @@
 - astro build complains about "Unsupported file type general.js found" (and home.js)
 - integrate tracking
 - translate all content
+
+- Skip to Content link
+- Color schema toggle?
+- High Contrast Styling
+- A11y Testing (Automated tools, NVDA, VoiceOver, TalkBack)
+- Early hints possible on Netlify?
+- Custom Performance Marks?
+- Data protection declaration
+- Device Testing on Win/Android/iOS
+- PWA?
+- Content Security Policies?
+- Schema.org?
+- Reference to https://the-sustainable.dev?
+- Save images as AVIF
+- Meta tags (description, sharing, etc.)
+- Share page button (Native API)?
