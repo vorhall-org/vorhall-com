@@ -129,59 +129,68 @@ export default (locale) => {
     title: tSite('title'),
   };
 
-  const footerData = {
-    copyright: tFooter('copyright'),
-    langSwitch: {
-      link: '#',
-      text: tFooter('langSwitchText'),
-    },
-    legalLinks: [
-      {
-        link: '#',
-        text: tFooter('linkDataPrivacy'),
+  const footerData = (lang) => {
+
+    let langSwitchLink = '/de/';
+
+    if (lang === 'de') {
+      langSwitchLink = '/en/';
+    }
+
+    return {
+      copyright: tFooter('copyright'),
+      langSwitch: {
+        link: langSwitchLink,
+        text: tFooter('langSwitchText'),
       },
-      {
-        link: '#',
-        text: tFooter('linkImpressum'),
-      },
-    ],
-    socialLinks: [
-      {
-        color: 'primary',
-        externalLink: true,
-        externalLinkText: tLinks('externalTarget'),
-        hideLabel: true,
-        href: 'https://www.sbb.ch',
-        iconAfter: false,
-        iconBefore: {
-          colorFixed: false,
-          name: 'linkedin',
+      legalLinks: [
+        {
+          link: '#',
+          text: tFooter('linkDataPrivacy'),
         },
-        label: tFooter('linkLinkedin'),
-        outline: false,
-        rawIcon: true,
-        size: 's',
-        type: 'button',
-      },
-      {
-        color: 'primary',
-        externalLink: true,
-        externalLinkText: tLinks('externalTarget'),
-        hideLabel: true,
-        href: 'https://www.sbb.ch',
-        iconAfter: false,
-        iconBefore: {
-          colorFixed: false,
-          name: 'github',
+        {
+          link: '#',
+          text: tFooter('linkImpressum'),
         },
-        label: tFooter('linkGithub'),
-        outline: false,
-        rawIcon: true,
-        size: 's',
-        type: 'button',
-      },
-    ],
-  };
+      ],
+      socialLinks: [
+        {
+          color: 'primary',
+          externalLink: true,
+          externalLinkText: tLinks('externalTarget'),
+          hideLabel: true,
+          href: 'https://www.sbb.ch',
+          iconAfter: false,
+          iconBefore: {
+            colorFixed: false,
+            name: 'linkedin',
+          },
+          label: tFooter('linkLinkedin'),
+          outline: false,
+          rawIcon: true,
+          size: 's',
+          type: 'button',
+        },
+        {
+          color: 'primary',
+          externalLink: true,
+          externalLinkText: tLinks('externalTarget'),
+          hideLabel: true,
+          href: 'https://www.sbb.ch',
+          iconAfter: false,
+          iconBefore: {
+            colorFixed: false,
+            name: 'github',
+          },
+          label: tFooter('linkGithub'),
+          outline: false,
+          rawIcon: true,
+          size: 's',
+          type: 'button',
+        },
+      ],
+    };
+  }
 
   return {
     contactFormData,

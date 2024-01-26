@@ -54,7 +54,7 @@ export default {
     },
     en: {
       copyright: '©2024 Vorhall KlG',
-      langSwitchText: 'Change to english',
+      langSwitchText: 'Auf Deutsch wechseln',
       linkDataPrivacy: 'Data Privacy',
       linkGithub: 'Link to Vorhall on Github',
       linkImpressum: 'Impressum',
