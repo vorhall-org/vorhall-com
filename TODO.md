@@ -2,7 +2,6 @@
 - form captcha?
 - show success message on successfull submit
 - 404 page
-- Add data-protection link to form
 - check and fix line-heights
 - check and fix letter spacing
 - check and fix font-weights
