@@ -190,7 +190,7 @@ export default (locale) => {
         },
       ],
     };
-  }
+  };
 
   return {
     contactFormData,
