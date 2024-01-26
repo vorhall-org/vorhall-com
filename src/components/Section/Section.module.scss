@@ -2,7 +2,7 @@
 @use '/src/styles/mediaqueries' as mq;
 
 :root {
-  --section-background: var(--color-gray-100);
+  --section-background: var(--color-white);
 
   @include mq.color-scheme-dark {
     --section-background: var(--color-gray-800);
