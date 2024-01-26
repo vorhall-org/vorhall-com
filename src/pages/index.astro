@@ -18,7 +18,9 @@ const pageData = pageDataGetter(locale);
 <Layout>
   <Main>
     <!-- Header -->
-    <Jumbotron {...pageData.jumbotronData}/>
+    <Section fullWidth={true}>
+      <Jumbotron {...pageData.jumbotronData}/>
+    </Section>
 
     <!-- Services -->
     <Section>
