@@ -7,3 +7,4 @@
 - check and fix letter spacing
 - check and fix font-weights
 - astro build complains about "Unsupported file type general.js found" (and home.js)
+- integrate tracking
