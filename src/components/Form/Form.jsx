@@ -119,6 +119,10 @@ export default function CustomForm(componentProps) {
         )}
       </For>
 
+      {componentProps.privacyNote &&
+        <div class={styles['form__privacy-note']}>{componentProps.privacyNote}</div>
+      }
+
       <Show when={componentProps.button}>
         <Button
           {...componentProps.button}

@@ -1,7 +1,14 @@
 @use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
 
 :root {
   --form-max-width: 364;
+
+  --form-privacy-note-color: var(--color-gray-500);
+
+  @include mq.color-scheme-dark {
+    --form-privacy-note-color: var(--color-gray-400);
+  }
 }
 
 .form {
@@ -15,5 +22,10 @@
     display: flex;
     flex-direction: column;
     gap: fn.to-rem(var(--spacing-5));
+  }
+
+  &__privacy-note {
+    color: var(--form-privacy-note-color);
+    font-size: fn.to-rem(var(--text-xs));
   }
 }

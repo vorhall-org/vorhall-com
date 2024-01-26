@@ -2,6 +2,7 @@
 import { getLocale } from 'astro-i18n-aut';
 import generalDataGetter from '../content/general';
 import Form from '../components/Form/Form';
+import Link from '../components/Link/Link';
 
 const locale = getLocale(Astro.url);
 
@@ -12,7 +13,13 @@ const generalData = generalDataGetter(locale);
 <Form
   client:load
   {...generalData.contactFormData}
-/>
+>
+
+  <div slot="privacyNote">
+    <p>privacy note <Link href="#">link</Link></p>
+  </div>
+
+</Form>
 
 <script>
   import formEvents from '../components/Form/Form.events';

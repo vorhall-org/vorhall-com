@@ -3,6 +3,7 @@ import * as fieldsetStories from '../Fieldset/Fieldset.stories.jsx';
 import * as inputTextStories from '../InputText/InputText.stories.jsx';
 import * as textareaStories from '../Textarea/Textarea.stories.jsx';
 import * as buttonStories from '../Button/Button.stories.jsx';
+import Link from '../Link/Link.jsx';
 
 export default {
   component: Comp,
@@ -66,6 +67,6 @@ export const Form = {
         legend: fieldsetStories.FieldsetWithHiddenLegend.args.legend,
       },
     ],
-
+    privacyNote: <p>some privacy note <Link href='#'>with link</Link> component</p>,
   },
 };
