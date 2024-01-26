@@ -6,6 +6,7 @@ export default {
 
 const defaultArgs = {
   classes: '',
+  fullWidth: false,
 };
 
 export const Section = {
