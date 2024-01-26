@@ -1,22 +1,36 @@
 @use '/src/styles/functions' as fn;
 @use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
 
 :root {
-  --border-color: var(--color-gray-200);
+  --footer-border-color: var(--color-gray-200);
+  --footer-spacing-top: var(--spacing-16);
 
   @include mq.color-scheme-dark {
-    --border-color: var(--color-gray-700);
+    --footer-border-color: var(--color-gray-700);
+  }
+
+  @include mq.breakpoint($from: md) {
+    --footer-spacing-top: var(--spacing-24);
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --footer-spacing-top: var(--spacing-32);
   }
 }
 
 .footer {
+  padding-top: fn.to-rem(var(--footer-spacing-top));
+
   &__legal-link-list {
+    @include mx.container-centered;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     column-gap: fn.to-rem(var(--spacing-8));
-    border-bottom: fn.to-rem(var(--spacing-px)) solid var(--border-color);
+    border-bottom: fn.to-rem(var(--spacing-px)) solid var(--footer-border-color);
     margin-bottom: fn.to-rem(var(--spacing-8));
     padding-bottom: fn.to-rem(var(--spacing-8));
 
@@ -26,6 +40,8 @@
   }
 
   &__bottom-wrapper {
+    @include mx.container-centered;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
