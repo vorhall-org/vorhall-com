@@ -2,28 +2,43 @@
 @use '/src/styles/mediaqueries' as mq;
 
 :root {
-  --jumbotron-padding-v: var(--spacing-8);
   --jumbotron-padding-h: var(--spacing-4);
+  --jumbotron-padding-v: var(--spacing-4);
+  --main-jumbotron-padding-v: var(--spacing-8);
+  --main-jumbotron-gradient: linear-gradient(180deg, rgba(28, 100, 242, 16%) 0%, rgba(28, 100, 242, 2%) 100%);
+
+  @include mq.color-scheme-dark {
+    --main-jumbotron-gradient: linear-gradient(180deg, rgba(26, 86, 219, 44%) 9.51%, rgba(28, 100, 242, 2%) 100%), var(--color-gray-900, #111928);
+  }
 
   @include mq.breakpoint($from: md) {
-    --jumbotron-padding-v: var(--spacing-16);
+    --jumbotron-padding-v: var(--spacing-8);
+    --main-jumbotron-padding-v: var(--spacing-16);
   }
 
   @include mq.breakpoint($from: lg) {
-    --jumbotron-padding-v: var(--spacing-24);
+    --jumbotron-padding-v: var(--spacing-16);
+    --main-jumbotron-padding-v: var(--spacing-24);
     --jumbotron-padding-h: var(--spacing-24);
   }
 
 }
 
 .jumbotron {
+  $root: &;
   text-align: center;
-  padding: fn.to-rem(var(--jumbotron-padding-v)) fn.to-rem(var(--jumbotron-padding-h));
+  padding: 0 fn.to-rem(var(--jumbotron-padding-h)) fn.to-rem(var(--jumbotron-padding-v)) fn.to-rem(var(--jumbotron-padding-h));
 
-  & &__heading {
+  &--main {
+    padding-top: fn.to-rem(var(--main-jumbotron-padding-v));
+    padding-bottom: fn.to-rem(var(--main-jumbotron-padding-v));
+    background: var(--main-jumbotron-gradient);
+  }
+
+  &__heading {
     margin-bottom: fn.to-rem(var(--spacing-4));
 
-    &--main {
+    #{$root}--main & {
       margin-bottom: fn.to-rem(var(--spacing-6));
     }
   }
