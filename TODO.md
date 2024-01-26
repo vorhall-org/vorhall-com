@@ -7,3 +7,21 @@
 - check and fix letter spacing
 - check and fix font-weights
 - astro build complains about "Unsupported file type general.js found" (and home.js)
+
+- Skip to Content link
+- Color schema toggle?
+- High Contrast Styling
+- A11y Testing (Automated tools, NVDA, VoiceOver, TalkBack)
+- Early hints on Netlify possible?
+- Brotli compression?
+- Custom Performance Marks?
+- GDPR compliant Tracking
+- Data protection declaration
+- Device Testing on Win/Android/iOS
+- PWA?
+- Content Security Policies?
+- Schema.org?
+- Reference to https://the-sustainable.dev?
+- Save images as AVIF
+- Meta tags (description, sharing, etc.)
+- Share page button (Native API)
