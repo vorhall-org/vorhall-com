@@ -1,7 +1,41 @@
 @use '/src/styles/functions' as fn;
 @use '/src/styles/mediaqueries' as mq;
 
-@mixin sr-only() {
+:root {
+  --section-spacing-h: var(--spacing-4);
+  --section-spacing-v: var(--spacing-20);
+
+  @include mq.breakpoint($from: sm) {
+    --section-spacing-h: var(--spacing-8);
+  }
+
+  @include mq.breakpoint($from: md) {
+    --section-spacing-h: var(--spacing-10);
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --section-spacing-h: var(--spacing-12);
+  }
+
+  @include mq.breakpoint($from: xlg) {
+    --section-spacing-h: var(--spacing-20);
+  }
+}
+
+@mixin container-centered {
+  max-width: fn.to-rem(calc(var(--content-max-width) + 2 * var(--section-spacing-h)));
+  margin: 0 auto fn.to-rem(var(--section-spacing-v)) auto;
+  padding: 0 fn.to-rem(var(--section-spacing-h));
+}
+
+@mixin container-full-width {
+  @include container-centered;
+
+  max-width: 100%;
+  padding: 0;
+}
+
+@mixin sr-only {
   position: absolute;
   left: -10000px;
   top: auto;
