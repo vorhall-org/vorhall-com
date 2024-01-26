@@ -13,8 +13,7 @@
 - Color schema toggle?
 - High Contrast Styling
 - A11y Testing (Automated tools, NVDA, VoiceOver, TalkBack)
-- Early hints on Netlify possible?
-- Brotli compression?
+- Early hints possible on Netlify?
 - Custom Performance Marks?
 - Data protection declaration
 - Device Testing on Win/Android/iOS

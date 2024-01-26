@@ -103,6 +103,69 @@ export default (locale) => {
     text: tServices('serviceCard3Text'),
   };
 
+  const serviceCardTeaser4 = {
+    button: {
+      click: false,
+      color: 'primary',
+      externalLink: true,
+      externalLinkText: tLinks('externalTarget'),
+      href: '#',
+      label: tServices('serviceCard4ButtonLabel'),
+      size: 'l',
+      type: 'button',
+    },
+    classes: '',
+    heading: {
+      level: '3',
+      text: tServices('serviceCard4Title'),
+      visualLevel: '4',
+    },
+    icon: false,
+    text: tServices('serviceCard4Text'),
+  };
+
+  const serviceCardTeaser5 = {
+    button: {
+      click: false,
+      color: 'primary',
+      externalLink: true,
+      externalLinkText: tLinks('externalTarget'),
+      href: '#',
+      label: tServices('serviceCard5ButtonLabel'),
+      size: 'l',
+      type: 'button',
+    },
+    classes: '',
+    heading: {
+      level: '3',
+      text: tServices('serviceCard5Title'),
+      visualLevel: '4',
+    },
+    icon: false,
+    text: tServices('serviceCard5Text'),
+  };
+
+  const serviceCardTeaser6 = {
+    button: {
+      click: false,
+      color: 'primary',
+      externalLink: true,
+      externalLinkText: tLinks('externalTarget'),
+      href: '#',
+      label: tServices('serviceCard6ButtonLabel'),
+      size: 'l',
+      type: 'button',
+    },
+    classes: '',
+    heading: {
+      level: '3',
+      text: tServices('serviceCard6Title'),
+      visualLevel: '4',
+    },
+    icon: false,
+    text: tServices('serviceCard6Text'),
+  };
+
   const avatarCardMarius = {
     avatar: {
       alt: tAbout('avatarMariusAltText'),
@@ -148,6 +211,9 @@ export default (locale) => {
     serviceCardTeaser1,
     serviceCardTeaser2,
     serviceCardTeaser3,
+    serviceCardTeaser4,
+    serviceCardTeaser5,
+    serviceCardTeaser6,
   };
 };
 
