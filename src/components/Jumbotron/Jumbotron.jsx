@@ -4,21 +4,17 @@ import LeadText from '../LeadText/LeadText';
 
 export default function Jumbotron(props) {
   return (
-    <section
+    <div
       classList={{
         [styles['jumbotron']]: true,
         [props.classes]: props.classes,
+        [styles['jumbotron--main']]: props.mainJumbo,
       }}
     >
       {props.heading &&
         <Heading
           {...props.heading}
-          classes={`
-            ${styles['jumbotron__heading']}
-            ${props.mainJumbo
-      ? styles['jumbotron__heading--main']
-      : ''}
-          `}
+          classes={styles['jumbotron__heading']}
         />
       }
 
@@ -27,6 +23,6 @@ export default function Jumbotron(props) {
           {props.leadTextContent}
         </LeadText>
       }
-    </section>
+    </div>
   );
 }
