@@ -27,12 +27,13 @@ const generalData = generalDataGetter(locale);
 
     const {
       email,
+      name,
       text,
     } = evt.detail;
 
     const message = `
     Contact form on vorhall.com filled out.<br><br>
-    from: ${email}<br><br>
+    from: ${name}, ${email}<br><br>
 
     message:
     ${text}

@@ -49,6 +49,23 @@ export const Form = {
           },
           {
             element: {
+              name: 'InputText',
+              props: {
+                ...inputTextStories.InputText.args,
+                name: 'name',
+                type: 'name',
+              },
+            },
+            name: 'name',
+            validate: [
+              {
+                text: 'Please enter your name.',
+                type: 'required',
+              },
+            ],
+          },
+          {
+            element: {
               name: 'Textarea',
               props: {
                 ...textareaStories.Textarea.args,

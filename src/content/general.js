@@ -56,6 +56,31 @@ export default (locale) => {
           },
           {
             element: {
+              name: 'name',
+              props: {
+                classes: '',
+                disabled: false,
+                label: {
+                  inputId: 'input-id',
+                  text: tContact('nameInputLabel'),
+                },
+                name: 'name',
+                placeholder: tContact('nameInputPlaceholder'),
+                required: false,
+                size: 'regular',
+                type: 'text',
+              },
+            },
+            name: 'name',
+            validate: [
+              {
+                text: tContact('nameInputErrorRequired'),
+                type: 'required',
+              },
+            ],
+          },
+          {
+            element: {
               name: 'Textarea',
               props: {
                 cols: '30',

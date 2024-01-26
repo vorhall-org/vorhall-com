@@ -10,6 +10,9 @@ export default {
       messageErrorRequired: 'Please enter your request.',
       messageLabel: 'What do you have to say?',
       messagePlaceholder: 'Your comments...',
+      nameInputErrorRequired: 'Please enter your name.',
+      nameInputLabel: 'Your Name',
+      nameInputPlaceholder: 'Type in your name',
       privacyNote: {
         link: 'Data Policy',
         postLink: 'for more information.',
@@ -28,6 +31,9 @@ export default {
       messageErrorRequired: 'Please enter your request.',
       messageLabel: 'What do you have to say?',
       messagePlaceholder: 'Your comments...',
+      nameInputErrorRequired: 'Please enter your name.',
+      nameInputLabel: 'Your Name',
+      nameInputPlaceholder: 'Type in your name',
       privacyNote: {
         link: 'Data Policy',
         postLink: 'for more information.',
