@@ -7,6 +7,9 @@ export default function Section(props) {
         [styles['section']]: true,
         [props.classes]: props.classes,
         [styles['section--full-width']]: props.fullWidth,
+        [styles['section--highlight']]: props.highlight,
+        [styles['section--no-v-spacing-top']]: props.noVerticalSpacingTop,
+        [styles['section--no-v-spacing-bottom']]: props.noVerticalSpacingBottom,
       }}
     >
       {props.children}

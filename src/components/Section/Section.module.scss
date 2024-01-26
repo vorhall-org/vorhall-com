@@ -1,9 +1,31 @@
 @use '/src/styles/mixins' as mx;
+@use '/src/styles/mediaqueries' as mq;
+
+:root {
+  --section-background: var(--color-gray-100);
+
+  @include mq.color-scheme-dark {
+    --section-background: var(--color-gray-800);
+  }
+}
 
 .section {
   @include mx.container-centered;
+  @include mx.container-vertical-spacing;
 
   &--full-width {
     @include mx.container-full-width;
+  }
+
+  &--highlight {
+    background-color: var(--section-background);
+  }
+
+  &--no-v-spacing-top {
+    padding-top: 0;
+  }
+
+  &--no-v-spacing-bottom {
+    padding-bottom: 0;
   }
 }

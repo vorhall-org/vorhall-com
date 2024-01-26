@@ -1,8 +1,9 @@
 @use '/src/styles/functions' as fn;
 @use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
 
 :root {
-  --form-max-width: 364;
+  --form-max-width: var(--spacing-96);
 
   --form-privacy-note-color: var(--color-gray-500);
 
@@ -12,11 +13,12 @@
 }
 
 .form {
+  @include mx.container-centered;
   display: flex;
   flex-direction: column;
   gap: fn.to-rem(var(--spacing-8));
   max-width: fn.to-rem(var(--form-max-width));
-  margin: 0 auto;
+  box-sizing: content-box;
 
   &__fieldset {
     display: flex;

@@ -39,7 +39,6 @@
   &__content {
     #{$root}--main & {
       @include mx.container-centered;
-      margin-bottom: 0;
     }
   }
 

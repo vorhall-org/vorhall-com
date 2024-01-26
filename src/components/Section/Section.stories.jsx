@@ -7,6 +7,9 @@ export default {
 const defaultArgs = {
   classes: '',
   fullWidth: false,
+  highlight: false,
+  noVerticalSpacingBottom: false,
+  noVerticalSpacingTop: false,
 };
 
 export const Section = {
