@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: fn.to-rem(var(--spacing-8));
   max-width: fn.to-rem(var(--form-max-width));
+  margin: 0 auto;
 
   &__fieldset {
     display: flex;
