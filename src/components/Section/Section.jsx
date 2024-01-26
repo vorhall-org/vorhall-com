@@ -6,6 +6,7 @@ export default function Section(props) {
       classList={{
         [styles['section']]: true,
         [props.classes]: props.classes,
+        [styles['section--full-width']]: props.fullWidth,
       }}
     >
       {props.children}

@@ -1,3 +1,9 @@
+@use '/src/styles/mixins' as mx;
+
 .section {
-  // padding-bottom: fn.to-rem(var(--spacing-xl));
+  @include mx.container-centered;
+
+  &--full-width {
+    @include mx.container-full-width;
+  }
 }
