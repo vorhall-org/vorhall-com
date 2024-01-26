@@ -131,10 +131,10 @@ export default (locale) => {
 
   const footerData = (lang) => {
 
-    let langSwitchLink = '/de/';
+    let langSwitchLink = '/';
 
-    if (lang === 'de') {
-      langSwitchLink = '/en/';
+    if (lang === 'en') {
+      langSwitchLink = '/de/';
     }
 
     return {
