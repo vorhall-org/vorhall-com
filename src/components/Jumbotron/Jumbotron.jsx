@@ -11,18 +11,20 @@ export default function Jumbotron(props) {
         [styles['jumbotron--main']]: props.mainJumbo,
       }}
     >
-      {props.heading &&
-        <Heading
-          {...props.heading}
-          classes={styles['jumbotron__heading']}
-        />
-      }
+      <div class={styles['jumbotron__content']}>
+        {props.heading &&
+          <Heading
+            {...props.heading}
+            classes={styles['jumbotron__heading']}
+          />
+        }
 
-      {props.leadTextContent &&
-        <LeadText {...props.leadText}>
-          {props.leadTextContent}
-        </LeadText>
-      }
+        {props.leadTextContent &&
+          <LeadText {...props.leadText}>
+            {props.leadTextContent}
+          </LeadText>
+        }
+      </div>
     </div>
   );
 }

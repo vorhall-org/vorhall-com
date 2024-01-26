@@ -1,5 +1,6 @@
 @use '/src/styles/functions' as fn;
 @use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
 
 :root {
   --jumbotron-padding-h: var(--spacing-4);
@@ -33,6 +34,13 @@
     padding-top: fn.to-rem(var(--main-jumbotron-padding-v));
     padding-bottom: fn.to-rem(var(--main-jumbotron-padding-v));
     background: var(--main-jumbotron-gradient);
+  }
+
+  &__content {
+    #{$root}--main & {
+      @include mx.container-centered;
+      margin-bottom: 0;
+    }
   }
 
   &__heading {
