@@ -112,6 +112,7 @@ export default (locale) => {
       },
     ],
     privacyNote: tContact('privacyNote'),
+    submitSuccess: tContact('submitSuccessMessage'),
   };
 
   const jumbotronContact = {

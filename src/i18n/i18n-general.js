@@ -19,6 +19,7 @@ export default {
         preLink: 'We don\'t share any information. Read our',
       },
       submitButtonText: 'Absenden',
+      submitSuccessMessage: 'Your request just landed on our desk. We\'ll be in touch soon.',
       title: 'Contact',
     },
     en: {
@@ -40,6 +41,7 @@ export default {
         preLink: 'We don\'t share any information. Read our',
       },
       submitButtonText: 'Absenden',
+      submitSuccessMessage: 'Your request just landed on our desk. We\'ll be in touch soon.',
       title: 'Contact',
     },
   },
