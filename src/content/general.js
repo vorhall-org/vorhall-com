@@ -112,6 +112,7 @@ export default (locale) => {
       },
     ],
     privacyNote: tContact('privacyNote'),
+    submitError: tContact('submitErrorMessage'),
     submitSuccess: tContact('submitSuccessMessage'),
   };
 
