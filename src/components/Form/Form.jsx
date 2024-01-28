@@ -1,5 +1,6 @@
 import styles from './Form.module.scss';
 import { Dynamic } from 'solid-js/web';
+import { Transition } from 'solid-transition-group';
 import {
   createForm,
   email,
@@ -9,7 +10,9 @@ import {
 import {
   createSignal,
   For,
+  Match,
   Show,
+  Switch,
 } from 'solid-js';
 
 import Button from '../Button/Button';
@@ -64,12 +67,21 @@ export default function CustomForm(componentProps) {
   ] = createForm();
 
   const [
-    submitDisabled,
-    setSubmitDisabled,
+    formDisabled,
+    setFormDisabled,
+  ] = createSignal(false);
+
+  const [
+    submitSuccess,
+    setSubmitSuccess,
   ] = createSignal(false);
 
   const handleSubmit = (values) => {
-    setSubmitDisabled(true);
+    setFormDisabled(true);
+
+    window.addEventListener(formEvents.submitSuccess, (evt) => {
+      setSubmitSuccess(evt.detail);
+    });
 
     const dispatchEvent = new CustomEvent(
       formEvents.submitForm,
@@ -83,52 +95,72 @@ export default function CustomForm(componentProps) {
   };
 
   return (
-    <Form
-      classList={{
-        [styles['form']]: true,
-        [componentProps.classes]: componentProps.classes,
-      }}
-      onSubmit={handleSubmit}
-    >
-      <For each={componentProps.fieldsets}>
-        {(fieldset) => (
-          <Fieldset
-            legend={fieldset.legend}
-            classes={styles['form__fieldset']}
-          >
-            <For each={fieldset.fields}>
-              {(fieldItem) => (
-                <Field
-                  name={fieldItem.name}
-                  validate={getValidationFromProps(fieldItem.validate)}
-                >
-                  {(field, props) => (
-                    <>
-                      <Dynamic component={getFormElementFromName(fieldItem.element.name)}
-                        {...props}
-                        {...fieldItem.element.props}
-                        value={field.value}
-                        error={field.error}
-                      />
-                    </>
-                  )}
-                </Field>
-              )}
-            </For>
-          </Fieldset>
-        )}
-      </For>
+    <>
+      <Transition
+        name='fade'
+        mode='outin'
+        enterActiveClass={styles['form--fade-enter-active']}
+        exitActiveClass={styles['form--fade-exit-active']}
+        enterClass={styles['form--fade-enter']}
+        exitToClass={styles['form--fade-exit-to']}
+      >
+        <Switch>
+          <Match when={!submitSuccess()}>
+            <Form
+              classList={{
+                [styles['form']]: true,
+                [componentProps.classes]: componentProps.classes,
+              }}
+              onSubmit={handleSubmit}
+            >
+              <For each={componentProps.fieldsets}>
+                {(fieldset) => (
+                  <Fieldset
+                    legend={fieldset.legend}
+                    classes={styles['form__fieldset']}
+                  >
+                    <For each={fieldset.fields}>
+                      {(fieldItem) => (
+                        <Field
+                          name={fieldItem.name}
+                          validate={getValidationFromProps(fieldItem.validate)}
+                        >
+                          {(field, props) => (
+                            <>
+                              <Dynamic component={getFormElementFromName(fieldItem.element.name)}
+                                {...props}
+                                {...fieldItem.element.props}
+                                value={field.value}
+                                error={field.error}
+                                disabled={formDisabled()}
+                              />
+                            </>
+                          )}
+                        </Field>
+                      )}
+                    </For>
+                  </Fieldset>
+                )}
+              </For>
 
-      {componentProps.privacyNote &&
-        <div class={styles['form__privacy-note']}>{componentProps.privacyNote}</div>
-      }
+              {componentProps.privacyNote &&
+                <div class={styles['form__privacy-note']}>{componentProps.privacyNote}</div>
+              }
 
-      <Show when={componentProps.button}>
-        <Button
-          {...componentProps.button}
-          disabled={submitDisabled()}
-        />
-      </Show>
-    </Form>
+              <Show when={componentProps.button}>
+                <Button
+                  {...componentProps.button}
+                  disabled={formDisabled()}
+                />
+              </Show>
+            </Form>
+          </Match>
+          <Match when={submitSuccess()}>
+            <p>{submitSuccess()}</p>
+          </Match>
+        </Switch>
+      </Transition>
+
+    </>
   );
 }

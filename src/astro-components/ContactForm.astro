@@ -3,6 +3,7 @@ import { getLocale } from 'astro-i18n-aut';
 import generalDataGetter from '../content/general';
 import Form from '../components/Form/Form';
 import Link from '../components/Link/Link';
+import formEvents from '../components/Form/Form.events';
 
 const locale = getLocale(Astro.url);
 
@@ -20,11 +21,13 @@ const generalData = generalDataGetter(locale);
 
 </Form>
 
-<script>
-  import formEvents from '../components/Form/Form.events';
+<script define:vars={{
+  formEvents,
+  generalData,
+}}>
 
+  /* eslint-disable no-undef */
   window.addEventListener(formEvents.submitForm, async (evt) => {
-
     const {
       email,
       name,
@@ -70,11 +73,20 @@ const generalData = generalDataGetter(locale);
         return;
       }
 
-      console.log('E-Mail successfully send');
+      const dispatchEvent = new CustomEvent(
+        formEvents.submitSuccess,
+        {
+          detail: generalData.contactFormData.submitSuccess,
+        },
+      );
+
+      window.dispatchEvent(dispatchEvent);
 
     } catch (e) {
       console.log(e);
     }
+    /* eslint-enable no-undef */
+
   });
 
 </script>

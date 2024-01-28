@@ -30,4 +30,14 @@
     color: var(--form-privacy-note-color);
     font-size: fn.to-rem(var(--text-xs));
   }
+
+  &--fade-enter-active,
+  &--fade-exit-active {
+    transition: opacity 1.5s;
+  }
+
+  &--fade-enter,
+  &--fade-exit-to {
+    opacity: 0;
+  }
 }
