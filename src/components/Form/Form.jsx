@@ -76,11 +76,21 @@ export default function CustomForm(componentProps) {
     setSubmitSuccess,
   ] = createSignal(false);
 
+  const [
+    submitError,
+    setSubmitError,
+  ] = createSignal(false);
+
   const handleSubmit = (values) => {
     setFormDisabled(true);
 
     window.addEventListener(formEvents.submitSuccess, (evt) => {
       setSubmitSuccess(evt.detail);
+    });
+
+    window.addEventListener(formEvents.submitError, (evt) => {
+      setFormDisabled(false);
+      setSubmitError(evt.detail);
     });
 
     const dispatchEvent = new CustomEvent(
@@ -152,6 +162,10 @@ export default function CustomForm(componentProps) {
                   {...componentProps.button}
                   disabled={formDisabled()}
                 />
+              </Show>
+
+              <Show when={submitError()}>
+                <p>{submitError()}</p>
               </Show>
             </Form>
           </Match>

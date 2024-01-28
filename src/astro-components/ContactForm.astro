@@ -84,6 +84,15 @@ const generalData = generalDataGetter(locale);
 
     } catch (e) {
       console.log(e);
+
+      const dispatchEvent = new CustomEvent(
+        formEvents.submitError,
+        {
+          detail: generalData.contactFormData.submitError,
+        },
+      );
+
+      window.dispatchEvent(dispatchEvent);
     }
     /* eslint-enable no-undef */
 
