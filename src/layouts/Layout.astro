@@ -28,16 +28,22 @@ const {
     {!removeNoIndex && <meta name="robots" content="noindex">}
 
     <script is:inline>
+      const trackingHosts = [
+        'vorhall.com',
+        'beta-release--splendorous-pika-9446de.netlify.app',
+      ];
 
-      /* eslint-disable */
-      (function(s,q,u,e,a,k,y){
-        s._sqSettings={site_id:'98b34961-1354-46de-829d-15eb7d0ba92f'};
-        e=q.getElementsByTagName('head')[0];
-        a=q.createElement('script');
-        a.src=u+s._sqSettings.site_id;
-        e.appendChild(a);
-      })(window,document,'https://cdn.squeaky.ai/g/1.1.0/script.js?');
-      /* eslint-enable */
+      if (trackingHosts.indexOf('window.location.host') !== -1) {
+        /* eslint-disable */
+        (function(s,q,u,e,a,k,y){
+          s._sqSettings={site_id:'98b34961-1354-46de-829d-15eb7d0ba92f'};
+          e=q.getElementsByTagName('head')[0];
+          a=q.createElement('script');
+          a.src=u+s._sqSettings.site_id;
+          e.appendChild(a);
+        })(window,document,'https://cdn.squeaky.ai/g/1.1.0/script.js?');
+        /* eslint-enable */
+      }
     </script>
   </head>
   <body>
