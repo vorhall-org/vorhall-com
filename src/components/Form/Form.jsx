@@ -19,6 +19,7 @@ import Button from '../Button/Button';
 import Fieldset from '../Fieldset/Fieldset';
 import InputText from '../InputText/InputText';
 import Textarea from '../Textarea/Textarea';
+import { submitForm } from './form-actions';
 
 const getFormElementFromName = (elementName) => {
   let comp;
@@ -81,61 +82,15 @@ export default function CustomForm(componentProps) {
   ] = createSignal(false);
 
   const handleSubmit = async (values) => {
-    setFormDisabled(true);
-    setSubmitError(false);
-
-    const {
-      email: emailValue,
-      name,
-      text,
-    } = values;
-
-    const message = `
-    Contact form on vorhall.com filled out.<br><br>
-    from: ${name}, ${emailValue}<br><br>
-
-    message:
-    ${text}
-    `;
-
-    const data = {
-      from: 'Vorhall.com Contact <vorhall@resend.dev>',
-      message,
-      subject: 'Contact form on vorhall.com',
-      to: 'vorhall23@gmail.com',
-    };
-
-    const options = {
-      body: JSON.stringify(data),
-      cache: 'no-cache',
-      credentials: 'same-origin',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    };
-
-    try {
-      const response = await fetch(componentProps.postUrl, options);
-      const responseData = await response.text();
-      const responseDataParsed = JSON.parse(responseData);
-
-      if (responseDataParsed.statusCode !== 200) {
-        console.log('There was an error sending the mail');
-        console.log(responseDataParsed);
-        setSubmitError(componentProps.submitError);
-        setFormDisabled(false);
-
-        return;
-      }
-
-      setSubmitSuccess(componentProps.submitSuccess);
-
-    } catch (e) {
-      console.log(e);
-      setSubmitError(componentProps.submitError);
-      setFormDisabled(false);
-    }
+    await submitForm(
+      values,
+      componentProps.postUrl,
+      setFormDisabled,
+      setSubmitError,
+      setSubmitSuccess,
+      componentProps.submitError,
+      componentProps.submitSuccess,
+    );
 
   };
 
