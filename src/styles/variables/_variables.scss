@@ -101,6 +101,7 @@
   --shadow-2xl: 0 #{fn.to-rem(25)} #{fn.to-rem(50)} #{fn.to-rem(-12)} rgba(0, 0, 0, 25%);
 
   // transition
+  --transition-long-duration: 500ms;
   --transition-default-duration: 155ms;
   --transition-default-timing-function: ease-in-out;
 
