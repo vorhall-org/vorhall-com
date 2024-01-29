@@ -94,6 +94,7 @@ export default (locale) => {
                 placeholder: tContact('messagePlaceholder'),
                 required: true,
                 rows: '5',
+                size: 'xl',
               },
             },
             name: 'text',

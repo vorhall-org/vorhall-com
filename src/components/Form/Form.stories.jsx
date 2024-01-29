@@ -73,6 +73,7 @@ export const Form = {
               props: {
                 ...textareaStories.Textarea.args,
                 required: true,
+                size: 'xl',
               },
             },
             name: 'text',
