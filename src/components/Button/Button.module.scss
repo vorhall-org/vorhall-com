@@ -91,6 +91,7 @@
   }
 
   .button--size-s {
+    --button-font-size: var(--text-xs);
     --button-padding-v: var(--spacing-2);
     --button-padding-h: var(--spacing-2-5);
     --button-icon-height: var(--spacing-4);
