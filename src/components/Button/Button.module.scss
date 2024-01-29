@@ -149,6 +149,10 @@
     }
   }
 
+  &:is(a) &__label {
+    margin-top: fn.to-rem(-1);
+  }
+
   &__icon-before,
   &__icon-after {
     color: currentcolor;
@@ -174,7 +178,7 @@
   }
 
   &--link {
-    display: inline-block;
+    display: inline-flex;
   }
 
   @include mx.hover-focus {

@@ -40,6 +40,7 @@
     outline: none;
     appearance: none;
     -webkit-appearance: none;
+    font-size: fn.to-rem(--text-base);
 
     @include mx.default-transition;
     transition-property: color, border-color, background-color;
@@ -53,19 +54,16 @@
     };
 
     #{$root}--size-small & {
-      font-size: fn.to-rem(var(--text-sm));
       padding-top: fn.to-rem(var(--spacing-2));
       padding-bottom: fn.to-rem(var(--spacing-2));
     }
 
     #{$root}--size-regular & {
-      font-size: fn.to-rem(var(--text-sm));
       padding-top: fn.to-rem(var(--spacing-3));
       padding-bottom: fn.to-rem(var(--spacing-3));
     }
 
     #{$root}--size-large & {
-      font-size: fn.to-rem(--text-base);
       padding-top: fn.to-rem(var(--spacing-3-5));
       padding-bottom: fn.to-rem(var(--spacing-3-5));
     }

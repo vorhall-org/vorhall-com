@@ -18,9 +18,11 @@ export default {
 };
 
 const defaultArgs = {
+  autocomplete: '',
   classes: '',
   disabled: false,
   error: false,
+  inputmode: '',
   label: {
     ...formLabel.FormLabel.args,
     inputId: 'input-id',

@@ -29,10 +29,12 @@ export default (locale) => {
             element: {
               name: 'email',
               props: {
+                autocomplete: 'email',
                 classes: '',
                 disabled: false,
+                inputmode: 'email',
                 label: {
-                  inputId: 'input-id',
+                  inputId: 'email',
                   text: tContact('emailInputLabel'),
                 },
                 name: 'email',
@@ -58,10 +60,11 @@ export default (locale) => {
             element: {
               name: 'name',
               props: {
+                autocomplete: 'name',
                 classes: '',
                 disabled: false,
                 label: {
-                  inputId: 'input-id',
+                  inputId: 'name',
                   text: tContact('nameInputLabel'),
                 },
                 name: 'name',
@@ -83,14 +86,14 @@ export default (locale) => {
             element: {
               name: 'Textarea',
               props: {
-                cols: '30',
+                cols: '20',
                 disabled: false,
-                id: 'textarea-id',
+                id: 'message',
                 label: {
-                  inputId: 'textarea-id',
+                  inputId: 'message',
                   text: tContact('messageLabel'),
                 },
-                name: 'textarea-name',
+                name: 'message',
                 placeholder: tContact('messagePlaceholder'),
                 required: true,
                 rows: '5',

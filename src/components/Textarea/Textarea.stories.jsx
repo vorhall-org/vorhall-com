@@ -20,7 +20,7 @@ export default {
 
 const defaultArgs = {
   classes: '',
-  cols: '30',
+  cols: '10',
   disabled: false,
   id: 'textarea-id',
   label: {

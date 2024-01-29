@@ -22,10 +22,12 @@ export default function InputText(props) {
       <FormLabel {...externalProps.label}/>
       <input
         {...internalProps}
+        autocomplete={internalProps.autocomplete}
         id={internalProps.name}
         value={internalProps.value || ''}
         class={styles['input-text__input']}
         disabled={internalProps.disabled}
+        inputmode={internalProps.inputmode}
         placeholder={internalProps.placeholder}
         required={internalProps.required}
         type={internalProps.type}
