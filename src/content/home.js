@@ -3,6 +3,7 @@ import { useTranslations } from '../i18n/utils';
 
 export default (locale) => {
   const tHeader = useTranslations(locale, i18n.header);
+  const tMain = useTranslations(locale, i18n.main);
   const tServices = useTranslations(locale, i18n.services);
   const tAbout = useTranslations(locale, i18n.about);
 
@@ -36,6 +37,10 @@ export default (locale) => {
     },
     leadTextContent: tAbout('lead'),
     mainJumbo: false,
+  };
+
+  const mainData = {
+    ariaLabel: tMain('ariaLabel'),
   };
 
   const serviceCardTeaser1 = {
@@ -212,6 +217,7 @@ export default (locale) => {
     jumbotronData,
     jumbotronDataAbout,
     jumbotronDataServices,
+    mainData,
     serviceCardTeaser1,
     serviceCardTeaser2,
     serviceCardTeaser3,

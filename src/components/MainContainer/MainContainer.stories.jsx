@@ -5,7 +5,9 @@ export default {
 };
 
 const defaultArgs = {
+  ariaLabel: '',
   classes: '',
+  id: '',
 };
 
 export const MainContainer = {

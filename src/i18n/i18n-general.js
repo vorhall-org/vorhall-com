@@ -73,6 +73,14 @@ export default {
       externalTarget: 'Link target opens in new window.',
     },
   },
+  main: {
+    de: {
+      ariaLabel: 'Inhaltsbereich',
+    },
+    en: {
+      ariaLabel: 'Content area',
+    },
+  },
   site: {
     de: {
       description: 'Beschreibung unserere Website',
