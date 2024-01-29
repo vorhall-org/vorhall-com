@@ -10,6 +10,7 @@ export default function Avatar(props) {
         [props.classes]: props.classes,
       }}
       height={props.height}
+      loading='lazy'
       src={props.image}
       role='presentation'
       width={props.width}
