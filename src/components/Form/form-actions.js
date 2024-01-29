@@ -62,4 +62,4 @@ export const submitForm = async (
     setSubmitError(errorMessage);
     setFormDisabled(false);
   }
-}
+};

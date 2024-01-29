@@ -1,12 +1,10 @@
 import i18n from '../i18n/i18n-home';
-import i18nGeneral from '../i18n/i18n-general';
 import { useTranslations } from '../i18n/utils';
 
 export default (locale) => {
   const tHeader = useTranslations(locale, i18n.header);
   const tServices = useTranslations(locale, i18n.services);
   const tAbout = useTranslations(locale, i18n.about);
-  const tLinks = useTranslations(locale, i18nGeneral.links);
 
   const jumbotronData = {
     heading: {
