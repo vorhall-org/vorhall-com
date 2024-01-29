@@ -25,7 +25,9 @@ const pageData = pageDataGetter(locale);
     <!-- Services -->
     <Section>
       <Jumbotron {...pageData.jumbotronDataServices} />
-      <ContentCardGrid>
+      <ContentCardGrid
+        ariaLabelledBy={pageData.jumbotronDataServices.heading.id}
+      >
         <ContentCard {...pageData.serviceCardTeaser1}></ContentCard>
         <ContentCard {...pageData.serviceCardTeaser2}></ContentCard>
         <ContentCard {...pageData.serviceCardTeaser3}></ContentCard>
@@ -38,7 +40,9 @@ const pageData = pageDataGetter(locale);
     <!-- About -->
     <Section>
       <Jumbotron {...pageData.jumbotronDataAbout} />
-      <AvatarCardGrid>
+      <AvatarCardGrid
+        ariaLabelledBy={pageData.jumbotronDataAbout.heading.id}
+      >
         <AvatarCard {...pageData.avatarCardMarius}></AvatarCard>
         <AvatarCard {...pageData.avatarCardYves}></AvatarCard>
       </AvatarCardGrid>

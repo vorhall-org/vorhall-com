@@ -1,66 +1,22 @@
-import {
-  createEffect,
-  createSignal,
-} from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import styles from './Button.module.scss';
 import Icon from '../Icon/Icon';
 
 export default function Button(props) {
-  const [
-    propsToRender,
-    setPropsToRender,
-  ] = createSignal(props);
-
-  createEffect(() => {
-
-    let modifiedProps = {};
-
-    const handleButtonClick = (evt) => {
-      if (props.click) {
-        props.click(evt);
-      }
-    };
-
-    if (props.href) {
-      let ariaLabel = props.label;
-      let target;
-      let rel;
-
-      if (props.href && props.externalLink) {
-        ariaLabel += `. ${props.externalLinkText}`;
-        target = '_blank';
-        rel = 'external noopener nofollow';
-      }
-
-      modifiedProps = {
-        'aria-label': ariaLabel,
-        'href': props.href,
-        rel,
-        target,
-      };
-
-    } else {
-      modifiedProps = {
-        'aria-label': props.label,
-        'disabled': props.disabled,
-        'onclick': handleButtonClick,
-        'type': props.type,
-      };
-    }
-
-    setPropsToRender(modifiedProps);
-
-  });
 
   return (
     <Dynamic
+      aria-label={ ((props.ariaLabel && props.externalLink)
+        ? `${props.ariaLabel}. ${props.externalLinkText}`
+        : props.ariaLabel) || ((props.href && props.externalLink)
+        ? `${props.label}. ${props.externalLinkText}`
+        : props.label)
+      }
       component={
         props.href
           ? 'a'
           : 'button'
       }
-      {...propsToRender()}
       classList={{
         [styles.button]: true,
         [styles['button--icon']]: props.iconBefore || props.iconAfter,
@@ -72,6 +28,36 @@ export default function Button(props) {
         [styles['button--link']]: props.href,
         [props.classes]: props.classes,
       }}
+      disabled={
+        props.href
+          ? undefined
+          : props.disabled
+      }
+      href={
+        props.href
+          ? props.href
+          : undefined
+      }
+      onClick={(evt) => {
+        if (props.click) {
+          props.click(evt);
+        }
+      }}
+      rel={
+        props.href && props.externalLink
+          ? 'external noopener nofollow'
+          : undefined
+      }
+      target={
+        props.href && props.externalLink
+          ? '_blank'
+          : undefined
+      }
+      type={
+        props.href
+          ? undefined
+          : props.type
+      }
     >
       {props.iconBefore &&
         <Icon

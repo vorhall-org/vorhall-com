@@ -1,8 +1,13 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mixins' as mx;
+
 .avatar {
   contain: content;
   aspect-ratio: 1 / 1;
   border-radius: var(--border-radius-rounded-full);
-  background: lightgray;
+  background: var(--color-gray-100);
+  width: fn.to-rem(100);
+  height: fn.to-rem(100);
 
   box-shadow: var(--shadow-md);
 }
