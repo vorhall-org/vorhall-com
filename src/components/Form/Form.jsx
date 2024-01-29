@@ -19,6 +19,8 @@ import Button from '../Button/Button';
 import Fieldset from '../Fieldset/Fieldset';
 import InputText from '../InputText/InputText';
 import Textarea from '../Textarea/Textarea';
+import SuccessMessage from '../SuccessMessage/SuccessMessage';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import { submitForm } from './form-actions';
 
 const getFormElementFromName = (elementName) => {
@@ -155,12 +157,15 @@ export default function CustomForm(componentProps) {
               </Show>
 
               <Show when={submitError()}>
-                <p>{submitError()}</p>
+                <ErrorMessage text={submitError()} />
               </Show>
             </Form>
           </Match>
           <Match when={submitSuccess()}>
-            <p>{submitSuccess()}</p>
+            <SuccessMessage
+              text={submitSuccess()}
+              classes={styles['form__success-message']}
+            />
           </Match>
         </Switch>
       </Transition>

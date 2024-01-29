@@ -33,11 +33,18 @@
 
   &--fade-enter-active,
   &--fade-exit-active {
-    transition: opacity 1.5s;
+    @include mx.default-transition;
+    transition-property: opacity;
+    transition-duration: var(--transition-long-duration);
   }
 
   &--fade-enter,
   &--fade-exit-to {
     opacity: 0;
+  }
+
+  &__success-message {
+    max-width: fn.to-rem(var(--form-max-width));
+    margin: 0 auto;
   }
 }
