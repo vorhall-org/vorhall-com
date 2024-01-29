@@ -19,7 +19,6 @@ import Button from '../Button/Button';
 import Fieldset from '../Fieldset/Fieldset';
 import InputText from '../InputText/InputText';
 import Textarea from '../Textarea/Textarea';
-import formEvents from './Form.events';
 
 const getFormElementFromName = (elementName) => {
   let comp;
@@ -81,26 +80,62 @@ export default function CustomForm(componentProps) {
     setSubmitError,
   ] = createSignal(false);
 
-  const handleSubmit = (values) => {
+  const handleSubmit = async (values) => {
     setFormDisabled(true);
+    setSubmitError(false);
 
-    window.addEventListener(formEvents.submitSuccess, (evt) => {
-      setSubmitSuccess(evt.detail);
-    });
+    const {
+      email: emailValue,
+      name,
+      text,
+    } = values;
 
-    window.addEventListener(formEvents.submitError, (evt) => {
-      setFormDisabled(false);
-      setSubmitError(evt.detail);
-    });
+    const message = `
+    Contact form on vorhall.com filled out.<br><br>
+    from: ${name}, ${emailValue}<br><br>
 
-    const dispatchEvent = new CustomEvent(
-      formEvents.submitForm,
-      {
-        detail: values,
+    message:
+    ${text}
+    `;
+
+    const data = {
+      from: 'Vorhall.com Contact <vorhall@resend.dev>',
+      message,
+      subject: 'Contact form on vorhall.com',
+      to: 'vorhall23@gmail.com',
+    };
+
+    const options = {
+      body: JSON.stringify(data),
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
       },
-    );
+      method: 'POST',
+    };
 
-    window.dispatchEvent(dispatchEvent);
+    try {
+      const response = await fetch(componentProps.postUrl, options);
+      const responseData = await response.text();
+      const responseDataParsed = JSON.parse(responseData);
+
+      if (responseDataParsed.statusCode !== 200) {
+        console.log('There was an error sending the mail');
+        console.log(responseDataParsed);
+        setSubmitError(componentProps.submitError);
+        setFormDisabled(false);
+
+        return;
+      }
+
+      setSubmitSuccess(componentProps.submitSuccess);
+
+    } catch (e) {
+      console.log(e);
+      setSubmitError(componentProps.submitError);
+      setFormDisabled(false);
+    }
 
   };
 

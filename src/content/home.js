@@ -3,8 +3,6 @@ import i18nGeneral from '../i18n/i18n-general';
 import { useTranslations } from '../i18n/utils';
 
 export default (locale) => {
-  console.log('###############################');
-
   const tHeader = useTranslations(locale, i18n.header);
   const tServices = useTranslations(locale, i18n.services);
   const tAbout = useTranslations(locale, i18n.about);

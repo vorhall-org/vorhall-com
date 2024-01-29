@@ -4,7 +4,8 @@ import generalDataGetter from '../content/general';
 import Footer from '../components/Footer/Footer';
 import Section from '../components/Section/Section';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
-import ContactForm from '../astro-components/ContactForm.astro';
+import Form from '../components/Form/Form';
+import Link from '../components/Link/Link';
 
 const locale = getLocale(Astro.url);
 const generalData = generalDataGetter(locale);
@@ -31,7 +32,18 @@ const {
 
     <Section highlight fullWidth>
       <Jumbotron {...generalData.jumbotronContact} />
-      <ContactForm />
+
+      <Form
+        client:load
+        {...generalData.contactFormData}
+      >
+
+        <div slot="privacyNote">
+          <p>{generalData.contactFormData.privacyNote.preLink} <Link href="#">{generalData.contactFormData.privacyNote.link}</Link> {generalData.contactFormData.privacyNote.postLink}</p>
+        </div>
+
+      </Form>
+
     </Section>
 
     <Footer {...generalData.footerData(locale)}/>

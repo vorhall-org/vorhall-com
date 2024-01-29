@@ -111,6 +111,7 @@ export default (locale) => {
         },
       },
     ],
+    postUrl: '/.netlify/functions/send-mail',
     privacyNote: tContact('privacyNote'),
     submitError: tContact('submitErrorMessage'),
     submitSuccess: tContact('submitSuccessMessage'),
