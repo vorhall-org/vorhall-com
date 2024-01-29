@@ -101,6 +101,8 @@
 @mixin card {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
 
   list-style: none;
   border-radius: fn.to-rem(var(--border-radius-rounded-lg));
