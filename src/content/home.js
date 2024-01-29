@@ -22,6 +22,7 @@ export default (locale) => {
 
   const jumbotronDataServices = {
     heading: {
+      id: 'our-services',
       level: 2,
       text: tServices('title'),
       visualLevel: false,
@@ -32,6 +33,7 @@ export default (locale) => {
 
   const jumbotronDataAbout = {
     heading: {
+      id: 'about-us',
       level: 2,
       text: tAbout('title'),
       visualLevel: false,

@@ -89,6 +89,7 @@
   --card-bg-color: var(--color-white);
   --card-border-color: var(--color-gray-200);
   --card-color: var(--color-gray-500);
+  --card-width: 100%;
 
   @include mq.color-scheme-dark {
     --card-bg-color: var(--color-gray-800);
@@ -109,4 +110,14 @@
   color: var(--card-color);
 
   box-shadow: var(--shadow-md);
+
+  @include mq.breakpoint($from: md) {
+    --card-width: 50%;
+    flex: 1 1 calc(var(--card-width) - #{fn.to-rem(var(--spacing-4))});
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --card-width: 33.33333%;
+  };
+
 }

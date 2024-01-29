@@ -10,6 +10,10 @@ export default function Heading(props) {
         [props.classes]: props.classes,
         [styles[`heading--level-${props.visualLevel || props.level}`]]: true,
       }}
+      id={ props.id
+        ? props.id
+        : undefined
+      }
     >
       {props.text}
     </Dynamic>

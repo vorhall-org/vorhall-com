@@ -23,6 +23,7 @@ export default {
 };
 
 const defaultArgs = {
+  id: '',
   level: 1,
   text: 'Heading text',
   visualLevel: false,

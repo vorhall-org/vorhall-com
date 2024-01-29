@@ -4,21 +4,11 @@
 
 :root {
   @include mx.card-variables;
-  --card-width: 100%;
 }
 
 .content-card {
   @include mx.card;
   padding: fn.to-rem(var(--spacing-6));
-
-  @include mq.breakpoint($from: md) {
-    --card-width: 50%;
-    flex: 1 1 calc(var(--card-width) - #{fn.to-rem(var(--spacing-4))});
-  }
-
-  @include mq.breakpoint($from: lg) {
-    --card-width: 33.333333%;
-  }
 
   &__icon {
     width: fn.to-rem(var(--spacing-10));
@@ -27,6 +17,7 @@
 
   &__title {
     margin-block-end: fn.to-rem(var(--spacing-2));
+    hyphens: none;
   }
 
   &__lead:not(:last-child) {
