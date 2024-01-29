@@ -31,8 +31,16 @@ export default function InputText(props) {
         placeholder={internalProps.placeholder}
         required={internalProps.required}
         type={internalProps.type}
-        aria-invalid={Boolean(internalProps.error)}
-        aria-errormessage={`${internalProps.name}-error`}
+        aria-invalid={
+          internalProps.error
+            ? Boolean(internalProps.error)
+            : undefined
+        }
+        aria-describedby={
+          internalProps.error
+            ? `${internalProps.name}-error`
+            : undefined
+        }
       />
 
       <FormError
