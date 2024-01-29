@@ -15,7 +15,7 @@ export default function Heading(props) {
         : undefined
       }
     >
-      {props.text}
+      <span innerHTML={props.text}/>
     </Dynamic>
   );
 }

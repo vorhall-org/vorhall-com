@@ -66,4 +66,11 @@
   &--level-6 {
     font-size: fn.to-rem(var(--heading-6-font-size));
   }
+
+  & br {
+    @include mq.breakpoint($to: md) {
+      display: none;
+    }
+  }
+
 }
