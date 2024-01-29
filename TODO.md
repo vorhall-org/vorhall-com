@@ -8,6 +8,7 @@
 - astro build complains about "Unsupported file type general.js found" (and home.js)
 - integrate tracking
 - translate all content
+- before release, use correct tracking-id (get it on squeaky, define it in "page-helpers/Tracking.astro")
 
 - Skip to Content link
 - Color schema toggle?
