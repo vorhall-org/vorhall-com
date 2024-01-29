@@ -84,6 +84,9 @@ export const Form = {
         legend: fieldsetStories.FieldsetWithHiddenLegend.args.legend,
       },
     ],
+    postUrl: '/.netlify/functions/send-mail',
     privacyNote: <p>some privacy note <Link href='#'>with link</Link> component</p>,
+    submitError: 'some submit error text',
+    submitSuccess: 'some submit success text',
   },
 };
