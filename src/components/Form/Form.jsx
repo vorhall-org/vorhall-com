@@ -153,6 +153,7 @@ export default function CustomForm(componentProps) {
                 <Button
                   {...componentProps.button}
                   disabled={formDisabled()}
+                  loading={formDisabled()}
                 />
               </Show>
 
