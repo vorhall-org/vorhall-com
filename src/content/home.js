@@ -42,10 +42,11 @@ export default (locale) => {
 
   const serviceCardTeaser1 = {
     button: {
+      ariaLabel: tServices('serviceCard1ButtonAriaLabel'),
       click: false,
       color: 'primary',
-      externalLink: true,
-      externalLinkText: tLinks('externalTarget'),
+      externalLink: false,
+      externalLinkText: '',
       href: '#',
       label: tServices('serviceCard1ButtonLabel'),
       size: 'l',
@@ -63,10 +64,11 @@ export default (locale) => {
 
   const serviceCardTeaser2 = {
     button: {
+      ariaLabel: tServices('serviceCard2ButtonAriaLabel'),
       click: false,
       color: 'primary',
-      externalLink: true,
-      externalLinkText: tLinks('externalTarget'),
+      externalLink: false,
+      externalLinkText: '',
       href: '#',
       label: tServices('serviceCard2ButtonLabel'),
       size: 'l',
@@ -84,10 +86,11 @@ export default (locale) => {
 
   const serviceCardTeaser3 = {
     button: {
+      ariaLabel: tServices('serviceCard3ButtonAriaLabel'),
       click: false,
       color: 'primary',
-      externalLink: true,
-      externalLinkText: tLinks('externalTarget'),
+      externalLink: false,
+      externalLinkText: '',
       href: '#',
       label: tServices('serviceCard3ButtonLabel'),
       size: 'l',
@@ -105,10 +108,11 @@ export default (locale) => {
 
   const serviceCardTeaser4 = {
     button: {
+      ariaLabel: tServices('serviceCard4ButtonAriaLabel'),
       click: false,
       color: 'primary',
-      externalLink: true,
-      externalLinkText: tLinks('externalTarget'),
+      externalLink: false,
+      externalLinkText: '',
       href: '#',
       label: tServices('serviceCard4ButtonLabel'),
       size: 'l',
@@ -126,10 +130,11 @@ export default (locale) => {
 
   const serviceCardTeaser5 = {
     button: {
+      ariaLabel: tServices('serviceCard5ButtonAriaLabel'),
       click: false,
       color: 'primary',
-      externalLink: true,
-      externalLinkText: tLinks('externalTarget'),
+      externalLink: false,
+      externalLinkText: '',
       href: '#',
       label: tServices('serviceCard5ButtonLabel'),
       size: 'l',
@@ -147,10 +152,11 @@ export default (locale) => {
 
   const serviceCardTeaser6 = {
     button: {
+      ariaLabel: tServices('serviceCard6ButtonAriaLabel'),
       click: false,
       color: 'primary',
-      externalLink: true,
-      externalLinkText: tLinks('externalTarget'),
+      externalLink: false,
+      externalLinkText: '',
       href: '#',
       label: tServices('serviceCard6ButtonLabel'),
       size: 'l',

@@ -30,6 +30,7 @@ const iconsColorizable = {
 
 export default {
   argTypes: {
+    ariaLabel: '',
     click: disableArgType,
     color: {
       control: {
@@ -83,6 +84,7 @@ export default {
 };
 
 const defaultArgs = {
+  ariaLabel: '',
   click: () => {
     console.log('button was clicked');
   },
