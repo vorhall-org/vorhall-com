@@ -25,5 +25,4 @@
 - Save images as AVIF
 - Meta tags (description, sharing, etc.)
 - Share page button (Native API)?
-- Adjust theme-color values in meta elements
 - Store language and theme preference
