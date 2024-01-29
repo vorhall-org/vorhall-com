@@ -96,6 +96,7 @@ const defaultArgs = {
   iconAfter: false,
   iconBefore: false,
   label: 'Button Text',
+  loading: false,
   outline: false,
   rawIcon: false,
   size: 's',
@@ -164,5 +165,12 @@ export const Outline = {
   args: {
     ...defaultArgs,
     outline: true,
+  },
+};
+
+export const Loading = {
+  args: {
+    ...defaultArgs,
+    loading: true,
   },
 };

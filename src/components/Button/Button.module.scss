@@ -84,7 +84,7 @@
   }
 
   .button--size-xs {
-    --button-font-size: var(--text-s);
+    --button-font-size: var(--text-xs);
     --button-padding-v: var(--spacing-2);
     --button-padding-h: var(--spacing-2-5);
     --button-icon-height: var(--spacing-4);
@@ -97,14 +97,14 @@
   }
 
   .button--size-l {
-    --button-font-size: var(--text-m);
+    --button-font-size: var(--text-base);
     --button-padding-v: var(--spacing-2-5);
     --button-padding-h: var(--spacing-5);
     --button-icon-height: var(--spacing-6);
   }
 
   .button--size-xl {
-    --button-font-size: var(--text-m);
+    --button-font-size: var(--text-base);
     --button-padding-v: var(--spacing-2-5);
     --button-padding-h: var(--spacing-6);
     --button-icon-height: var(--spacing-6);
@@ -197,6 +197,33 @@
 
     @include mx.hover-focus {
       background-color: transparent;
+    }
+  }
+
+  &--loading {
+    position: relative;
+    padding-right: calc(fn.to-rem(var(--button-padding-h)) * 2 + fn.to-rem(var(--button-font-size)));
+
+    ::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - fn.to-rem(var(--button-font-size) / 2));
+      right: fn.to-rem(var(--button-padding-h));
+      width: fn.to-rem(var(--button-font-size));
+      height: fn.to-rem(var(--button-font-size));
+      box-sizing: border-box;
+      border-top: fn.to-rem(var(--spacing-0-5)) solid var(--button-text-color);
+      border-left: fn.to-rem(var(--spacing-0-5)) solid transparent;
+      border-right: fn.to-rem(var(--spacing-0-5)) solid transparent;
+      border-bottom: fn.to-rem(var(--spacing-0-5)) solid transparent;
+      border-radius: 100%;
+      animation: spin 0.6s ease-out infinite;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
     }
   }
 
