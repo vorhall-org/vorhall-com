@@ -11,6 +11,7 @@
   --textarea-text-color: var(--color-gray-900);
   --textarea-text-color-disabled: var(--color-gray-400);
   --textarea-text-color-error: var(--color-red-700);
+  --textarea-font-size: var(--text-sm);
 
   @include mq.color-scheme-dark {
     --textarea-placeholder-color: var(--color-gray-400);
@@ -22,6 +23,22 @@
     --textarea-text-color: var(--color-white);
     --textarea-text-color-error: var(--color-red-500);
   }
+
+  .textarea--size-xs {
+    --textarea-font-size: var(--text-xs);
+  }
+
+  .textarea--size-s {
+    --textarea-font-size: var(--text-xs);
+  }
+
+  .textarea--size-l {
+    --textarea-font-size: var(--text-base);
+  }
+
+  .textarea--size-xl {
+    --textarea-font-size: var(--text-base);
+  }
 }
 
 .textarea {
@@ -32,7 +49,7 @@
 
   &__input {
     font-family: var(--font-family);
-    font-size: fn.to-rem(var(--text-sm));
+    font-size: fn.to-rem(var(--textarea-font-size));
 
     border-radius: fn.to-rem(var(--border-radius-rounded-lg));
     border: fn.to-rem(var(--border-weight-s)) solid var(--textarea-border-color);

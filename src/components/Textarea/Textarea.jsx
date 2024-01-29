@@ -16,6 +16,7 @@ export default function Textarea(props) {
         [internalProps.classes]: internalProps.classes,
         [styles['textarea--disabled']]: props.disabled,
         [styles['textarea--error']]: internalProps.error,
+        [styles[`textarea--size-${props.size}`]]: props.size,
       }}
     >
       <FormLabel {...externalProps.label} />

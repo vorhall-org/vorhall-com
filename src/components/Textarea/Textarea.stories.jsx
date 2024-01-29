@@ -2,6 +2,19 @@ import Comp from './Textarea.jsx';
 import * as formLabel from '../FormLabel/FormLabel.stories.jsx';
 
 export default {
+  argTypes: {
+    size: {
+      control: {
+        type: 'select',
+      },
+      options: [
+        'xs',
+        's',
+        'l',
+        'xl',
+      ],
+    },
+  },
   component: Comp,
 };
 
@@ -19,6 +32,7 @@ const defaultArgs = {
   placeholder: 'textarea placeholder',
   required: false,
   rows: '5',
+  size: 's',
 };
 
 export const Textarea = {
