@@ -20,6 +20,7 @@ export const Form = {
       ...buttonStories.Button.args,
       click: false,
       label: 'Submit',
+      size: 'xl',
       type: 'submit',
     },
 
@@ -32,6 +33,7 @@ export const Form = {
               props: {
                 ...inputTextStories.InputText.args,
                 name: 'email',
+                size: 'large',
                 type: 'email',
               },
             },
@@ -53,6 +55,7 @@ export const Form = {
               props: {
                 ...inputTextStories.InputText.args,
                 name: 'name',
+                size: 'large',
                 type: 'name',
               },
             },
