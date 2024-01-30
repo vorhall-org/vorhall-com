@@ -7,7 +7,11 @@ export default function InputText(props) {
   const [
     externalProps,
     internalProps,
-  ] = splitProps(props, ['label']);
+  ] = splitProps(props, [
+    'classes',
+    'label',
+    'size',
+  ]);
 
   return (
     <div

@@ -6,6 +6,8 @@ export default function FormError(props) {
     <>
       <Show when={props.error}>
         <div
+          aria-hidden='true'
+          role='presentation'
           id={props.id}
           classList={{
             [styles['form-error']]: true,

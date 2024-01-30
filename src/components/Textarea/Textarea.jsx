@@ -7,7 +7,11 @@ export default function Textarea(props) {
   const [
     externalProps,
     internalProps,
-  ] = splitProps(props, ['label']);
+  ] = splitProps(props, [
+    'classes',
+    'label',
+    'size',
+  ]);
 
   return (
     <div
@@ -31,6 +35,16 @@ export default function Textarea(props) {
         placeholder={internalProps.placeholder}
         required={internalProps.required}
         rows={internalProps.rows}
+        aria-invalid={
+          internalProps.error
+            ? Boolean(internalProps.error)
+            : undefined
+        }
+        aria-describedby={
+          internalProps.error
+            ? `${internalProps.name}-error`
+            : undefined
+        }
       />
 
       <FormError

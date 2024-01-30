@@ -81,7 +81,7 @@
 
   // flying focus
   --flying-focus-border-weight: var(--border-weight-l);
-  --flying-focus-outline-offset: var(--spacing-2);
+  --flying-focus-outline-offset: var(--spacing-1);
 
   // shadows
   --shadow-sm: 0 #{fn.to-rem(1)} #{fn.to-rem(2)} 0 rgba(0, 0, 0, 8%);

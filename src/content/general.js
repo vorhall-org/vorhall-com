@@ -166,7 +166,7 @@ export default (locale) => {
           externalLink: true,
           externalLinkText: tLinks('externalTarget'),
           hideLabel: true,
-          href: 'https://www.sbb.ch',
+          href: 'https://www.linkedin.com/company/vorhall/',
           iconAfter: false,
           iconBefore: {
             colorFixed: false,
@@ -183,7 +183,7 @@ export default (locale) => {
           externalLink: true,
           externalLinkText: tLinks('externalTarget'),
           hideLabel: true,
-          href: 'https://www.sbb.ch',
+          href: 'https://github.com/vorhall-org/',
           iconAfter: false,
           iconBefore: {
             colorFixed: false,

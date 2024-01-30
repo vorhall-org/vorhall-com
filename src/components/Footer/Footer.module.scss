@@ -59,6 +59,11 @@
     @include mq.breakpoint($from: sm) {
       flex-basis: auto;
     }
+
+    @include mq.forced-colors {
+      gap: fn.to-rem(var(--spacing-1));
+    }
+
   }
 
   &__copyright {

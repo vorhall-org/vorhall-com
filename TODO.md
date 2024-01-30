@@ -26,3 +26,4 @@
 - Meta tags (description, sharing, etc.)
 - Share page button (Native API)?
 - Store language and theme preference
+- Data Policy link below form lacks contrast
