@@ -6,7 +6,7 @@
   --success-message-color: var(--color-green-600);
 
   @include mq.color-scheme-dark {
-    --success-message-color: var(--color-green-500);
+    --success-message-color: var(--color-green-400);
   }
 
   @include mx.card-variables;

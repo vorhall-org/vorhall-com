@@ -28,6 +28,18 @@ const {
     <meta name="generator" content={Astro.generator} />
     {!removeNoIndex && <meta name="robots" content="noindex">}
 
+    <script>
+      import FlyingFocus from '../helpers/flying-focus/flying-focus';
+
+      window.flyingFocus = new FlyingFocus();
+    </script>
+
+    <style is:global lang="scss">
+        @import '../styles/global';
+    </style>
+
+    <link rel='preconnect' href='https://cdn.squeaky.ai' crossorigin />
+
     <Tracking />
   </head>
   <body>
@@ -50,15 +62,6 @@ const {
     </Section>
 
     <Footer {...generalData.footerData(locale)}/>
-  </body>
+
+    </body>
 </html>
-
-<style is:global lang="scss">
-  @import '../styles/global';
-</style>
-
-<script>
-  import FlyingFocus from '../helpers/flying-focus/flying-focus';
-
-  window.flyingFocus = new FlyingFocus();
-</script>

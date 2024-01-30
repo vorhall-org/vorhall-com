@@ -7,7 +7,7 @@ export default {
       avatarYvesAltText: 'Avatar of Yves',
       avatarYvesSubtitle: 'Avatar Card subtitle',
       avatarYvesText: 'Avatar Card text',
-      lead: 'Some lead text content. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.',
+      lead: 'Obwohl Vorhall erst seit Januar 2024 tätig ist, triffst Du auf ein sehr erfahrenes Team. Als Kinder der 80er Jahre sind wir quasi mit dem Web aufgewachsen. Dank unserer Erfahrung entwickeln wir nicht nur, sondern schlagen Brücken zwischen den verschiedenen Disziplinen. Wir sind es uns gewohnt Anforderungen zu erheben, aus verschiedensten Blickwinkeln zu betrachten und die nötigen Fragen zu stellen.',
       title: 'Wer ist Vorhall',
     },
     en: {

@@ -36,6 +36,15 @@
 }
 
 // ##############################
+// Forced colors
+// ##############################
+@mixin more-contrast() {
+  @media (prefers-contrast: more) {
+    @content
+  }
+}
+
+// ##############################
 // Inverted colors
 // ##############################
 
