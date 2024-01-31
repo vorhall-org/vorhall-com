@@ -33,3 +33,4 @@
 - Add sitemap.xml?
 - Add scroll margin top for :target
 - Decide what we want to mark as main content area, move jumbo tron into <header>?
+- Add correct aria-labels and social profile links in avatar cards
