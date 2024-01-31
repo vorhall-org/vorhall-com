@@ -1,0 +1,128 @@
+@use '/src/styles/mixins' as mx;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/functions' as fn;
+
+:root {
+  @include mx.heading-variables;
+  @include mx.link-variables;
+
+  --richtext-color: var(--color-gray-500);
+
+  @include mq.color-scheme-dark {
+    --richtext-color: var(--color-gray-400);
+  }
+}
+
+.richtext {
+  // general
+
+  * {
+    padding: 0;
+    margin: 0;
+    font-size: fn.to-rem(var(--text-base));
+    line-height: 150%;
+    color: var(--richtext-color);
+  }
+
+  :is(p, ul, ol) {
+    margin-bottom: fn.to-rem(var(--spacing-4));
+  }
+
+  // bold
+  p > b {
+    font-weight: var(--font-weight-bold);
+  }
+
+  // italic
+  p > i {
+    font-style: italic;
+  }
+
+  // links
+  :is(a) {
+    @include mx.link;
+  }
+
+  // headings
+  @include mx.heading;
+
+  h1 {
+    padding-top: fn.to-rem(var(--spacing-12));
+    padding-bottom: fn.to-rem(var(--spacing-8));
+  }
+
+  h2 {
+    padding-top: fn.to-rem(var(--spacing-12));
+    padding-bottom: fn.to-rem(var(--spacing-7));
+  }
+
+  h3 {
+    padding-top: fn.to-rem(var(--spacing-10));
+    padding-bottom: fn.to-rem(var(--spacing-6));
+  }
+
+  h4 {
+    padding-top: fn.to-rem(var(--spacing-8));
+    padding-bottom: fn.to-rem(var(--spacing-5));
+  }
+
+  h5 {
+    padding-top: fn.to-rem(var(--spacing-6));
+    padding-bottom: fn.to-rem(var(--spacing-4));
+  }
+
+  h6 {
+    padding-top: fn.to-rem(var(--spacing-6));
+    padding-bottom: fn.to-rem(var(--spacing-3));
+  }
+
+  h1 + h2 {
+    padding-top: 0;
+  }
+
+  h2 + h3 {
+    padding-top: 0;
+  }
+
+  h3 + h4 {
+    padding-top: 0;
+  }
+
+  h4 + h5 {
+    padding-top: 0;
+  }
+
+  h5 + h6 {
+    padding-top: 0;
+  }
+
+  // lists
+  li {
+    margin-left: fn.to-rem(var(--spacing-6));
+  }
+
+  li + li {
+    margin-top: fn.to-rem(var(--spacing-2));
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  li :is(ul, ol) {
+    
+    margin-top: fn.to-rem(var(--spacing-2));
+    margin-bottom: 0;
+  }
+
+  // first- / last-children
+  > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
