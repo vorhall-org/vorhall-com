@@ -5,11 +5,11 @@
 - check and fix line-heights
 - check and fix letter spacing
 - check and fix font-weights
-- astro build complains about "Unsupported file type general.js found" (and home.js)
 - integrate tracking
 - translate all content
 - before release, use correct tracking-id (get it on squeaky, define it in "page-helpers/Tracking.astro")
 - remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss)
+- configure dependabot
 
 - Skip to Content link
 - Color schema toggle?
