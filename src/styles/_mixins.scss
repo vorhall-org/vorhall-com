@@ -1,7 +1,7 @@
 @use '/src/styles/functions' as fn;
 @use '/src/styles/mediaqueries' as mq;
 
-:root {
+@mixin container-centered-variables {
   --section-spacing-h: var(--spacing-4);
   --section-spacing-v: var(--spacing-24);
 

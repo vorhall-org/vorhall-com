@@ -2,6 +2,8 @@
 @use '/src/styles/mediaqueries' as mq;
 
 :root {
+  @include mx.container-centered-variables;
+
   --section-background: var(--color-white);
 
   @include mq.color-scheme-dark {

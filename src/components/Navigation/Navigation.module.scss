@@ -3,6 +3,7 @@
 @use '/src/styles/mixins' as mx;
 
 :root {
+  @include mx.container-centered-variables;
   --navigation-padding-v: var(--spacing-4);
 
   @include mq.breakpoint($from: lg) {

@@ -3,8 +3,9 @@
 @use '/src/styles/mixins' as mx;
 
 :root {
-  --form-max-width: var(--spacing-96);
+  @include mx.container-centered-variables;
 
+  --form-max-width: var(--spacing-96);
   --form-privacy-note-color: var(--color-gray-500);
 
   @include mq.color-scheme-dark {
