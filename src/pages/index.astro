@@ -15,20 +15,23 @@ const locale = getLocale(Astro.url);
 const pageData = pageDataGetter(locale);
 const pageDataGeneral = pageDataGetterGeneral(locale);
 
-const pageMetaTags = [
-  {
-    content: pageDataGeneral.siteData.description,
-    name: 'description',
-  },
-  {
-    content: 'noindex',
-    name: 'robots',
-  },
-];
+const pageMetaInformation = {
+  title: pageData.siteData.title,
+  tags: [
+    {
+      content: pageData.siteData.description,
+      name: 'description',
+    },
+    {
+      content: 'noindex',
+      name: 'robots',
+    },
+  ]
+};
 
 ---
 
-<Layout pageMetaTags={pageMetaTags}>
+<Layout pageTitle={pageMetaInformation.title} pageMetaTags={pageMetaInformation.tags}>
   <Main {...pageDataGeneral.mainData}>
     <!-- Header -->
     <Section fullWidth noVerticalSpacingTop>

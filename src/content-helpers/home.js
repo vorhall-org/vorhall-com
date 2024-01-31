@@ -4,7 +4,13 @@ import { useTranslations } from '../i18n/utils';
 export default (locale) => {
   const tHeader = useTranslations(locale, i18n.header);
   const tServices = useTranslations(locale, i18n.services);
+  const tSite = useTranslations(locale, i18n.site);
   const tAbout = useTranslations(locale, i18n.about);
+
+  const siteData = {
+    description: tSite('description'),
+    title: tSite('title'),
+  };
 
   const jumbotronData = {
     heading: {
@@ -218,6 +224,7 @@ export default (locale) => {
     serviceCardTeaser4,
     serviceCardTeaser5,
     serviceCardTeaser6,
+    siteData,
   };
 };
 

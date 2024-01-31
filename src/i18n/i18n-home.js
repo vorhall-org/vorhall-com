@@ -24,11 +24,11 @@ export default {
   header: {
     de: {
       lead: '⏤ Vorhall',
-      title: '« We build fast, sustainable digital products that last and can be accessed by everyone. »',
+      title: '«We build fast, sustainable digital products that last and can be accessed by everyone.»',
     },
     en: {
       lead: '⏤ Vorhall',
-      title: '« We build fast, sustainable digital products that last and can be accessed by everyone. »',
+      title: '«We build fast, sustainable digital products that last and can be accessed by everyone.»',
     },
   },
   services: {
@@ -87,6 +87,16 @@ export default {
       serviceCard6Text: 'Do you have an idea in mind which does not seem to fit in any of the services mentioned? Talk to us and let\'s see how we can support you.',
       serviceCard6Title: 'Your own<br> project idea',
       title: 'Our services',
+    },
+  },
+  site: {
+    de: {
+      description: 'Startseite Beschreibung unserere Website',
+      title: 'Startseite | Vorhall',
+    },
+    en: {
+      description: 'Homepage Description of our website',
+      title: 'Homepage | Vorhall',
     },
   },
 };

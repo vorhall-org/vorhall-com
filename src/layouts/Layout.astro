@@ -14,6 +14,7 @@ const locale = getLocale(Astro.url);
 const generalData = generalDataGetter(locale);
 
 const {
+  pageTitle,
   pageMetaTags,
 } = Astro.props;
 
@@ -22,12 +23,14 @@ const metaTags = [
   ...pageMetaTags || [],
 ];
 
+const title = pageTitle || generalData.siteData.title;
+
 ---
 
 <!doctype html>
 <html lang={locale}>
   <head>
-    <title>{generalData.siteData.title}</title>
+    <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     {metaTags.map((tag) => <meta {...tag} />)}
