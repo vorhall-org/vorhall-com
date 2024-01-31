@@ -136,6 +136,21 @@ export default (locale) => {
 
   const siteData = {
     description: tSite('description'),
+    homeButtonData: {
+      click: false,
+      color: 'black',
+      externalLink: false,
+      href: pageRoutes(locale).home,
+      iconAfter: false,
+      iconBefore: {
+        name: 'home',
+      },
+      label: tSite('homeButtonText'),
+      outline: false,
+      rawIcon: false,
+      size: 'xl',
+      type: 'submit',
+    },
     title: tSite('title'),
   };
 
