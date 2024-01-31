@@ -1,7 +1,8 @@
 ---
 import Tracking from '../page-helpers/Tracking.astro';
+import { generalMetaTags } from '../content-helpers/metaTags';
 import { getLocale } from 'astro-i18n-aut';
-import generalDataGetter from '../content/general';
+import generalDataGetter from '../content-helpers/general';
 import Footer from '../components/Footer/Footer';
 import Section from '../components/Section/Section';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
@@ -11,23 +12,25 @@ import Link from '../components/Link/Link';
 
 const locale = getLocale(Astro.url);
 const generalData = generalDataGetter(locale);
+
 const {
-  removeNoIndex,
+  pageMetaTags,
 } = Astro.props;
+
+const metaTags = [
+  ...generalMetaTags(Astro.generator),
+  ...pageMetaTags || [],
+];
+
 ---
 
 <!doctype html>
 <html lang={locale}>
   <head>
-    <meta charset="UTF-8" />
     <title>{generalData.siteData.title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#D6E3FA" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#153376" />
-    <meta name="description" content={generalData.siteData.description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    {!removeNoIndex && <meta name="robots" content="noindex">}
+
+    {metaTags.map((tag) => <meta {...tag} />)}
 
     <script>
       import FlyingFocus from '../helpers/flying-focus/flying-focus';

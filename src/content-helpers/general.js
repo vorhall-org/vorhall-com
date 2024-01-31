@@ -5,6 +5,7 @@ export default (locale) => {
   const tContact = useTranslations(locale, i18n.contact);
   const tFooter = useTranslations(locale, i18n.footer);
   const tSite = useTranslations(locale, i18n.site);
+  const tMain = useTranslations(locale, i18n.main);
   const tLinks = useTranslations(locale, i18n.links);
 
   const contactFormData = {
@@ -136,6 +137,10 @@ export default (locale) => {
     title: tSite('title'),
   };
 
+  const mainData = {
+    ariaLabel: tMain('ariaLabel'),
+  };
+
   const footerData = (lang) => {
 
     let langSwitchLink = '/';
@@ -203,6 +208,7 @@ export default (locale) => {
     contactFormData,
     footerData,
     jumbotronContact,
+    mainData,
     siteData,
   };
 };
