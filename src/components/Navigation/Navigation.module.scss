@@ -1,0 +1,17 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  --navigation-padding-v: var(--spacing-4);
+
+  @include mq.breakpoint($from: lg) {
+    --navigation-padding-v: var(--spacing-6);
+  }
+}
+
+.navigation {
+  @include mx.container-centered;
+  padding-top: fn.to-rem(var(--navigation-padding-v));
+  padding-bottom: fn.to-rem(var(--navigation-padding-v));
+}
