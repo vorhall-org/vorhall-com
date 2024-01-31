@@ -84,10 +84,12 @@ export default {
   site: {
     de: {
       description: 'Beschreibung unserere Website',
+      homeButtonText: 'Zur Startseite',
       title: 'General Title | Vorhall',
     },
     en: {
       description: 'Description of our website',
+      homeButtonText: 'Back to home',
       title: 'General Title | Vorhall',
     },
   },
