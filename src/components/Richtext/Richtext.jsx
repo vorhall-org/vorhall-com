@@ -8,8 +8,7 @@ export default function Richtext(props) {
         [styles['richtext']]: true,
         [props.classes]: props.classes,
       }}
-    >
-      {props.children}
-    </div>
+      innerHTML={props.text}
+    />
   );
 }
