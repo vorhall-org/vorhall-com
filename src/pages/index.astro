@@ -8,8 +8,8 @@ import ContentCardGrid from '../components/ContentCardGrid/ContentCardGrid';
 import ContentCard from '../components/ContentCard/ContentCard';
 import AvatarCardGrid from '../components/AvatarCardGrid/AvatarCardGrid';
 import AvatarCard from '../components/AvatarCard/AvatarCard';
-import pageDataGetter from '../content/home';
-import pageDataGetterGeneral from '../content/general';
+import pageDataGetter from '../content-helpers/home';
+import pageDataGetterGeneral from '../content-helpers/general';
 
 const locale = getLocale(Astro.url);
 const pageData = pageDataGetter(locale);
