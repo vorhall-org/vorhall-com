@@ -3,6 +3,7 @@ import { langRoute } from '../i18n/utils';
 export const pageRoutes = (lang) => ({
   contact: langRoute(lang, 'contact'),
   dataPrivacy: langRoute(lang, 'data-privacy'),
+  home: langRoute(lang, ''),
   impressum: langRoute(lang, 'impressum'),
   serviceAccessibility: langRoute(lang, 'services/accessibility'),
   serviceDesignSystems: langRoute(lang, 'services/design-systems'),
