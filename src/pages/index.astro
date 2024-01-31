@@ -9,14 +9,16 @@ import ContentCard from '../components/ContentCard/ContentCard';
 import AvatarCardGrid from '../components/AvatarCardGrid/AvatarCardGrid';
 import AvatarCard from '../components/AvatarCard/AvatarCard';
 import pageDataGetter from '../content/home';
+import pageDataGetterGeneral from '../content/general';
 
 const locale = getLocale(Astro.url);
 const pageData = pageDataGetter(locale);
+const pageDataGeneral = pageDataGetterGeneral(locale);
 
 ---
 
 <Layout>
-  <Main {...pageData.mainData}>
+  <Main {...pageDataGeneral.mainData}>
     <!-- Header -->
     <Section fullWidth noVerticalSpacingTop>
       <Jumbotron {...pageData.jumbotronData}/>

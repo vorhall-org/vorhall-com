@@ -31,14 +31,6 @@ export default {
       title: '« We build fast, sustainable digital products that last and can be accessed by everyone. »',
     },
   },
-  main: {
-    de: {
-      ariaLabel: 'Inhaltsbereich',
-    },
-    en: {
-      ariaLabel: 'Content area',
-    },
-  },
   services: {
     de: {
       lead: 'Find out how we can support you',
