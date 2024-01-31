@@ -143,12 +143,14 @@ export default (locale) => {
     ariaLabel: tMain('ariaLabel'),
   };
 
-  const footerData = (lang) => {
+  const footerData = (lang, path) => {
 
-    let langSwitchLink = '/';
+    let langSwitchLink = path;
 
-    if (lang === 'en') {
-      langSwitchLink = '/de/';
+    if (lang === 'de') {
+      langSwitchLink = path.replace('/de/', '/');
+    } else {
+      langSwitchLink = `/de${path}`;
     }
 
     return {

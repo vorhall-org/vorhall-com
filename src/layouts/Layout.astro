@@ -13,6 +13,7 @@ import Link from '../components/Link/Link';
 
 const locale = getLocale(Astro.url);
 const generalData = generalDataGetter(locale);
+const path = Astro.url.pathname;
 
 const {
   pageTitle,
@@ -73,7 +74,7 @@ const title = pageTitle || generalData.siteData.title;
 
     </Section>
 
-    <Footer {...generalData.footerData(locale)}/>
+    <Footer {...generalData.footerData(locale, path)}/>
 
     <Tracking />
   </body>
