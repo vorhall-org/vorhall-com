@@ -10,6 +10,7 @@
 - before release, use correct tracking-id (get it on squeaky, define it in "page-helpers/Tracking.astro")
 - remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss)
 - configure dependabot
+- Textarea: improve line-height
 
 - Skip to Content link
 - Color schema toggle?
