@@ -1,5 +1,6 @@
 import i18n from '../i18n/i18n-general';
 import { useTranslations } from '../i18n/utils';
+import { pageRoutes } from './pageRoutes';
 
 export default (locale) => {
   const tContact = useTranslations(locale, i18n.contact);
@@ -135,6 +136,21 @@ export default (locale) => {
 
   const siteData = {
     description: tSite('description'),
+    homeButtonData: {
+      click: false,
+      color: 'black',
+      externalLink: false,
+      href: pageRoutes(locale).home,
+      iconAfter: false,
+      iconBefore: {
+        name: 'home',
+      },
+      label: tSite('homeButtonText'),
+      outline: false,
+      rawIcon: false,
+      size: 'xl',
+      type: 'submit',
+    },
     title: tSite('title'),
   };
 
@@ -142,12 +158,14 @@ export default (locale) => {
     ariaLabel: tMain('ariaLabel'),
   };
 
-  const footerData = (lang) => {
+  const footerData = (lang, path) => {
 
-    let langSwitchLink = '/';
+    let langSwitchLink = path;
 
-    if (lang === 'en') {
-      langSwitchLink = '/de/';
+    if (lang === 'de') {
+      langSwitchLink = path.replace('/de/', '/');
+    } else {
+      langSwitchLink = `/de${path}`;
     }
 
     return {
@@ -158,11 +176,11 @@ export default (locale) => {
       },
       legalLinks: [
         {
-          link: '#',
+          link: pageRoutes(lang).dataPrivacy,
           text: tFooter('linkDataPrivacy'),
         },
         {
-          link: '#',
+          link: pageRoutes(lang).impressum,
           text: tFooter('linkImpressum'),
         },
       ],

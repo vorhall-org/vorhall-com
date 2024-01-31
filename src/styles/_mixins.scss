@@ -1,7 +1,7 @@
 @use '/src/styles/functions' as fn;
 @use '/src/styles/mediaqueries' as mq;
 
-:root {
+@mixin container-centered-variables {
   --section-spacing-h: var(--spacing-4);
   --section-spacing-v: var(--spacing-24);
 
@@ -140,4 +140,111 @@
     --card-width: 33.33333%;
   };
 
+}
+
+@mixin heading-variables {
+  --heading-color: var(--color-gray-900);
+  --heading-1-font-size: var(--text-4xl);
+  --heading-2-font-size: var(--text-3xl);
+  --heading-3-font-size: var(--text-2xl);
+  --heading-4-font-size: var(--text-xl);
+  --heading-5-font-size: var(--text-l);
+  --heading-6-font-size: var(--text-base);
+
+  @include mq.color-scheme-dark {
+    --heading-color: var(--color-white);
+  }
+
+  @include mq.breakpoint($from: md) {
+    --heading-1-font-size: var(--text-5xl);
+    --heading-2-font-size: var(--text-4xl);
+    --heading-3-font-size: var(--text-3xl);
+    --heading-4-font-size: var(--text-2xl);
+    --heading-5-font-size: var(--text-xl);
+    --heading-6-font-size: var(--text-l);
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --heading-1-font-size: var(--text-6xl);
+    --heading-2-font-size: var(--text-5xl);
+    --heading-3-font-size: var(--text-4xl);
+    --heading-4-font-size: var(--text-3xl);
+    --heading-5-font-size: var(--text-2xl);
+    --heading-6-font-size: var(--text-xl);
+  }
+}
+
+@mixin heading-generic {
+  line-height: 125%;
+  font-weight: var(--font-weight-bold);
+
+  color: var(--heading-color);
+  text-wrap: balance;
+}
+
+@mixin heading {
+  h1, h2, h3, h4, h5, h6 {
+    @include heading-generic;
+  }
+
+  &--level-1,
+  h1 {
+    font-size: fn.to-rem(var(--heading-1-font-size));
+    line-height: 100%;
+  }
+
+  &--level-2,
+  h2 {
+    font-size: fn.to-rem(var(--heading-2-font-size));
+  }
+
+  &--level-3,
+  h3 {
+    font-size: fn.to-rem(var(--heading-3-font-size));
+  }
+
+  &--level-4,
+  h4 {
+    font-size: fn.to-rem(var(--heading-4-font-size));
+  }
+
+  &--level-5,
+  h5 {
+    font-size: fn.to-rem(var(--heading-5-font-size));
+  }
+
+  &--level-6,
+  h6 {
+    font-size: fn.to-rem(var(--heading-6-font-size));
+  }
+
+  & br {
+    @include mq.breakpoint($to: md) {
+      display: none;
+    }
+  }
+}
+
+@mixin link-variables {
+  --link-color: var(--color-blue-600);
+  --link-color-hover: var(--color-blue-800);
+
+  @include mq.color-scheme-dark {
+    --link-color: var(--color-blue-500);
+    --link-color-hover: var(--color-blue-300);
+  }
+}
+
+@mixin link {
+  $root: &;
+  display: inline-block;
+  text-underline-offset: fn.to-rem(var(--spacing-1-5));
+  color: var(--link-color);
+
+  @include default-transition;
+  transition-property: color;
+
+  @include hover-focus {
+    color: var(--link-color-hover);
+  };
 }

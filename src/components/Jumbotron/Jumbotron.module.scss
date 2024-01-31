@@ -3,6 +3,8 @@
 @use '/src/styles/mixins' as mx;
 
 :root {
+  @include mx.container-centered-variables;
+
   --jumbotron-padding-h: var(--spacing-4);
   --jumbotron-padding-v: var(--spacing-4);
   --main-jumbotron-padding-v: var(--spacing-8);

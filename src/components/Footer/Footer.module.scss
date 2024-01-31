@@ -3,6 +3,8 @@
 @use '/src/styles/mixins' as mx;
 
 :root {
+  @include mx.container-centered-variables;
+
   --footer-border-color: var(--color-gray-200);
   --footer-spacing-top: var(--spacing-16);
 

@@ -3,19 +3,24 @@ import Tracking from '../page-helpers/Tracking.astro';
 import { generalMetaTags } from '../content-helpers/metaTags';
 import { getLocale } from 'astro-i18n-aut';
 import generalDataGetter from '../content-helpers/general';
+import { pageRoutes } from '../content-helpers/pageRoutes';
 import Footer from '../components/Footer/Footer';
 import Section from '../components/Section/Section';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
 import Form from '../components/Form/Form';
 import SkipLink from '../components/SkipLink/SkipLink';
 import Link from '../components/Link/Link';
+import Navigation from '../components/Navigation/Navigation';
+import Button from '../components/Button/Button';
 
 const locale = getLocale(Astro.url);
 const generalData = generalDataGetter(locale);
+const path = Astro.url.pathname;
 
 const {
   pageTitle,
   pageMetaTags,
+  isHome = false,
 } = Astro.props;
 
 const metaTags = [
@@ -54,6 +59,12 @@ const title = pageTitle || generalData.siteData.title;
       <SkipLink {...generalData.skipLink} />
     </section>
 
+    {!isHome &&
+      <Navigation>
+        <Button {...generalData.siteData.homeButtonData} />
+      </Navigation>
+    }
+
     <slot />
 
     <Section highlight fullWidth>
@@ -65,14 +76,14 @@ const title = pageTitle || generalData.siteData.title;
       >
 
         <div slot="privacyNote">
-          <p>{generalData.contactFormData.privacyNote.preLink} <Link href="#" secondary="true">{generalData.contactFormData.privacyNote.link}</Link> {generalData.contactFormData.privacyNote.postLink}</p>
+          <p>{generalData.contactFormData.privacyNote.preLink} <Link href={pageRoutes(locale).dataPrivacy} secondary="true">{generalData.contactFormData.privacyNote.link}</Link> {generalData.contactFormData.privacyNote.postLink}</p>
         </div>
 
       </Form>
 
     </Section>
 
-    <Footer {...generalData.footerData(locale)}/>
+    <Footer {...generalData.footerData(locale, path)}/>
 
     <Tracking />
   </body>
