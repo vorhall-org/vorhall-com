@@ -84,7 +84,7 @@ export default {
   site: {
     de: {
       description: 'Beschreibung unserere Website',
-      title: 'General Title | Vorhall',
+      title: 'General Title | Vorhall',
     },
     en: {
       description: 'Description of our website',
