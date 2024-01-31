@@ -18,6 +18,7 @@ const path = Astro.url.pathname;
 const {
   pageTitle,
   pageMetaTags,
+  hideHomeButton = false,
 } = Astro.props;
 
 const metaTags = [
@@ -55,6 +56,12 @@ const title = pageTitle || generalData.siteData.title;
     <section aria-label="Skiplinks">
       <SkipLink {...generalData.skipLink} />
     </section>
+
+    {!hideHomeButton &&
+      <nav>
+        <Link href={pageRoutes(locale).home}>back links</Link>
+      </nav>
+    }
 
     <slot />
 
