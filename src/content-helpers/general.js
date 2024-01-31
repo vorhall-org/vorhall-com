@@ -9,11 +9,6 @@ export default (locale) => {
   const tMain = useTranslations(locale, i18n.main);
   const tLinks = useTranslations(locale, i18n.links);
 
-  const skipLink = {
-    href: '#content-area',
-    label: tskipLink('label'),
-  };
-
   const contactFormData = {
     button: {
       click: false,
@@ -210,12 +205,17 @@ export default (locale) => {
     };
   };
 
+  const skipLink = {
+    href: '#content-area',
+    label: tskipLink('label'),
+  };
+
   return {
-    skipLink,
     contactFormData,
     footerData,
     jumbotronContact,
     mainData,
     siteData,
+    skipLink,
   };
 };
