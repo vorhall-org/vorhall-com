@@ -45,6 +45,10 @@ body {
   // hyphens: auto;
 }
 
+a {
+  text-decoration-skip-ink: auto;
+}
+
 ul {
   list-style-type: none;
 }
