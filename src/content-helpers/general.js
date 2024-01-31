@@ -1,5 +1,6 @@
 import i18n from '../i18n/i18n-general';
 import { useTranslations } from '../i18n/utils';
+import { pageRoutes } from './pageRoutes';
 
 export default (locale) => {
   const tskipLink = useTranslations(locale, i18n.skipLink);
@@ -158,11 +159,11 @@ export default (locale) => {
       },
       legalLinks: [
         {
-          link: '#',
+          link: pageRoutes(lang).dataPrivacy,
           text: tFooter('linkDataPrivacy'),
         },
         {
-          link: '#',
+          link: pageRoutes(lang).impressum,
           text: tFooter('linkImpressum'),
         },
       ],

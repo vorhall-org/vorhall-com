@@ -1,5 +1,6 @@
 import i18n from '../i18n/i18n-home';
 import { useTranslations } from '../i18n/utils';
+import { pageRoutes } from './pageRoutes';
 
 export default (locale) => {
   const tHeader = useTranslations(locale, i18n.header);
@@ -51,7 +52,7 @@ export default (locale) => {
       color: 'primary',
       externalLink: false,
       externalLinkText: '',
-      href: '#',
+      href: pageRoutes(locale).serviceAccessibility,
       label: tServices('serviceCard1ButtonLabel'),
       size: 'l',
       type: 'button',
@@ -73,7 +74,7 @@ export default (locale) => {
       color: 'primary',
       externalLink: false,
       externalLinkText: '',
-      href: '#',
+      href: pageRoutes(locale).serviceWebPerformance,
       label: tServices('serviceCard2ButtonLabel'),
       size: 'l',
       type: 'button',
@@ -95,7 +96,7 @@ export default (locale) => {
       color: 'primary',
       externalLink: false,
       externalLinkText: '',
-      href: '#',
+      href: pageRoutes(locale).serviceDigitalSustainability,
       label: tServices('serviceCard3ButtonLabel'),
       size: 'l',
       type: 'button',
@@ -117,7 +118,7 @@ export default (locale) => {
       color: 'primary',
       externalLink: false,
       externalLinkText: '',
-      href: '#',
+      href: pageRoutes(locale).serviceFrontend,
       label: tServices('serviceCard4ButtonLabel'),
       size: 'l',
       type: 'button',
@@ -139,7 +140,7 @@ export default (locale) => {
       color: 'primary',
       externalLink: false,
       externalLinkText: '',
-      href: '#',
+      href: pageRoutes(locale).serviceDesignSystems,
       label: tServices('serviceCard5ButtonLabel'),
       size: 'l',
       type: 'button',
@@ -161,7 +162,7 @@ export default (locale) => {
       color: 'primary',
       externalLink: false,
       externalLinkText: '',
-      href: '#',
+      href: pageRoutes(locale).contact,
       label: tServices('serviceCard6ButtonLabel'),
       size: 'l',
       type: 'button',

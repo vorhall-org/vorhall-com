@@ -3,6 +3,7 @@ import Tracking from '../page-helpers/Tracking.astro';
 import { generalMetaTags } from '../content-helpers/metaTags';
 import { getLocale } from 'astro-i18n-aut';
 import generalDataGetter from '../content-helpers/general';
+import { pageRoutes } from '../content-helpers/pageRoutes';
 import Footer from '../components/Footer/Footer';
 import Section from '../components/Section/Section';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
@@ -65,7 +66,7 @@ const title = pageTitle || generalData.siteData.title;
       >
 
         <div slot="privacyNote">
-          <p>{generalData.contactFormData.privacyNote.preLink} <Link href="#" secondary="true">{generalData.contactFormData.privacyNote.link}</Link> {generalData.contactFormData.privacyNote.postLink}</p>
+          <p>{generalData.contactFormData.privacyNote.preLink} <Link href={pageRoutes(locale).dataPrivacy} secondary="true">{generalData.contactFormData.privacyNote.link}</Link> {generalData.contactFormData.privacyNote.postLink}</p>
         </div>
 
       </Form>
