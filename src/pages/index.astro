@@ -16,7 +16,6 @@ const pageData = pageDataGetter(locale);
 const pageDataGeneral = pageDataGetterGeneral(locale);
 
 const pageMetaInformation = {
-  title: pageData.siteData.title,
   tags: [
     {
       content: pageData.siteData.description,
@@ -26,7 +25,8 @@ const pageMetaInformation = {
       content: 'noindex',
       name: 'robots',
     },
-  ]
+  ],
+  title: pageData.siteData.title,
 };
 
 ---
