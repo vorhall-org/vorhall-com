@@ -1,0 +1,35 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  --skiplink-color: var(--color-blue-600);
+  --skiplink-color-hover: var(--color-blue-800);
+  --skiplink-color-secondary: var(--color-gray-500);
+
+  @include mq.color-scheme-dark {
+    --skiplink-color: var(--color-blue-500);
+    --skiplink-color-hover: var(--color-blue-300);
+    --skiplink-color-secondary: var(--color-gray-400);
+  }
+}
+
+.skiplink {
+  $root: &;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--skiplink-color);
+  border-bottom: fn.to-rem(var(--spacing-px)) solid currentcolor;
+
+  @include mx.hover-focus {
+    border-bottom-color: currentcolor;
+  }
+
+  @include mx.default-transition;
+  transition-property: color, border-color;
+
+  @include mx.hover-focus {
+    color: var(--skiplink-color-hover);
+  };
+
+}

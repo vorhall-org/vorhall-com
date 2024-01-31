@@ -12,7 +12,7 @@
 
 - Skip to Content link
 - Color schema toggle?
-- High Contrast Styling
+- High Contrast Styling (Note to ourselves: looks fairly good so far)
 - A11y Testing (Automated tools, NVDA, VoiceOver, TalkBack)
 - Early hints possible on Netlify?
 - Custom Performance Marks?
@@ -23,7 +23,10 @@
 - Schema.org?
 - Reference to https://the-sustainable.dev?
 - Save images as AVIF
-- Meta tags (description, sharing, etc.)
+- Meta tags (<title>, description, sharing, etc.)
 - Share page button (Native API)?
 - Store language and theme preference
 - Data Policy link below form lacks contrast
+- Setup Canonical -> https://developer.chrome.com/docs/lighthouse/seo/canonical
+- Add a robots.txt?
+- Add sitemap.xml?
