@@ -224,3 +224,27 @@
     }
   }
 }
+
+@mixin link-variables {
+  --link-color: var(--color-blue-600);
+  --link-color-hover: var(--color-blue-800);
+
+  @include mq.color-scheme-dark {
+    --link-color: var(--color-blue-500);
+    --link-color-hover: var(--color-blue-300);
+  }
+}
+
+@mixin link {
+  $root: &;
+  display: inline-block;
+  text-underline-offset: fn.to-rem(var(--spacing-1-5));
+  color: var(--link-color);
+
+  @include default-transition;
+  transition-property: color;
+
+  @include hover-focus {
+    color: var(--link-color-hover);
+  };
+}

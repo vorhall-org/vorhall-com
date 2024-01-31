@@ -1,34 +1,20 @@
-@use '/src/styles/functions' as fn;
 @use '/src/styles/mediaqueries' as mq;
 @use '/src/styles/mixins' as mx;
 
 :root {
-  --link-color: var(--color-blue-600);
-  --link-color-hover: var(--color-blue-800);
+  @include mx.link-variables;
   --link-color-secondary: var(--color-gray-500);
 
   @include mq.color-scheme-dark {
-    --link-color: var(--color-blue-500);
-    --link-color-hover: var(--color-blue-300);
     --link-color-secondary: var(--color-gray-400);
   }
 }
 
 .link {
-  $root: &;
-  display: inline-block;
-  text-underline-offset: fn.to-rem(var(--spacing-1-5));
-  color: var(--link-color);
+  @include mx.link;
 
   &--secondary {
     color: var(--link-color-secondary);
   }
-
-  @include mx.default-transition;
-  transition-property: color;
-
-  @include mx.hover-focus {
-    color: var(--link-color-hover);
-  };
 
 }
