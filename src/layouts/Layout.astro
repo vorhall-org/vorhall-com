@@ -10,6 +10,8 @@ import Jumbotron from '../components/Jumbotron/Jumbotron';
 import Form from '../components/Form/Form';
 import SkipLink from '../components/SkipLink/SkipLink';
 import Link from '../components/Link/Link';
+import Navigation from '../components/Navigation/Navigation';
+import Button from '../components/Button/Button';
 
 const locale = getLocale(Astro.url);
 const generalData = generalDataGetter(locale);
@@ -18,7 +20,7 @@ const path = Astro.url.pathname;
 const {
   pageTitle,
   pageMetaTags,
-  hideHomeButton = false,
+  isHome = false,
 } = Astro.props;
 
 const metaTags = [
@@ -57,10 +59,10 @@ const title = pageTitle || generalData.siteData.title;
       <SkipLink {...generalData.skipLink} />
     </section>
 
-    {!hideHomeButton &&
-      <nav>
-        <Link href={pageRoutes(locale).home}>back links</Link>
-      </nav>
+    {!isHome &&
+      <Navigation>
+        <Button {...generalData.siteData.homeButtonData} />
+      </Navigation>
     }
 
     <slot />
