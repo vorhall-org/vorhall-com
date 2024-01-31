@@ -29,6 +29,10 @@
   &__lead {
     font-size: fn.to-rem(var(--text-sm));
     text-align: center;
-  }
 
+    &:not(:last-child) {
+      margin-block-end: fn.to-rem(var(--spacing-1-5));
+    }
+
+  }
 }

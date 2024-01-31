@@ -1,6 +1,7 @@
 import styles from './AvatarCard.module.scss';
-import Heading from '../Heading/Heading';
 import Avatar from '../Avatar/Avatar';
+import Heading from '../Heading/Heading';
+import SocialLinks from '../SocialLinks/SocialLinks';
 
 export default function AvatarCard(props) {
   return (
@@ -26,6 +27,8 @@ export default function AvatarCard(props) {
         <p>{props.subtitle}</p>
         <p>{props.text}</p>
       </div>
+
+      <SocialLinks {...props.socialLinks} />
     </li>
   );
 }

@@ -1,11 +1,13 @@
 import i18n from '../i18n/i18n-home';
+import i18nGeneral from '../i18n/i18n-general';
 import { useTranslations } from '../i18n/utils';
 
 export default (locale) => {
+  const tAbout = useTranslations(locale, i18n.about);
   const tHeader = useTranslations(locale, i18n.header);
+  const tLinks = useTranslations(locale, i18nGeneral.links);
   const tServices = useTranslations(locale, i18n.services);
   const tSite = useTranslations(locale, i18n.site);
-  const tAbout = useTranslations(locale, i18n.about);
 
   const siteData = {
     description: tSite('description'),
@@ -189,6 +191,44 @@ export default (locale) => {
       level: '3',
       text: 'Marius Bleuer',
       visualLevel: '4',
+    },
+    socialLinks: {
+      socialLinks: [
+        {
+          color: 'primary',
+          externalLink: true,
+          externalLinkText: tLinks('externalTarget'),
+          hideLabel: true,
+          href: 'https://www.linkedin.com/company/vorhall/',
+          iconAfter: false,
+          iconBefore: {
+            colorFixed: false,
+            name: 'linkedin',
+          },
+          label: 'TODO set this properly',
+          outline: false,
+          rawIcon: true,
+          size: 's',
+          type: 'button',
+        },
+        {
+          color: 'primary',
+          externalLink: true,
+          externalLinkText: tLinks('externalTarget'),
+          hideLabel: true,
+          href: 'https://github.com/vorhall-org/',
+          iconAfter: false,
+          iconBefore: {
+            colorFixed: false,
+            name: 'github',
+          },
+          label: 'TODO set this properly',
+          outline: false,
+          rawIcon: true,
+          size: 's',
+          type: 'button',
+        },
+      ],
     },
     subtitle: tAbout('avatarMariusSubtitle'),
     text: tAbout('avatarMariusText'),

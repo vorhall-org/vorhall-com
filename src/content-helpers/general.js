@@ -2,11 +2,11 @@ import i18n from '../i18n/i18n-general';
 import { useTranslations } from '../i18n/utils';
 
 export default (locale) => {
-  const tskipLink = useTranslations(locale, i18n.skipLink);
   const tContact = useTranslations(locale, i18n.contact);
   const tFooter = useTranslations(locale, i18n.footer);
-  const tSite = useTranslations(locale, i18n.site);
   const tMain = useTranslations(locale, i18n.main);
+  const tSite = useTranslations(locale, i18n.site);
+  const tSkipLink = useTranslations(locale, i18n.skipLink);
   const tLinks = useTranslations(locale, i18n.links);
 
   const contactFormData = {
@@ -166,48 +166,50 @@ export default (locale) => {
           text: tFooter('linkImpressum'),
         },
       ],
-      socialLinks: [
-        {
-          color: 'primary',
-          externalLink: true,
-          externalLinkText: tLinks('externalTarget'),
-          hideLabel: true,
-          href: 'https://www.linkedin.com/company/vorhall/',
-          iconAfter: false,
-          iconBefore: {
-            colorFixed: false,
-            name: 'linkedin',
+      socialLinks: {
+        socialLinks: [
+          {
+            color: 'primary',
+            externalLink: true,
+            externalLinkText: tLinks('externalTarget'),
+            hideLabel: true,
+            href: 'https://www.linkedin.com/company/vorhall/',
+            iconAfter: false,
+            iconBefore: {
+              colorFixed: false,
+              name: 'linkedin',
+            },
+            label: tFooter('linkLinkedin'),
+            outline: false,
+            rawIcon: true,
+            size: 's',
+            type: 'button',
           },
-          label: tFooter('linkLinkedin'),
-          outline: false,
-          rawIcon: true,
-          size: 's',
-          type: 'button',
-        },
-        {
-          color: 'primary',
-          externalLink: true,
-          externalLinkText: tLinks('externalTarget'),
-          hideLabel: true,
-          href: 'https://github.com/vorhall-org/',
-          iconAfter: false,
-          iconBefore: {
-            colorFixed: false,
-            name: 'github',
+          {
+            color: 'primary',
+            externalLink: true,
+            externalLinkText: tLinks('externalTarget'),
+            hideLabel: true,
+            href: 'https://github.com/vorhall-org/',
+            iconAfter: false,
+            iconBefore: {
+              colorFixed: false,
+              name: 'github',
+            },
+            label: tFooter('linkGithub'),
+            outline: false,
+            rawIcon: true,
+            size: 's',
+            type: 'button',
           },
-          label: tFooter('linkGithub'),
-          outline: false,
-          rawIcon: true,
-          size: 's',
-          type: 'button',
-        },
-      ],
+        ],
+      },
     };
   };
 
   const skipLink = {
     href: '#content-area',
-    label: tskipLink('label'),
+    label: tSkipLink('label'),
   };
 
   return {

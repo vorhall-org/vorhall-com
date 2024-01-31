@@ -49,23 +49,6 @@
     row-gap: fn.to-rem(var(--spacing-4));
   }
 
-  &__social-link-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 100%;
-
-    @include mq.breakpoint($from: sm) {
-      flex-basis: auto;
-    }
-
-    @include mq.forced-colors {
-      gap: fn.to-rem(var(--spacing-1));
-    }
-
-  }
-
   &__copyright {
     flex-basis: 100%;
     text-align: center;

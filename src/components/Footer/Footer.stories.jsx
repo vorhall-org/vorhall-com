@@ -1,5 +1,5 @@
 import Comp from './Footer.jsx';
-import * as button from '../Button/Button.stories.jsx';
+import * as socialLinks from '../SocialLinks/SocialLinks.stories.jsx';
 
 export default {
   component: Comp,
@@ -22,17 +22,7 @@ const defaultArgs = {
       text: 'Impressum',
     },
   ],
-  socialLinks: [
-    {
-      ...button.IconOnlyRaw.args,
-    },
-    {
-      ...button.IconOnlyRaw.args,
-      iconBefore: {
-        name: 'linkedin',
-      },
-    },
-  ],
+  socialLinks: socialLinks.SocialLinks.args,
 };
 
 export const Footer = {

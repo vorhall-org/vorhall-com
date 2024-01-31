@@ -6,8 +6,8 @@
   aspect-ratio: 1 / 1;
   border-radius: var(--border-radius-rounded-full);
   background: var(--color-gray-100);
-  width: fn.to-rem(100);
-  height: fn.to-rem(100);
+  width: 40%;
+  height: auto;
 
   box-shadow: var(--shadow-md);
 }
