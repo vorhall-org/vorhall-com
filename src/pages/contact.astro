@@ -1,9 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const pageMetaInformation = {
+  tags: [
+    {
+      content: 'todo',
+      name: 'description',
+    },
+    {
+      content: 'noindex',
+      name: 'robots',
+    },
+  ],
+  title: 'todo',
+};
 ---
 
-<Layout>
+<Layout pageMetaTags={pageMetaInformation.tags}>
   contact
-
 </Layout>
