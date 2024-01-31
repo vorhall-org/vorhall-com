@@ -150,7 +150,7 @@
   }
 
   &:is(a) &__label {
-    margin-top: fn.to-rem(-1);
+    margin-top: fn.to-rem(-2);
   }
 
   &__icon-before,
@@ -179,6 +179,7 @@
 
   &--link {
     display: inline-flex;
+    text-underline-offset: fn.to-rem(var(--spacing-1));
   }
 
   @include mx.hover-focus {

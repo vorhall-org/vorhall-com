@@ -73,6 +73,24 @@
   border: 0;
 }
 
+@mixin visually-hidden-reset {
+	position: static;
+	width: auto;
+	height: auto;
+	overflow: visible;
+	margin: 0;
+	clip: auto;
+}
+
+@mixin visually-hidden-focusable {
+	@include visually-hidden;
+
+	&:focus,
+	&:active {
+		@include visually-hidden-reset;
+	}
+}
+
 @mixin hover-focus {
   &:hover {
     @include mq.mouse-only {

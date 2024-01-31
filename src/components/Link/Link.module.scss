@@ -17,21 +17,15 @@
 .link {
   $root: &;
   display: inline-block;
-  text-decoration: none;
+  text-underline-offset: fn.to-rem(var(--spacing-1-5));
   color: var(--link-color);
-  border-bottom: fn.to-rem(var(--spacing-px)) solid currentcolor;
 
   &--secondary {
     color: var(--link-color-secondary);
-    border-bottom-color: transparent;
-
-    @include mx.hover-focus {
-      border-bottom-color: currentcolor;
-    }
   }
 
   @include mx.default-transition;
-  transition-property: color, border-color;
+  transition-property: color;
 
   @include mx.hover-focus {
     color: var(--link-color-hover);

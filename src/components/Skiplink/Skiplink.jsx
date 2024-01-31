@@ -1,15 +1,14 @@
-import styles from './Skiplink.module.scss';
+import styles from './SkipLink.module.scss';
 
-export default function Skiplink(props) {
+export default function SkipLink(props) {
   return (
     <a
       classList={{
         [styles['skiplink']]: true,
-        [props.classes]: props.classes,
       }}
       href={props.href}
     >
-      {props.children}
+      {props.label}
     </a>
   );
 }

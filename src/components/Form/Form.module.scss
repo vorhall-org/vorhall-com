@@ -29,6 +29,11 @@
   &__privacy-note {
     color: var(--form-privacy-note-color);
     font-size: fn.to-rem(var(--text-xs));
+
+    a {
+      text-underline-offset: fn.to-rem(var(--spacing-1));
+    }
+
   }
 
   &--fade-enter-active,

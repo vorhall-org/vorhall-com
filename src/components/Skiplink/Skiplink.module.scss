@@ -3,33 +3,34 @@
 @use '/src/styles/mixins' as mx;
 
 :root {
-  --skiplink-color: var(--color-blue-600);
-  --skiplink-color-hover: var(--color-blue-800);
-  --skiplink-color-secondary: var(--color-gray-500);
+  --skiplink-background-color: var(--color-red-700);
+  --skiplink-color: var(--color-white);
+  --skiplink-padding-v: var(--spacing-2-5);
+  --skiplink-padding-h: var(--spacing-5);
+  --skiplink-border-radius: var(--border-radius-rounded-lg);
 
   @include mq.color-scheme-dark {
-    --skiplink-color: var(--color-blue-500);
-    --skiplink-color-hover: var(--color-blue-300);
-    --skiplink-color-secondary: var(--color-gray-400);
+    --skiplink-background-color: var(--color-red-500);
   }
 }
 
 .skiplink {
   $root: &;
+
+  @include mx.visually-hidden-focusable;
+
   display: inline-block;
-  text-decoration: none;
+  padding: fn.to-rem(calc(var(--skiplink-padding-v) - 1)) fn.to-rem(var(--skiplink-padding-h)) fn.to-rem(var(--skiplink-padding-v));
+  background-color: var(--skiplink-background-color);
+  border-radius: fn.to-rem(var(--skiplink-border-radius));
   color: var(--skiplink-color);
-  border-bottom: fn.to-rem(var(--spacing-px)) solid currentcolor;
+  text-decoration: underline;
+  text-underline-offset: fn.to-rem(var(--spacing-1));
 
-  @include mx.hover-focus {
-    border-bottom-color: currentcolor;
+  &:focus {
+    position: fixed;
+    inset-block-start: fn.to-rem(var(--spacing-5));
+    inset-inline-start: fn.to-rem(var(--spacing-5));
   }
-
-  @include mx.default-transition;
-  transition-property: color, border-color;
-
-  @include mx.hover-focus {
-    color: var(--skiplink-color-hover);
-  };
 
 }

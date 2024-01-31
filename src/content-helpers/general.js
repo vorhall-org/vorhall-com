@@ -2,11 +2,17 @@ import i18n from '../i18n/i18n-general';
 import { useTranslations } from '../i18n/utils';
 
 export default (locale) => {
+  const tskipLink = useTranslations(locale, i18n.skipLink);
   const tContact = useTranslations(locale, i18n.contact);
   const tFooter = useTranslations(locale, i18n.footer);
   const tSite = useTranslations(locale, i18n.site);
   const tMain = useTranslations(locale, i18n.main);
   const tLinks = useTranslations(locale, i18n.links);
+
+  const skipLink = {
+    href: '#content-area',
+    label: tskipLink('label'),
+  };
 
   const contactFormData = {
     button: {
@@ -205,6 +211,7 @@ export default (locale) => {
   };
 
   return {
+    skipLink,
     contactFormData,
     footerData,
     jumbotronContact,

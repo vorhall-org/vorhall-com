@@ -91,4 +91,12 @@ export default {
       title: 'General Title | Vorhall',
     },
   },
+  skipLink: {
+    de: {
+      label: 'Zum Inhaltsbereich springen',
+    },
+    en: {
+      label: 'Jump to content area',
+    },
+  },
 };

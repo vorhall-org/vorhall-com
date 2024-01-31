@@ -1,17 +1,14 @@
-import Comp from './Skiplink.jsx';
+import Comp from './SkipLink.jsx';
 
 export default {
   component: Comp,
 };
 
 const defaultArgs = {
-  classes: '',
   href: '#content-area',
+  label: 'Skip to main content',
 };
 
 export const Skiplink = {
   args: defaultArgs,
-  render: (args) => <Comp {...args}>
-    Skip to main content
-  </Comp>,
 };

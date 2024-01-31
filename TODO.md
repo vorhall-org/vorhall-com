@@ -24,10 +24,11 @@
 - Schema.org?
 - Reference to https://the-sustainable.dev?
 - Save images as AVIF
-- Meta tags (<title>, description, sharing, etc.)
 - Share page button (Native API)?
 - Store language and theme preference
 - Data Policy link below form lacks contrast
 - Setup Canonical -> https://developer.chrome.com/docs/lighthouse/seo/canonical
 - Add a robots.txt?
 - Add sitemap.xml?
+- Add scroll margin top for :target
+- Decide what we want to mark as main content area, move jumbo tron into <header>?
