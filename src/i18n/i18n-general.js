@@ -85,20 +85,14 @@ export default {
     de: {
       description: 'Beschreibung unserere Website',
       homeButtonText: 'Zur Startseite',
+      skipLinkText: 'Zum Inhaltsbereich springen',
       title: 'General Title | Vorhall',
     },
     en: {
       description: 'Description of our website',
       homeButtonText: 'Back to home',
+      skipLinkText: 'Jump to content area',
       title: 'General Title | Vorhall',
-    },
-  },
-  skipLink: {
-    de: {
-      label: 'Zum Inhaltsbereich springen',
-    },
-    en: {
-      label: 'Jump to content area',
     },
   },
 };

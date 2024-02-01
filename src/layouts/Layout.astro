@@ -8,7 +8,6 @@ import Footer from '../components/Footer/Footer';
 import Section from '../components/Section/Section';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
 import Form from '../components/Form/Form';
-import SkipLink from '../components/SkipLink/SkipLink';
 import Link from '../components/Link/Link';
 import Navigation from '../components/Navigation/Navigation';
 import Button from '../components/Button/Button';
@@ -56,7 +55,7 @@ const title = pageTitle || generalData.siteData.title;
   </head>
   <body>
     <section aria-label="Skiplinks">
-      <SkipLink {...generalData.skipLink} />
+      <Button {...generalData.siteData.skipLinkData} />
     </section>
 
     {!isHome &&

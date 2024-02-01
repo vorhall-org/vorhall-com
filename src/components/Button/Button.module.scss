@@ -83,6 +83,17 @@
     }
   }
 
+  .button--skip-link {
+    --button-background-color: var(--color-red-700);
+    --button-text-color: var(--color-white);
+    --button-border-color-hover: var(--color-white);
+
+    @include mq.color-scheme-dark {
+      --button-background-color: var(--color-red-500);
+    }
+
+  }
+
   .button--size-xs {
     --button-font-size: var(--text-xs);
     --button-padding-v: var(--spacing-2);
@@ -137,8 +148,17 @@
   background-color: var(--button-background-color);
   width: max-content;
 
-  @include mx.default-transition;
   transition-property: color, background-color, border-color;
+
+  @include mx.default-transition;
+
+  &:not(&--skip-link) {
+    @include mx.hover-focus {
+      background-color: var(--button-background-color-hover);
+      color: var(--button-text-color-hover);
+      border-color: var(--button-border-color-hover);
+    }
+  }
 
   &__label {
     display: inline-block;
@@ -178,10 +198,16 @@
     text-decoration: none;
   }
 
-  @include mx.hover-focus {
-    background-color: var(--button-background-color-hover);
-    color: var(--button-text-color-hover);
-    border-color: var(--button-border-color-hover);
+  &--skip-link {
+    @include mx.visually-hidden-focusable;
+    inset-block-start: fn.to-rem(var(--spacing-4));
+    inset-inline-start: fn.to-rem(var(--spacing-4));
+
+    @include mx.hover-focus {
+      position: fixed;
+      padding: fn.to-rem(var(--button-padding-v)) fn.to-rem(var(--button-padding-h));
+      border: fn.to-rem(1) solid var(--button-border-color-hover);
+    }
   }
 
   &--icon-raw {

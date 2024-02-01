@@ -151,6 +151,21 @@ export default (locale) => {
       size: 'xl',
       type: 'submit',
     },
+    skipLinkData: {
+      classes: 'button--skip-link',
+      click: false,
+      color: 'black',
+      externalLink: false,
+      href: '#content-area',
+      iconAfter: false,
+      iconBefore: false,
+      label: tSite('skipLinkText'),
+      outline: false,
+      rawIcon: false,
+      size: 'xl',
+      skipLink: true,
+      type: 'submit',
+    },
     title: tSite('title'),
   };
 
@@ -225,17 +240,11 @@ export default (locale) => {
     };
   };
 
-  const skipLink = {
-    href: '#content-area',
-    label: tSkipLink('label'),
-  };
-
   return {
     contactFormData,
     footerData,
     jumbotronContact,
     mainData,
     siteData,
-    skipLink,
   };
 };

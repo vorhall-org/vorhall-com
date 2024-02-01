@@ -12,7 +12,6 @@
 - configure dependabot
 - Textarea: improve line-height
 
-- Skip to Content link
 - Color schema toggle?
 - High Contrast Styling (Note to ourselves: looks fairly good so far)
 - A11y Testing (Automated tools, NVDA, VoiceOver, TalkBack)
@@ -21,13 +20,12 @@
 - Data protection declaration
 - Device Testing on Win/Android/iOS
 - PWA?
-- Content Security Policies?
+- Content Security Policies? -> there is a netlify integration. needs further study
 - Schema.org?
 - Reference to https://the-sustainable.dev?
 - Save images as AVIF
 - Share page button (Native API)?
 - Store language and theme preference
-- Data Policy link below form lacks contrast
 - Setup Canonical -> https://developer.chrome.com/docs/lighthouse/seo/canonical
 - Add a robots.txt?
 - Add sitemap.xml?

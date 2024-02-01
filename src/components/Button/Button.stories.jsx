@@ -100,6 +100,7 @@ const defaultArgs = {
   outline: false,
   rawIcon: false,
   size: 's',
+  skipLink: false,
   type: 'button',
 };
 
@@ -114,6 +115,16 @@ export const ButtonLink = {
     externalLinkText: 'Link target opens in new window.',
     href: 'https://www.sbb.ch',
     label: 'Link Text',
+  },
+};
+
+export const ButtonSkipLink = {
+  args: {
+    ...defaultArgs,
+    classes: 'button--skiplink',
+    href: '#content-area',
+    label: 'Skip to main content',
+    skipLink: true,
   },
 };
 

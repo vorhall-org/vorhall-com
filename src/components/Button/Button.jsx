@@ -27,6 +27,7 @@ export default function Button(props) {
         [styles['button--icon-raw']]: props.rawIcon,
         [styles['button--link']]: props.href,
         [styles['button--loading']]: props.loading,
+        [styles['button--skip-link']]: props.skipLink,
         [props.classes]: props.classes,
       }}
       disabled={
