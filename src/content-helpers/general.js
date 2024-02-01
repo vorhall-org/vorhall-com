@@ -7,7 +7,6 @@ export default (locale) => {
   const tFooter = useTranslations(locale, i18n.footer);
   const tMain = useTranslations(locale, i18n.main);
   const tSite = useTranslations(locale, i18n.site);
-  const tSkipLink = useTranslations(locale, i18n.skipLink);
   const tLinks = useTranslations(locale, i18n.links);
 
   const contactFormData = {
