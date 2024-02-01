@@ -27,7 +27,7 @@ export default {
       emailInputErrorMalformed: 'The email address is badly formatted.',
       emailInputErrorRequired: 'Please enter your email.',
       emailInputLabel: 'Your email address',
-      emailInputPlaceholder: 'Your email address',
+      emailInputPlaceholder: 'Type in your email address',
       lead: 'Contact lead text',
       legend: 'Contact form',
       messageErrorRequired: 'Please enter your request.',
