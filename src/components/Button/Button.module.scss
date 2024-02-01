@@ -157,6 +157,10 @@
       background-color: var(--button-background-color-hover);
       color: var(--button-text-color-hover);
       border-color: var(--button-border-color-hover);
+
+      &.button--icon-raw {
+        background-color: transparent;
+      }
     }
   }
 
@@ -221,10 +225,6 @@
     #{$root}__icon-after {
       width: fn.to-rem(var(--spacing-6));
       height: fn.to-rem(var(--spacing-6));
-    }
-
-    @include mx.hover-focus {
-      background-color: transparent;
     }
   }
 
