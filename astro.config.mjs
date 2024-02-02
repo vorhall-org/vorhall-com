@@ -30,6 +30,7 @@ export default defineConfig({
     }),
     solidJs(),
   ],
+  prefetch: true,
   scopedStyleStrategy: 'class',
   site: 'https://vorhall.com/',
   trailingSlash: 'always',
