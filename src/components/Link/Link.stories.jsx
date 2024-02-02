@@ -7,6 +7,7 @@ export default {
 const defaultArgs = {
   classes: '',
   href: '#',
+  prefetch: false,
   secondary: false,
 };
 

@@ -60,6 +60,7 @@ export default function Button(props) {
           ? undefined
           : props.type
       }
+      data-astro-prefetch={(props.href && props.prefetch) || undefined}
     >
       {props.iconBefore &&
         <Icon

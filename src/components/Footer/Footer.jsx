@@ -20,6 +20,7 @@ export default function Footer(props) {
               <Link
                 href={link.link}
                 secondary={true}
+                prefetch={link.prefetch}
               >
                 {link.text}
               </Link>
@@ -43,6 +44,7 @@ export default function Footer(props) {
         <Link
           href={props.langSwitch.link}
           classes={styles['footer__lang-switch']}
+          prefetch={props.langSwitch.prefetch}
         >
           {props.langSwitch.text}
         </Link>
