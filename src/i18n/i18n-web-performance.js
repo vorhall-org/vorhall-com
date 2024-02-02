@@ -1,6 +1,6 @@
 export default {
   de: {
-    description: 'Impressum beschreibung',
+    description: 'TODO',
     docTitle: 'Web Performance (Monitoring)',
     lead: `
     Wir sehen das Thema Web-Performance als einen der entscheidenden
@@ -36,7 +36,7 @@ export default {
       Optimierung ist heutzutage entscheidend um einerseits eine
       hervorragende UX-Experience als auch einen minimalen ökologischen
       Fußabdruck zu gewährleisten.</p>
-      <h2>Wie wir Sie unterstützen können</h2>
+      <h2>Wie wir unterstützen können</h2>
       <ul>
         <li>Wir begleiten Ihre Architekturentscheide um mögliche
         Performance Probleme schon im Ansatz zu vermeiden.</li>
@@ -55,7 +55,7 @@ export default {
     title: 'Web Performance (Monitoring)',
   },
   en: {
-    description: 'Impressum description',
+    description: 'TODO',
     docTitle: 'Web Performance (Monitoring)',
     lead: `
       We see web performance as key enabler towards a sustainable IT.

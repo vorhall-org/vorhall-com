@@ -1,6 +1,6 @@
 export default {
   de: {
-    description: 'Impressum beschreibung',
+    description: 'TODO',
     docTitle: 'Digitale Barrierefreiheit',
     lead: `
       Das Internet birgt ein immenses Potenzial für die Gleichstellung
@@ -28,7 +28,7 @@ export default {
       Coding-Arbeit kontinuierlich zu überprüfen. Wir verfügen zudem über
       Expertise in Bezug auf den schweizerischen Zertifizierungsprozess
       gemäß den Web Content Accessibility Guidelines (WCAG).</p>
-      <h2>Wie wir Sie unterstützen können</h2>
+      <h2>Wie wir unterstützen können</h2>
       <ul>
         <li>Wir begleiten Ihren UX-Design Prozess um mögliche Accessibility
         Probleme schon in der frühzeitig zu erkennen und zu vermeiden.</li>
@@ -46,7 +46,7 @@ export default {
     title: 'Digitale Barrierefreiheit',
   },
   en: {
-    description: 'Impressum description',
+    description: 'TODO',
     docTitle: 'Digital Accessibility',
     lead: `
       The internet holds immense potential as an equalizer for many individuals,

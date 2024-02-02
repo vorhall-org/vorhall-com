@@ -7,7 +7,13 @@ export default {
       avatarYvesAltText: 'Avatar of Yves',
       avatarYvesSubtitle: 'Avatar Card subtitle',
       avatarYvesText: 'Avatar Card text',
-      lead: 'Obwohl Vorhall erst seit Januar 2024 tätig ist, triffst Du auf ein sehr erfahrenes Team. Als Kinder der 80er Jahre sind wir quasi mit dem Web aufgewachsen. Dank unserer Erfahrung entwickeln wir nicht nur, sondern schlagen Brücken zwischen den verschiedenen Disziplinen. Wir sind es uns gewohnt Anforderungen zu erheben, aus verschiedensten Blickwinkeln zu betrachten und die nötigen Fragen zu stellen.',
+      lead: `
+        Obwohl Vorhall erst seit Januar 2024 tätig ist, triffst Du auf ein sehr erfahrenes Team.
+        Als Kinder der 80er Jahre sind wir quasi mit dem Web aufgewachsen. Dank unserer Erfahrung
+        entwickeln wir nicht nur, sondern schlagen Brücken zwischen den verschiedenen Disziplinen.
+        Wir sind es uns gewohnt Anforderungen zu erheben, aus verschiedensten Blickwinkeln zu
+        betrachten und die nötigen Fragen zu stellen. Durch die Mandate unserer früherer Arbeitgeber,
+        kennen wir sowohl die Agenturwelt als auch die Arbeit im Grosskonzern.`,
       title: 'Wer ist Vorhall',
     },
     en: {

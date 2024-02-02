@@ -8,7 +8,7 @@ export default {
       lead: 'Contact lead text',
       legend: 'Kontaktformular',
       messageErrorRequired: 'Beschreib uns doch dein Anliegen',
-      messageLabel: 'Dein Anliegen an uns',
+      messageLabel: 'Dein Anliegen',
       messagePlaceholder: 'Beschreib uns doch bitte dein Anliegen in ein paar Sätzen',
       nameInputErrorRequired: 'Gib bitte deinen Namen ein',
       nameInputLabel: 'Dein Name',
