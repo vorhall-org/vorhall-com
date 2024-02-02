@@ -1,7 +1,11 @@
 export default {
   de: {
-    description: 'TODO',
-    docTitle: 'Digitale Barrierefreiheit',
+    description: `
+      Digitale Produkte sollten allen zugänglich sein. Wir helfen Ihnen,
+      die regulatorischen Anforderungen des European Accessibility Acts (EAA)
+      zu erfüllen.
+    `,
+    docTitle: 'Digitale Barrierefreiheit Beratung & Umsetzung',
     lead: `
       Das Internet birgt ein immenses Potenzial für die Gleichstellung,
       insbesondere für Menschen mit Behinderungen. Indem
@@ -46,8 +50,12 @@ export default {
     title: 'Digitale Barrierefreiheit',
   },
   en: {
-    description: 'TODO',
-    docTitle: 'Digital Accessibility',
+    description: `
+      Digital services should be accessible to everyone. We help
+      you to make your website accessible and to remain compliant
+      with the European Accessibility Act (EAA).
+    `,
+    docTitle: 'Digital Accessibility Consulting & Development',
     lead: `
       The internet holds immense potential as an equalizer for many individuals,
       particularly those with disabilities. By ensuring proper technical

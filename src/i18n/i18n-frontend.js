@@ -1,6 +1,9 @@
 export default {
   de: {
-    description: 'TODO',
+    description: `
+      Profitieren Sie von unserer umfassenden Erfahrung mit Frontend-Grossprojekten.
+      Wir entwickeln barrierefrei, mit Fokus auf Web Performance und Nachhaltigkeit.
+    `,
     docTitle: 'Frontend Entwicklung & Architektur',
     lead: `
       TODO
@@ -24,7 +27,10 @@ export default {
     title: 'Frontend Entwicklung & Architektur',
   },
   en: {
-    description: 'TODO',
+    description: `
+      Benefit from our extensive experience with large-scale frontend projects. We
+      develop with a focus on accessibility, web performance, and digital sustainability.
+    `,
     docTitle: 'Frontend Development & Architecture',
     lead: `
       TODO
