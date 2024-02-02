@@ -2,9 +2,11 @@ export default {
   about: {
     de: {
       avatarMariusAltText: 'Avatar of Marius',
+      avatarMariusSocialAriaLabel: 'Profile von Marius Bleuer',
       avatarMariusSubtitle: 'Avatar Card subtitle',
       avatarMariusText: 'Avatar Card text',
       avatarYvesAltText: 'Avatar of Yves',
+      avatarYvesSocialAriaLabel: 'Profile von Yves Tscherry',
       avatarYvesSubtitle: 'Avatar Card subtitle',
       avatarYvesText: 'Avatar Card text',
       lead: `
@@ -18,9 +20,11 @@ export default {
     },
     en: {
       avatarMariusAltText: 'Avatar of Marius',
+      avatarMariusSocialAriaLabel: 'Profiles of Marius Bleuer',
       avatarMariusSubtitle: 'Avatar Card subtitle',
       avatarMariusText: 'Avatar Card text',
       avatarYvesAltText: 'Avatar of Yves',
+      avatarYvesSocialAriaLabel: 'Profiles of Yves Tscherry',
       avatarYvesSubtitle: 'Avatar Card subtitle',
       avatarYvesText: 'Avatar Card text',
       lead: 'Even though Vorhall started its operations as early as January 2024, you are meeting a very experienced team. As children of the 80s, we practically grew up with the web.',

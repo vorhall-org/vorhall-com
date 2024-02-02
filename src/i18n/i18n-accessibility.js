@@ -3,8 +3,8 @@ export default {
     description: 'TODO',
     docTitle: 'Digitale Barrierefreiheit',
     lead: `
-      Das Internet birgt ein immenses Potenzial für die Gleichstellung
-      der Menschen, insbesondere für Menschen mit Behinderungen. Indem
+      Das Internet birgt ein immenses Potenzial für die Gleichstellung,
+      insbesondere für Menschen mit Behinderungen. Indem
       wir die technische Barrierefreiheit digitaler Produkte sicherstellen,
       ermöglichen wir es möglichst vielen Menschen ein unabhängigeres
       Leben zu führen und eigene Entscheidungen treffen zu können. Als
