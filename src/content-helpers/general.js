@@ -146,6 +146,7 @@ export default (locale) => {
       },
       label: tSite('homeButtonText'),
       outline: false,
+      prefetch: true,
       rawIcon: false,
       size: 'xl',
       type: 'submit',
@@ -186,15 +187,18 @@ export default (locale) => {
       copyright: tFooter('copyright'),
       langSwitch: {
         link: langSwitchLink,
+        prefetch: true,
         text: tFooter('langSwitchText'),
       },
       legalLinks: [
         {
           link: pageRoutes(lang).dataPrivacy,
+          prefetch: true,
           text: tFooter('linkDataPrivacy'),
         },
         {
           link: pageRoutes(lang).impressum,
+          prefetch: true,
           text: tFooter('linkImpressum'),
         },
       ],

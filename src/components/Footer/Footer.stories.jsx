@@ -15,10 +15,12 @@ const defaultArgs = {
   legalLinks: [
     {
       link: '#',
+      prefetch: true,
       text: 'Data Privacy',
     },
     {
       link: '#',
+      prefetch: true,
       text: 'Impressum',
     },
   ],

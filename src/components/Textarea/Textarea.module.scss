@@ -35,6 +35,7 @@
   &__input {
     font-family: var(--font-family);
     font-size: fn.to-rem(--text-base);
+    line-height: 150%;
 
     border-radius: fn.to-rem(var(--border-radius-rounded-lg));
     border: fn.to-rem(var(--border-weight-s)) solid var(--textarea-border-color);

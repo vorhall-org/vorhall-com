@@ -9,6 +9,9 @@ export default function Link(props) {
         [props.classes]: props.classes,
       }}
       href={props.href}
+      data-astro-prefetch={props.prefetch
+        ? 'hover'
+        : undefined}
     >
       {props.children}
     </a>

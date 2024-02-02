@@ -98,6 +98,7 @@ const defaultArgs = {
   label: 'Button Text',
   loading: false,
   outline: false,
+  prefetch: false,
   rawIcon: false,
   size: 's',
   skipLink: false,
