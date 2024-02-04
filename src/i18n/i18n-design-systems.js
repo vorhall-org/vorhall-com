@@ -2,7 +2,7 @@ export default {
   de: {
     description: `
       Stärken Sie Ihre digitale Marke durch die Vereinheitlichung Ihre
-      digitalen Auftritte. Dadurch sparen Sie gleichzeitig Kosten &  Ressourcen.
+      digitalen Auftritte. Dadurch sparen Sie gleichzeitig Kosten & Ressourcen.
     `,
     docTitle: 'Design Systems Beratung & Umsetzung',
     lead: `
@@ -32,7 +32,10 @@ export default {
     title: 'Design Systems',
   },
   en: {
-    description: 'TODO',
+    description: `
+      Strengthen your digital brand by unifying your digital appearances.
+      This simultaneously saves costs and resources.
+    `,
     docTitle: 'Design Systems Consulting & Development',
     lead: `
       TODO

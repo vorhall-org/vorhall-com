@@ -29,15 +29,21 @@ export default {
       avatarYvesText: 'Avatar Card text',
       lead: `
         Even though Vorhall started its operations as early as January 2024, you are meeting a
-        very experienced team. As children of the 80s, we practically grew up with the web.'
+        very experienced team. As children of the 80s, we practically grew up with the web.
+        Thanks to our experience, we not only develop but also bridge the gap between various
+        disciplines. We are accustomed to gathering requirements, considering them from diverse
+        perspectives, and asking the necessary questions. Through mandates from our previous
+        employers, we are familiar with both the agency environment and working in large corporations.
       `,
-      title: 'About',
+      title: 'Who\'s Vorhall',
     },
   },
   header: {
     de: {
       lead: '⏤ Vorhall',
-      title: '«We build fast, sustainable digital products that last and can be accessed by everyone.»',
+      title: `
+        «Wir bauen und konzipieren schnelle, barrierefreie und nachhaltige digitale Produkte.»
+      `,
     },
     en: {
       lead: '⏤ Vorhall',
@@ -46,90 +52,98 @@ export default {
   },
   services: {
     de: {
-      lead: 'Find out how we can support you',
-      serviceCard1ButtonAriaLabel: 'Mehr zum Angebot Digitale Barrierefreiheit',
+      lead: `
+        In den letzten 20 Jahren haben wir die stetige Professionalisierung und Kommerzialisierung
+        der Digitalbranche hautnah miterlebt. In Zeiten der fortschreitenden Klimaerwärmung erscheint
+        es uns wichtiger denn je, ein Web für alle zu schaffen, welches die natürlichen Ressourcen so
+        wenig wie möglich belastet. Dafür bieten wir gerne unser Fachwissen an.
+      `,
+      serviceCard1ButtonAriaLabel: 'Mehr zum Angebot Frontend Entwicklung & Architectur',
       serviceCard1ButtonLabel: 'Mehr dazu',
       serviceCard1Text: `
-        Digitale Produkte und Dienstleistungen sollten für alle zugänglich sein.
-        Wir prüfen und verbessern die Zugänglichkeit Ihrer Website und helfen Ihnen,
-        die regulatorischen Anforderungen European Accessibility Act (EAA) zu erfüllen.
+        Wenn ihr uns mit der Architektur und Implementierung eines Frontends beauftragt, erhaltet
+        ihr unsere gesamtheitliche Expertise aus allen Themenbereichen. Dabei lieben wir es so weit
+        wie möglich mit den Web Standard Technologien zu arbeiten.
       `,
-      serviceCard1Title: 'Digitale<br> Barrierefreiheit',
-      serviceCard2ButtonAriaLabel: 'Mehr zum Angebot Web Performance',
+      serviceCard1Title: 'Frontend Entwicklung<br> & Architektur',
+      serviceCard2ButtonAriaLabel: 'Mehr zum Angebot Digitale Barrierefreiheit',
       serviceCard2ButtonLabel: 'Mehr dazu',
       serviceCard2Text: `
-        Schnell ladende Websites werden von Nutzern und Suchmaschinenbots gleichermaßen bevorzugt.
-        Sie unterstützen einen barrierefreien Zugang für alle und sparen Ressourcen.'
+        Digitale Produkte und Dienstleistungen sollten für alle zugänglich sein.
+        Wir prüfen und verbessern die Zugänglichkeit eurer Website und helfen euch,
+        die regulatorischen Anforderungen European Accessibility Act (EAA) zu erfüllen.
       `,
-      serviceCard2Title: 'Web Performance<br> (Monitoring)',
-      serviceCard3ButtonAriaLabel: 'Mehr zum Angebot Nachhaltige Digitalisierung',
+      serviceCard2Title: 'Digitale<br> Barrierefreiheit',
+      serviceCard3ButtonAriaLabel: 'Mehr zum Angebot Web Performance',
       serviceCard3ButtonLabel: 'Mehr dazu',
       serviceCard3Text: `
-        «Software eats the world» hat heute messbare Auswirkungen auf die Umwelt. Wir unterstützen Sie dabei,
-        Ihre digitalen Dienstleistungen und Erzeugnisse mittels bewusster ökologischer Entscheidungen
-        Ressourcen-schonend zu gestalten und zu betreiben um ihren CO2e-Fußabdruck zu minimieren.
+        Schnell ladende Websites werden von Nutzer:innen und Suchmaschinen gleichermassen bevorzugt.
+        Dabei unterstützen sie auch einen barrierefreien Zugang für alle und sparen Ressourcen.
+        Wir können beraten, Probleme lokalisieren, umsetzen und den Zustand langfristig überwachen
+        um Regressionen zu vermeiden.
       `,
-      serviceCard3Title: 'Nachhaltige<br> Digitalisierung',
-      serviceCard4ButtonAriaLabel: 'Mehr zum Angebot Frontend Entwicklung & Architectur',
+      serviceCard3Title: 'Web Performance<br> (Monitoring)',
+      serviceCard4ButtonAriaLabel: 'Mehr zum Angebot Nachhaltige Digitalisierung',
       serviceCard4ButtonLabel: 'Mehr dazu',
       serviceCard4Text: `
-        Wenn Sie uns mit der Architektur und Implementierung von Frontends beauftragen, erhalten Sie unsere
-        gesamtheitliche Expertise. Diese umfasst auch CSS-Kenntnisse, die deutlich über die Verwendung von
-        Bibliotheken hinausgehen.
+        «Software eats the world» hat heute messbare Auswirkungen auf die Umwelt. Wir unterstützen euch dabei,
+        eure digitalen Dienstleistungen und Erzeugnisse mittels bewusster ökologischer Entscheidungen
+        ressourcenschonend zu gestalten und zu betreiben und deren CO2e-Fussabdruck zu minimieren.
       `,
-      serviceCard4Title: 'Frontend Entwicklung<br> & Architektur',
+      serviceCard4Title: 'Nachhaltige<br> Digitalisierung',
       serviceCard5ButtonAriaLabel: 'Mehr zum Angebot Design Systeme',
       serviceCard5ButtonLabel: 'Mehr dazu',
       serviceCard5Text: `
-        Wir unterstützen Sie bei der bei der Vereinheitlichung Ihrer digitalen Auftritte. Damit stärken wir
-        Ihre Marke und helfen mit Kosten und Ressourcen zu sparen.
+        Wir unterstützen euch bei der Vereinheitlichung eurer digitalen Auftritte und dem Aufbau
+        der damit verbundenen Prozesse und Organisation. Damit stärken wir eure Marke und helfen
+        euch langfristig Kosten und Ressourcen zu sparen.
       `,
-      serviceCard5Title: 'Design<br> Systeme',
+      serviceCard5Title: 'Design<br> Systems',
       serviceCard6ButtonAriaLabel: 'Tell us more about your project idea',
       serviceCard6ButtonLabel: 'Tell us more',
       serviceCard6Text: `
-        Ihre Projektidee passt vermeintlich in keine der genannten Kategorien? Erzählen Sie uns doch davon,
-        vielleicht können wir Ihnen trotzdem weiterhelfen.'
+        Eure Projektidee passt vermeintlich in keine der genannten Kategorien? Erzählt uns doch davon,
+        vielleicht können wir euch trotzdem weiterhelfen.
       `,
-      serviceCard6Title: 'Eure<br> Projektidee',
+      serviceCard6Title: 'Eure individuelle<br> Projektidee',
       title: 'Unser Angebot',
     },
     en: {
       lead: 'Find out how we can support you',
-      serviceCard1ButtonAriaLabel: 'Learn more about our Digital Accessibility offering',
+      serviceCard1ButtonAriaLabel: 'Learn more about our Frontend Development & Architecture offering',
       serviceCard1ButtonLabel: 'Learn more',
       serviceCard1Text: `
+        If you hire us for frontend architecture and implementation work, you will get our full accumulated
+        expertise combined. And yes, that involves CSS beyond using libraries.
+      `,
+      serviceCard1Title: 'Frontend Development<br> & Architecture',
+      serviceCard2ButtonAriaLabel: 'Learn more about our Digital Accessibility offering',
+      serviceCard2ButtonLabel: 'Learn more',
+      serviceCard2Text: `
         Digital products and services should be accessible to everybody. We can help to improve
         the access to your website and also stay compliant with the European Accessibility Act (EAA).
       `,
-      serviceCard1Title: 'Digital<br> Accessibility',
-      serviceCard2ButtonAriaLabel: 'Learn more about our Web Performance offering',
-      serviceCard2ButtonLabel: 'Learn more',
-      serviceCard2Text: `
+      serviceCard2Title: 'Digital<br> Accessibility',
+      serviceCard3ButtonAriaLabel: 'Learn more about our Web Performance offering',
+      serviceCard3ButtonLabel: 'Learn more',
+      serviceCard3Text: `
         Fast-loading websites are favored by both users and search engine bots. They support accessible
         browsing for all and conserve resources efficiently.
       `,
-      serviceCard2Title: 'Web Performance<br> (Monitoring)',
-      serviceCard3ButtonAriaLabel: 'Learn more about our Digital Sustainability offering',
-      serviceCard3ButtonLabel: 'Learn more',
-      serviceCard3Text: `
+      serviceCard3Title: 'Web Performance<br> (Monitoring)',
+      serviceCard4ButtonAriaLabel: 'Learn more about our Digital Sustainability offering',
+      serviceCard4ButtonLabel: 'Learn more',
+      serviceCard4Text: `
         Software eats the world" has tangible environmental impacts today. We help you make your digital
         services and products more resource-efficient through conscious environmental decisions and
         operations, thereby reducing their CO2e footprint.
       `,
-      serviceCard3Title: 'Digital<br> Sustainability',
-      serviceCard4ButtonAriaLabel: 'Learn more about our Frontend Development & Architecture offering',
-      serviceCard4ButtonLabel: 'Learn more',
-      serviceCard4Text: `
-        If you hire us for frontend architecture and implementation work, you will get our full accumulated
-        expertise combined. And yes, that involves CSS beyond using libraries.
-      `,
-      serviceCard4Title: 'Frontend Development<br> & Architecture',
+      serviceCard4Title: 'Digital<br> Sustainability',
       serviceCard5ButtonAriaLabel: 'Learn more about our Design Systems offering',
       serviceCard5ButtonLabel: 'Learn more',
       serviceCard5Text: `
         Elevate and unify your brand's digital presence with our expertise in architecting and building a
-        customized design system.',
+        customized design system.,
       `,
       serviceCard5Title: 'Design<br> Systems',
       serviceCard6ButtonAriaLabel: 'Tell us more about your project idea',

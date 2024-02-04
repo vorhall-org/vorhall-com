@@ -37,7 +37,7 @@ export default {
     `,
     richtext: `
       <p>
-      TODO We can offer a long lasting experience in building digital products.
+      We can offer a long lasting experience in building digital products.
       Over the course of our careers we have been working with many different
       technologies and frameworks. Still, we are great fans of the Web Standards.
       We have strong skills in CSS, semantic HTML and JavaScript. That does
