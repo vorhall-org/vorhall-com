@@ -6,7 +6,7 @@
   @include mx.container-centered-variables;
 
   --footer-border-color: var(--color-gray-200);
-  --footer-spacing-top: var(--spacing-16);
+  --footer-spacing-top: var(--spacing-32);
   --footer-spacing-bottom: var(--spacing-8);
 
   @include mq.color-scheme-dark {
@@ -14,11 +14,11 @@
   }
 
   @include mq.breakpoint($from: md) {
-    --footer-spacing-top: var(--spacing-24);
+    --footer-spacing-top: var(--spacing-36);
   }
 
   @include mq.breakpoint($from: lg) {
-    --footer-spacing-top: var(--spacing-32);
+    --footer-spacing-top: var(--spacing-44);
   }
 }
 
