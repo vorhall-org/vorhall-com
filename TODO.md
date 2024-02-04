@@ -5,12 +5,12 @@
 - check and fix line-heights
 - check and fix letter spacing
 - check and fix font-weights
+- check fonts on windows
 - integrate tracking
 - translate all content
 - before release, use correct tracking-id (get it on squeaky, define it in "page-helpers/Tracking.astro")
 - remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss)
 - configure dependabot
-- Textarea: improve line-height
 
 - Color schema toggle?
 - High Contrast Styling (Note to ourselves: looks fairly good so far)
