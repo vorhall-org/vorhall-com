@@ -1,6 +1,10 @@
 export default {
   de: {
-    description: 'TODO',
+    description: `
+      Wir unterstützen Sie dabei, Ihre digitalen Services mittels
+      bewusster ökologischer Entscheidungen ressourcenschonend zu
+      gestalten und zu betreiben.
+    `,
     docTitle: 'Nachhaltige Digitalisierung & Carbon Aware Computing',
     lead: `
       Wir erleben aktuell eine bedeutende globale Bewegung hin zu einer
@@ -32,7 +36,10 @@ export default {
     title: 'Nachhaltige Digitalisierung & Carbon Aware Computing',
   },
   en: {
-    description: 'TODO',
+    description: `
+      We support you in making and operating your digital services
+      resource-efficient through conscious ecological decisions.
+    `,
     docTitle: 'Digital Sustainability & Carbon Aware Computing',
     lead: `
     We are currently experiencing a significant global shift towards both

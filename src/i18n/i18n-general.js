@@ -67,7 +67,7 @@ export default {
   },
   links: {
     de: {
-      externalTarget: 'Link target opens in new window.',
+      externalTarget: 'Linkziel öffnet sich in einem neuen Fenster.',
     },
     en: {
       externalTarget: 'Link target opens in new window.',

@@ -1,7 +1,11 @@
 export default {
   de: {
-    description: 'TODO',
-    docTitle: 'Web Performance (Monitoring)',
+    description: `
+      Schnell ladende Websites werden von Nutzer:innen und Suchmaschinenbots
+      gleichermassen bevorzugt. Wir helfen Ihnen diese zu planen, zu bauen
+      und zu «monitoren».
+    `,
+    docTitle: 'Web Performance Beratung, Umsetzung & Monitoring',
     lead: `
     Wir sehen das Thema Web-Performance als einen der entscheidenden
     Erfolgsfaktoren für eine nachhaltige IT. Oftmals ist die
@@ -52,10 +56,13 @@ export default {
         ihrem Asset-Management.</li>
       </ul>
 `,
-    title: 'Web Performance (Monitoring)',
+    title: 'Web Performance Consulting, Development & Monitoring',
   },
   en: {
-    description: 'TODO',
+    description: `
+      Fast-loading websites are favored by both users and search engine
+      bots. We help you architect, build and monitor them.
+    `,
     docTitle: 'Web Performance (Monitoring)',
     lead: `
       We see web performance as key enabler towards a sustainable IT.
