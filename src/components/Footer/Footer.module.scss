@@ -7,6 +7,7 @@
 
   --footer-border-color: var(--color-gray-200);
   --footer-spacing-top: var(--spacing-16);
+  --footer-spacing-bottom: var(--spacing-8);
 
   @include mq.color-scheme-dark {
     --footer-border-color: var(--color-gray-700);
@@ -22,7 +23,10 @@
 }
 
 .footer {
-  padding-top: fn.to-rem(var(--footer-spacing-top));
+  @include mx.container-full-width;
+  margin-top: fn.to-rem(var(--footer-spacing-top));
+  padding-bottom: fn.to-rem(var(--footer-spacing-bottom));
+  border-top: fn.to-rem(var(--spacing-px)) solid var(--footer-border-color);
 
   &__legal-link-list {
     @include mx.container-centered;
@@ -32,9 +36,8 @@
     align-items: center;
     justify-content: center;
     column-gap: fn.to-rem(var(--spacing-8));
-    border-bottom: fn.to-rem(var(--spacing-px)) solid var(--footer-border-color);
-    margin-bottom: fn.to-rem(var(--spacing-8));
-    padding-bottom: fn.to-rem(var(--spacing-8));
+    margin-bottom: fn.to-rem(var(--spacing-5));
+    padding-top: fn.to-rem(var(--spacing-8));
 
     @include mq.breakpoint($from: sm) {
       justify-content: flex-start;
@@ -51,12 +54,19 @@
     row-gap: fn.to-rem(var(--spacing-4));
   }
 
+  &__social-links {
+    @include mq.breakpoint($from: sm) {
+      order: 2;
+    }
+  }
+
   &__copyright {
     flex-basis: 100%;
     text-align: center;
 
     @include mq.breakpoint($from: sm) {
       flex-basis: auto;
+      order: 1;
     }
   }
 
@@ -65,6 +75,7 @@
 
     @include mq.breakpoint($from: sm) {
       margin: 0;
+      order: 3;
     }
   }
 
