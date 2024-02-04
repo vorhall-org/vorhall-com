@@ -1,18 +1,15 @@
 ---
 import { getLocale } from 'astro-i18n-aut';
 import i18n from '../../i18n/i18n-accessibility';
-import i18nGeneral from '../../i18n/i18n-general';
 import { useTranslations } from '../../i18n/utils';
 
 import Layout from '../../layouts/Layout.astro';
-import Main from '../../components/MainContainer/MainContainer';
 import Section from '../../components/Section/Section';
 import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import Richtext from '../../components/Richtext/Richtext';
 
 const locale = getLocale(Astro.url);
 const t = useTranslations(locale, i18n);
-const tGeneralMain = useTranslations(locale, i18nGeneral.main);
 
 const pageMetaInformation = {
   tags: [
@@ -44,13 +41,9 @@ const jumbotronData = {
   pageMetaTags={pageMetaInformation.tags}
   pageTitle={pageMetaInformation.title}
 >
-  <Main ariaLabel={tGeneralMain('ariaLabel')}>
-
-    <Section>
-      <Jumbotron {...jumbotronData} />
-      <Richtext text={t('richtext')} />
-    </Section>
-
-  </Main>
+  <Section>
+    <Jumbotron {...jumbotronData} />
+    <Richtext text={t('richtext')} />
+  </Section>
 </Layout>
 

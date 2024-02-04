@@ -33,6 +33,7 @@ export default function Footer(props) {
       <div class={styles['footer__bottom-wrapper']}>
         <SocialLinks
           {...props.socialLinks}
+          classes={styles['footer__social-links']}
         />
 
         {/* Copyright */}
