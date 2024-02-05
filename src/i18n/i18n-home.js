@@ -110,13 +110,13 @@ export default {
     },
     en: {
       lead: 'Find out how we can support you',
-      serviceCard1ButtonAriaLabel: 'Learn more about our Frontend Development & Architecture offering',
+      serviceCard1ButtonAriaLabel: 'Learn more about our front-end Development & Architecture offering',
       serviceCard1ButtonLabel: 'Learn more',
       serviceCard1Text: `
-        If you hire us for frontend architecture and implementation work, you will get our full accumulated
+        If you hire us for front-end architecture and implementation work, you will get our full accumulated
         expertise combined. And yes, that involves CSS beyond using libraries.
       `,
-      serviceCard1Title: 'Frontend Development<br> & Architecture',
+      serviceCard1Title: 'Front-end Development<br> & Architecture',
       serviceCard2ButtonAriaLabel: 'Learn more about our Digital Accessibility offering',
       serviceCard2ButtonLabel: 'Learn more',
       serviceCard2Text: `

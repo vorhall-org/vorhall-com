@@ -31,26 +31,34 @@ export default {
       Benefit from our extensive experience with large-scale frontend projects. We
       develop with a focus on accessibility, web performance, and digital sustainability.
     `,
-    docTitle: 'Frontend Development & Architecture',
+    docTitle: 'Front-end Development & Architecture',
     lead: `
-      TODO
-    `,
-    richtext: `
-      <p>
       We can offer a long lasting experience in building digital products.
       Over the course of our careers we have been working with many different
       technologies and frameworks. Still, we are great fans of the Web Standards.
-      We have strong skills in CSS, semantic HTML and JavaScript. That does
-      not mean that we do not relay on appropriate frameworks and innovative
-      state of the art infrastructure where it is appropriate. With our
-      strong focus on Web Performance and a resource gentle approach to software
-      development, we try to use only what is strictly necessary to avoid any
-      unnecessary bloat. Obviously, this should not come at the expense of
-      reduced flexibility and speed in terms of “time to market”. We will provide
-      you with an innovative and flexible setup which will keep you agile
-      and lean at the same time.
+    `,
+    richtext: `
+      <p>
+        We have strong skills in CSS, semantic HTML and JavaScript. That does
+        not mean that we do not relay on appropriate frameworks and innovative
+        state of the art infrastructure where it is appropriate. With our
+        strong focus on Web Performance and a resource gentle approach to software
+        development, we try to use only what is strictly necessary to avoid any
+        unnecessary bloat.
+      </p>
+      <p>
+        Obviously, this should not come at the expense of
+        reduced flexibility and speed in terms of “time to market”. We will provide
+        you with an innovative and flexible setup which will keep you agile
+        and lean at the same time.
+      </p>
+      <p>
+        We are used to working in agile environments and understand the importance of
+        communication and team dynamics. As former front-end engineering team leads,
+        we are not only familiar with the technical aspects of the work, but can also
+        help build the right skills and team structure.
       </p>
     `,
-    title: 'Frontend Development & Architecture',
+    title: 'Front-end Development & Architecture',
   },
 };
