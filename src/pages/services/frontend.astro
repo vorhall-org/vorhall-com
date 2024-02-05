@@ -33,7 +33,7 @@ const jumbotronData = {
     visualLevel: false,
   },
   leadTextContent: t('lead'),
-  mainJumbo: false,
+  secondaryJumbo: true,
 };
 
 const badges = [
@@ -80,7 +80,6 @@ const badges = [
   <Section>
     <Jumbotron {...jumbotronData} />
     <Richtext text={t('richtext')} />
-
     <BadgeList items={badges} />
   </Section>
 </Layout>
