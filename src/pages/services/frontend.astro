@@ -36,6 +36,41 @@ const jumbotronData = {
   mainJumbo: false,
 };
 
+const badges = [
+  {
+    color: 'blue',
+    text: 'JAM-Stack',
+  },
+  {
+    color: 'blue',
+    text: 'React',
+  },
+  {
+    color: 'blue',
+    text: 'SolidJS',
+  },
+  {
+    color: 'blue',
+    text: 'GitHub',
+  },
+  {
+    color: 'blue',
+    text: 'CI/CD',
+  },
+  {
+    color: 'blue',
+    text: 'Astro',
+  },
+  {
+    color: 'blue',
+    text: 'Webpack',
+  },
+  {
+    color: 'blue',
+    text: 'Vite',
+  },
+];
+
 ---
 
 <Layout
@@ -46,40 +81,7 @@ const jumbotronData = {
     <Jumbotron {...jumbotronData} />
     <Richtext text={t('richtext')} />
 
-    <BadgeList items={[
-      {
-        color: 'blue',
-        text: 'JAM-Stack',
-      },
-      {
-        color: 'blue',
-        text: 'React',
-      },
-      {
-        color: 'blue',
-        text: 'SolidJS',
-      },
-      {
-        color: 'blue',
-        text: 'GitHub',
-      },
-      {
-        color: 'blue',
-        text: 'CI/CD',
-      },
-      {
-        color: 'blue',
-        text: 'Astro',
-      },
-      {
-        color: 'blue',
-        text: 'Webpack',
-      },
-      {
-        color: 'blue',
-        text: 'Vite',
-      },
-    ]} />
+    <BadgeList items={badges} />
   </Section>
 </Layout>
 
