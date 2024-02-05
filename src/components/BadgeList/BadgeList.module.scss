@@ -1,0 +1,7 @@
+@use '/src/styles/functions' as fn;
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: fn.to-rem(var(--spacing-4));
+}
