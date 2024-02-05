@@ -5,7 +5,11 @@ export default {
       emailInputErrorRequired: 'Gib bitte deine E-Mail Adresse ein.',
       emailInputLabel: 'Deine E-Mail Adresse',
       emailInputPlaceholder: 'Deine E-Mail Adresse',
-      lead: 'Contact lead text',
+      lead: `
+        Eure Projektidee passt vermeintlich in keine der von uns genannten Kategorien? Erzählt uns doch
+        davon, vielleicht können wir euch trotzdem weiterhelfen. Wir sind stets auch an neuen Kooperation
+        interessiert. Zögert nicht, wenn wir euch kennenlernen sollten!
+      `,
       legend: 'Kontaktformular',
       messageErrorRequired: 'Beschreib uns doch dein Anliegen',
       messageLabel: 'Dein Anliegen',
@@ -28,7 +32,11 @@ export default {
       emailInputErrorRequired: 'Please enter your email.',
       emailInputLabel: 'Your email address',
       emailInputPlaceholder: 'Type in your email address',
-      lead: 'Contact lead text',
+      lead: `
+        Do you have an idea in mind which does not seem to fit in any of the services mentioned?
+        Talk to us and let's see how we can support you. We are always open to new collaborations.
+        Don't hesitate to reach out if we should get to know each other!
+      `,
       legend: 'Contact form',
       messageErrorRequired: 'Please enter your request.',
       messageLabel: 'Tell us about your idea or question',
@@ -49,7 +57,7 @@ export default {
   },
   footer: {
     de: {
-      copyright: '©2024 Vorhall KlG',
+      copyright: '©2024 Vorhall KLG',
       langSwitchText: 'Change to english',
       linkDataPrivacy: 'Data Privacy',
       linkGithub: 'Besuche Vorhall auf Github',
@@ -57,7 +65,7 @@ export default {
       linkLinkedin: 'Besuche Vorhall auf LinkedIn',
     },
     en: {
-      copyright: '©2024 Vorhall KlG',
+      copyright: '©2024 Vorhall KLG',
       langSwitchText: 'Auf Deutsch wechseln',
       linkDataPrivacy: 'Data Privacy',
       linkGithub: 'Visit Vorhall on Github',

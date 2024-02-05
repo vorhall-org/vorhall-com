@@ -40,7 +40,7 @@ export default {
     richtext: `
       <p>
         We have strong skills in CSS, semantic HTML and JavaScript. That does
-        not mean that we do not relay on appropriate frameworks and innovative
+        not mean that we do not rely on appropriate frameworks and innovative
         state of the art infrastructure where it is appropriate. With our
         strong focus on Web Performance and a resource gentle approach to software
         development, we try to use only what is strictly necessary to avoid any
@@ -58,6 +58,30 @@ export default {
         we are not only familiar with the technical aspects of the work, but can also
         help build the right skills and team structure.
       </p>
+      <h2>What we can do for you</h2>
+       <ul>
+       <li>
+        We accompany your UX design process to validate the feasability and the
+        accesibility of the design eary in the process.</li>
+       <li>
+        We can help you define and setup the architecture of your front-end.
+      </li>
+      <li>
+        We can realise semantic, <a href="https://vorhall.com/services/web-performance">fast</a>,
+        <a href="https://vorhall.com/services/accessibility">accessible</a> and
+        <a href="https://vorhall.com/services/services/digital-sustainability">resource-saving</a> front-ends.
+      </li>
+       <li>
+        We can offer technical search engine optimisation (SEO) know-how, including
+        structured data (schema.org).
+      </li>
+      <li>
+
+      </li>
+      <li>
+
+      </li>
+       </ul>
     `,
     title: 'Front-end Development & Architecture',
   },

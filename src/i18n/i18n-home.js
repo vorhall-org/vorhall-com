@@ -109,7 +109,12 @@ export default {
       title: 'Unser Angebot',
     },
     en: {
-      lead: 'Find out how we can support you',
+      lead: `
+        Over the past 20 years, we have witnessed the continuous professionalization and commercialization
+        of the digital industry up close. In the era of advancing climate change, it seems more important
+        than ever to create a web accessible to all that minimizes the impact on natural resources. We are
+        more than willing to contribute our expertise towards this goal.
+      `,
       serviceCard1ButtonAriaLabel: 'Learn more about our front-end Development & Architecture offering',
       serviceCard1ButtonLabel: 'Learn more',
       serviceCard1Text: `
