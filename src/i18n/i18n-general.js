@@ -6,8 +6,8 @@ export default {
       emailInputLabel: 'Deine E-Mail Adresse',
       emailInputPlaceholder: 'Deine E-Mail Adresse',
       lead: `
-        Eure Projektidee passt vermeintlich in keine der von uns genannten Kategorien? Erzählt uns doch
-        davon, vielleicht können wir euch trotzdem weiterhelfen. Wir sind stets auch an neuen Kooperation
+        Deine Projektidee passt vermeintlich in keine der von uns genannten Kategorien? Erzähl uns doch
+        davon, vielleicht können wir dir trotzdem weiterhelfen. Wir sind auch stets an neuen Kooperation
         interessiert. Zögert nicht, wenn wir euch kennenlernen sollten!
       `,
       legend: 'Kontaktformular',

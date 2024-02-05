@@ -99,8 +99,8 @@ export default {
         euch langfristig Kosten und Ressourcen zu sparen.
       `,
       serviceCard5Title: 'Design<br> Systems',
-      serviceCard6ButtonAriaLabel: 'Tell us more about your project idea',
-      serviceCard6ButtonLabel: 'Tell us more',
+      serviceCard6ButtonAriaLabel: 'Kontaktiert uns und erzählt uns mehr über eure Idee',
+      serviceCard6ButtonLabel: 'Kontaktiert uns',
       serviceCard6Text: `
         Eure Projektidee passt vermeintlich in keine der genannten Kategorien? Erzählt uns doch davon,
         vielleicht können wir euch trotzdem weiterhelfen.

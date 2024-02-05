@@ -18,9 +18,9 @@ export default {
     `,
     richtext: `
       <p>
-        Einge gelungene Digitale Barrierefreiheit erfordert die
+        Einge gelungene Digitale Barriere&shy;freiheit erfordert die
         Zusammenarbeit aus unterschiedlichen Bereichen und
-        Perspektiven. Enstprechend ist es uns wichtig, die Barrierefreiheit
+        Perspektiven. Entsprechend ist es uns wichtig, die Barriere&shy;freiheit
         über die bloße Technik hinaus zu fördern und bei unseren Kundinnen
         und Kunden möglichst nachhaltig in die Prozessen einfliessen zu
         lassen.
@@ -64,7 +64,7 @@ export default {
         </li>
       </ul>
   `,
-    title: 'Digitale Barrierefreiheit',
+    title: 'Digitale Barriere&shy;freiheit',
   },
   en: {
     description: `

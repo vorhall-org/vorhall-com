@@ -53,7 +53,7 @@ export default {
         </li>
         <li>
           Wir nutzen die mächtige Service Worker API, um leistungsfähige und ressourcenschonende
-          digitale Erlebnisse zu gestalten. Die Service Worker API dient mitunter auch als Basis
+          digitale Erlebnisse umzusetzen. Die Service Worker API dient mitunter auch als Basis
           für die inzwischen etwas bekannter gewordenen Progressive Web Apps (PWA).
         </li>
       </ul>
