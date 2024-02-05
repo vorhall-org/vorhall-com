@@ -6,7 +6,7 @@ export default {
     `,
     docTitle: 'Frontend Entwicklung & Architektur',
     lead: `
-      Seit beinahe zwei Jahrzehnte bauen wir digitale Erlebnisse. Entsprechend haben
+      Seit beinahe zwei Jahrzehnten bauen wir digitale Erlebnisse. Entsprechend haben
       wir im Laufe unserer Karrieren mit vielen verschiedenen Technologien
       und Frameworks gearbeitet. Nichtsdestotrotz sind wir nach wie vor begeisterte
       Befürworter der Web Standard Technologien.
@@ -35,27 +35,30 @@ export default {
       <h2>Wie wir unterstützen können</h2>
       <ul>
         <li>
-          We accompany your UX design process to validate the feasability and the
-          accesibility of the design eary in the process.
+          Wir begleiten euren UX-Prozess um frühzeitig die Machbarkeit und die Barrierefreiheit
+          zu beurteilen.
         </li>
         <li>
-          We can help you define and setup the architecture of your front-end.
+          Wir helfen euch bei der Konzeption der Architektur und dem Projektaufbau eures Frontends.
         </li>
         <li>
-          We can realise semantic, <a href="https://vorhall.com/services/web-performance">fast</a>,
-          <a href="https://vorhall.com/services/accessibility">accessible</a> and
-          <a href="https://vorhall.com/services/services/digital-sustainability">resource-saving</a> front-ends.
+          Wir setzen euch ein semantisches, <a href="https://vorhall.com/services/web-performance">schnelles</a>,
+          <a href="https://vorhall.com/services/accessibility">barrierefreies</a> und
+          <a href="https://vorhall.com/services/services/digital-sustainability">ressourcenschonendes</a>
+          Frontend um.
         </li>
         <li>
-          We can offer technical search engine optimisation (SEO) know-how, including
-          structured data (schema.org).
+          Wir kennen uns mit den «Markup-technischen» Aspekten der Suchmaschinenoptimierung (SEO) aus,
+          inklusive der Auszeichnung mittels «structured data» nach schema.org.
         </li>
         <li>
-          We use the power of Service Workers to craft capable and ressource-saving digital experiences.
+          Wir nutzen die mächtige Service Worker API, um leistungsfähige und ressourcenschonende
+          digitale Erlebnisse zu gestalten. Die Service Worker API dient mitunter auch als Basis
+          für die inzwischen etwas bekannter gewordenen Progressive Web Apps (PWA).
         </li>
       </ul>
 `,
-    title: 'Frontend Entwicklung & Architektur',
+    title: 'Frontend<br> Entwicklung & Architektur',
   },
   en: {
     description: `
@@ -108,10 +111,12 @@ export default {
           structured data (schema.org).
         </li>
         <li>
-          We use the power of Service Workers to craft capable and ressource-saving digital experiences.
+          We use the power of Service Worker API to craft capable and ressource-saving
+          digital experiences, also known as Progressive Web Apps (PWA).
         </li>
       </ul>
+      <h3>Some of the front-end technology we work with</h3>
     `,
-    title: 'Front-end Development & Architecture',
+    title: 'Front-end<br> Development & Architecture',
   },
 };

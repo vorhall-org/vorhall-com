@@ -7,6 +7,7 @@ import Layout from '../../layouts/Layout.astro';
 import Section from '../../components/Section/Section';
 import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import Richtext from '../../components/Richtext/Richtext';
+import BadgeList from '../../components/BadgeList/BadgeList';
 
 const locale = getLocale(Astro.url);
 const t = useTranslations(locale, i18n);
@@ -35,6 +36,41 @@ const jumbotronData = {
   mainJumbo: false,
 };
 
+const badges = [
+  {
+    color: 'blue',
+    text: 'JAM-Stack',
+  },
+  {
+    color: 'blue',
+    text: 'React',
+  },
+  {
+    color: 'blue',
+    text: 'SolidJS',
+  },
+  {
+    color: 'blue',
+    text: 'GitHub',
+  },
+  {
+    color: 'blue',
+    text: 'CI/CD',
+  },
+  {
+    color: 'blue',
+    text: 'Astro',
+  },
+  {
+    color: 'blue',
+    text: 'Webpack',
+  },
+  {
+    color: 'blue',
+    text: 'Vite',
+  },
+];
+
 ---
 
 <Layout
@@ -44,6 +80,8 @@ const jumbotronData = {
   <Section>
     <Jumbotron {...jumbotronData} />
     <Richtext text={t('richtext')} />
+
+    <BadgeList items={badges} />
   </Section>
 </Layout>
 

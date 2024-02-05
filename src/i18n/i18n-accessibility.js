@@ -27,7 +27,7 @@ export default {
       </p>
       <p>
         Wir verfügen über Erfahrung mit den populärsten
-        Desktop-Screenreadern wie JAWS und NVDA sowie mobile Varianten wie
+        Desktop-Screenreadern JAWS und NVDA sowie den Mobile-Screenreadern
         Voice Over und Talkback. Im Rahmen unserer vergangenen Mandaten
         haben wir eng mit Nutzerinnen und Nutzern von Screenreadern
         zusammengearbeitet und dabei wertvolle Einblicke in ihre
@@ -63,7 +63,7 @@ export default {
           zu verankern.
         </li>
       </ul>
-`,
+  `,
     title: 'Digitale Barrierefreiheit',
   },
   en: {
