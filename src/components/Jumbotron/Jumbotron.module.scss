@@ -4,10 +4,13 @@
 
 :root {
   @include mx.container-centered-variables;
+  @include mx.card-variables;
 
   --jumbotron-padding-h: var(--spacing-4);
   --jumbotron-padding-v: var(--spacing-4);
   --main-jumbotron-padding-v: var(--spacing-8);
+  --secondary-jumbotron-padding-v: var(--spacing-8);
+  --secondary-jumbotron-padding-h: var(--spacing-8);
   --main-jumbotron-gradient: linear-gradient(
     180deg,
     hsl(219deg 79% 91%) 0%,
@@ -42,12 +45,16 @@
   @include mq.breakpoint($from: md) {
     --jumbotron-padding-v: var(--spacing-8);
     --main-jumbotron-padding-v: var(--spacing-16);
+    --secondary-jumbotron-padding-v: var(--spacing-16);
+    --secondary-jumbotron-padding-h: var(--spacing-16);
   }
 
   @include mq.breakpoint($from: lg) {
     --jumbotron-padding-v: var(--spacing-16);
     --main-jumbotron-padding-v: var(--spacing-24);
     --jumbotron-padding-h: var(--spacing-24);
+    --secondary-jumbotron-padding-v: var(--spacing-16);
+    --secondary-jumbotron-padding-h: var(--spacing-16);
   }
 
 }
@@ -56,23 +63,34 @@
   $root: &;
   text-align: center;
   padding: 0 fn.to-rem(var(--jumbotron-padding-h)) fn.to-rem(var(--jumbotron-padding-v)) fn.to-rem(var(--jumbotron-padding-h));
-
+ 
   &--main {
     padding-top: fn.to-rem(var(--main-jumbotron-padding-v));
     padding-bottom: fn.to-rem(var(--main-jumbotron-padding-v));
     background: var(--main-jumbotron-gradient);
   }
 
+  &--secondary {
+    @include mx.card;
+    padding: 0;
+    margin-bottom: fn.to-rem(var(--spacing-16));
+  }
+
   &__content {
     #{$root}--main & {
       @include mx.container-centered;
+    }
+
+    #{$root}--secondary & {
+      padding: fn.to-rem(var(--secondary-jumbotron-padding-v)) fn.to-rem(var(--secondary-jumbotron-padding-h));
     }
   }
 
   &__heading {
     margin-bottom: fn.to-rem(var(--spacing-4));
 
-    #{$root}--main & {
+    #{$root}--main &,
+    #{$root}--secondary & {
       margin-bottom: fn.to-rem(var(--spacing-6));
     }
   }

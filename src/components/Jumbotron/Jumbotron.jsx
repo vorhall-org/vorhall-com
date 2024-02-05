@@ -9,6 +9,7 @@ export default function Jumbotron(props) {
         [styles['jumbotron']]: true,
         [props.classes]: props.classes,
         [styles['jumbotron--main']]: props.mainJumbo,
+        [styles['jumbotron--secondary']]: props.secondaryJumbo,
       }}
     >
       <div class={styles['jumbotron__content']}>
