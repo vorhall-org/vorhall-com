@@ -1,6 +1,7 @@
 @use '/src/styles/functions' as fn;
 
 .badge-list {
+  margin-top: fn.to-rem(var(--spacing-7));
   display: flex;
   flex-wrap: wrap;
   gap: fn.to-rem(var(--spacing-4));
