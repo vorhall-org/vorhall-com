@@ -11,6 +11,7 @@
 - before release, use correct tracking-id (get it on squeaky, define it in "page-helpers/Tracking.astro")
 - remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss)
 - configure dependabot
+- Flowbite: copyright/attribution?
 
 - Color schema toggle?
 - High Contrast Styling (Note to ourselves: looks fairly good so far)
