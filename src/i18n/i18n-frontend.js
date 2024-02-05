@@ -69,7 +69,7 @@ export default {
       <li>
         We can realise semantic, <a href="https://vorhall.com/services/web-performance">fast</a>,
         <a href="https://vorhall.com/services/accessibility">accessible</a> and
-        <a href="https://vorhall.com/services/services/digital-sustainability">resource-saving</a> front-ends.
+        <a href="https://vorhall.com/services/digital-sustainability">resource-saving</a> front-ends.
       </li>
        <li>
         We can offer technical search engine optimisation (SEO) know-how, including
