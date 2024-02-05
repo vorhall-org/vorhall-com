@@ -8,7 +8,6 @@
   --jumbotron-padding-h: var(--spacing-4);
   --jumbotron-padding-v: var(--spacing-4);
   --main-jumbotron-padding-v: var(--spacing-8);
-  // --main-jumbotron-gradient: linear-gradient(180deg, rgba(28, 100, 242, 16%) 0%, rgba(28, 100, 242, 2%) 100%);
   --main-jumbotron-gradient: linear-gradient(
     180deg,
     hsl(219deg 79% 91%) 0%,
@@ -25,7 +24,6 @@
 
 
   @include mq.color-scheme-dark {
-    //--main-jumbotron-gradient: linear-gradient(180deg, rgba(26, 86, 219, 44%) 9.51%, rgba(28, 100, 242, 2%) 100%), var(--color-gray-900, #111928);
     --main-jumbotron-gradient: linear-gradient(
       180deg,
       hsl(221deg 70% 27%) 0%,
