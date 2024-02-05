@@ -82,6 +82,7 @@ export default {
 
       </li>
        </ul>
+       <h2>Buzzwording</h2>
     `,
     title: 'Front-end Development & Architecture',
   },
