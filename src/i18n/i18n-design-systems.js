@@ -92,14 +92,14 @@ export default {
           We support you in the conception and implementation of a new design system.
       </li>
       <li>
-          We provide consulting services for your existing design system.
+          We provide consulting services for your design system.
       </li>
       <li>
           We carry out implementation work for expanding an existing design system.
       </li>
       <li>
           We <a href="https://vorhall.com/services/accessibility">evaluate the accessibility</a>
-          of the existing code implementations in your existing design system.
+          of the code implementations in your design system.
       </li>
     </ul>
 
