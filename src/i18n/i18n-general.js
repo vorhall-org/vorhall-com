@@ -21,8 +21,8 @@ export default {
         link: 'Datenschutzbestimmungen',
         postLink: 'erfährst Du mehr zu unserem Umgang mit Daten.',
         preLink: `
-          Wir schätzen «Privacy By Design» genauso wie Du. Deine Eingaben in diesem
-          Formular werden einzig zur Bearbeitung der Anfrage verwendet. In unseren
+          Wir schätzen unsere Privatsphäre genauso wie Du die deine. Deine Eingaben in
+          diesem Formular werden einzig zur Bearbeitung der Anfrage verwendet. In unseren
         `,
       },
       submitButtonText: 'Absenden',
@@ -51,8 +51,8 @@ export default {
         link: 'Data Policy',
         postLink: 'for more information.',
         preLink: `
-          We value 'Privacy By Design' just as much as you do. Your inputs in this form will be solely
-          used for processing the request. Have a look at our
+          We value our privacy just as much as you do yours. Your inputs in this form will
+          be solely used for processing the request. Have a look at our
         `,
       },
       submitButtonText: 'Submit',
@@ -65,7 +65,7 @@ export default {
     de: {
       copyright: '©2024 Vorhall KLG',
       langSwitchText: 'Change to english',
-      linkDataPrivacy: 'Data Privacy',
+      linkDataPrivacy: 'Datenschutzbestimmungen',
       linkGithub: 'Besuche Vorhall auf Github',
       linkImpressum: 'Impressum',
       linkLinkedin: 'Besuche Vorhall auf LinkedIn',
