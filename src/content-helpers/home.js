@@ -55,6 +55,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceFrontend,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard1ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -78,6 +81,7 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceAccessibility,
+      iconAfter: 'arrowRight',
       label: tServices('serviceCard2ButtonLabel'),
       prefetch: true,
       size: 'l',

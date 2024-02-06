@@ -1,4 +1,5 @@
 import { For } from 'solid-js';
+import Button from '../Button/Button';
 import Link from '../Link/Link';
 import SocialLinks from '../SocialLinks/SocialLinks';
 import styles from './Footer.module.scss';
@@ -14,6 +15,11 @@ export default function Footer(props) {
 
       {/* Legal Links */}
       <ul class={styles['footer__legal-link-list']}>
+        <li>
+          <p class={styles['footer__copyright']}>
+            {props.copyright}
+          </p>
+        </li>
         <For each={props.legalLinks}>
           {(link) => (
             <li>
@@ -36,19 +42,15 @@ export default function Footer(props) {
           classes={styles['footer__social-links']}
         />
 
-        {/* Copyright */}
-        <p class={styles['footer__copyright']}>
-          {props.copyright}
-        </p>
-
         {/* Language */}
-        <Link
+        <Button
           href={props.langSwitch.link}
           classes={styles['footer__lang-switch']}
+          color='gray'
+          label={props.langSwitch.text}
           prefetch={props.langSwitch.prefetch}
-        >
-          {props.langSwitch.text}
-        </Link>
+          size='s'
+        />
       </div>
 
     </footer>

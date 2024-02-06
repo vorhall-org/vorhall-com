@@ -15,4 +15,14 @@
   @include mx.container-centered;
   padding-top: fn.to-rem(var(--navigation-padding-v));
   padding-bottom: fn.to-rem(var(--navigation-padding-v));
+
+  display: flex;
+  justify-content: center;
+
+
+  @include mq.breakpoint($to: lg) {
+    display: flex;
+    justify-content: center;
+  }
+
 }

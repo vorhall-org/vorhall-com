@@ -59,7 +59,7 @@ export default {
     de: {
       copyright: '©2024 Vorhall KLG',
       langSwitchText: 'Change to english',
-      linkDataPrivacy: 'Data Privacy',
+      linkDataPrivacy: 'Datenschutzerklärung',
       linkGithub: 'Besuche Vorhall auf Github',
       linkImpressum: 'Impressum',
       linkLinkedin: 'Besuche Vorhall auf LinkedIn',

@@ -115,40 +115,40 @@ export default {
         than ever to create a web accessible to all that minimizes the impact on natural resources. We are
         more than willing to contribute our expertise towards this goal.
       `,
-      serviceCard1ButtonAriaLabel: 'Learn more about our front-end Development & Architecture offering',
-      serviceCard1ButtonLabel: 'Learn more',
+      serviceCard1ButtonAriaLabel: 'Read more about our front-end Development & Architecture offering',
+      serviceCard1ButtonLabel: 'Read more',
       serviceCard1Text: `
         If you hire us for front-end architecture and implementation work, you will get our full accumulated
         expertise combined. And yes, that involves CSS beyond using libraries.
       `,
       serviceCard1Title: 'Front-end Development<br> & Architecture',
-      serviceCard2ButtonAriaLabel: 'Learn more about our Digital Accessibility offering',
-      serviceCard2ButtonLabel: 'Learn more',
+      serviceCard2ButtonAriaLabel: 'Read more about our Digital Accessibility offering',
+      serviceCard2ButtonLabel: 'Read more',
       serviceCard2Text: `
         Digital products and services should be accessible to everybody. We can help to improve
         the access to your website and also stay compliant with the European Accessibility Act (EAA).
       `,
       serviceCard2Title: 'Digital<br> Accessibility',
-      serviceCard3ButtonAriaLabel: 'Learn more about our Web Performance offering',
-      serviceCard3ButtonLabel: 'Learn more',
+      serviceCard3ButtonAriaLabel: 'Read more about our Web Performance offering',
+      serviceCard3ButtonLabel: 'Read more',
       serviceCard3Text: `
         Fast-loading websites are favored by both users and search engine bots. They support accessible
         browsing for all and conserve resources efficiently.
       `,
       serviceCard3Title: 'Web Performance<br> (Monitoring)',
-      serviceCard4ButtonAriaLabel: 'Learn more about our Digital Sustainability offering',
-      serviceCard4ButtonLabel: 'Learn more',
+      serviceCard4ButtonAriaLabel: 'Read more about our Digital Sustainability offering',
+      serviceCard4ButtonLabel: 'Read more',
       serviceCard4Text: `
         Software eats the world" has tangible environmental impacts today. We help you make your digital
         services and products more resource-efficient through conscious environmental decisions and
         operations, thereby reducing their CO2e footprint.
       `,
       serviceCard4Title: 'Digital<br> Sustainability',
-      serviceCard5ButtonAriaLabel: 'Learn more about our Design Systems offering',
-      serviceCard5ButtonLabel: 'Learn more',
+      serviceCard5ButtonAriaLabel: 'Read more about our Design Systems offering',
+      serviceCard5ButtonLabel: 'Read more',
       serviceCard5Text: `
         Elevate and unify your brand's digital presence with our expertise in architecting and building a
-        customized design system.,
+        customized design system.
       `,
       serviceCard5Title: 'Design<br> Systems',
       serviceCard6ButtonAriaLabel: 'Tell us more about your project idea',

@@ -5,7 +5,7 @@
 :root {
   @include mx.container-centered-variables;
 
-  --form-max-width: var(--spacing-96);
+  // --form-max-width: var(--spacing-96);
   --form-privacy-note-color: var(--color-gray-500);
 
   @include mq.color-scheme-dark {
@@ -17,19 +17,25 @@
   @include mx.container-centered;
   display: flex;
   flex-direction: column;
-  gap: fn.to-rem(var(--spacing-8));
-  max-width: fn.to-rem(var(--form-max-width));
+  gap: fn.to-rem(var(--spacing-4));
+  // max-width: fn.to-rem(var(--form-max-width));
   box-sizing: content-box;
 
   &__fieldset {
     display: flex;
     flex-direction: column;
-    gap: fn.to-rem(var(--spacing-5));
+    gap: fn.to-rem(var(--spacing-4));
+
+    @include mq.breakpoint($from: md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
   }
 
   &__privacy-note {
     color: var(--form-privacy-note-color);
-    font-size: fn.to-rem(var(--text-xs));
+    font-size: fn.to-rem(var(--text-sm));
 
     a {
       text-underline-offset: fn.to-rem(var(--spacing-1));

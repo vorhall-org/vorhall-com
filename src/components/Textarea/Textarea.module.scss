@@ -30,6 +30,7 @@
   $root: &;
   display: flex;
   flex-direction: column;
+  flex: 1 0 auto;
   gap: fn.to-rem(var(--spacing-3));
 
   &__input {
