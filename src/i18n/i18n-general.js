@@ -18,9 +18,12 @@ export default {
       nameInputLabel: 'Dein Name',
       nameInputPlaceholder: 'Dein Name',
       privacyNote: {
-        link: 'Data Policy',
-        postLink: 'for more information.',
-        preLink: 'We don\'t share any information. Read our',
+        link: 'Datenschutzbestimmungen',
+        postLink: 'erfährst Du mehr zu unserem Umgang mit Daten.',
+        preLink: `
+          Wir schätzen «Privacy By Design» genauso wie Du. Deine Eingaben in diesem
+          Formular werden einzig zur Bearbeitung der Anfrage verwendet. In unseren
+        `,
       },
       submitButtonText: 'Absenden',
       submitErrorMessage: 'Bei der Übermittlung des Formulars ist leider ein Fehler aufgetreten. Versuche es doch bitte noch einmal.',
@@ -47,7 +50,10 @@ export default {
       privacyNote: {
         link: 'Data Policy',
         postLink: 'for more information.',
-        preLink: 'We don\'t share any information. Read our',
+        preLink: `
+          We value 'Privacy By Design' just as much as you do. Your inputs in this form will be solely
+          used for processing the request. Have a look at our
+        `,
       },
       submitButtonText: 'Submit',
       submitErrorMessage: 'There was an error submitting the form. Please try again.',

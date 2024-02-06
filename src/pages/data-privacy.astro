@@ -1,10 +1,20 @@
 ---
+import { getLocale } from 'astro-i18n-aut';
+import i18n from '../i18n/i18n-data-privacy';
+import { useTranslations } from '../i18n/utils';
+
 import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section/Section';
+import Jumbotron from '../components/Jumbotron/Jumbotron';
+import Richtext from '../components/Richtext/Richtext';
+
+const locale = getLocale(Astro.url);
+const t = useTranslations(locale, i18n);
 
 const pageMetaInformation = {
   tags: [
     {
-      content: 'todo',
+      content: t('description'),
       name: 'description',
     },
     {
@@ -12,10 +22,27 @@ const pageMetaInformation = {
       name: 'robots',
     },
   ],
-  title: 'todo',
+  title: t('docTitle'),
 };
+
+const jumbotronData = {
+  heading: {
+    level: 1,
+    text: t('title'),
+    visualLevel: false,
+  },
+  leadTextContent: t('lead'),
+  mainJumbo: false,
+};
+
 ---
 
-<Layout pageMetaTags={pageMetaInformation.tags}>
-  data privacy
+<Layout
+  pageMetaTags={pageMetaInformation.tags}
+  pageTitle={pageMetaInformation.title}
+>
+  <Section>
+    <Jumbotron {...jumbotronData} />
+    <Richtext text={t('richtext')} />
+  </Section>
 </Layout>
