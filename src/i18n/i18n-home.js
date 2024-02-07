@@ -1,10 +1,19 @@
 export default {
   about: {
     de: {
-      avatarMariusAltText: 'Avatar of Marius',
+      avatarMariusAltText: 'Profilfoto Marius Bleuer',
       avatarMariusSocialAriaLabel: 'Profile von Marius Bleuer',
-      avatarMariusSubtitle: 'Avatar Card subtitle',
-      avatarMariusText: 'Avatar Card text',
+      avatarMariusSubtitle: 'Expert Frontend Architect',
+      avatarMariusText: `
+        Die digitale Transformation geht je länger je mehr zu Lasten der Umwelt,
+        auch wenn wir das noch nicht überall auf der Welt gleichermassen zu spüren
+        kriegen. Als erfahrener Berufsmann erachte ich es heute als meine Aufgabe,
+        meine Erfahrung und mein Wissen bestmöglich einzusetzen, um die negativen
+        Auswirkungen des Webs zu mindern und den Weg hin zu einer nachhaltigeren
+        Digitalisierung mitzugestalten. Das Internet soll auch weiterhin der offene,
+        kreative und allen zugängliche Ort bleiben, den ich vor über 20 Jahren entdecken
+        und zu meiner Profession machen durfte.
+      `,
       avatarYvesAltText: 'Avatar of Yves',
       avatarYvesSocialAriaLabel: 'Profile von Yves Tscherry',
       avatarYvesSubtitle: 'Avatar Card subtitle',
@@ -19,10 +28,17 @@ export default {
       title: 'Wer ist Vorhall',
     },
     en: {
-      avatarMariusAltText: 'Avatar of Marius',
-      avatarMariusSocialAriaLabel: 'Profiles of Marius Bleuer Tscherry',
-      avatarMariusSubtitle: 'Avatar Card subtitle',
-      avatarMariusText: 'Avatar Card text',
+      avatarMariusAltText: 'Avatar of Marius Bleuer',
+      avatarMariusSocialAriaLabel: 'Profiles of Marius Bleuer',
+      avatarMariusSubtitle: 'Expert Front-end Architect',
+      avatarMariusText: `
+        The digital transformation increasingly comes at the expense of the environment, even though
+        we may not yet feel this equally everywhere in the world. As an experienced professional, I
+        now consider it my duty to use my expertise and knowledge to the best of my ability to mitigate
+        the negative impacts of the web and help shape the path towards a more sustainable digitization.
+        The internet should continue to be the open, creative, and accessible place that I had the
+        privilege to discover and make my profession over 20 years ago.
+      `,
       avatarYvesAltText: 'Avatar of Yves',
       avatarYvesSocialAriaLabel: 'Profiles of Yves Tscherry',
       avatarYvesSubtitle: 'Avatar Card subtitle',

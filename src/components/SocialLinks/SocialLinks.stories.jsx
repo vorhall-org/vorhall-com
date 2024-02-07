@@ -7,6 +7,7 @@ export default {
 
 const defaultArgs = {
   'aria-label': 'Social platforms links',
+  'classes': '',
   'socialLinks': [
     {
       ...button.IconOnlyRaw.args,

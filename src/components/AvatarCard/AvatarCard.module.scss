@@ -4,13 +4,23 @@
 
 :root {
   @include mx.card-variables;
+
+  --avatar-card-padding-v: var(--spacing-10);
+  --avatar-card-padding-h: var(--spacing-6);
+
+  @include mq.breakpoint($from: md) {
+    --avatar-card-padding-h: var(--spacing-10);
+  }
 }
 
 .avatar-card {
   @include mx.card;
   align-items: center;
+  padding: fn.to-rem(var(--avatar-card-padding-v)) fn.to-rem(var(--avatar-card-padding-h));
 
-  padding: fn.to-rem(var(--spacing-10)) fn.to-rem(var(--spacing-4));
+  @include mq.breakpoint($from: sm) {
+    justify-content: flex-start;
+  }
 
   &__image {
     display: flex;
@@ -27,12 +37,22 @@
   }
 
   &__lead {
-    font-size: fn.to-rem(var(--text-sm));
     text-align: center;
+    text-wrap: balance;
+    hyphens: auto;
 
     &:not(:last-child) {
-      margin-block-end: fn.to-rem(var(--spacing-1-5));
+      margin-block-end: fn.to-rem(var(--spacing-6));
     }
-
   }
+
+  &__subtitle {
+    margin-block-start: fn.to-rem(#{calc(var(--spacing-1) * -1)});
+    margin-block-end: fn.to-rem(var(--spacing-6));
+  }
+
+  &__social-links {
+    margin-block-end: fn.to-rem(#{calc(var(--spacing-3) * -1)});
+  }
+
 }

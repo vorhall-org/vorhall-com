@@ -4,6 +4,9 @@ import Heading from '../Heading/Heading';
 import SocialLinks from '../SocialLinks/SocialLinks';
 
 export default function AvatarCard(props) {
+
+  console.log(styles['avatar-card__social-links']);
+
   return (
     <li
       classList={{
@@ -24,11 +27,22 @@ export default function AvatarCard(props) {
       <div classList={{
         [styles['avatar-card__lead']]: true,
       }}>
-        <p>{props.subtitle}</p>
-        <p>{props.text}</p>
+        <p classList={{
+          [styles['avatar-card__subtitle']]: true,
+        }}>
+          {props.subtitle}
+        </p>
+        <p classList={{
+          [styles['avatar-card__text']]: true,
+        }}>
+          {props.text}
+        </p>
       </div>
 
-      <SocialLinks {...props.socialLinks} />
+      <SocialLinks
+        {...props.socialLinks}
+        classes={styles['avatar-card__social-links']}
+      />
     </li>
   );
 }
