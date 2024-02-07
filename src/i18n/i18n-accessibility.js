@@ -10,7 +10,7 @@ export default {
       Das Internet birgt ein immenses Potenzial für die Gleichstellung,
       insbesondere für Menschen mit Behinderungen. Indem
       wir die technische Barrierefreiheit digitaler Produkte sicherstellen,
-      ermöglichen wir es möglichst vielen Menschen ein unabhängigeres
+      ermöglichen wir es vielen Menschen ein unabhängigeres
       Leben zu führen und eigene Entscheidungen treffen zu können. Als
       Produzenten digitaler Lösungen ist es unsere Verantwortung, unsere
       Fähigkeiten bestmöglichst einzusetzen, um diese wesentliche
@@ -18,7 +18,7 @@ export default {
     `,
     richtext: `
       <p>
-        Einge gelungene Digitale Barriere&shy;freiheit erfordert die
+        Eine gelungene Digitale Barriere&shy;freiheit erfordert die
         Zusammenarbeit aus unterschiedlichen Bereichen und
         Perspektiven. Entsprechend ist es uns wichtig, die Barriere&shy;freiheit
         über die bloße Technik hinaus zu fördern und bei unseren Kundinnen

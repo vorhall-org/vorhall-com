@@ -24,7 +24,7 @@ export default {
         Digitalisierung eines Produktes oder einer Dienstleistung nicht, dass
         dieses dann automatisch «umweltfreundlich» wird. Die Energiequelle und
         die Art und Weise, wie wir digitale Produkte entwickeln, haben einen
-        erheblichen Einfluss darauf, wie viele Treibhausgasemissionen
+        erheblichen Einfluss darauf, wieviele Treibhausgasemissionen
         diese erzeugen. Und es ist nicht nur der Standort, der eine Rolle spielt,
         sondern auch wann bestimmte Aufgaben ausgeführt werden. So sollten
         beispielsweise rechenintensive Aufgaben in Regionen und zu Uhrzeiten

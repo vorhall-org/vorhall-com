@@ -8,7 +8,7 @@ export default {
     lead: `
       Design Systems sind im Idealfall viel mehr als reine Component Libraries.
       Sie sollen zusammenführen, was zusammengehört. «Branding», Design, Code, Anschauungs-
-      und Integrationsbeispiele, Richtlinien, «Best Practices» und ein umfassende Dokumentation,
+      und Integrationsbeispiele, Richtlinien, «Best Practices» und eine umfassende Dokumentation,
       vereint an einer Stelle.
     `,
     richtext: `
@@ -41,10 +41,10 @@ export default {
           Wir unterstützen euch bei der Konzeption und dem Aufbau eines neuen Design Systems.
         </li>
         <li>
-          Wir beraten euer bestehendes Design-System in Fachfragen.
+          Wir beraten euer bestehendes Design System Team in Fachfragen.
         </li>
         <li>
-          Wir leisten Umsetzungsarbeiten für die Erweiterung eines bestehendes Design-System.
+          Wir leisten Umsetzungsarbeiten für die Erweiterung eines bestehendes Design System.
         </li>
         <li>
           Wir <a href="https://vorhall.com/de/services/accessibility">evaluieren die Barrierefreiheit</a>

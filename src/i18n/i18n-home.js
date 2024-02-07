@@ -87,7 +87,7 @@ export default {
       serviceCard2Text: `
         Digitale Produkte und Dienstleistungen sollten für alle zugänglich sein.
         Wir prüfen und verbessern die Zugänglichkeit eurer Website und helfen euch,
-        die regulatorischen Anforderungen European Accessibility Act (EAA) zu erfüllen.
+        die regulatorischen Anforderungen des European Accessibility Act (EAA) zu erfüllen.
       `,
       serviceCard2Title: 'Digitale<br> Barrierefreiheit',
       serviceCard3ButtonAriaLabel: 'Mehr zum Angebot Web Performance',
