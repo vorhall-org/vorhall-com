@@ -10,7 +10,6 @@
 - remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss)
 - configure dependabot
 - Flowbite: copyright/attribution?
-- check if we can reduze css size: https://github.com/codiume/orbit/tree/main/packages/astro-purgecss
 
 - Color schema toggle?
 - High Contrast Styling (Note to ourselves: looks fairly good so far)
