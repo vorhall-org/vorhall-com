@@ -58,7 +58,7 @@ export default {
     de: {
       lead: '⏤ Vorhall',
       title: `
-        «Wir bauen und konzipieren schnelle, barrierefreie und nachhaltige digitale Produkte.»
+        «Wir konzipieren und bauen schnelle, barrierefreie und nachhaltige digitale Produkte.»
       `,
     },
     en: {
