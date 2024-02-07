@@ -21,6 +21,7 @@ const {
   pageTitle,
   pageMetaTags,
   isHome = false,
+  hideContactForm = false,
 } = Astro.props;
 
 const metaTags = [
@@ -69,21 +70,24 @@ const title = pageTitle || generalData.siteData.title;
 
       <slot />
 
-      <Section highlight fullWidth>
-        <Jumbotron {...generalData.jumbotronContact} />
+      {!hideContactForm &&
+        <Section highlight fullWidth>
+          <Jumbotron {...generalData.jumbotronContact} />
 
-        <Form
-          client:load
-          {...generalData.contactFormData}
-        >
+          <Form
+            client:load
+            {...generalData.contactFormData}
+          >
 
-          <div slot="privacyNote">
-            <p>{generalData.contactFormData.privacyNote.preLink} <Link href={pageRoutes(locale).dataPrivacy} secondary="true" prefetch={true}>{generalData.contactFormData.privacyNote.link}</Link> {generalData.contactFormData.privacyNote.postLink}</p>
-          </div>
+            <div slot="privacyNote">
+              <p>{generalData.contactFormData.privacyNote.preLink} <Link href={pageRoutes(locale).dataPrivacy} secondary="true" prefetch={true}>{generalData.contactFormData.privacyNote.link}</Link> {generalData.contactFormData.privacyNote.postLink}</p>
+            </div>
 
-        </Form>
+          </Form>
 
-      </Section>
+        </Section>
+      }
+
     </Main>
 
     <Footer {...generalData.footerData(locale, path)}/>

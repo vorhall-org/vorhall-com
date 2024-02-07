@@ -26,10 +26,10 @@
 - Reference to https://the-sustainable.dev?
 - Save images as AVIF
 - Share page button (Native API)?
-- Store language and theme preference
+- Store language and theme preference?
 - Setup Canonical -> https://developer.chrome.com/docs/lighthouse/seo/canonical
 - Add a robots.txt?
 - Add scroll margin top for :target
 - Decide what we want to mark as main content area, move jumbo tron into <header>?
-- Add correct aria-labels and social profile links in avatar cards
 - Skiplink & Home Button alignment
+- Responsive images for avatar images

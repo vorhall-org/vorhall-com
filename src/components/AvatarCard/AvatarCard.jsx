@@ -4,9 +4,6 @@ import Heading from '../Heading/Heading';
 import SocialLinks from '../SocialLinks/SocialLinks';
 
 export default function AvatarCard(props) {
-
-  console.log(styles['avatar-card__social-links']);
-
   return (
     <li
       classList={{
