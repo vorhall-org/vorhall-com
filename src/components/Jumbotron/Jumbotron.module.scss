@@ -52,7 +52,7 @@
   @include mq.breakpoint($from: lg) {
     --jumbotron-padding-v: var(--spacing-16);
     --main-jumbotron-padding-v: var(--spacing-24);
-    --jumbotron-padding-h: var(--spacing-24);
+    --jumbotron-padding-h: var(--spacing-4);
     --secondary-jumbotron-padding-v: var(--spacing-16);
     --secondary-jumbotron-padding-h: var(--spacing-16);
   }
@@ -63,7 +63,7 @@
   $root: &;
   text-align: center;
   padding: 0 fn.to-rem(var(--jumbotron-padding-h)) fn.to-rem(var(--jumbotron-padding-v)) fn.to-rem(var(--jumbotron-padding-h));
- 
+
   &--main {
     padding-top: fn.to-rem(var(--main-jumbotron-padding-v));
     padding-bottom: fn.to-rem(var(--main-jumbotron-padding-v));
