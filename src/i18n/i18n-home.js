@@ -16,8 +16,8 @@ export default {
       `,
       avatarYvesAltText: 'Avatar of Yves',
       avatarYvesSocialAriaLabel: 'Profile von Yves Tscherry',
-      avatarYvesSubtitle: 'Avatar Card subtitle',
-      avatarYvesText: 'Avatar Card text',
+      avatarYvesSubtitle: 'Expert Front-end Architect',
+      avatarYvesText: 'Als leidenschaftlicher Entwickler habe ich mich auf die Gestaltung digitaler Erlebnisse jenseits der Ästhetik spezialisiert. Barrierefreiheit ist nicht nur eine Checkbox oder eine Option; es ist unsere Verantwortung, Erlebnisse zu schaffen, die jede/r mühelos navigieren kann. Nachhaltigkeit ist für nicht bloss ein Trend; sie ist ein Leitstern - im Code und im Leben. Mit zwei Jahrzehnten Erfahrung wird Ihre Website nicht nur funktionieren; sie wird herausragend sein. Begleiten Sie mich auf dieser Reise, auf der Barrierefreiheit, Inklusion, Nachhaltigkeit und erstklassige Performance zusammenkommen. Lassen Sie uns ein digitales Meisterwerk schaffen, das unsere Verpflichtung zu einem besseren Web und einer besseren Welt widerspiegelt.',
       lead: `
         Obwohl Vorhall erst seit Januar 2024 tätig ist, triffst Du auf ein sehr erfahrenes Team.
         Als Kinder der 80er Jahre sind wir quasi mit dem Web aufgewachsen. Dank unserer Erfahrung
@@ -41,8 +41,8 @@ export default {
       `,
       avatarYvesAltText: 'Avatar of Yves',
       avatarYvesSocialAriaLabel: 'Profiles of Yves Tscherry',
-      avatarYvesSubtitle: 'Avatar Card subtitle',
-      avatarYvesText: 'Avatar Card text',
+      avatarYvesSubtitle: 'Expert Front-end Architect',
+      avatarYvesText: 'As a passionate developer and consultant, I specialize in crafting digital experiences beyond aesthetics. Accessibility isn\'t just a checkbox or an option; it\'s our responsibility to create spaces everyone can navigate effortlessly. Sustainability isn\'t a trend for me; it\'s a guiding star in code and life. With two decades of honing my craft, your website won\'t just function; it will excel. Join me in this journey where accessibility, inclusion, sustainability, and top-tier performance converge. Let\'s create a digital masterpiece reflecting our commitment to a better web and world.',
       lead: `
         Even though Vorhall started its operations as early as January 2024, you are meeting a
         very experienced team. As children of the 80s, we practically grew up with the web.
