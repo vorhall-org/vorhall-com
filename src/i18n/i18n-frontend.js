@@ -87,7 +87,7 @@ export default {
         and lean at the same time.
       </p>
       <p>
-        We are used to working in agile environments and understand the importance of
+        We are used to work in agile environments and understand the importance of
         communication and team dynamics. As former front-end engineering team leads,
         we are not only familiar with the technical aspects of the work, but can also
         help build the right skills and team structure.
