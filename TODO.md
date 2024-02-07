@@ -10,7 +10,8 @@
 - remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss)
 - configure dependabot
 - Flowbite: copyright/attribution?
-- check if we can reduze css size: https://github.com/codiume/orbit/tree/main/packages/astro-purgecss
+- Cypress test for form submission
+- OpenGraph meta data
 
 - Color schema toggle?
 - High Contrast Styling (Note to ourselves: looks fairly good so far)
@@ -28,7 +29,6 @@
 - Store language and theme preference
 - Setup Canonical -> https://developer.chrome.com/docs/lighthouse/seo/canonical
 - Add a robots.txt?
-- Add sitemap.xml?
 - Add scroll margin top for :target
 - Decide what we want to mark as main content area, move jumbo tron into <header>?
 - Add correct aria-labels and social profile links in avatar cards
