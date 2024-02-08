@@ -110,5 +110,6 @@
   --transition-reduced-motion-duration: 0.01ms;
 
   // content
-  --content-max-width: calc(var(--spacing-base) * 256);
+  --content-max-width-wide: calc(var(--spacing-base) * 300);
+  --content-max-width-narrow: calc(var(--spacing-base) * 200);
 }
