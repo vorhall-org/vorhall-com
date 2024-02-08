@@ -19,10 +19,10 @@
 
 .form {
   @include mx.container-centered;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: fn.to-rem(var(--spacing-6)) fn.to-rem(var(--spacing-4));
-  box-sizing: content-box;
 
   &__fieldset {
     display: flex;
