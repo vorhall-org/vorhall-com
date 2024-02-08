@@ -26,6 +26,7 @@ export default (locale) => {
 
     fieldsets: [
       {
+        /* eslint-disable quote-props */
         fields: [
           {
             element: {
@@ -33,6 +34,7 @@ export default (locale) => {
               props: {
                 autocomplete: 'email',
                 classes: '',
+                'data-cy': 'email',
                 disabled: false,
                 inputmode: 'email',
                 label: {
@@ -64,6 +66,7 @@ export default (locale) => {
               props: {
                 autocomplete: 'name',
                 classes: '',
+                'data-cy': 'name',
                 disabled: false,
                 label: {
                   inputId: 'name',
@@ -89,6 +92,7 @@ export default (locale) => {
               name: 'Textarea',
               props: {
                 cols: '20',
+                'data-cy': 'text',
                 disabled: false,
                 id: 'message',
                 label: {
@@ -111,6 +115,7 @@ export default (locale) => {
             ],
           },
         ],
+        /* eslint-enable quote-props */
         legend: {
           hidden: true,
           text: tContact('legend'),
