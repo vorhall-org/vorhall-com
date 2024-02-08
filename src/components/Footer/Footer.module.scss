@@ -6,8 +6,8 @@
   @include mx.container-centered-variables;
 
   --footer-border-color: var(--color-gray-200);
-  --footer-spacing-top: var(--spacing-32);
-  --footer-spacing-bottom: var(--spacing-8);
+  --footer-spacing-top: var(--spacing-16);
+  --footer-spacing-bottom: var(--spacing-16);
   --footer-text-color: inherit;
 
   @include mq.color-scheme-dark {
@@ -16,11 +16,13 @@
   }
 
   @include mq.breakpoint($from: md) {
-    --footer-spacing-top: var(--spacing-36);
+    --footer-spacing-top: var(--spacing-20);
+    --footer-spacing-bottom: var(--spacing-20);
   }
 
   @include mq.breakpoint($from: lg) {
-    --footer-spacing-top: var(--spacing-44);
+    --footer-spacing-top: var(--spacing-24);
+    --footer-spacing-bottom: var(--spacing-24);
   }
 }
 
@@ -28,7 +30,7 @@
   @include mx.container-full-width;
   font-size: fn.to-rem(var(--text-sm));
 
-  padding-block-end: fn.to-rem(var(--footer-spacing-bottom));
+  padding-block: fn.to-rem(var(--footer-spacing-top)) fn.to-rem(var(--footer-spacing-bottom));
   border-block-start: fn.to-rem(var(--spacing-px)) solid var(--footer-border-color);
   color: var(--footer-text-color);
 
@@ -38,10 +40,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    // justify-content: space-between;
     row-gap: fn.to-rem(var(--spacing-4));
-    padding-block-start: fn.to-rem(var(--spacing-4));
-    padding-block-end: fn.to-rem(var(--spacing-1));
+    padding-block-end: fn.to-rem(var(--spacing-4)) fn.to-rem(var(--spacing-1));
 
     @include mq.breakpoint($to: md) {
       flex-direction: column;
@@ -57,8 +57,7 @@
 
     @include mq.breakpoint($from: sm) {
       justify-content: flex-start;
-      row-gap: 0;
-      column-gap: fn.to-rem(var(--spacing-2));
+      gap: 0 fn.to-rem(var(--spacing-2));
     }
 
     @include mq.breakpoint($from: md) {
