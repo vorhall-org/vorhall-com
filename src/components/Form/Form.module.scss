@@ -5,11 +5,15 @@
 :root {
   @include mx.container-centered-variables;
 
-  // --form-max-width: var(--spacing-96);
   --form-privacy-note-color: var(--color-gray-500);
+  --form-gap-v: var(--spacing-6);
 
   @include mq.color-scheme-dark {
     --form-privacy-note-color: var(--color-gray-400);
+  }
+
+  @include mq.breakpoint($from: md) {
+    --form-gap-v: var(--spacing-8);
   }
 }
 
@@ -17,18 +21,16 @@
   @include mx.container-centered;
   display: flex;
   flex-direction: column;
-  gap: fn.to-rem(var(--spacing-4));
-  // max-width: fn.to-rem(var(--form-max-width));
+  gap: fn.to-rem(var(--spacing-6)) fn.to-rem(var(--spacing-4));
   box-sizing: content-box;
 
   &__fieldset {
     display: flex;
     flex-direction: column;
-    gap: fn.to-rem(var(--spacing-4));
+    gap: fn.to-rem(var(--form-gap-v)) fn.to-rem(var(--spacing-4));
 
     @include mq.breakpoint($from: md) {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
     }
 
   }
