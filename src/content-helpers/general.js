@@ -129,6 +129,7 @@ export default (locale) => {
       text: tContact('title'),
       visualLevel: false,
     },
+    isInFullWidthContainer: true,
     leadTextContent: tContact('lead'),
     mainJumbo: false,
   };

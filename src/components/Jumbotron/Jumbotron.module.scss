@@ -7,7 +7,7 @@
   @include mx.card-variables;
 
   --jumbotron-padding-h: var(--spacing-4);
-  --jumbotron-padding-v: var(--spacing-4);
+  --jumbotron-padding-v: var(--spacing-16);
   --main-jumbotron-padding-v: var(--spacing-8);
   --secondary-jumbotron-padding-v: var(--spacing-8);
   --secondary-jumbotron-padding-h: var(--spacing-8);
@@ -43,14 +43,14 @@
   }
 
   @include mq.breakpoint($from: md) {
-    --jumbotron-padding-v: var(--spacing-8);
+    --jumbotron-padding-v: var(--spacing-20);
     --main-jumbotron-padding-v: var(--spacing-16);
     --secondary-jumbotron-padding-v: var(--spacing-16);
     --secondary-jumbotron-padding-h: var(--spacing-16);
   }
 
   @include mq.breakpoint($from: lg) {
-    --jumbotron-padding-v: var(--spacing-16);
+    --jumbotron-padding-v: var(--spacing-24);
     --main-jumbotron-padding-v: var(--spacing-24);
     --jumbotron-padding-h: var(--spacing-4);
     --secondary-jumbotron-padding-v: var(--spacing-16);
@@ -74,6 +74,10 @@
     @include mx.card;
     padding: 0;
     margin-bottom: fn.to-rem(var(--spacing-16));
+  }
+
+  &--center {
+    @include mx.container-centered;
   }
 
   &__content {
