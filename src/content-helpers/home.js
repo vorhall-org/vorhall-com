@@ -81,7 +81,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceAccessibility,
-      iconAfter: 'arrowRight',
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard2ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -105,6 +107,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceWebPerformance,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard3ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -128,6 +133,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceDigitalSustainability,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard4ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -151,6 +159,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceDesignSystems,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard5ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -174,6 +185,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).contact,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard6ButtonLabel'),
       prefetch: true,
       size: 'l',

@@ -216,12 +216,6 @@
   h6 {
     font-size: fn.to-rem(var(--heading-6-font-size));
   }
-
-  & br {
-    @include mq.breakpoint($to: md) {
-      display: none;
-    }
-  }
 }
 
 @mixin link-variables {
@@ -237,7 +231,7 @@
 @mixin link {
   $root: &;
   display: inline-block;
-  text-underline-offset: fn.to-rem(var(--spacing-1-5));
+  text-underline-offset: fn.to-em(var(--spacing-1-5));
   color: var(--link-color);
 
   @include default-transition;

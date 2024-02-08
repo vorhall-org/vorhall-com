@@ -18,11 +18,11 @@ export default {
       nameInputLabel: 'Dein Name',
       nameInputPlaceholder: 'Dein Name',
       privacyNote: {
-        link: 'Datenschutzbestimmungen',
+        link: 'Datenschutzerklärung',
         postLink: 'erfährst Du mehr zu unserem Umgang mit Daten.',
         preLink: `
           Wir schätzen unsere Privatsphäre genauso wie Du die deine. Deine Eingaben in
-          diesem Formular werden einzig zur Bearbeitung der Anfrage verwendet. In unseren
+          diesem Formular werden einzig zur Bearbeitung der Anfrage verwendet. In unserer
         `,
       },
       submitButtonText: 'Absenden',
@@ -43,7 +43,7 @@ export default {
       legend: 'Contact form',
       messageErrorRequired: 'Please enter your request.',
       messageLabel: 'Tell us about your idea or question',
-      messagePlaceholder: 'Your request or comment...',
+      messagePlaceholder: 'Please describe your idea or question to us.',
       nameInputErrorRequired: 'Please enter your name.',
       nameInputLabel: 'Your name',
       nameInputPlaceholder: 'Type in your name',

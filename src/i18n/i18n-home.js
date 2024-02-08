@@ -134,8 +134,9 @@ export default {
       serviceCard1ButtonAriaLabel: 'Read more about our front-end Development & Architecture offering',
       serviceCard1ButtonLabel: 'Read more',
       serviceCard1Text: `
-        If you hire us for front-end architecture and implementation work, you will get our full accumulated
-        expertise combined. And yes, that involves CSS beyond using libraries.
+        If you entrust us with the architecture and implementation of a front-end, you will receive our
+        comprehensive expertise from all subject areas. In doing so, we love to push the boundaries of
+        web standard technologies as much as possible.
       `,
       serviceCard1Title: 'Front-end Development<br> & Architecture',
       serviceCard2ButtonAriaLabel: 'Read more about our Digital Accessibility offering',

@@ -33,3 +33,4 @@
 - Decide what we want to mark as main content area, move jumbo tron into <header>?
 - Skiplink & Home Button alignment
 - Responsive images for avatar images
+- Rename favicon so it's easier to replace later

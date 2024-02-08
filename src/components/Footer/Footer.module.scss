@@ -27,70 +27,78 @@
 .footer {
   @include mx.container-full-width;
   font-size: fn.to-rem(var(--text-sm));
-  margin-block-start: fn.to-rem(var(--footer-spacing-top));
+
   padding-block-end: fn.to-rem(var(--footer-spacing-bottom));
   border-block-start: fn.to-rem(var(--spacing-px)) solid var(--footer-border-color);
   color: var(--footer-text-color);
 
-  &__legal-link-list {
+  &__bottom-wrapper {
     @include mx.container-centered;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    // justify-content: space-between;
+    row-gap: fn.to-rem(var(--spacing-4));
+    padding-block-start: fn.to-rem(var(--spacing-4));
+    padding-block-end: fn.to-rem(var(--spacing-1));
 
+    @include mq.breakpoint($to: md) {
+      flex-direction: column;
+    }
+  }
+
+  &__legal-link-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: fn.to-rem(var(--spacing-2));
-    margin-block-end: fn.to-rem(var(--spacing-5));
-    padding-block-start: fn.to-rem(var(--spacing-8));
 
     @include mq.breakpoint($from: sm) {
       justify-content: flex-start;
-      gap: fn.to-rem(var(--spacing-4));
+      row-gap: 0;
+      column-gap: fn.to-rem(var(--spacing-2));
     }
 
-    li {
-      text-align: center;
-
-      @include mq.breakpoint($to: sm) {
-        flex: 1 0 100%;
-      }
+    @include mq.breakpoint($from: md) {
+      display: flex;
+      flex: 1 1 40%;
     }
 
-  }
-
-  &__bottom-wrapper {
-    @include mx.container-centered;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    row-gap: fn.to-rem(var(--spacing-4));
   }
 
   &__social-links {
-    @include mq.breakpoint($from: sm) {
-      order: 2;
+    @include mq.breakpoint($from: md) {
+        display: flex;
+        flex: 1 1 20%;
+        justify-content: center;
     }
   }
 
-  &__copyright {
-    flex-basis: 100%;
-    text-align: center;
-
-    @include mq.breakpoint($from: sm) {
-      flex-basis: auto;
-      order: 1;
+  &__lang-switch-wrapper {
+    @include mq.breakpoint($from: md) {
+      display: flex;
+      flex: 1 1 40%;
+      justify-content: flex-end;
     }
   }
 
   &__lang-switch {
-    margin: 0 auto;
-
-    @include mq.breakpoint($from: sm) {
-      margin: 0;
-      order: 3;
+    @include mq.breakpoint($to: sm) {
+      margin-inline: auto;
     }
+  }
+
+  &__copyright {
+    @include mx.container-centered;
+    font-size: fn.to-rem(var(--text-xs));
+
+    @include mq.breakpoint($to: md) {
+      margin-block-start: fn.to-rem(var(--spacing-8));
+      text-align: center;
+    }
+
   }
 
 }

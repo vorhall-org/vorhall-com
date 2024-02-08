@@ -3,18 +3,20 @@
 
 :root {
   @include mx.link-variables;
-  --link-color-secondary: var(--color-gray-500);
-
-  @include mq.color-scheme-dark {
-    --link-color-secondary: var(--color-gray-400);
-  }
 }
 
 .link {
   @include mx.link;
 
   &--secondary {
-    color: var(--link-color-secondary);
+    --link-color: var(--color-gray-500);
+    --link-color-hover: var(--color-gray-900);
+
+    @include mq.color-scheme-dark {
+      --link-color: var(--color-gray-400);
+      --link-color-hover: var(--color-gray-200);
+    }
+
   }
 
 }

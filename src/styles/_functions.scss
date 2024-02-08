@@ -1,3 +1,7 @@
 @function to-rem($value) {
   @return calc($value / var(--text-base) * 1rem);
 }
+
+@function to-em($value) {
+  @return calc($value / var(--text-base) * 1em);
+}
