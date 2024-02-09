@@ -1,6 +1,5 @@
 - https://www.websitecarbon.com/badge/
 - form captcha?
-- 404 page
 - check and fix line-heights
 - check and fix letter spacing
 - check and fix font-weights
@@ -9,7 +8,6 @@
 - before release, use correct tracking-id (get it on squeaky, define it in "page-helpers/Tracking.astro")
 - remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss)
 - configure dependabot
-- Flowbite: copyright/attribution?
 - Cypress test for form submission
 - OpenGraph meta data
 
@@ -29,7 +27,6 @@
 - Store language and theme preference?
 - Setup Canonical -> https://developer.chrome.com/docs/lighthouse/seo/canonical
 - Add a robots.txt?
-- Add scroll margin top for :target
 - Decide what we want to mark as main content area, move jumbo tron into <header>?
 - Skiplink & Home Button alignment
 - Responsive images for avatar images
