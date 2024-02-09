@@ -2,6 +2,7 @@
 import { getLocale } from 'astro-i18n-aut';
 import i18n from '../i18n/i18n-404';
 import { useTranslations } from '../i18n/utils';
+import { seoMetaTags } from '../content-helpers/metaTagsSeo';
 
 import generalDataGetter from '../content-helpers/general';
 import Button from '../components/Button/Button';
@@ -13,19 +14,7 @@ const locale = getLocale(Astro.url);
 const generalData = generalDataGetter(locale);
 const t = useTranslations(locale, i18n);
 
-const pageMetaInformation = {
-  tags: [
-    {
-      content: t('description'),
-      name: 'description',
-    },
-    {
-      content: 'noindex',
-      name: 'robots',
-    },
-  ],
-  title: t('docTitle'),
-};
+const pageMetaInformation = seoMetaTags(t, Astro.url, 'noindex');
 
 const jumbotronData = {
   heading: {

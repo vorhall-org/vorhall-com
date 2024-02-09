@@ -182,15 +182,15 @@ export default {
   site: {
     de: {
       description: `
-      Für qualitativ hochwertige Lösungen mit Hand und Fuss. Wir berücksichtigen die Bedürfnisse verschiedenster
-      Nutzer als auch die Einflüsse auf die Umwelt.'
+        Für qualitativ hochwertige Lösungen mit Hand und Fuss. Wir berücksichtigen die Bedürfnisse verschiedenster
+        Nutzer als auch die Einflüsse auf die Umwelt.'
       `,
       title: 'Digitale Lösungen: schnell, barrierefrei & nachhaltig',
     },
     en: {
       description: `
-      We craft solutions thoughtfully balancing user' needs and environmental impact. Contact us, if you want to
-      elevate the quality of your digital services.
+        We craft solutions thoughtfully balancing user' needs and environmental impact. Contact us, if you want to
+        elevate the quality of your digital services.
       `,
       title: 'Fast, accessible & sustainable digital solutions',
     },

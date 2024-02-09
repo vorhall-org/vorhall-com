@@ -100,13 +100,13 @@ export default {
       description: 'Beschreibung unserere Website',
       homeButtonText: 'Zur Startseite',
       skipLinkText: 'Zum Inhaltsbereich springen',
-      title: 'General Title | Vorhall',
+      title: 'General Title',
     },
     en: {
       description: 'Description of our website',
       homeButtonText: 'Back to home',
       skipLinkText: 'Jump to content area',
-      title: 'General Title | Vorhall',
+      title: 'General Title',
     },
   },
 };

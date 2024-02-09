@@ -1,5 +1,8 @@
 export const generalMetaTags = (generator) => [
   {
+    charset: 'UTF-8',
+  },
+  {
     content: 'width=device-width, initial-scale=1',
     name: 'viewport',
   },
@@ -12,9 +15,6 @@ export const generalMetaTags = (generator) => [
     content: '#153376',
     media: '(prefers-color-scheme: dark)',
     name: 'theme-color',
-  },
-  {
-    charset: 'UTF-8',
   },
   {
     content: generator,

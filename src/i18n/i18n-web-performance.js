@@ -7,11 +7,11 @@ export default {
     `,
     docTitle: 'Web Performance Beratung, Umsetzung & Monitoring',
     lead: `
-    Wir sehen das Thema Web-Performance als einen der entscheidenden
-    Erfolgsfaktoren für eine nachhaltige IT. Oftmals ist die
-    Web-Performance auch der Schlüsselfaktor für SEO, gute Core Web
-    Vitals-Werte und eine herausragende Kundenerfahrung für
-    die Nutzer:innen.
+      Wir sehen das Thema Web-Performance als einen der entscheidenden
+      Erfolgsfaktoren für eine nachhaltige IT. Oftmals ist die
+      Web-Performance auch der Schlüsselfaktor für SEO, gute Core Web
+      Vitals-Werte und eine herausragende Kundenerfahrung für
+      die Nutzer:innen.
     `,
     richtext: `
       <p>
