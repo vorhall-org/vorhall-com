@@ -37,7 +37,7 @@ const title = pageTitle || generalData.siteData.title;
 <html lang={locale}>
   <head>
     <title>{`${title} | Vorhall KLG`}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-beta.svg" />
 
     {metaTags.map((tag) => <meta {...tag} />)}
 
@@ -51,6 +51,7 @@ const title = pageTitle || generalData.siteData.title;
       @import '../styles/global';
     </style>
 
+    <link rel="sitemap" href="https://vorhall.com/sitemap-index.xml" />
     <link rel="preconnect" href="https://cdn.squeaky.ai" crossorigin />
     <link rel="preconnect" href="https://api.squeaky.ai/graphql" crossorigin />
 

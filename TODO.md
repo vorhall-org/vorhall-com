@@ -14,11 +14,11 @@ TODO:
 - Device Testing iOS (Yves)
 - Device Testing on Win/Android/ (Marius)
 - Content Security Policies? -> there is a netlify integration. needs further study (Marius)
-- Add a robots.txt (Marius -> Sitemap.xml & block Open AI Bot)
 - Skiplink & Home Button alignment (Marius)
 - Rename favicon so it's easier to replace later (Marius)
 - Alternative solution for 'header' (Marius / Yves)
 - Column width adjustment (Yves)
+- Set proper index behaviour for individual pages before go-live (Marius)
 
 OPTIONAL:
 - form captcha?
