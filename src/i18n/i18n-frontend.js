@@ -57,6 +57,7 @@ export default {
           für die inzwischen etwas bekannter gewordenen Progressive Web Apps (PWA).
         </li>
       </ul>
+      <h3>Ein Auszug aus den von uns genutzten Frontend Technologien</h3>
   `,
     title: 'Frontend<br> Entwicklung & Architektur',
   },

@@ -7,9 +7,5 @@
   flex-wrap: wrap;
   gap: fn.to-rem(var(--spacing-2));
   margin-block-start: fn.to-rem(var(--spacing-7));
-
-  @include mq.breakpoint($to: lg) {
-    justify-content: center;
-  }
-
+  justify-content: center;
 }
