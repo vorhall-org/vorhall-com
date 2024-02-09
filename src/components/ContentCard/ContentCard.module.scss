@@ -16,13 +16,13 @@
   }
 
   &__title {
-    margin-block-end: fn.to-rem(var(--spacing-2));
+    margin-block-end: fn.to-rem(var(--spacing-3));
     hyphens: none;
   }
 
   &__lead:not(:last-child) {
     flex-grow: 1;
-    margin-block-end: fn.to-rem(var(--spacing-3));
+    margin-block-end: fn.to-rem(var(--spacing-7));
   }
 
 }

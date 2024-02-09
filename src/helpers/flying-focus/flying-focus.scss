@@ -59,7 +59,7 @@
     :focus,
     .focus {
       outline: var(--flying-focus-color) dashed fn.to-rem(var(--flying-focus-border-weight));
-      outline-offset: fn.to-rem(var(--flying-focus-outline-offset));
+      outline-offset: fn.to-em(var(--flying-focus-outline-offset));
     }
   }
 }

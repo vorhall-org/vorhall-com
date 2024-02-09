@@ -6,7 +6,7 @@
   @include mx.container-centered-variables;
 
   --footer-border-color: var(--color-gray-200);
-  --footer-text-color: inherit;
+  --footer-text-color: var(--color-gray-500);
 
   @include mq.color-scheme-dark {
     --footer-border-color: var(--color-gray-700);
