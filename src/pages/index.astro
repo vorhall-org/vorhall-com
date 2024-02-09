@@ -14,42 +14,42 @@ const pageData = pageDataGetter(locale);
 
 const pageMetaInformation = {
   tags: [
-      {
-        content: 'noindex, nofollow',
-        name: 'robots',
-      },
-      {
-        content: pageData.siteData.description,
-        name: 'description',
-      },
-      {
-        content: 'article',
-        property: 'og:type',
-      },
-      {
-        content: pageData.siteData.title,
-        property: 'og:title',
-      },
-      {
-        content: pageData.siteData.description,
-        property: 'og:description',
-      },
-      {
-        content: Astro.url,
-        property: 'og:url',
-      },
-      {
-        content: 'summary',
-        property: 'twitter:card',
-      },
-      {
-        content: pageData.siteData.title,
-        property: 'twitter:title',
-      },
-      {
-        content: pageData.siteData.description,
-        property: 'twitter:description',
-      },
+    {
+      content: 'noindex, nofollow',
+      name: 'robots',
+    },
+    {
+      content: pageData.siteData.description,
+      name: 'description',
+    },
+    {
+      content: 'article',
+      property: 'og:type',
+    },
+    {
+      content: pageData.siteData.title,
+      property: 'og:title',
+    },
+    {
+      content: pageData.siteData.description,
+      property: 'og:description',
+    },
+    {
+      content: Astro.url,
+      property: 'og:url',
+    },
+    {
+      content: 'summary',
+      property: 'twitter:card',
+    },
+    {
+      content: pageData.siteData.title,
+      property: 'twitter:title',
+    },
+    {
+      content: pageData.siteData.description,
+      property: 'twitter:description',
+    },
   ],
   title: pageData.siteData.title,
 };
