@@ -24,7 +24,7 @@ export default {
         Digitalisierung eines Produktes oder einer Dienstleistung nicht, dass
         dieses dann automatisch «umweltfreundlich» wird. Die Energiequelle und
         die Art und Weise, wie wir digitale Produkte entwickeln, haben einen
-        erheblichen Einfluss darauf, wie viele Treibhausgasemissionen
+        erheblichen Einfluss darauf, wieviele Treibhausgasemissionen
         diese erzeugen. Und es ist nicht nur der Standort, der eine Rolle spielt,
         sondern auch wann bestimmte Aufgaben ausgeführt werden. So sollten
         beispielsweise rechenintensive Aufgaben in Regionen und zu Uhrzeiten
@@ -60,12 +60,12 @@ export default {
         Running the Internet and its infrastructure requires massive amounts of
         energy and water. For this reason, going 'digital' does not automatically
         mean going 'green'. The source of energy and how we build digital products
-        has a massive impact on how much greenhouse gas emissions they create.
+        have a massive impact on how much greenhouse gas emissions they create.
         And it is not only the location that plays a role in carbon aware computing,
         but also the time at which certain tasks are carried out.
       </p>
       <p>
-        We help you to evaluate appropriate hosting solutions and build sustainable
+        We help you evaluate appropriate hosting solutions and build sustainable
         and resource aware websites & digital products. Since modern web development
         offers a wide range of ways to craft a website, we do not offer a one size fits
         all solution. Our long lasting experience will help us to work with you
