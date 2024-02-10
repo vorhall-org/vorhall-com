@@ -1,5 +1,4 @@
 TODO:
-- remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss) (Yves)
 - configure dependabot (Yves)
 - check fonts on windows (Marius)
 - Schema.org JSON-LD (Marius)
