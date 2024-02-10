@@ -12,7 +12,7 @@ TODO:
 - Content Security Policies? -> there is a netlify integration. needs further study (Marius)
 - Skiplink & Home Button alignment (Marius)
 - Alternative solution for 'header' (Marius / Yves)
-- Column width adjustment (Yves)
+- Check new implementation of Column width adjustment (Yves & Marius)
 - Set proper index behaviour for individual pages before go-live (Marius)
 
 OPTIONAL:
