@@ -8,12 +8,6 @@ export default (locale) => {
   const tHeader = useTranslations(locale, i18n.header);
   const tLinks = useTranslations(locale, i18nGeneral.links);
   const tServices = useTranslations(locale, i18n.services);
-  const tSite = useTranslations(locale, i18n.site);
-
-  const siteData = {
-    description: tSite('description'),
-    title: tSite('title'),
-  };
 
   const jumbotronData = {
     heading: {
@@ -345,7 +339,6 @@ export default (locale) => {
     serviceCardTeaser4,
     serviceCardTeaser5,
     serviceCardTeaser6,
-    siteData,
   };
 };
 
