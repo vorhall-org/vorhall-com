@@ -77,12 +77,12 @@
   }
 
   &--center {
-    @include mx.container-centered;
+    @include mx.container-centered-narrow;
   }
 
   &__content {
     #{$root}--main & {
-      @include mx.container-centered;
+      @include mx.container-centered-narrow;
     }
 
     #{$root}--secondary & {
