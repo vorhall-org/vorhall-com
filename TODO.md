@@ -1,5 +1,4 @@
 TODO:
-- configure dependabot (Yves)
 - check fonts on windows (Marius)
 - Schema.org JSON-LD (Marius)
 - High Contrast Styling (Note to ourselves: looks fairly good so far) (Marius)
