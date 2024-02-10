@@ -1,7 +1,4 @@
 TODO:
-- check and fix line-heights (Yves)
-- check and fix letter spacing (Yves)
-- check and fix font-weights (Yves)
 - before release, use correct tracking-id (get it on squeaky, define it in "page-helpers/Tracking.astro") (Yves)
 - remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss) (Yves)
 - configure dependabot (Yves)
