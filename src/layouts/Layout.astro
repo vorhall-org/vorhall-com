@@ -101,7 +101,9 @@ const title = pageTitle || generalData.siteData.title;
     <script
       type="application/ld+json"
       set:html={
-        JSON.stringify({...generalData.schemaData})
+        JSON.stringify({
+          ...generalData.schemaData,
+        })
       }
     />
 
