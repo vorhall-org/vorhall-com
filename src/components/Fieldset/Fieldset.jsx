@@ -11,7 +11,6 @@ export default function Fieldset(props) {
       {props.legend &&
         <legend
           classList={{
-            [styles['fieldset__legend']]: true,
             [styles['fieldset__legend--hidden']]: props.legend.hidden,
           }}
         >
