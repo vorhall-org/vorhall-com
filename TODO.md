@@ -1,5 +1,4 @@
 TODO:
-- before release, use correct tracking-id (get it on squeaky, define it in "page-helpers/Tracking.astro") (Yves)
 - remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss) (Yves)
 - configure dependabot (Yves)
 - check fonts on windows (Marius)
@@ -24,6 +23,7 @@ OPTIONAL:
 - Store language and theme preference?
 
 LATER:
+- Check Tracking integration for prod
 - Cypress test for form submission 
 - https://www.websitecarbon.com/badge/
 - Reference to https://the-sustainable.dev?
