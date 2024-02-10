@@ -13,6 +13,7 @@ TODO:
 - Alternative solution for 'header' (Marius / Yves)
 - Check new implementation of Column width adjustment (Yves & Marius)
 - Set proper index behaviour for individual pages before go-live (Marius)
+- I removed `text-wrap: balance;` from LeadText. Ok with that? (Marius)
 
 OPTIONAL:
 - form captcha?
