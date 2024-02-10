@@ -76,13 +76,11 @@
     margin-bottom: fn.to-rem(var(--spacing-16));
   }
 
-  &--center {
-    @include mx.container-centered;
-  }
-
   &__content {
+    @include mx.container-m;
+
     #{$root}--main & {
-      @include mx.container-centered;
+      @include mx.container-l;
     }
 
     #{$root}--secondary & {

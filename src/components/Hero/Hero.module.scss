@@ -86,7 +86,7 @@ $stars-big: stars(100);
   background: var(--jumbotron-gradient);
 
   &__content {
-    @include mx.container-centered;
+    @include mx.container-l;
   }
 
   &__heading {

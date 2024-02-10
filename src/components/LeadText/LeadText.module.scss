@@ -3,22 +3,17 @@
 
 :root {
   --lead-color: var(--color-gray-500);
-  --lead-font-size: var(--text-xl);
+  --lead-font-size: var(--text-2xl);
 
   @include mq.color-scheme-dark {
     --lead-color: var(--color-gray-300);
   }
-
-  @include mq.breakpoint($from: md) {
-    --lead-font-size: var(--text-xl);
-  }
-
 }
 
 .lead-text {
   color: var(--lead-color);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-thin);
   font-size: fn.to-rem(var(--lead-font-size));
   hyphens: auto;
-  text-wrap: balance;
+  // text-wrap: balance;
 }

@@ -23,10 +23,24 @@
 }
 
 @mixin container-centered {
-  max-width: fn.to-rem(calc(var(--content-max-width) + 2 * var(--section-spacing-h)));
   margin: 0 auto;
   padding-right: fn.to-rem(var(--section-spacing-h));
   padding-left: fn.to-rem(var(--section-spacing-h));
+}
+
+@mixin container-l {
+  @include container-centered;
+  max-width: fn.to-rem(calc(var(--content-max-width-l) + 2 * var(--section-spacing-h)));
+}
+
+@mixin container-m {
+  @include container-centered;
+  max-width: fn.to-rem(calc(var(--content-max-width-m) + 2 * var(--section-spacing-h)));
+}
+
+@mixin container-s {
+  @include container-centered;
+  max-width: fn.to-rem(calc(var(--content-max-width-s) + 2 * var(--section-spacing-h)));
 }
 
 @mixin container-full-width {
