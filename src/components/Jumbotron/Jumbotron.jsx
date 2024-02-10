@@ -10,7 +10,6 @@ export default function Jumbotron(props) {
         [props.classes]: props.classes,
         [styles['jumbotron--main']]: props.mainJumbo,
         [styles['jumbotron--secondary']]: props.secondaryJumbo,
-        [styles['jumbotron--center']]: props.isInFullWidthContainer,
       }}
     >
       <div class={styles['jumbotron__content']}>

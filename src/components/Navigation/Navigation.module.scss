@@ -12,7 +12,7 @@
 }
 
 .navigation {
-  @include mx.container-centered-wide;
+  // @include mx.container-centered-wide;
   padding-top: fn.to-rem(var(--navigation-padding-v));
   padding-bottom: fn.to-rem(var(--navigation-padding-v));
 

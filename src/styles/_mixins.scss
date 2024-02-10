@@ -28,14 +28,19 @@
   padding-left: fn.to-rem(var(--section-spacing-h));
 }
 
-@mixin container-centered-wide {
+@mixin container-l {
   @include container-centered;
-  max-width: fn.to-rem(calc(var(--content-max-width-wide) + 2 * var(--section-spacing-h)));
+  max-width: fn.to-rem(calc(var(--content-max-width-l) + 2 * var(--section-spacing-h)));
 }
 
-@mixin container-centered-narrow {
+@mixin container-m {
   @include container-centered;
-  max-width: fn.to-rem(calc(var(--content-max-width-narrow) + 2 * var(--section-spacing-h)));
+  max-width: fn.to-rem(calc(var(--content-max-width-m) + 2 * var(--section-spacing-h)));
+}
+
+@mixin container-s {
+  @include container-centered;
+  max-width: fn.to-rem(calc(var(--content-max-width-s) + 2 * var(--section-spacing-h)));
 }
 
 @mixin container-full-width {

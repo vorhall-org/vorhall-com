@@ -12,15 +12,19 @@
 }
 
 .section {
-  @include mx.container-centered-wide;
+  @include mx.container-m;
   @include mx.container-vertical-spacing;
 
   &--full-width {
     @include mx.container-full-width;
   }
 
-  &--narrow {
-    @include mx.container-centered-narrow;
+  &--small {
+    @include mx.container-s;
+  }
+
+  &--large {
+    @include mx.container-l;
   }
 
   &--highlight {

@@ -110,6 +110,7 @@
   --transition-reduced-motion-duration: 0.01ms;
 
   // content
-  --content-max-width-wide: calc(var(--spacing-base) * 300);
-  --content-max-width-narrow: calc(var(--spacing-base) * 200);
+  --content-max-width-l: calc(var(--spacing-base) * 320);
+  --content-max-width-m: calc(var(--spacing-base) * 250);
+  --content-max-width-s: calc(var(--spacing-base) * 200);
 }
