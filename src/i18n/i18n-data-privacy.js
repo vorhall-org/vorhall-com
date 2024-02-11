@@ -21,7 +21,7 @@ export default {
         Inspiriert und adaptiert von <a href="https://www.figma.com/community/file/1179442320711977498/flowbite-design-system" target="_blank" aria-label="Flowbite Design System. Linkziel öffnet sich in einem neuen Fenster.">Flowbite Design System</a>, veröffentlicht unter <a href="https://creativecommons.org/licenses/by/4.0/deed.de" target="_blank" aria-label="Creative Commons BY 4.0 Lizenz. Linkziel öffnet sich in einem neuen Fenster.">CC BY 4.0 Lizenz</a>.
       </p>
 `,
-    title: 'Datenschutzerklärung',
+    title: 'Daten&shy;schutz&shy;erklärung',
   },
   en: {
     description: 'Data Privacy',
