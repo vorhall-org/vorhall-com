@@ -11,6 +11,10 @@ TODO:
 - Set proper index behaviour for individual pages before go-live (Marius)
 - I removed `text-wrap: balance;` from LeadText. Ok with that? (Marius)
 
+RIGHT AFTER GO LIVE:
+- Remove no-index meta
+- Check Tracking integration for prod
+
 OPTIONAL:
 - form captcha?
 - Color schema toggle?
@@ -20,7 +24,6 @@ OPTIONAL:
 - Store language and theme preference?
 
 LATER:
-- Check Tracking integration for prod
 - Cypress test for form submission 
 - https://www.websitecarbon.com/badge/
 - Reference to https://the-sustainable.dev?
