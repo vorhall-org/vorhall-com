@@ -243,11 +243,33 @@ export default (locale) => {
     };
   };
 
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressCountry': 'CH',
+      'addressLocality': 'Bern',
+      'addressRegion': 'Bern',
+      'postalCode': '3012',
+      'streetAddress': 'Brückfeldstrasse 40',
+    },
+    'description': `
+      We craft solutions thoughtfully balancing user' needs and environmental impact.
+      Contact us, if you want to elevate the quality of your digital services.
+    `,
+    'email': 'info@vorhall.com.com',
+    'name': 'Vorhall KLG',
+    'url': 'https://vorhall.com',
+    'vatID': 'CHE-371.533.033',
+  };
+
   return {
     contactFormData,
     footerData,
     jumbotronContact,
     mainData,
+    schemaData,
     siteData,
   };
 };

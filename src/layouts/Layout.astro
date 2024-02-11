@@ -97,5 +97,15 @@ const title = pageTitle || generalData.siteData.title;
     <Footer {...generalData.footerData(locale, path)}/>
 
     <Tracking />
+
+    <script
+      type="application/ld+json"
+      set:html={
+        JSON.stringify({
+          ...generalData.schemaData,
+        })
+      }
+    />
+
   </body>
 </html>
