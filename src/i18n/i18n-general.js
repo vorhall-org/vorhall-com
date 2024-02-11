@@ -48,7 +48,7 @@ export default {
       nameInputLabel: 'Your name',
       nameInputPlaceholder: 'Type in your name',
       privacyNote: {
-        link: 'Data Policy',
+        link: 'Data Protection Statement',
         postLink: 'for more information.',
         preLink: `
           We value our privacy just as much as you do yours. Your inputs in this form will
@@ -73,9 +73,9 @@ export default {
     en: {
       copyright: '©2024 Vorhall KLG',
       langSwitchText: 'Auf Deutsch wechseln',
-      linkDataPrivacy: 'Data Privacy',
+      linkDataPrivacy: 'Data Protection',
       linkGithub: 'Visit Vorhall on Github',
-      linkImpressum: 'Impressum',
+      linkImpressum: 'Imprint',
       linkLinkedin: 'Visit Vorhall on LinkedIn',
     },
   },

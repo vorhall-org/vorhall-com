@@ -16,12 +16,12 @@ const defaultArgs = {
     {
       link: '#',
       prefetch: true,
-      text: 'Data Privacy',
+      text: 'Data Protection',
     },
     {
       link: '#',
       prefetch: true,
-      text: 'Impressum',
+      text: 'Imprint',
     },
   ],
   socialLinks: socialLinks.SocialLinks.args,

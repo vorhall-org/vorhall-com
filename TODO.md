@@ -2,7 +2,6 @@ TODO:
 - check fonts on windows (Marius)
 - High Contrast Styling (Note to ourselves: looks fairly good so far) (Marius)
 - A11y Testing (Automated tools, NVDA, VoiceOver, TalkBack) (Marius)
-- Data protection declaration (Marius -> Recherche)
 - Device Testing on Win/Android/ (Marius)
 - Content Security Policies? -> there is a netlify integration. needs further study (Marius)
 - Skiplink & Home Button alignment (Marius)

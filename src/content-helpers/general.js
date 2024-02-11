@@ -192,12 +192,12 @@ export default (locale) => {
       },
       legalLinks: [
         {
-          link: pageRoutes(lang).dataPrivacy,
+          link: pageRoutes(lang).dataProtection,
           prefetch: true,
           text: tFooter('linkDataPrivacy'),
         },
         {
-          link: pageRoutes(lang).impressum,
+          link: pageRoutes(lang).imprint,
           prefetch: true,
           text: tFooter('linkImpressum'),
         },
