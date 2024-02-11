@@ -2,10 +2,10 @@
 @use '/src/styles/mediaqueries' as mq;
 
 :root {
-  --error-message-color: var(--color-red-700);
+  --error-message-color: var(--color-red-600);
 
   @include mq.color-scheme-dark {
-    --error-message-color: var(--color-red-500);
+    --error-message-color: var(--color-red-400);
   }
 }
 
