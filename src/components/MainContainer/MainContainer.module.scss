@@ -3,7 +3,6 @@
 @use '/src/styles/mixins' as mx;
 
 :root {
-
   @include mq.breakpoint($from: md) {
     --header-height: 81;
     --footer-height: 118;

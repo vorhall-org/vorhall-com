@@ -141,7 +141,7 @@ export default {
       <p>
         Unsere Website <a href="https://vorhall.com">https://vorhall.com</a> verwendet derzeit keine
         Cookies. Auf der Website läuft der Analytics-Dienst von <a aria-label="Squeaky AI,
-        Linkziel in englischer Sprache, öffnet sich in einem neuen Fenster" href="https://squeaky.ai/"
+        Linkziel in englischer Sprache, öffnet sich in einem neuen Fenster." href="https://squeaky.ai/"
         target="_blank" rel="external noopener nofollow">Squeaky AI.</a> Dies ist
         eine Dienstleistung von Dritten mit Sitz in den Niederlanden, mit welcher wir die Nutzung der
         Website (nicht personenbezogen) messen und auswerten können. Squeaky nutzt ebenfalls keine Cookies
@@ -150,7 +150,7 @@ export default {
         zur <a aria-label="Squeaky AI Privacy Police, Linkziel in englischer Sprache, öffnet sich in einem neuen Fenster"
         href="https://squeaky.ai/legal/privacy-policy/" target="_blank" rel="external noopener nofollow">Squeaky AI Privacy
         Police</a> und <a aria-label="Squaky AI GDPR Compliance, Linkziel in englischer Sprache, öffnet sich
-        in einem neuen Fenster" href="https://squeaky.ai/legal/gdpr/" target="_blank" rel="external
+        in einem neuen Fenster." href="https://squeaky.ai/legal/gdpr/" target="_blank" rel="external
         noopener nofollow">Squaky AI GDPR-Compliance</a>.
       </p>
       <h2>
@@ -274,12 +274,18 @@ export default {
         Jede betroffene Person hat überdies das Recht, ihre Ansprüche gerichtlich durchzusetzen
         oder bei der zuständigen Datenschutzbehörde eine Beschwerde einzureichen. Die zuständige
         Datenschutzbehörde der Schweiz ist der <a aria-label="Eidgenössische Datenschutz- und
-        Öffentlichkeitsbeauftragte, Linkziel öffnet sich in einem neuen Fenster"
+        Öffentlichkeitsbeauftragte, Linkziel öffnet sich in einem neuen Fenster."
         href="http://www.edoeb.admin.ch" target="_blank" rel="external noopener nofollow">
         Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte.</a>
       </p>
+      <p>--</p>
+      <p><strong>Disclaimer:</strong><br>Diese Datenschutzerklärung basiert auf der frei verfügbaren
+      Vorlage «Allgemeine Datenschutzerklärung Version 2.01a» von <a aria-label="datenrecht.ch,
+      Linkziel öffnet sich in einem neuen Fenster." href="https://datenrecht.ch/muster-
+      datenschutzerklaerung-dsgvo-und-dsg-revdsg/" target="_blank" rel="external noopener
+      nofollow">datenrecht.ch</a>.
     `,
-    title: 'Datenschutz&shy;erklärung der Vorhall KLG',
+    title: 'Daten&shy;schutz&shy;erklärung der Vorhall KLG',
   },
   en: {
     description: 'Data Privacy',

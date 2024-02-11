@@ -57,7 +57,7 @@ export default {
           für die inzwischen etwas bekannter gewordenen Progressive Web Apps (PWA).
         </li>
       </ul>
-      <h3>Ein Auszug aus den von uns genutzten Frontend Technologien</h3>
+      <h2>Ein Auszug aus den von uns genutzten Technologien</h2>
   `,
     title: 'Frontend<br> Entwicklung & Architektur',
   },
@@ -116,7 +116,7 @@ export default {
           digital experiences, also known as Progressive Web Apps (PWA).
         </li>
       </ul>
-      <h3>Some of the front-end technology we work with</h3>
+      <h2>Some of the technologies we work with</h2>
     `,
     title: 'Front-end<br> Development & Architecture',
   },
