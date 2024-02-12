@@ -1,5 +1,6 @@
 @use '/src/styles/mixins' as mx;
 @use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/functions' as fn;
 
 :root {
   @include mx.container-centered-variables;
@@ -29,6 +30,11 @@
 
   &--highlight {
     background-color: var(--section-background);
+    margin-top: fn.to-rem(var(--section-spacing-v-small));
+
+    @include mq.breakpoint($from: md) {
+      margin-top: fn.to-rem(var(--section-spacing-v-large));
+    }
   }
 
   &--no-v-spacing-top {
