@@ -1,12 +1,5 @@
 TODO:
-- check fonts on windows (Marius)
-- High Contrast Styling (Note to ourselves: looks fairly good so far) (Marius)
-- A11y Testing (Automated tools, NVDA, VoiceOver, TalkBack) (Marius)
-- Device Testing on Win/Android/ (Marius)
 - Content Security Policies? -> there is a netlify integration. needs further study (Marius)
-- Skiplink & Home Button alignment (Marius)
-- Alternative solution for 'header' (Marius / Yves)
-- Check new implementation of Column width adjustment (Yves & Marius)
 - Set proper index behaviour for individual pages before go-live (Marius) (!!! WE SHOULD DO THIS AFTER WE ARE LIVE, OTHERWISE THE CONTENT UNDER THE BETA-URL WILL BE INDEX, RIGHT?)
 - I removed `text-wrap: balance;` from LeadText. Ok with that? (Marius)
 

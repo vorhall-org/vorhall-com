@@ -18,6 +18,7 @@
   @include mx.container-full-width;
   font-size: fn.to-rem(var(--text-sm));
 
+  margin-inline: 0;
   padding-block: fn.to-rem(var(--spacing-16));
   border-block-start: fn.to-rem(var(--spacing-px)) solid var(--footer-border-color);
   color: var(--footer-text-color);

@@ -21,7 +21,7 @@ export default {
         link: 'Datenschutzerklärung',
         postLink: 'erfährst Du mehr zu unserem Umgang mit Daten.',
         preLink: `
-          Wir schätzen unsere Privatsphäre genauso wie Du die deine. Deine Eingaben in
+          Wir schätzen deine Privatsphäre genauso wie unsere eigene. Deine Eingaben in
           diesem Formular werden einzig zur Bearbeitung der Anfrage verwendet. In unserer
         `,
       },
@@ -51,7 +51,7 @@ export default {
         link: 'Data Protection Statement',
         postLink: 'for more information.',
         preLink: `
-          We value our privacy just as much as you do yours. Your inputs in this form will
+          We value your privacy just as much as we do ours. Your inputs in this form will
           be solely used for processing the request. Have a look at our
         `,
       },
