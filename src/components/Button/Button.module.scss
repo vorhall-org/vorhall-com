@@ -217,11 +217,11 @@
 
   &--skip-link {
     @include mx.visually-hidden-focusable;
-    inset-block-start: fn.to-rem(var(--spacing-4));
-    inset-inline-start: fn.to-rem(var(--spacing-4));
 
     @include mx.hover-focus {
       position: fixed;
+      inset-block-start: fn.to-rem(var(--spacing-6));
+      inset-inline-start: fn.to-rem(var(--spacing-6));
       padding: fn.to-rem(var(--button-padding-v)) fn.to-rem(var(--button-padding-h));
       border: fn.to-rem(1) solid var(--button-border-color-hover);
     }

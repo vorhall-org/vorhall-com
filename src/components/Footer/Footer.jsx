@@ -7,6 +7,7 @@ import styles from './Footer.module.scss';
 export default function Footer(props) {
   return (
     <footer
+      aria-label={props.ariaLabel}
       classList={{
         [styles['footer']]: true,
         [props.classes]: props.classes,

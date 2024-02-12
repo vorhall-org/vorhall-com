@@ -63,6 +63,7 @@ export default {
   },
   footer: {
     de: {
+      ariaLabel: 'Fusszeile',
       copyright: '©2024 Vorhall KLG',
       langSwitchText: 'Change to english',
       linkDataPrivacy: 'Datenschutzerklärung',
@@ -71,6 +72,7 @@ export default {
       linkLinkedin: 'Besuche Vorhall auf LinkedIn',
     },
     en: {
+      ariaLabel: 'Footer',
       copyright: '©2024 Vorhall KLG',
       langSwitchText: 'Auf Deutsch wechseln',
       linkDataPrivacy: 'Data Protection',

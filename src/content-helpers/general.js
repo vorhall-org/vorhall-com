@@ -184,6 +184,7 @@ export default (locale) => {
     }
 
     return {
+      ariaLabel: tFooter('ariaLabel'),
       copyright: tFooter('copyright'),
       langSwitch: {
         link: langSwitchLink,

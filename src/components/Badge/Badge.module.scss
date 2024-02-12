@@ -53,32 +53,32 @@
       --badge-text-color: var(--color-red-300);
       --badge-background-color: var(--color-red-900);
     }
-  
+
     .badge--color-yellow {
       --badge-text-color: var(--color-yellow-300);
       --badge-background-color: var(--color-yellow-900);
     }
-  
+
     .badge--color-green {
       --badge-text-color: var(--color-green-300);
       --badge-background-color: var(--color-green-900);
     }
-  
+
     .badge--color-blue {
       --badge-text-color: var(--color-blue-300);
       --badge-background-color: var(--color-blue-900);
     }
-  
+
     .badge--color-indigo {
       --badge-text-color: var(--color-indigo-300);
       --badge-background-color: var(--color-indigo-900);
     }
-  
+
     .badge--color-purple {
       --badge-text-color: var(--color-purple-300);
       --badge-background-color: var(--color-purple-900);
     }
-  
+
     .badge--color-pink {
       --badge-text-color: var(--color-pink-300);
       --badge-background-color: var(--color-pink-900);
@@ -96,4 +96,9 @@
   font-weight: var(--font-weight-medium);
   border-radius: fn.to-rem(var(--border-radius-rounded-md));
   display: inline-block;
+
+  @include mq.forced-colors {
+    border: fn.to-em(var(--spacing-px)) solid currentColor;
+  }
+
 }
