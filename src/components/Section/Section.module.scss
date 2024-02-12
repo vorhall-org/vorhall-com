@@ -33,6 +33,10 @@
     margin-top: fn.to-rem(var(--section-spacing-v-small));
 
     @include mq.breakpoint($from: md) {
+      margin-top: fn.to-rem(var(--section-spacing-v-medium));
+    }
+
+    @include mq.breakpoint($from: lg) {
       margin-top: fn.to-rem(var(--section-spacing-v-large));
     }
   }

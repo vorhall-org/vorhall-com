@@ -4,6 +4,7 @@
 @mixin container-centered-variables {
   --section-spacing-h: var(--spacing-4);
   --section-spacing-v-small: var(--spacing-12);
+  --section-spacing-v-medium: var(--spacing-16);
   --section-spacing-v-large: var(--spacing-24);
 
   @include mq.breakpoint($from: sm) {
@@ -57,6 +58,11 @@
   padding-bottom: fn.to-rem(var(--section-spacing-v-small));
 
   @include mq.breakpoint($from: md) {
+    padding-top: fn.to-rem(var(--section-spacing-v-medium));
+    padding-bottom: fn.to-rem(var(--section-spacing-v-medium));
+  }
+
+  @include mq.breakpoint($from: lg) {
     padding-top: fn.to-rem(var(--section-spacing-v-large));
     padding-bottom: fn.to-rem(var(--section-spacing-v-large));
   }
