@@ -11,6 +11,16 @@ export const seoMetaTags = (translatedData, url, index) => (
         name: 'description',
       },
       {
+        content: '#F9FAFB',
+        media: '(prefers-color-scheme: light)',
+        name: 'theme-color',
+      },
+      {
+        content: '#111827',
+        media: '(prefers-color-scheme: dark)',
+        name: 'theme-color',
+      },
+      {
         content: 'article',
         property: 'og:type',
       },
