@@ -12,7 +12,10 @@
     "lint:styles": "npx stylelint '**/*.astro'",
     "lint:js": "eslint . --ext .js,.mjs,.astro",
     "storybook": "storybook dev -p 6006",
-    "cypress:open": "cypress open"
+    "netlify:cli": "netlify dev",
+    "cypress:open": "cypress open",
+    "cypress:cli": "cypress run",
+    "cypress": "run-p netlify:cli cypress:cli"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.0.4",
@@ -29,6 +32,7 @@
     "eslint-plugin-solid": "^0.13.1",
     "eslint-plugin-storybook": "^0.6.15",
     "netlify-cli": "^17.16.1",
+    "npm-run-all2": "^6.1.2",
     "postcss-html": "^1.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
