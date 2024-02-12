@@ -82,6 +82,15 @@ export default function Button(props) {
           classes={styles['button__icon-after']}
         />
       }
+      {props.href && props.ariaLabel &&
+        <span
+          class={styles['button__hidden-text']}
+          aria-hidden='true'
+          role='presentation'
+        >
+          {props.ariaLabel}
+        </span>
+      }
     </Dynamic>
   );
 }
