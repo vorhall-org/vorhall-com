@@ -23,7 +23,7 @@
   color: var(--footer-text-color);
 
   &__bottom-wrapper {
-    @include mx.container-s;
+    @include mx.container-l;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -78,7 +78,7 @@
   }
 
   &__copyright {
-    @include mx.container-s;
+    @include mx.container-l;
     font-size: fn.to-rem(var(--text-xs));
 
     @include mq.breakpoint($to: md) {
