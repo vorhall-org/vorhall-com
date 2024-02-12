@@ -1,0 +1,51 @@
+@use '/src/styles/mixins' as mx;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/functions' as fn;
+
+:root {
+  @include mx.container-centered-variables;
+
+  --section-background: var(--color-white);
+
+  @include mq.color-scheme-dark {
+    --section-background: var(--color-gray-800);
+  }
+}
+
+.section {
+  @include mx.container-m;
+  @include mx.container-vertical-spacing;
+
+  &--full-width {
+    @include mx.container-full-width;
+  }
+
+  &--small {
+    @include mx.container-s;
+  }
+
+  &--large {
+    @include mx.container-l;
+  }
+
+  &--highlight {
+    background-color: var(--section-background);
+    margin-top: fn.to-rem(var(--section-spacing-v-small));
+
+    @include mq.breakpoint($from: md) {
+      margin-top: fn.to-rem(var(--section-spacing-v-medium));
+    }
+
+    @include mq.breakpoint($from: lg) {
+      margin-top: fn.to-rem(var(--section-spacing-v-large));
+    }
+  }
+
+  &--no-v-spacing-top {
+    padding-top: 0;
+  }
+
+  &--no-v-spacing-bottom {
+    padding-bottom: 0;
+  }
+}

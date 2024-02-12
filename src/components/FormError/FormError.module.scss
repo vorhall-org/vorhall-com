@@ -1,0 +1,16 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+
+:root {
+  --form-error-color: var(--color-red-600);
+
+  @include mq.color-scheme-dark {
+    --form-error-color: var(--color-red-400);
+  }
+}
+
+.form-error {
+  font-size: fn.to-rem(var(--text-sm));
+  color: var(--form-error-color);
+  line-height: 150%;
+}

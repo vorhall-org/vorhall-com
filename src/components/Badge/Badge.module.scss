@@ -1,0 +1,104 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  .badge--color-gray {
+    --badge-text-color: var(--color-gray-900);
+    --badge-background-color: var(--color-gray-100);
+  }
+
+  .badge--color-red {
+    --badge-text-color: var(--color-red-800);
+    --badge-background-color: var(--color-red-100);
+  }
+
+  .badge--color-yellow {
+    --badge-text-color: var(--color-yellow-800);
+    --badge-background-color: var(--color-yellow-100);
+  }
+
+  .badge--color-green {
+    --badge-text-color: var(--color-green-800);
+    --badge-background-color: var(--color-green-100);
+  }
+
+  .badge--color-blue {
+    --badge-text-color: var(--color-blue-800);
+    --badge-background-color: var(--color-blue-100);
+  }
+
+  .badge--color-indigo {
+    --badge-text-color: var(--color-indigo-800);
+    --badge-background-color: var(--color-indigo-100);
+  }
+
+  .badge--color-purple {
+    --badge-text-color: var(--color-purple-800);
+    --badge-background-color: var(--color-purple-100);
+  }
+
+  .badge--color-pink {
+    --badge-text-color: var(--color-pink-800);
+    --badge-background-color: var(--color-pink-100);
+  }
+
+  @include mq.color-scheme-dark {
+    .badge--color-gray {
+      --badge-text-color: var(--color-gray-300);
+      --badge-background-color: var(--color-gray-700);
+    }
+
+    .badge--color-red {
+      --badge-text-color: var(--color-red-300);
+      --badge-background-color: var(--color-red-900);
+    }
+
+    .badge--color-yellow {
+      --badge-text-color: var(--color-yellow-300);
+      --badge-background-color: var(--color-yellow-900);
+    }
+
+    .badge--color-green {
+      --badge-text-color: var(--color-green-300);
+      --badge-background-color: var(--color-green-900);
+    }
+
+    .badge--color-blue {
+      --badge-text-color: var(--color-blue-300);
+      --badge-background-color: var(--color-blue-900);
+    }
+
+    .badge--color-indigo {
+      --badge-text-color: var(--color-indigo-300);
+      --badge-background-color: var(--color-indigo-900);
+    }
+
+    .badge--color-purple {
+      --badge-text-color: var(--color-purple-300);
+      --badge-background-color: var(--color-purple-900);
+    }
+
+    .badge--color-pink {
+      --badge-text-color: var(--color-pink-300);
+      --badge-background-color: var(--color-pink-900);
+    }
+  }
+
+}
+
+.badge {
+  color: var(--badge-text-color);
+  background-color: var(--badge-background-color);
+  font-size: fn.to-rem(var(--text-sm));
+  line-height: 150%;
+  padding: fn.to-rem(var(--spacing-0-5)) fn.to-rem(var(--spacing-3));
+  font-weight: var(--font-weight-medium);
+  border-radius: fn.to-rem(var(--border-radius-rounded-md));
+  display: inline-block;
+
+  @include mq.forced-colors {
+    border: fn.to-em(var(--spacing-px)) solid currentColor;
+  }
+
+}

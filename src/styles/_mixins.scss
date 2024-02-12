@@ -1,8 +1,269 @@
-@mixin sr-only() {
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+
+@mixin container-centered-variables {
+  --section-spacing-h: var(--spacing-4);
+  --section-spacing-v-small: var(--spacing-12);
+  --section-spacing-v-medium: var(--spacing-16);
+  --section-spacing-v-large: var(--spacing-24);
+
+  @include mq.breakpoint($from: sm) {
+    --section-spacing-h: var(--spacing-8);
+  }
+
+  @include mq.breakpoint($from: md) {
+    --section-spacing-h: var(--spacing-10);
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --section-spacing-h: var(--spacing-12);
+  }
+
+  @include mq.breakpoint($from: xlg) {
+    --section-spacing-h: var(--spacing-20);
+  }
+}
+
+@mixin container-centered {
+  margin: 0 auto;
+  padding-right: fn.to-rem(var(--section-spacing-h));
+  padding-left: fn.to-rem(var(--section-spacing-h));
+}
+
+@mixin container-l {
+  @include container-centered;
+  max-width: fn.to-rem(calc(var(--content-max-width-l) + 2 * var(--section-spacing-h)));
+}
+
+@mixin container-m {
+  @include container-centered;
+  max-width: fn.to-rem(calc(var(--content-max-width-m) + 2 * var(--section-spacing-h)));
+}
+
+@mixin container-s {
+  @include container-centered;
+  max-width: fn.to-rem(calc(var(--content-max-width-s) + 2 * var(--section-spacing-h)));
+}
+
+@mixin container-full-width {
+  @include container-centered;
+
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@mixin container-vertical-spacing {
+  padding-top: fn.to-rem(var(--section-spacing-v-small));
+  padding-bottom: fn.to-rem(var(--section-spacing-v-small));
+
+  @include mq.breakpoint($from: md) {
+    padding-top: fn.to-rem(var(--section-spacing-v-medium));
+    padding-bottom: fn.to-rem(var(--section-spacing-v-medium));
+  }
+
+  @include mq.breakpoint($from: lg) {
+    padding-top: fn.to-rem(var(--section-spacing-v-large));
+    padding-bottom: fn.to-rem(var(--section-spacing-v-large));
+  }
+
+}
+
+@mixin sr-only {
   position: absolute;
   left: -10000px;
   top: auto;
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+@mixin default-transition {
+  transition-duration: var(--transition-default-duration);
+  transition-timing-function: var(--transition-default-timing-function);
+
+  @include mq.reduced-motion {
+    transition-duration: var(--transition-reduced-motion-duration);
+    transition-timing-function: none;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin visually-hidden-reset {
+	position: static;
+	width: auto;
+	height: auto;
+	overflow: visible;
+	margin: 0;
+	clip: auto;
+}
+
+@mixin visually-hidden-focusable {
+	@include visually-hidden;
+
+	&:focus,
+	&:active {
+		@include visually-hidden-reset;
+	}
+}
+
+@mixin hover-focus {
+  &:hover {
+    @include mq.mouse-only {
+      @content;
+    }
+  }
+
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin card-variables {
+  --card-bg-color: var(--color-white);
+  --card-border-color: var(--color-gray-200);
+  --card-color: var(--color-gray-500);
+  --card-width: 100%;
+
+  @include mq.color-scheme-dark {
+    --card-bg-color: var(--color-gray-800);
+    --card-border-color: var(--color-gray-700);
+    --card-color: var(--color-gray-300);
+  }
+}
+
+@mixin card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+
+  list-style: none;
+  border-radius: fn.to-rem(var(--border-radius-rounded-lg));
+  border: fn.to-rem(1) solid var(--card-border-color);
+  background: var(--card-bg-color);
+
+  color: var(--card-color);
+
+  box-shadow: var(--shadow-md);
+
+  @include mq.breakpoint($from: md) {
+    --card-width: 50%;
+    flex: 1 1 calc(var(--card-width) - #{fn.to-rem(var(--spacing-4))});
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --card-width: 33.33333%;
+  };
+
+}
+
+@mixin heading-variables {
+  --heading-color: var(--color-gray-900);
+  --heading-1-font-size: var(--text-4xl);
+  --heading-2-font-size: var(--text-3xl);
+  --heading-3-font-size: var(--text-2xl);
+  --heading-4-font-size: var(--text-xl);
+  --heading-5-font-size: var(--text-l);
+  --heading-6-font-size: var(--text-base);
+
+  @include mq.color-scheme-dark {
+    --heading-color: var(--color-white);
+  }
+
+  @include mq.breakpoint($from: md) {
+    --heading-1-font-size: var(--text-5xl);
+    --heading-2-font-size: var(--text-4xl);
+    --heading-3-font-size: var(--text-3xl);
+    --heading-4-font-size: var(--text-2xl);
+    --heading-5-font-size: var(--text-xl);
+    --heading-6-font-size: var(--text-l);
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --heading-1-font-size: var(--text-6xl);
+    --heading-2-font-size: var(--text-5xl);
+    --heading-3-font-size: var(--text-4xl);
+    --heading-4-font-size: var(--text-3xl);
+    --heading-5-font-size: var(--text-2xl);
+    --heading-6-font-size: var(--text-xl);
+  }
+}
+
+@mixin heading-generic {
+  line-height: 125%;
+  font-weight: var(--font-weight-bold);
+
+  color: var(--heading-color);
+  text-wrap: balance;
+}
+
+@mixin heading {
+  h1, h2, h3, h4, h5, h6 {
+    @include heading-generic;
+  }
+
+  &--level-1,
+  h1 {
+    font-size: fn.to-rem(var(--heading-1-font-size));
+  }
+
+  &--level-2,
+  h2 {
+    font-size: fn.to-rem(var(--heading-2-font-size));
+  }
+
+  &--level-3,
+  h3 {
+    font-size: fn.to-rem(var(--heading-3-font-size));
+  }
+
+  &--level-4,
+  h4 {
+    font-size: fn.to-rem(var(--heading-4-font-size));
+  }
+
+  &--level-5,
+  h5 {
+    font-size: fn.to-rem(var(--heading-5-font-size));
+  }
+
+  &--level-6,
+  h6 {
+    font-size: fn.to-rem(var(--heading-6-font-size));
+  }
+}
+
+@mixin link-variables {
+  --link-color: var(--color-blue-600);
+  --link-color-hover: var(--color-blue-800);
+
+  @include mq.color-scheme-dark {
+    --link-color: var(--color-blue-500);
+    --link-color-hover: var(--color-blue-300);
+  }
+}
+
+@mixin link {
+  $root: &;
+  text-underline-offset: fn.to-em(var(--spacing-1-5));
+  color: var(--link-color);
+
+  @include default-transition;
+  transition-property: color;
+
+  @include hover-focus {
+    color: var(--link-color-hover);
+  };
 }

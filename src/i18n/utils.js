@@ -1,5 +1,3 @@
-import { translations } from './translations';
-
 export const defaultLocale = 'en';
 
 export const locales = {
@@ -7,9 +5,19 @@ export const locales = {
   en: 'en-US',
 };
 
-export const useTranslations = (lang) => (key) => translations[lang][key] || translations[defaultLocale][key];
+export const useTranslations = (lang, translations) => (key) => translations[lang][key] || translations[defaultLocale][key];
 
-export const langRoute = (lang, route) => (lang === defaultLocale
-  ? `${route}/`
-  : `/${lang}/${route}/`
-);
+export const langRoute = (lang, route) => {
+
+  // home route
+  if (route.length === 0 || route === '/') {
+    return lang === defaultLocale
+      ? '/'
+      : `/${lang}/`;
+  }
+
+  // routes other than home
+  return lang === defaultLocale
+    ? `/${route}/`
+    : `/${lang}/${route}/`;
+};

@@ -1,0 +1,24 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+
+:root {
+  --error-message-color: var(--color-red-600);
+
+  @include mq.color-scheme-dark {
+    --error-message-color: var(--color-red-400);
+  }
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: fn.to-rem(var(--spacing-3));
+  color: var(--error-message-color);
+
+  &__icon {
+    width: fn.to-rem(var(--spacing-6));
+    height: fn.to-rem(var(--spacing-6));
+  }
+
+}

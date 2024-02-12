@@ -1,0 +1,30 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  --success-message-color: var(--color-green-600);
+
+  @include mq.color-scheme-dark {
+    --success-message-color: var(--color-green-400);
+  }
+
+  @include mx.card-variables;
+}
+
+.success-message {
+  @include mx.card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: fn.to-rem(var(--spacing-4));
+  padding: fn.to-rem(var(--spacing-6));
+  color: var(--success-message-color);
+
+  &__icon {
+    width: fn.to-rem(var(--spacing-12));
+    height: fn.to-rem(var(--spacing-12));
+  }
+
+}

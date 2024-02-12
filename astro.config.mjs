@@ -8,6 +8,7 @@ import {
   defaultLocale,
   locales,
 } from './src/i18n/utils';
+import solidJs from '@astrojs/solid-js';
 
 export default defineConfig({
   build: {
@@ -27,7 +28,9 @@ export default defineConfig({
         locales,
       },
     }),
+    solidJs(),
   ],
+  prefetch: true,
   scopedStyleStrategy: 'class',
   site: 'https://vorhall.com/',
   trailingSlash: 'always',

@@ -1,0 +1,10 @@
+@use '/src/styles/mixins' as mx;
+
+:root {
+  @include mx.heading-variables;
+}
+
+.heading {
+  @include mx.heading-generic;
+  @include mx.heading;
+}

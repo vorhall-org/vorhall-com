@@ -1,0 +1,76 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mixins' as mx;
+@use '/src/styles/mediaqueries' as mq;
+
+:root {
+  --textarea-placeholder-color: var(--color-gray-500);
+  --textarea-border-color: var(--color-gray-300);
+  --textarea-border-color-hover: var(--color-blue-700);
+  --textarea-background-color: var(--color-gray-50);
+  --textarea-background-color-error: var(--color-red-50);
+  --textarea-text-color: var(--color-gray-900);
+  --textarea-text-color-disabled: var(--color-gray-400);
+  --textarea-text-color-error: var(--color-red-700);
+  --textarea-font-size: var(--text-sm);
+
+  @include mq.color-scheme-dark {
+    --textarea-placeholder-color: var(--color-gray-400);
+    --textarea-border-color: var(--color-gray-600);
+    --textarea-border-color-hover: var(--color-blue-600);
+    --textarea-background-color: var(--color-gray-700);
+    --textarea-background-color-error: var(--color-gray-700);
+    --textarea-text-color-disabled: var(--color-gray-500);
+    --textarea-text-color: var(--color-white);
+    --textarea-text-color-error: var(--color-red-500);
+  }
+
+}
+
+.textarea {
+  $root: &;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  gap: fn.to-rem(var(--spacing-3));
+
+  &__input {
+    font-family: var(--font-family);
+    font-size: fn.to-rem(--text-base);
+    line-height: 150%;
+
+    border-radius: fn.to-rem(var(--border-radius-rounded-lg));
+    border: fn.to-rem(var(--border-weight-s)) solid var(--textarea-border-color);
+    background-color: var(--textarea-background-color);
+    color: var(--textarea-text-color);
+    padding: fn.to-rem(var(--spacing-2)) fn.to-rem(var(--spacing-4));
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+
+    @include mx.default-transition;
+    transition-property: color, border-color, background-color;
+
+    &::placeholder {
+      color: var(--textarea-placeholder-color);
+    }
+
+    @include mx.hover-focus {
+      border-color: var(--textarea-border-color-hover);
+    };
+
+    #{$root}--disabled & {
+      color: var(--textarea-text-color-disabled);
+      pointer-events: none;
+
+      &::placeholder {
+        color: var(--textarea-text-color-disabled);
+      }
+    }
+
+    #{$root}--error & {
+      color: var(--textarea-text-color-error);
+      background-color: var(--textarea-background-color-error);
+      border-color: var(--color-red-500);
+    }
+  }
+}

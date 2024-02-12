@@ -1,0 +1,107 @@
+---
+import { getLocale } from 'astro-i18n-aut';
+import i18n from '../../i18n/i18n-frontend';
+import { useTranslations } from '../../i18n/utils';
+import { seoMetaTags } from '../../content-helpers/metaTagsSeo';
+
+import Layout from '../../layouts/Layout.astro';
+import Section from '../../components/Section/Section';
+import Jumbotron from '../../components/Jumbotron/Jumbotron';
+import Richtext from '../../components/Richtext/Richtext';
+import BadgeList from '../../components/BadgeList/BadgeList';
+
+const locale = getLocale(Astro.url);
+const t = useTranslations(locale, i18n);
+
+const pageMetaInformation = seoMetaTags(t, Astro.url, 'noindex, nofollow');
+
+const jumbotronData = {
+  heading: {
+    level: 1,
+    text: t('title'),
+    visualLevel: false,
+  },
+  leadTextContent: t('lead'),
+  secondaryJumbo: true,
+};
+
+const badges = [
+  {
+    color: 'blue',
+    text: 'CSS',
+  },
+  {
+    color: 'blue',
+    text: 'HTML',
+  },
+  {
+    color: 'blue',
+    text: 'JavaScript',
+  },
+  {
+    color: 'blue',
+    text: 'Typescript',
+  },
+  {
+    color: 'blue',
+    text: 'JAM-Stack',
+  },
+  {
+    color: 'blue',
+    text: 'React',
+  },
+  {
+    color: 'blue',
+    text: 'SolidJS',
+  },
+  {
+    color: 'blue',
+    text: 'GitHub',
+  },
+  {
+    color: 'blue',
+    text: 'CI/CD',
+  },
+  {
+    color: 'blue',
+    text: 'Astro',
+  },
+  {
+    color: 'blue',
+    text: 'Webpack',
+  },
+  {
+    color: 'blue',
+    text: 'Vite',
+  },
+  {
+    color: 'blue',
+    text: 'Netlify',
+  },
+  {
+    color: 'blue',
+    text: 'GraphQL',
+  },
+  {
+    color: 'blue',
+    text: 'Stencil JS',
+  },
+  {
+    color: 'blue',
+    text: 'Web Components',
+  },
+];
+
+---
+
+<Layout
+  pageMetaTags={pageMetaInformation.tags}
+  pageTitle={pageMetaInformation.title}
+>
+  <Section>
+    <Jumbotron {...jumbotronData} />
+    <Richtext text={t('richtext')} />
+    <BadgeList items={badges} />
+  </Section>
+</Layout>
+

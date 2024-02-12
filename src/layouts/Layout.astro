@@ -1,66 +1,111 @@
 ---
+import Tracking from '../page-helpers/Tracking.astro';
+import { generalMetaTags } from '../content-helpers/metaTags';
 import { getLocale } from 'astro-i18n-aut';
-import { useTranslations } from '../i18n/utils';
+import generalDataGetter from '../content-helpers/general';
+import { pageRoutes } from '../content-helpers/pageRoutes';
+import Main from '../components/MainContainer/MainContainer';
+import Footer from '../components/Footer/Footer';
+import Section from '../components/Section/Section';
+import Jumbotron from '../components/Jumbotron/Jumbotron';
+import Form from '../components/Form/Form';
+import Link from '../components/Link/Link';
+import Navigation from '../components/Navigation/Navigation';
+import Button from '../components/Button/Button';
 
 const locale = getLocale(Astro.url);
-const t = useTranslations(locale);
+const generalData = generalDataGetter(locale);
+const path = Astro.url.pathname;
+
 const {
-  removeNoIndex,
+  pageTitle,
+  pageMetaTags,
+  isHome = false,
+  hideContactForm = false,
 } = Astro.props;
+
+const metaTags = [
+  ...generalMetaTags(Astro.generator),
+  ...pageMetaTags || [],
+];
+
+const title = pageTitle || generalData.siteData.title;
+
 ---
 
 <!doctype html>
 <html lang={locale}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={t('site.description')} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <title>{`${title} | Vorhall KLG`}</title>
 
-    {!removeNoIndex && <meta name="robots" content="noindex">}
+    {metaTags.map((tag) => <meta {...tag} />)}
 
-    <title>{t('site.title')}</title>
+    <script>
+      import FlyingFocus from '../helpers/flying-focus/flying-focus';
+
+      window.flyingFocus = new FlyingFocus();
+    </script>
+
+    <style is:global lang="scss">
+      @import '../styles/global';
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon-beta.svg" />
+    <link rel="sitemap" href="https://vorhall.com/sitemap-index.xml" />
+
+    <link rel="preconnect" href="https://cdn.squeaky.ai" crossorigin />
+    <link rel="preconnect" href="https://api.squeaky.ai/graphql" crossorigin />
+
   </head>
   <body>
-    <div class="layout">
+    <section aria-label="Skiplinks">
+      <Button {...generalData.siteData.skipLinkData} />
+    </section>
+
+    {!isHome &&
+      <Navigation>
+        <Button {...generalData.siteData.homeButtonData} />
+      </Navigation>
+    }
+
+    <Main {...generalData.mainData}>
+
       <slot />
-    </div>
+
+      {!hideContactForm &&
+        <Section
+          highlight
+          fullWidth
+        >
+          <Jumbotron {...generalData.jumbotronContact} />
+
+          <Form
+            client:load
+            {...generalData.contactFormData}
+          >
+
+            <div slot="privacyNote">
+              <p>{generalData.contactFormData.privacyNote.preLink} <Link href={pageRoutes(locale).dataProtection} secondary="true" prefetch={true}>{generalData.contactFormData.privacyNote.link}</Link> {generalData.contactFormData.privacyNote.postLink}</p>
+            </div>
+          </Form>
+
+        </Section>
+
+      }
+    </Main>
+
+    <Footer {...generalData.footerData(locale, path)}/>
+
+    <Tracking />
+
+    <script
+      type="application/ld+json"
+      set:html={
+        JSON.stringify({
+          ...generalData.schemaData,
+        })
+      }
+    />
+
   </body>
 </html>
-
-<style is:global lang="scss">
-  @use '../styles/mediaqueries' as mq;
-  @use '../styles/functions' as fn;
-  @import '../styles/global/variables';
-
-  html {
-    font-size: calc(var(--font-size-base) * 1px);
-  }
-
-  body {
-    font-family: system-ui, BlinkMacSystemFont, Arial, sans-serif;
-    font-size: fn.to-rem(var(--font-size-base));
-    background-color: rgb(var(--color-background));
-    color: rgb(var(--color-foreground));
-    line-height: var(--font-line-height);
-  }
-
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    hyphens: auto;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
-  .layout {
-    max-width: fn.to-rem(var(--content-max-width));
-    margin: 0 auto;
-    padding: 0 fn.to-rem(var(--content-padding));
-  }
-
-</style>

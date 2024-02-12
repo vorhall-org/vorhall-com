@@ -1,0 +1,90 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mixins' as mx;
+@use '/src/styles/mediaqueries' as mq;
+
+:root {
+  --input-placeholder-color: var(--color-gray-500);
+  --input-border-color: var(--color-gray-300);
+  --input-border-color-hover: var(--color-blue-700);
+  --input-background-color: var(--color-gray-50);
+  --input-background-color-error: var(--color-red-50);
+  --input-text-color: var(--color-gray-900);
+  --input-text-color-disabled: var(--color-gray-400);
+  --input-text-color-error: var(--color-red-700);
+
+  @include mq.color-scheme-dark {
+    --input-placeholder-color: var(--color-gray-400);
+    --input-border-color: var(--color-gray-600);
+    --input-border-color-hover: var(--color-blue-600);
+    --input-background-color: var(--color-gray-700);
+    --input-background-color-error: var(--color-gray-700);
+    --input-text-color-disabled: var(--color-gray-500);
+    --input-text-color: var(--color-white);
+    --input-text-color-error: var(--color-red-400);
+  }
+}
+
+.input-text {
+  $root: &;
+  display: flex;
+  flex-direction: column;
+  gap: fn.to-rem(var(--spacing-2));
+
+  @include mq.breakpoint($from: md) {
+    flex: 1 1 calc(50% - fn.to-rem((var(--spacing-4))));
+  }
+
+  &__input {
+    border-radius: fn.to-rem(var(--border-radius-rounded-lg));
+    border: fn.to-rem(var(--border-weight-s)) solid var(--input-border-color);
+    background-color: var(--input-background-color);
+    color: var(--input-text-color);
+    padding-left: fn.to-rem(var(--spacing-4));
+    padding-right: fn.to-rem(var(--spacing-4));
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: fn.to-rem(--text-base);
+
+    @include mx.default-transition;
+    transition-property: color, border-color, background-color;
+
+    &::placeholder {
+      color: var(--input-placeholder-color);
+    }
+
+    @include mx.hover-focus {
+      border-color: var(--input-border-color-hover);
+    };
+
+    #{$root}--size-small & {
+      padding-top: fn.to-rem(var(--spacing-2));
+      padding-bottom: fn.to-rem(var(--spacing-2));
+    }
+
+    #{$root}--size-regular & {
+      padding-top: fn.to-rem(var(--spacing-3));
+      padding-bottom: fn.to-rem(var(--spacing-3));
+    }
+
+    #{$root}--size-large & {
+      padding-top: fn.to-rem(var(--spacing-3-5));
+      padding-bottom: fn.to-rem(var(--spacing-3-5));
+    }
+
+    #{$root}--disabled & {
+      color: var(--input-text-color-disabled);
+      pointer-events: none;
+
+      &::placeholder {
+        color: var(--input-text-color-disabled);
+      }
+    }
+
+    #{$root}--error & {
+      color: var(--input-text-color-error);
+      background-color: var(--input-background-color-error);
+      border-color: var(--input-text-color-error);
+    }
+  }
+}

@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # astro-i18n-aut
 astro_tmp_pages_*
+
+# Local Netlify folder
+.netlify

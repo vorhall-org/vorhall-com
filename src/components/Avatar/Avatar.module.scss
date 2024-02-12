@@ -1,0 +1,23 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+.avatar {
+  contain: content;
+
+  border-radius: var(--border-radius-rounded-full);
+  background: var(--color-gray-100);
+  width: 40%;
+  box-shadow: var(--shadow-md);
+
+  @include mq.breakpoint($to: md) {
+    width: 50%;
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+  }
+
+}

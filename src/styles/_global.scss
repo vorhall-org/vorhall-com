@@ -1,0 +1,66 @@
+@use './mediaqueries' as mq;
+@use './functions' as fn;
+@use './mixins' as mx;
+@import './variables/variables';
+
+:root {
+  --color-foreground: var(--color-gray-900);
+  --color-background: var(--color-gray-50);
+  --scroll-behavior: smooth;
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
+
+  @include mq.color-scheme-dark {
+    --color-foreground: var(--color-gray-50);
+    --color-background: var(--color-gray-900);
+    --webkit-font-smoothing: subpixel-antialiased;
+  }
+
+  @include mq.reduced-motion {
+    --scroll-behavior: auto;
+  }
+}
+
+html {
+  font-size: calc(var(--text-base) * 1px);
+  scroll-behavior: var(--scroll-behavior);
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: fn.to-rem(var(--text-base));
+  font-weight: var(--font-weight-normal);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: var(--font-line-height);
+  -webkit-font-smoothing: var(--webkit-font-smoothing);
+	-moz-osx-font-smoothing: var(--moz-osx-font-smoothing);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration-skip-ink: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  display: block;
+}
+
+:target,
+:focus {
+  scroll-margin-block: fn.to-rem(var(--spacing-12));
+}

@@ -1,0 +1,101 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  @include mx.container-centered-variables;
+  @include mx.card-variables;
+
+  --jumbotron-padding-h: var(--spacing-4);
+  --jumbotron-padding-v: var(--spacing-16);
+  --main-jumbotron-padding-v: var(--spacing-8);
+  --secondary-jumbotron-padding-v: var(--spacing-8);
+  --secondary-jumbotron-padding-h: var(--spacing-8);
+  --jumbotron-border-color: var(--color-gray-200);
+  --main-jumbotron-gradient: linear-gradient(
+    180deg,
+    hsl(219deg 79% 91%) 0%,
+    hsl(218deg 78% 91%) 11%,
+    hsl(217deg 76% 92%) 22%,
+    hsl(216deg 74% 93%) 33%,
+    hsl(215deg 72% 94%) 44%,
+    hsl(214deg 68% 94%) 56%,
+    hsl(213deg 63% 95%) 67%,
+    hsl(212deg 56% 96%) 78%,
+    hsl(211deg 44% 97%) 89%,
+    hsl(210deg 20% 98%) 100%
+  );
+
+
+  @include mq.color-scheme-dark {
+    --jumbotron-border-color: var(--color-gray-700);
+    --main-jumbotron-gradient: linear-gradient(
+      180deg,
+      hsl(221deg 70% 27%) 0%,
+      hsl(221deg 73% 26%) 11%,
+      hsl(222deg 76% 25%) 23%,
+      hsl(222deg 78% 23%) 34%,
+      hsl(221deg 82% 22%) 45%,
+      hsl(222deg 78% 20%) 56%,
+      hsl(223deg 69% 18%) 67%,
+      hsl(223deg 59% 15%) 78%,
+      hsl(224deg 49% 13%) 89%,
+      hsl(224deg 39% 11%) 100%
+    );
+  }
+
+  @include mq.breakpoint($from: md) {
+    --jumbotron-padding-v: var(--spacing-20);
+    --main-jumbotron-padding-v: var(--spacing-16);
+    --secondary-jumbotron-padding-v: var(--spacing-16);
+    --secondary-jumbotron-padding-h: var(--spacing-16);
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --jumbotron-padding-v: var(--spacing-24);
+    --main-jumbotron-padding-v: var(--spacing-24);
+    --jumbotron-padding-h: var(--spacing-4);
+    --secondary-jumbotron-padding-v: var(--spacing-16);
+    --secondary-jumbotron-padding-h: var(--spacing-16);
+  }
+
+}
+
+.jumbotron {
+  $root: &;
+  text-align: center;
+  padding: 0 fn.to-rem(var(--jumbotron-padding-h)) fn.to-rem(var(--jumbotron-padding-v)) fn.to-rem(var(--jumbotron-padding-h));
+
+  &--main {
+    padding-top: fn.to-rem(var(--main-jumbotron-padding-v));
+    padding-bottom: fn.to-rem(var(--main-jumbotron-padding-v));
+    background: var(--main-jumbotron-gradient);
+  }
+
+  &--secondary {
+    padding: 0;
+    margin-bottom: fn.to-rem(var(--spacing-24));
+    border-block-end: fn.to-rem(var(--spacing-px)) solid var(--jumbotron-border-color);
+  }
+
+  &__content {
+    @include mx.container-m;
+
+    #{$root}--main & {
+      @include mx.container-l;
+    }
+
+    #{$root}--secondary & {
+      padding: fn.to-rem(var(--secondary-jumbotron-padding-v)) fn.to-rem(var(--secondary-jumbotron-padding-h));
+    }
+  }
+
+  &__heading {
+    margin-bottom: fn.to-rem(var(--spacing-4));
+
+    #{$root}--main &,
+    #{$root}--secondary & {
+      margin-bottom: fn.to-rem(var(--spacing-6));
+    }
+  }
+}

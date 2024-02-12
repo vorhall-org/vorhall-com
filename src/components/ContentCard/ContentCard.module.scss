@@ -1,0 +1,28 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  @include mx.card-variables;
+}
+
+.content-card {
+  @include mx.card;
+  padding: fn.to-rem(var(--spacing-6));
+
+  &__icon {
+    width: fn.to-rem(var(--spacing-10));
+    height: fn.to-rem(var(--spacing-10));
+  }
+
+  &__title {
+    margin-block-end: fn.to-rem(var(--spacing-3));
+    hyphens: none;
+  }
+
+  &__lead:not(:last-child) {
+    flex-grow: 1;
+    margin-block-end: fn.to-rem(var(--spacing-7));
+  }
+
+}

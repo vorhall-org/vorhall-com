@@ -1,0 +1,92 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  @include mx.container-centered-variables;
+
+  --footer-border-color: var(--color-gray-200);
+  --footer-text-color: var(--color-gray-500);
+
+  @include mq.color-scheme-dark {
+    --footer-border-color: var(--color-gray-700);
+    --footer-text-color: var(--color-gray-400);
+  }
+}
+
+.footer {
+  @include mx.container-full-width;
+  font-size: fn.to-rem(var(--text-sm));
+
+  margin-inline: 0;
+  padding-block: fn.to-rem(var(--spacing-16));
+  border-block-start: fn.to-rem(var(--spacing-px)) solid var(--footer-border-color);
+  color: var(--footer-text-color);
+
+  &__bottom-wrapper {
+    @include mx.container-l;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: fn.to-rem(var(--spacing-4));
+    padding-block-end: fn.to-rem(var(--spacing-4)) fn.to-rem(var(--spacing-1));
+
+    @include mq.breakpoint($to: md) {
+      flex-direction: column;
+    }
+  }
+
+  &__legal-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: fn.to-rem(var(--spacing-2));
+
+    @include mq.breakpoint($from: sm) {
+      justify-content: flex-start;
+      gap: 0 fn.to-rem(var(--spacing-2));
+    }
+
+    @include mq.breakpoint($from: md) {
+      display: flex;
+      flex: 1 1 40%;
+    }
+
+  }
+
+  &__social-links {
+    @include mq.breakpoint($from: md) {
+        display: flex;
+        flex: 1 1 20%;
+        justify-content: center;
+    }
+  }
+
+  &__lang-switch-wrapper {
+    @include mq.breakpoint($from: md) {
+      display: flex;
+      flex: 1 1 40%;
+      justify-content: flex-end;
+    }
+  }
+
+  &__lang-switch {
+    @include mq.breakpoint($to: sm) {
+      margin-inline: auto;
+    }
+  }
+
+  &__copyright {
+    @include mx.container-l;
+    font-size: fn.to-rem(var(--text-xs));
+
+    @include mq.breakpoint($to: md) {
+      margin-block-start: fn.to-rem(var(--spacing-8));
+      text-align: center;
+    }
+
+  }
+
+}

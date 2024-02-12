@@ -1,0 +1,19 @@
+@use '/src/styles/functions' as fn;
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--colorizable {
+    svg {
+      fill: currentcolor;
+    }
+  }
+
+  & svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

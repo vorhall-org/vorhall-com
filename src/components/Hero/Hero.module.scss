@@ -1,0 +1,180 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  @include mx.container-centered-variables;
+
+  --hero-padding-h: var(--spacing-4);
+  --hero-padding-v: var(--spacing-8);
+  --hero-stars-color: var(--color-gray-400);
+  --hero-stars-base-velocity: 180s;
+  --hero-stars-size: 200;
+
+  --hero-gradient: linear-gradient(
+    45deg,
+    hsl(219deg 79% 91%) 0%,
+    hsl(218deg 78% 91%) 11%,
+    hsl(217deg 76% 92%) 22%,
+    hsl(216deg 74% 93%) 33%,
+    hsl(215deg 72% 94%) 44%,
+    hsl(214deg 68% 94%) 56%,
+    hsl(213deg 63% 95%) 67%,
+    hsl(212deg 56% 96%) 78%,
+    hsl(211deg 44% 97%) 89%,
+    hsl(210deg 20% 98%) 100%
+  );
+
+
+  @include mq.color-scheme-dark {
+    --hero-stars-color: var(--color-gray-600);
+
+    --hero-gradient: linear-gradient(
+      45deg,
+      hsl(221deg 70% 27%) 0%,
+      hsl(221deg 73% 26%) 11%,
+      hsl(222deg 76% 25%) 23%,
+      hsl(222deg 78% 23%) 34%,
+      hsl(221deg 82% 22%) 45%,
+      hsl(222deg 78% 20%) 56%,
+      hsl(223deg 69% 18%) 67%,
+      hsl(223deg 59% 15%) 78%,
+      hsl(224deg 49% 13%) 89%,
+      hsl(224deg 39% 11%) 100%
+    );
+  }
+
+  @include mq.breakpoint($from: md) {
+    --hero-padding-v: var(--spacing-16);
+  }
+
+  @include mq.breakpoint($from: lg) {
+    --hero-padding-v: var(--spacing-24);
+    --hero-padding-h: var(--spacing-24);
+  }
+
+}
+
+@function stars($n) {
+  $value: '#{random(200)}vh #{random(200)}vh var(--hero-stars-color)';
+
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(200)}vh #{random(200)}vh var(--hero-stars-color)';
+  }
+
+  @return unquote($value);
+}
+
+$stars-small: stars(700);
+$stars-medium: stars(200);
+$stars-big: stars(100);
+
+@keyframes stars-animation {
+  from {
+    transform: translateY(-200vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  text-align: center;
+  position: relative;
+  padding: fn.to-rem(var(--hero-padding-v)) fn.to-rem(var(--hero-padding-h)) calc(fn.to-rem(var(--hero-padding-v)) * 2) fn.to-rem(var(--hero-padding-h));
+  background: var(--jumbotron-gradient);
+
+  &__content {
+    @include mx.container-l;
+  }
+
+  &__heading {
+    margin-bottom: fn.to-rem(var(--spacing-6));
+  }
+
+  &__diagonal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--hero-gradient);
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - fn.to-rem(var(--spacing-8))));
+  
+    @include mq.breakpoint($from: md) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - fn.to-rem(var(--spacing-12))));
+    }
+  
+    @include mq.breakpoint($from: lg) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - fn.to-rem(var(--spacing-20))));
+    }
+  }
+
+  &__stars {
+    z-index: -1;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: opacity 1s ease-in-out;
+  }
+
+  &__star--small {
+    width: fn.to-rem(1);
+    height: fn.to-rem(1);
+    background: transparent;
+    box-shadow: $stars-small;
+    animation: stars-animation calc(1 * var(--hero-stars-base-velocity)) linear infinite;
+  
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 200vh;
+      width: fn.to-rem(1);
+      height: fn.to-rem(1);
+      background: transparent;
+      box-shadow: $stars-small;
+    }
+  }
+  
+  &__star--medium {
+    width: fn.to-rem(2);
+    height: fn.to-rem(2);
+    background: transparent;
+    box-shadow: $stars-medium;
+    animation: stars-animation calc(2 * var(--hero-stars-base-velocity)) linear infinite;
+  
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 200vh;
+      width: fn.to-rem(2);
+      height: fn.to-rem(2);
+      background: transparent;
+      box-shadow: $stars-medium;
+    }
+  }
+  
+  &__star--big {
+    width: fn.to-rem(3);
+    height: fn.to-rem(3);
+    background: transparent;
+    box-shadow: $stars-big;
+    border-radius: 100%;
+    animation: stars-animation calc(3 * var(--hero-stars-base-velocity)) linear infinite;
+  
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 200vh;
+      width: fn.to-rem(3);
+      height: fn.to-rem(3);
+      background: transparent;
+      box-shadow: $stars-big;
+      border-radius: 100%;
+    }
+  }
+}

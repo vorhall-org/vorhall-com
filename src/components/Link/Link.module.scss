@@ -1,0 +1,22 @@
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
+
+:root {
+  @include mx.link-variables;
+}
+
+.link {
+  @include mx.link;
+
+  &--secondary {
+    --link-color: var(--color-gray-500);
+    --link-color-hover: var(--color-gray-900);
+
+    @include mq.color-scheme-dark {
+      --link-color: var(--color-gray-400);
+      --link-color-hover: var(--color-gray-200);
+    }
+
+  }
+
+}

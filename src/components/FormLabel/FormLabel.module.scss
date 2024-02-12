@@ -1,0 +1,16 @@
+@use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+
+:root {
+  --label-color: var(--color-gray-900);
+
+  @include mq.color-scheme-dark {
+    --label-color: var(--color-white);
+  }
+}
+
+.form-label {
+  font-size: fn.to-rem(var(--text-m));
+  font-weight: var(--font-weight-medium);
+  color: var(--label-color);
+}

@@ -257,7 +257,7 @@
         "max": 1
       }
     ],
-    "multiline-comment-style": "error",
+    "multiline-comment-style": "off",
     "multiline-ternary": [
       "error",
       "always"
@@ -459,7 +459,7 @@
       ],
       "parser": "astro-eslint-parser",
       "rules": {
-        "astro/no-set-html-directive": "error",
+        "astro/no-set-html-directive": "off",
         "quotes": [
           "error",
           "single"
@@ -468,6 +468,17 @@
           "error",
           "prefer-double"
         ]
+      }
+    },
+    {
+      "files": ["*.jsx"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:solid/recommended"
+      ],
+      "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
       }
     }
   ]
