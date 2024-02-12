@@ -1,7 +1,5 @@
 TODO:
 - Content Security Policies? -> there is a netlify integration. needs further study (Marius)
-- Set proper index behaviour for individual pages before go-live (Marius) (!!! WE SHOULD DO THIS AFTER WE ARE LIVE, OTHERWISE THE CONTENT UNDER THE BETA-URL WILL BE INDEX, RIGHT?)
-- I removed `text-wrap: balance;` from LeadText. Ok with that? (Marius)
 
 RIGHT AFTER GO LIVE:
 - Remove no-index meta, set proper index

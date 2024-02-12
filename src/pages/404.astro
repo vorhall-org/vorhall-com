@@ -15,7 +15,7 @@ const locale = getLocale(Astro.url);
 const generalData = generalDataGetter(locale);
 const t = useTranslations(locale, i18n);
 
-const pageMetaInformation = seoMetaTags(t, Astro.url, 'noindex, nofollow');
+const pageMetaInformation = seoMetaTags(t, Astro.url, 'noindex, follow');
 
 const jumbotronData = {
   heading: {
