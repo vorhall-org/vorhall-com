@@ -26,7 +26,7 @@
   }
 
   :is(p, ul, ol) {
-    margin-bottom: fn.to-rem(var(--spacing-4));
+    margin-bottom: fn.to-rem(var(--spacing-6));
   }
 
   // bold
