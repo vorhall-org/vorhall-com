@@ -10,4 +10,8 @@ export const generalMetaTags = (generator) => [
     content: generator,
     name: 'generator',
   },
+  {
+    content: 'bxbg_YknRn8eGXBH7h_ulO_YBwwCGyohGj4Aqkkd1wQ',
+    name: 'google-site-verification',
+  },
 ];
