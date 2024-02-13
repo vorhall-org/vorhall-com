@@ -12,7 +12,7 @@ export default (locale) => {
 
   const siteData = {
     description: tSite('description'),
-    title: tSite('title'),
+    docTitle: tSite('docTitle'),
   };
 
   const jumbotronData = {
