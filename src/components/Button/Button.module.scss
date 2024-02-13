@@ -193,6 +193,10 @@
     flex: 0 0 fn.to-rem(var(--spacing-4));
   }
 
+  &__hidden-text {
+    @include mx.visually-hidden;
+  }
+
   &--outline {
     border: fn.to-rem(1) solid var(--button-border-color);
     transition-property: color, background-color, border-color;
