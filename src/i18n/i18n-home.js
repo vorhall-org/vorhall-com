@@ -183,7 +183,7 @@ export default {
     de: {
       description: `
         Für qualitativ hochwertige Lösungen mit Hand und Fuss. Wir berücksichtigen die Bedürfnisse verschiedenster
-        Nutzer als auch die Einflüsse auf die Umwelt.'
+        Nutzer als auch die Einflüsse auf die Umwelt.
       `,
       title: 'Digitale Lösungen: schnell, barrierefrei & nachhaltig',
     },
