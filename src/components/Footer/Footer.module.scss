@@ -7,16 +7,24 @@
 
   --footer-border-color: var(--color-gray-200);
   --footer-text-color: var(--color-gray-500);
+  --footer-height-estimation: fn.to-em(317);
+
+  @include mq.breakpoint($from: md) {
+    --footer-height-estimation: fn.to-em(195);
+  }
 
   @include mq.color-scheme-dark {
     --footer-border-color: var(--color-gray-700);
     --footer-text-color: var(--color-gray-400);
   }
+
+
 }
 
 .footer {
   @include mx.container-full-width;
   content-visibility: auto;
+  contain-intrinsic-size: auto var(--footer-height-estimation);
   font-size: fn.to-rem(var(--text-sm));
 
   margin-inline: 0;
