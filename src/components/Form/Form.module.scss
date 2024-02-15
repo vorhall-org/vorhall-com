@@ -24,6 +24,10 @@
   flex-direction: column;
   gap: fn.to-rem(var(--spacing-6)) fn.to-rem(var(--spacing-4));
 
+  main section:not(:first-child) & {
+    content-visibility: auto;
+  }
+
   &__fieldset {
     display: flex;
     flex-direction: column;

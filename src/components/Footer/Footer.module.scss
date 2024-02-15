@@ -16,6 +16,7 @@
 
 .footer {
   @include mx.container-full-width;
+  content-visibility: auto;
   font-size: fn.to-rem(var(--text-sm));
 
   margin-inline: 0;
