@@ -6,6 +6,7 @@ export default function Section(props) {
       classList={{
         [styles['section']]: true,
         [props.classes]: props.classes,
+        [styles['section--contact']]: props.contact,
         [styles['section--full-width']]: props.fullWidth,
         [styles['section--small']]: props.small,
         [styles['section--large']]: props.large,
