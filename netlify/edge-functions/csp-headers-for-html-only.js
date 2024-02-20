@@ -1,3 +1,7 @@
+/* Kindly provided by https://dev.to/philw_/using-a-netlify-edge-worker-
+to-cut-down-on-header-bloat-by-removing-html-only-headers-from-your-
+static-assets-3nh9#edge-functions-to-the-rescue */
+
 export default async (request, context) => {
   // Get the response.
   const response = await context.next();
