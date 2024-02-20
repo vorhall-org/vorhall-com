@@ -1,7 +1,6 @@
 [[plugins]]
   package = "@netlify/plugin-csp-nonce"
   [plugins.inputs]
-    reportOnly = false
     excludedPath = [
       "/dist/astro",
       "/dist/images",
