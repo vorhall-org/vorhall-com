@@ -1,3 +1,8 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "object-src 'none'; base-uri 'self'; require-trusted-types-for 'script';"
+
 [[plugins]]
   package = "@netlify/plugin-csp-nonce"
   [plugins.inputs]
