@@ -17,7 +17,7 @@
     ]
     path = "/*"
     reportOnly = false
-    unsafeEval = false
+    unsafeEval = true
 
 [[edge_functions]]
   path = "/*"
