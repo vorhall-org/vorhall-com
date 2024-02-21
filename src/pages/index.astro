@@ -11,6 +11,7 @@ import pageDataGetter from '../content-helpers/home';
 
 const locale = getLocale(Astro.url);
 const pageData = pageDataGetter(locale);
+const pageMetaDescription = pageData.siteData.description.trim();
 
 const pageMetaInformation = {
   tags: [
@@ -19,7 +20,7 @@ const pageMetaInformation = {
       name: 'robots',
     },
     {
-      content: pageData.siteData.description,
+      content: pageMetaDescription,
       name: 'description',
     },
     {
@@ -27,11 +28,11 @@ const pageMetaInformation = {
       property: 'og:type',
     },
     {
-      content: pageData.siteData.title,
+      content: pageData.siteData.docTitle,
       property: 'og:title',
     },
     {
-      content: pageData.siteData.description,
+      content: pageMetaDescription,
       property: 'og:description',
     },
     {
@@ -43,15 +44,15 @@ const pageMetaInformation = {
       property: 'twitter:card',
     },
     {
-      content: pageData.siteData.title,
+      content: pageData.siteData.docTitle,
       property: 'twitter:title',
     },
     {
-      content: pageData.siteData.description,
+      content: pageMetaDescription,
       property: 'twitter:description',
     },
   ],
-  title: pageData.siteData.title,
+  title: pageData.siteData.docTitle,
 };
 
 ---

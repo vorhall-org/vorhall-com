@@ -15,7 +15,7 @@ export const seoMetaTags = (translatedData, url, index) => (
         property: 'og:type',
       },
       {
-        content: translatedData('title'),
+        content: translatedData('docTitle'),
         property: 'og:title',
       },
       {
@@ -32,7 +32,7 @@ export const seoMetaTags = (translatedData, url, index) => (
         property: 'twitter:card',
       },
       {
-        content: translatedData('title'),
+        content: translatedData('docTitle'),
         property: 'twitter:title',
       },
       {

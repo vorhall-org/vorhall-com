@@ -6,6 +6,11 @@
   @include mx.container-centered-variables;
 
   --section-background: var(--color-white);
+  --section-contact-height-estimation: fn.to-em(1150);
+
+  @include mq.breakpoint($from: md) {
+    --section-contact-height-estimation: fn.to-em(1000);
+  }
 
   @include mq.color-scheme-dark {
     --section-background: var(--color-gray-800);
@@ -48,4 +53,12 @@
   &--no-v-spacing-bottom {
     padding-bottom: 0;
   }
+
+  &--contact {
+    main &:not(:first-child) {
+      content-visibility: auto;
+      contain-intrinsic-size: auto var(--section-contact-height-estimation);
+    }
+  }
+
 }

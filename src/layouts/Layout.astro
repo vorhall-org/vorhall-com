@@ -73,6 +73,7 @@ const title = pageTitle || generalData.siteData.title;
 
       {!hideContactForm &&
         <Section
+          contact
           highlight
           fullWidth
         >
@@ -97,14 +98,16 @@ const title = pageTitle || generalData.siteData.title;
 
     <Tracking />
 
-    <script
-      type="application/ld+json"
-      set:html={
-        JSON.stringify({
-          ...generalData.schemaData,
-        })
-      }
-    />
+    {isHome &&
+      <script
+        type="application/ld+json"
+        set:html={
+          JSON.stringify({
+            ...generalData.schemaData,
+          })
+        }
+      />
+    }
 
   </body>
 </html>
