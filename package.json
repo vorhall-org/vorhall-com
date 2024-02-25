@@ -25,6 +25,7 @@
     "@storybook/blocks": "^7.6.16",
     "@storybook/testing-library": "^0.2.2",
     "astro-i18n-aut": "^0.7.0",
+    "cypress": "^13.6.6",
     "eslint": "^8.51.0",
     "eslint-plugin-astro": "^0.31.4",
     "eslint-plugin-jsx-a11y": "^6.7.1",
