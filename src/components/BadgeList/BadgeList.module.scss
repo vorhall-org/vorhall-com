@@ -1,8 +1,11 @@
 @use '/src/styles/functions' as fn;
+@use '/src/styles/mediaqueries' as mq;
+@use '/src/styles/mixins' as mx;
 
 .badge-list {
-  margin-top: fn.to-rem(var(--spacing-7));
   display: flex;
   flex-wrap: wrap;
-  gap: fn.to-rem(var(--spacing-4));
+  gap: fn.to-rem(var(--spacing-2));
+  margin-block-start: fn.to-rem(var(--spacing-7));
+  justify-content: center;
 }

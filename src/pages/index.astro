@@ -11,19 +11,48 @@ import pageDataGetter from '../content-helpers/home';
 
 const locale = getLocale(Astro.url);
 const pageData = pageDataGetter(locale);
+const pageMetaDescription = pageData.siteData.description.trim();
 
 const pageMetaInformation = {
   tags: [
     {
-      content: pageData.siteData.description,
+      content: 'index, follow',
+      name: 'robots',
+    },
+    {
+      content: pageMetaDescription,
       name: 'description',
     },
     {
-      content: 'noindex',
-      name: 'robots',
+      content: 'article',
+      property: 'og:type',
+    },
+    {
+      content: pageData.siteData.docTitle,
+      property: 'og:title',
+    },
+    {
+      content: pageMetaDescription,
+      property: 'og:description',
+    },
+    {
+      content: Astro.url,
+      property: 'og:url',
+    },
+    {
+      content: 'summary',
+      property: 'twitter:card',
+    },
+    {
+      content: pageData.siteData.docTitle,
+      property: 'twitter:title',
+    },
+    {
+      content: pageMetaDescription,
+      property: 'twitter:description',
     },
   ],
-  title: pageData.siteData.title,
+  title: pageData.siteData.docTitle,
 };
 
 ---
@@ -34,12 +63,19 @@ const pageMetaInformation = {
   isHome={true}
 >
   <!-- Header -->
-  <Section fullWidth noVerticalSpacingTop>
+  <Section
+    fullWidth
+    noVerticalSpacingTop
+    noVerticalSpacingBottom
+  >
     <Jumbotron {...pageData.jumbotronData} />
   </Section>
 
   <!-- Services -->
-  <Section>
+  <Section
+    large
+
+  >
     <Jumbotron {...pageData.jumbotronDataServices} />
     <ContentCardGrid
       ariaLabelledBy={pageData.jumbotronDataServices.heading.id}
@@ -54,7 +90,7 @@ const pageMetaInformation = {
   </Section>
 
   <!-- About -->
-  <Section>
+  <Section large>
     <Jumbotron {...pageData.jumbotronDataAbout} />
     <AvatarCardGrid
       ariaLabelledBy={pageData.jumbotronDataAbout.heading.id}

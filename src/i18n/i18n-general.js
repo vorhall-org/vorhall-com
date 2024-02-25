@@ -18,11 +18,11 @@ export default {
       nameInputLabel: 'Dein Name',
       nameInputPlaceholder: 'Dein Name',
       privacyNote: {
-        link: 'Datenschutzbestimmungen',
+        link: 'Datenschutzerklärung',
         postLink: 'erfährst Du mehr zu unserem Umgang mit Daten.',
         preLink: `
-          Wir schätzen unsere Privatsphäre genauso wie Du die deine. Deine Eingaben in
-          diesem Formular werden einzig zur Bearbeitung der Anfrage verwendet. In unseren
+          Wir schätzen deine Privatsphäre genauso wie unsere eigene. Deine Eingaben in
+          diesem Formular werden einzig zur Bearbeitung der Anfrage verwendet. In unserer
         `,
       },
       submitButtonText: 'Absenden',
@@ -43,15 +43,15 @@ export default {
       legend: 'Contact form',
       messageErrorRequired: 'Please enter your request.',
       messageLabel: 'Tell us about your idea or question',
-      messagePlaceholder: 'Your request or comment...',
+      messagePlaceholder: 'Please describe your idea or question to us.',
       nameInputErrorRequired: 'Please enter your name.',
       nameInputLabel: 'Your name',
       nameInputPlaceholder: 'Type in your name',
       privacyNote: {
-        link: 'Data Policy',
+        link: 'Data Protection Statement',
         postLink: 'for more information.',
         preLink: `
-          We value our privacy just as much as you do yours. Your inputs in this form will
+          We value your privacy just as much as we do ours. Your inputs in this form will
           be solely used for processing the request. Have a look at our
         `,
       },
@@ -63,19 +63,21 @@ export default {
   },
   footer: {
     de: {
+      ariaLabel: 'Fusszeile',
       copyright: '©2024 Vorhall KLG',
       langSwitchText: 'Change to english',
-      linkDataPrivacy: 'Datenschutzbestimmungen',
+      linkDataPrivacy: 'Datenschutzerklärung',
       linkGithub: 'Besuche Vorhall auf Github',
       linkImpressum: 'Impressum',
       linkLinkedin: 'Besuche Vorhall auf LinkedIn',
     },
     en: {
+      ariaLabel: 'Footer',
       copyright: '©2024 Vorhall KLG',
       langSwitchText: 'Auf Deutsch wechseln',
-      linkDataPrivacy: 'Data Privacy',
+      linkDataPrivacy: 'Data Protection',
       linkGithub: 'Visit Vorhall on Github',
-      linkImpressum: 'Impressum',
+      linkImpressum: 'Imprint',
       linkLinkedin: 'Visit Vorhall on LinkedIn',
     },
   },
@@ -100,13 +102,13 @@ export default {
       description: 'Beschreibung unserere Website',
       homeButtonText: 'Zur Startseite',
       skipLinkText: 'Zum Inhaltsbereich springen',
-      title: 'General Title | Vorhall',
+      title: 'General Title',
     },
     en: {
       description: 'Description of our website',
       homeButtonText: 'Back to home',
       skipLinkText: 'Jump to content area',
-      title: 'General Title | Vorhall',
+      title: 'General Title',
     },
   },
 };

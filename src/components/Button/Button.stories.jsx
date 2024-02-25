@@ -18,6 +18,10 @@ const iconsColorizable = {
     ...icon.IconColorizable.args,
     name: 'arrowDown',
   },
+  arrowRight: {
+    ...icon.IconColorizable.args,
+    name: 'arrowRight',
+  },
   close: {
     ...icon.IconColorizable.args,
     name: 'close',
@@ -115,6 +119,7 @@ export const ButtonLink = {
     externalLink: true,
     externalLinkText: 'Link target opens in new window.',
     href: 'https://www.sbb.ch',
+    iconAfter: iconsColorizable.arrowRight,
     label: 'Link Text',
   },
 };

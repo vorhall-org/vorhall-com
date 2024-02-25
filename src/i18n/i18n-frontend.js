@@ -18,7 +18,7 @@ export default {
         und innovative, «state of the art» Infrastrukturen zurückgreifen, wenn es dem
         Anwendungszweck dient. Mit unserem klaren Fokus auf Web-Performance und einem
         ressourcenschonenden Ansatz in der Softwareentwicklung versuchen wir, nur das
-        Notwendigste zu verwenden, um überflüssige Ballast zu vermeiden.
+        Notwendigste zu verwenden, um überflüssigen Ballast zu vermeiden.
       </p>
       <p>
         Selbstverständlich darf dieser Ansatz nicht zu Lasten der Flexibilität oder der
@@ -57,6 +57,7 @@ export default {
           für die inzwischen etwas bekannter gewordenen Progressive Web Apps (PWA).
         </li>
       </ul>
+      <h2>Ein Auszug aus den von uns genutzten Technologien</h2>
   `,
     title: 'Frontend<br> Entwicklung & Architektur',
   },
@@ -87,7 +88,7 @@ export default {
         and lean at the same time.
       </p>
       <p>
-        We are used to working in agile environments and understand the importance of
+        We are used to work in agile environments and understand the importance of
         communication and team dynamics. As former front-end engineering team leads,
         we are not only familiar with the technical aspects of the work, but can also
         help build the right skills and team structure.
@@ -115,7 +116,7 @@ export default {
           digital experiences, also known as Progressive Web Apps (PWA).
         </li>
       </ul>
-      <h3>Some of the front-end technology we work with</h3>
+      <h2>Some of the technologies we work with</h2>
     `,
     title: 'Front-end<br> Development & Architecture',
   },

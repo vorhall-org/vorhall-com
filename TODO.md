@@ -1,35 +1,19 @@
-- https://www.websitecarbon.com/badge/
-- form captcha?
-- 404 page
-- check and fix line-heights
-- check and fix letter spacing
-- check and fix font-weights
-- check fonts on windows
-- translate all content
-- before release, use correct tracking-id (get it on squeaky, define it in "page-helpers/Tracking.astro")
-- remove empty classes / empty style blocks to make sure we get no `class='undefined'` in markup (example: MainContainer.module.scss)
-- configure dependabot
-- Flowbite: copyright/attribution?
-- Cypress test for form submission
-- OpenGraph meta data
+TODO:
+- Content Security Policies? -> there is a netlify integration. needs further study (Yves)
 
+RIGHT AFTER GO LIVE:
+- Remove no-index meta, set proper index
+- Check Tracking integration for prod
+
+OPTIONAL:
+- form captcha?
 - Color schema toggle?
-- High Contrast Styling (Note to ourselves: looks fairly good so far)
-- A11y Testing (Automated tools, NVDA, VoiceOver, TalkBack)
-- Early hints possible on Netlify?
 - Custom Performance Marks?
-- Data protection declaration
-- Device Testing on Win/Android/iOS
 - PWA?
-- Content Security Policies? -> there is a netlify integration. needs further study
-- Schema.org?
-- Reference to https://the-sustainable.dev?
-- Save images as AVIF
 - Share page button (Native API)?
 - Store language and theme preference?
-- Setup Canonical -> https://developer.chrome.com/docs/lighthouse/seo/canonical
-- Add a robots.txt?
-- Add scroll margin top for :target
-- Decide what we want to mark as main content area, move jumbo tron into <header>?
-- Skiplink & Home Button alignment
-- Responsive images for avatar images
+
+LATER:
+- Cypress test for form submission 
+- https://www.websitecarbon.com/badge/
+- Reference to https://the-sustainable.dev?

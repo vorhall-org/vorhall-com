@@ -5,31 +5,39 @@
 :root {
   @include mx.container-centered-variables;
 
-  --form-max-width: var(--spacing-96);
   --form-privacy-note-color: var(--color-gray-500);
+  --form-gap-v: var(--spacing-6);
+  --form-max-width: var(--spacing-96);
 
   @include mq.color-scheme-dark {
     --form-privacy-note-color: var(--color-gray-400);
   }
+
+  @include mq.breakpoint($from: md) {
+    --form-gap-v: var(--spacing-8);
+  }
 }
 
 .form {
-  @include mx.container-centered;
+  @include mx.container-s;
   display: flex;
   flex-direction: column;
-  gap: fn.to-rem(var(--spacing-8));
-  max-width: fn.to-rem(var(--form-max-width));
-  box-sizing: content-box;
+  gap: fn.to-rem(var(--spacing-6)) fn.to-rem(var(--spacing-4));
 
   &__fieldset {
     display: flex;
     flex-direction: column;
-    gap: fn.to-rem(var(--spacing-5));
+    gap: fn.to-rem(var(--form-gap-v)) fn.to-rem(var(--spacing-4));
+
+    @include mq.breakpoint($from: md) {
+      flex-flow: row wrap;
+    }
+
   }
 
   &__privacy-note {
     color: var(--form-privacy-note-color);
-    font-size: fn.to-rem(var(--text-xs));
+    font-size: fn.to-rem(var(--text-sm));
 
     a {
       text-underline-offset: fn.to-rem(var(--spacing-1));

@@ -12,7 +12,7 @@ export default (locale) => {
 
   const siteData = {
     description: tSite('description'),
-    title: tSite('title'),
+    docTitle: tSite('docTitle'),
   };
 
   const jumbotronData = {
@@ -55,6 +55,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceFrontend,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard1ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -78,6 +81,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceAccessibility,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard2ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -101,6 +107,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceWebPerformance,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard3ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -124,6 +133,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceDigitalSustainability,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard4ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -147,6 +159,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).serviceDesignSystems,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard5ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -170,6 +185,9 @@ export default (locale) => {
       externalLink: false,
       externalLinkText: '',
       href: pageRoutes(locale).contact,
+      iconAfter: {
+        name: 'arrowRight',
+      },
       label: tServices('serviceCard6ButtonLabel'),
       prefetch: true,
       size: 'l',
@@ -190,7 +208,15 @@ export default (locale) => {
       alt: tAbout('avatarMariusAltText'),
       classes: '',
       height: '100',
-      image: '/images/marius.jpg',
+      src: '/images/marius.jpg',
+      srcSetAvif: {
+        large: '/images/marius-600x600.avif 600w',
+        small: '/images/marius-300x300.avif 300w',
+      },
+      srcSetWebP: {
+        large: '/images/marius-600x600.webp 600w',
+        small: '/images/marius-300x300.webp 300w',
+      },
       width: '100',
     },
     heading: {
@@ -247,7 +273,15 @@ export default (locale) => {
       alt: tAbout('avatarYvesAltText'),
       classes: '',
       height: '100',
-      image: '/images/yves.jpg',
+      src: '/images/yves.jpg',
+      srcSetAvif: {
+        large: '/images/yves-600x600.avif 600w',
+        small: '/images/yves-300x300.avif 300w',
+      },
+      srcSetWebP: {
+        large: '/images/yves-600x600.webp 600w',
+        small: '/images/yves-300x300.webp 300w',
+      },
       width: '100',
     },
     heading: {

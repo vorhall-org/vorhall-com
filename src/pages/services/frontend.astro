@@ -2,6 +2,7 @@
 import { getLocale } from 'astro-i18n-aut';
 import i18n from '../../i18n/i18n-frontend';
 import { useTranslations } from '../../i18n/utils';
+import { seoMetaTags } from '../../content-helpers/metaTagsSeo';
 
 import Layout from '../../layouts/Layout.astro';
 import Section from '../../components/Section/Section';
@@ -12,19 +13,7 @@ import BadgeList from '../../components/BadgeList/BadgeList';
 const locale = getLocale(Astro.url);
 const t = useTranslations(locale, i18n);
 
-const pageMetaInformation = {
-  tags: [
-    {
-      content: t('description'),
-      name: 'description',
-    },
-    {
-      content: 'noindex',
-      name: 'robots',
-    },
-  ],
-  title: t('docTitle'),
-};
+const pageMetaInformation = seoMetaTags(t, Astro.url, 'index, follow');
 
 const jumbotronData = {
   heading: {
@@ -37,6 +26,22 @@ const jumbotronData = {
 };
 
 const badges = [
+  {
+    color: 'blue',
+    text: 'CSS',
+  },
+  {
+    color: 'blue',
+    text: 'HTML',
+  },
+  {
+    color: 'blue',
+    text: 'JavaScript',
+  },
+  {
+    color: 'blue',
+    text: 'Typescript',
+  },
   {
     color: 'blue',
     text: 'JAM-Stack',
@@ -68,6 +73,22 @@ const badges = [
   {
     color: 'blue',
     text: 'Vite',
+  },
+  {
+    color: 'blue',
+    text: 'Netlify',
+  },
+  {
+    color: 'blue',
+    text: 'GraphQL',
+  },
+  {
+    color: 'blue',
+    text: 'Stencil JS',
+  },
+  {
+    color: 'blue',
+    text: 'Web Components',
   },
 ];
 

@@ -189,6 +189,7 @@ export default (locale) => {
     }
 
     return {
+      ariaLabel: tFooter('ariaLabel'),
       copyright: tFooter('copyright'),
       langSwitch: {
         link: langSwitchLink,
@@ -197,12 +198,12 @@ export default (locale) => {
       },
       legalLinks: [
         {
-          link: pageRoutes(lang).dataPrivacy,
+          link: pageRoutes(lang).dataProtection,
           prefetch: true,
           text: tFooter('linkDataPrivacy'),
         },
         {
-          link: pageRoutes(lang).impressum,
+          link: pageRoutes(lang).imprint,
           prefetch: true,
           text: tFooter('linkImpressum'),
         },
@@ -248,11 +249,31 @@ export default (locale) => {
     };
   };
 
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressCountry': 'CH',
+      'addressLocality': 'Bern',
+      'addressRegion': 'Bern',
+      'postalCode': '3012',
+      'streetAddress': 'Brückfeldstrasse 40',
+    },
+    'description': 'We craft solutions thoughtfully balancing user\' needs and environmental impact. Contact us, if you want to elevate the quality of your digital services.',
+    'email': 'info@vorhall.com.com',
+    'foundingDate': '2023-10-30',
+    'name': 'Vorhall KLG',
+    'url': 'https://vorhall.com',
+    'vatID': 'CHE-371.533.033',
+  };
+
   return {
     contactFormData,
     footerData,
     jumbotronContact,
     mainData,
+    schemaData,
     siteData,
   };
 };

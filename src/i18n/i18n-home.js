@@ -16,7 +16,7 @@ export default {
       `,
       avatarYvesAltText: 'Avatar of Yves',
       avatarYvesSocialAriaLabel: 'Profile von Yves Tscherry',
-      avatarYvesSubtitle: 'Expert Front-end Architect',
+      avatarYvesSubtitle: 'Expert Frontend Architect',
       avatarYvesText: 'Als leidenschaftlicher Entwickler habe ich mich auf die Gestaltung digitaler Erlebnisse jenseits der Ästhetik spezialisiert. Barrierefreiheit ist nicht nur eine Checkbox oder eine Option; es ist unsere Verantwortung, Erlebnisse zu schaffen, die jede/r mühelos navigieren kann. Nachhaltigkeit ist für nicht bloss ein Trend; sie ist ein Leitstern - im Code und im Leben. Mit zwei Jahrzehnten Erfahrung wird Ihre Website nicht nur funktionieren; sie wird herausragend sein. Begleiten Sie mich auf dieser Reise, auf der Barrierefreiheit, Inklusion, Nachhaltigkeit und erstklassige Performance zusammenkommen. Lassen Sie uns ein digitales Meisterwerk schaffen, das unsere Verpflichtung zu einem besseren Web und einer besseren Welt widerspiegelt.',
       lead: `
         Obwohl Vorhall erst seit Januar 2024 tätig ist, triffst Du auf ein sehr erfahrenes Team.
@@ -134,8 +134,9 @@ export default {
       serviceCard1ButtonAriaLabel: 'Read more about our front-end Development & Architecture offering',
       serviceCard1ButtonLabel: 'Read more',
       serviceCard1Text: `
-        If you hire us for front-end architecture and implementation work, you will get our full accumulated
-        expertise combined. And yes, that involves CSS beyond using libraries.
+        If you entrust us with the architecture and implementation of a front-end, you will receive our
+        comprehensive expertise from all subject areas. In doing so, we love to push the boundaries of
+        web standard technologies as much as possible.
       `,
       serviceCard1Title: 'Front-end Development<br> & Architecture',
       serviceCard2ButtonAriaLabel: 'Read more about our Digital Accessibility offering',
@@ -181,17 +182,17 @@ export default {
   site: {
     de: {
       description: `
-      Für qualitativ hochwertige Lösungen mit Hand und Fuss. Wir berücksichtigen die Bedürfnisse verschiedenster
-      Nutzer als auch die Einflüsse auf die Umwelt.'
+        Für qualitativ hochwertige Lösungen mit Hand und Fuss. Wir berücksichtigen die Bedürfnisse verschiedenster
+        Nutzer als auch die Einflüsse auf die Umwelt.
       `,
-      title: 'Digitale Lösungen: schnell, barrierefrei & nachhaltig',
+      docTitle: 'Digitale Lösungen: schnell, barrierefrei & nachhaltig',
     },
     en: {
       description: `
-      We craft solutions thoughtfully balancing user' needs and environmental impact. Contact us, if you want to
-      elevate the quality of your digital services.
+        We craft solutions thoughtfully balancing user' needs and environmental impact. Contact us, if you want to
+        elevate the quality of your digital services.
       `,
-      title: 'Fast, accessible & sustainable digital solutions',
+      docTitle: 'Fast, accessible & sustainable digital solutions',
     },
   },
 };

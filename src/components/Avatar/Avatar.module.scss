@@ -4,16 +4,20 @@
 
 .avatar {
   contain: content;
-  aspect-ratio: 1 / 1;
+
   border-radius: var(--border-radius-rounded-full);
   background: var(--color-gray-100);
   width: 40%;
-  height: auto;
-
   box-shadow: var(--shadow-md);
 
   @include mq.breakpoint($to: md) {
     width: 50%;
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
   }
 
 }

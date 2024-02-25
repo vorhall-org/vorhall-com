@@ -1,8 +1,8 @@
 export default {
   de: {
-    description: 'Impressum beschreibung',
+    description: '',
     docTitle: 'Impressum',
-    lead: 'Impressum lead text',
+    lead: '',
     richtext: `
       <p>
         <strong>Vorhall KLG</strong><br>
@@ -24,9 +24,9 @@ export default {
     title: 'Impressum',
   },
   en: {
-    description: 'Impressum description',
-    docTitle: 'Impressum',
-    lead: 'Impressum lead text',
+    description: '',
+    docTitle: 'Imprint',
+    lead: '',
     richtext: `
       <p>
         <strong>Vorhall KLG</strong><br>
@@ -45,6 +45,6 @@ export default {
         Inspired and adapted from <a href="https://www.figma.com/community/file/1179442320711977498/flowbite-design-system" target="_blank" aria-label="Flowbite Design System. Link target opens in new window.">Flowbite Design System</a>, published under <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" aria-label="Creative Commons BY 4.0 Licence. Link target opens in new window.">CC BY 4.0 Licence</a>.
       </p>
     `,
-    title: 'Impressum',
+    title: 'Imprint',
   },
 };

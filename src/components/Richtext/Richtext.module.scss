@@ -9,23 +9,24 @@
   --richtext-color: var(--color-gray-500);
 
   @include mq.color-scheme-dark {
-    --richtext-color: var(--color-gray-400);
+    --richtext-color: var(--color-gray-300);
   }
 }
 
 .richtext {
   // general
+  hyphens: auto;
 
   * {
     padding: 0;
     margin: 0;
     font-size: fn.to-rem(var(--text-base));
-    line-height: 150%;
+    line-height: 160%;
     color: var(--richtext-color);
   }
 
   :is(p, ul, ol) {
-    margin-bottom: fn.to-rem(var(--spacing-4));
+    margin-bottom: fn.to-rem(var(--spacing-6));
   }
 
   // bold
@@ -45,6 +46,15 @@
 
   // headings
   @include mx.heading;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+  }
 
   h1 {
     padding-top: fn.to-rem(var(--spacing-12));
@@ -110,7 +120,7 @@
   }
 
   li :is(ul, ol) {
-    
+
     margin-top: fn.to-rem(var(--spacing-2));
     margin-bottom: 0;
   }

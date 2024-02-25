@@ -1,20 +1,19 @@
 ---
+import { getLocale } from 'astro-i18n-aut';
+import i18n from '../i18n/i18n-contact';
+import { useTranslations } from '../i18n/utils';
+import { seoMetaTags } from '../content-helpers/metaTagsSeo';
+
 import Layout from '../layouts/Layout.astro';
 
-const pageMetaInformation = {
-  tags: [
-    {
-      content: 'todo',
-      name: 'description',
-    },
-    {
-      content: 'noindex',
-      name: 'robots',
-    },
-  ],
-  title: 'todo',
-};
+const locale = getLocale(Astro.url);
+const t = useTranslations(locale, i18n);
+
+const pageMetaInformation = seoMetaTags(t, Astro.url, 'index, follow');
+
 ---
 
-<Layout pageMetaTags={pageMetaInformation.tags}>
-</Layout>
+<Layout
+  pageMetaTags={pageMetaInformation.tags}
+  pageTitle={pageMetaInformation.title}
+/>

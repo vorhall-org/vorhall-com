@@ -18,7 +18,6 @@
     --button-background-color-hover: var(--color-blue-800);
 
     &.button--outline {
-      --button-background-color: var(--color-white);
       --button-text-color: var(--color-blue-700);
       --button-border-color: var(--color-blue-700);
       --button-border-color-hover: var(--color-blue-800);
@@ -30,7 +29,6 @@
     --button-background-color-hover: var(--color-red-800);
 
     &.button--outline {
-      --button-background-color: var(--color-white);
       --button-text-color: var(--color-red-700);
       --button-border-color: var(--color-red-700);
       --button-border-color-hover: var(--color-red-800);
@@ -42,7 +40,6 @@
     --button-background-color-hover: var(--color-green-800);
 
     &.button--outline {
-      --button-background-color: var(--color-white);
       --button-text-color: var(--color-green-700);
       --button-border-color: var(--color-green-700);
       --button-border-color-hover: var(--color-green-800);
@@ -76,12 +73,28 @@
     --button-text-color-hover: var(--color-gray-800);
 
     &.button--outline {
-      --button-background-color: var(--color-white);
       --button-text-color: var(--color-gray-800);
       --button-border-color: var(--color-gray-200);
       --button-border-color-hover: var(--color-gray-300);
+
+      @include mq.color-scheme-dark {
+        --button-text-color: var(--color-gray-400);
+        --button-border-color: var(--color-gray-400);
+      }
+
     }
   }
+
+  .button--color-primary.button--outline,
+  .button--color-red.button--outline,
+  .button--color-green.button--outline,
+  .button--color-black.button--outline,
+  .button--color-gray.button--outline {
+    @include mq.color-scheme-dark {
+      --button-background-color: transparent;
+    }
+  }
+
 
   .button--skip-link {
     --button-background-color: var(--color-red-700);
@@ -124,7 +137,7 @@
 
   .button--icon-raw {
     --button-text-color: var(--color-gray-500);
-    --button-text-color-hover: var(--color-900);
+    --button-text-color-hover: var(--color-gray-900);
 
     @include mq.color-scheme-dark {
       --button-text-color: var(--color-gray-400);
@@ -180,6 +193,10 @@
     flex: 0 0 fn.to-rem(var(--spacing-4));
   }
 
+  &__hidden-text {
+    @include mx.visually-hidden;
+  }
+
   &--outline {
     border: fn.to-rem(1) solid var(--button-border-color);
     transition-property: color, background-color, border-color;
@@ -204,11 +221,11 @@
 
   &--skip-link {
     @include mx.visually-hidden-focusable;
-    inset-block-start: fn.to-rem(var(--spacing-4));
-    inset-inline-start: fn.to-rem(var(--spacing-4));
 
     @include mx.hover-focus {
       position: fixed;
+      inset-block-start: fn.to-rem(var(--spacing-6));
+      inset-inline-start: fn.to-rem(var(--spacing-6));
       padding: fn.to-rem(var(--button-padding-v)) fn.to-rem(var(--button-padding-h));
       border: fn.to-rem(1) solid var(--button-border-color-hover);
     }

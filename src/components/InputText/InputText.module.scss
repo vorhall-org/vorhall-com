@@ -20,7 +20,7 @@
     --input-background-color-error: var(--color-gray-700);
     --input-text-color-disabled: var(--color-gray-500);
     --input-text-color: var(--color-white);
-    --input-text-color-error: var(--color-red-500);
+    --input-text-color-error: var(--color-red-400);
   }
 }
 
@@ -29,6 +29,10 @@
   display: flex;
   flex-direction: column;
   gap: fn.to-rem(var(--spacing-2));
+
+  @include mq.breakpoint($from: md) {
+    flex: 1 1 calc(50% - fn.to-rem((var(--spacing-4))));
+  }
 
   &__input {
     border-radius: fn.to-rem(var(--border-radius-rounded-lg));
@@ -80,7 +84,7 @@
     #{$root}--error & {
       color: var(--input-text-color-error);
       background-color: var(--input-background-color-error);
-      border-color: var(--color-red-500);
+      border-color: var(--input-text-color-error);
     }
   }
 }

@@ -12,7 +12,9 @@ export default function BadgeList(props) {
     >
       <For each={props.items}>
         {(item) => (
-          <Badge {...item} />
+          <li>
+            <Badge {...item} />
+          </li>
         )}
       </For>
     </ul>

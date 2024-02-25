@@ -7,11 +7,11 @@ export default {
     `,
     docTitle: 'Web Performance Beratung, Umsetzung & Monitoring',
     lead: `
-    Wir sehen das Thema Web-Performance als einen der entscheidenden
-    Erfolgsfaktoren für eine nachhaltige IT. Oftmals ist die
-    Web-Performance auch der Schlüsselfaktor für SEO, gute Core Web
-    Vitals-Werte und eine herausragende Kundenerfahrung für
-    die Nutzer:innen.
+      Wir sehen das Thema Web-Performance als einen der entscheidenden
+      Erfolgsfaktoren für eine nachhaltige IT. Oftmals ist die
+      Web-Performance auch der Schlüsselfaktor für SEO, gute Core Web
+      Vitals-Werte und eine herausragende Kundenerfahrung für
+      die Nutzer:innen.
     `,
     richtext: `
       <p>
@@ -83,7 +83,7 @@ export default {
         one of the industry’s most respected tool “SpeedCurve”. We are confident
         to adopt, should you already have a different tool in place. We also
         bring a strong experience in working with Image Content Delivery
-        Networks, which are an essential nowadays to ensure an excellent
+        Networks, which are essential nowadays to ensure an excellent
         customer experience and a minimal ecological footprint.
       </p>
        <h2>What we can do for you</h2>
