@@ -39,7 +39,7 @@ describe('contact form', () => {
     cy.visit({
       retryOnStatusCodeFailure: true,
       timeout: '10000',
-      url: 'http://localhost:8888/contact/',
+      url: 'contact',
     });
 
     const formElement = cy
