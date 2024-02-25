@@ -14,8 +14,7 @@
     "storybook": "storybook dev -p 6006",
     "netlify:cli": "netlify dev",
     "cypress:open": "cypress open",
-    "cypress:cli": "cypress run",
-    "cypress": "run-p netlify:cli cypress:cli"
+    "cypress": "cypress run"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.0.4",
