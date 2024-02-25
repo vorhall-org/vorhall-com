@@ -6,4 +6,5 @@ export default defineConfig({
     setupNodeEvents() {},
     /* eslint-enable no-empty-function */
   },
+  projectId: 'd4druh',
 });
