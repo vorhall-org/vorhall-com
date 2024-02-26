@@ -4,15 +4,15 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Get Node.js version
+        id: nvm
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
