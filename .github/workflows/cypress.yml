@@ -9,5 +9,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: npm run netlify:cli
+          start: RESEND_KEY=${{ secrets.RESEND_KEY }} npm run netlify:cli
           wait-on: 'http://localhost:8888'
