@@ -33,8 +33,8 @@ describe('contact form', () => {
   */
 
   it('will show success message when successfully send', () => {
-    // cy.intercept('POST', '/.netlify/functions/send-mail')
-    //   .as('netlifyFunctionInvoke');
+    cy.intercept('POST', '/.netlify/functions/send-mail')
+      .as('netlifyFunctionInvoke');
 
     // cy.visit({
     //   retryOnStatusCodeFailure: true,
