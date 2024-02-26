@@ -43,7 +43,6 @@ describe('contact form', () => {
     // });
     cy.visit('/');
 
-    /*
     const formElement = cy
       .get('[data-cy="form"]');
 
@@ -62,7 +61,7 @@ describe('contact form', () => {
     formElement
       .get('[data-cy="submit"]')
       .click();
-
+/*
     cy
       .wait('@netlifyFunctionInvoke')
       .its('response.body')
