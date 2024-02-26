@@ -61,12 +61,12 @@ describe('contact form', () => {
     formElement
       .get('[data-cy="submit"]')
       .click();
-/*
+
     cy
       .wait('@netlifyFunctionInvoke')
       .its('response.body')
       .should('include', '{"statusCode":200}');
-    */
+
   });
 });
 
