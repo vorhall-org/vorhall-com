@@ -66,6 +66,7 @@ describe('contact form', () => {
       .its('response.body')
       .should('include', '{"statusCode":200}');
   });
+
 });
 
 /* eslint-enable no-undef */
