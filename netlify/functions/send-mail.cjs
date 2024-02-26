@@ -3,8 +3,7 @@ import { Resend } from 'resend';
 export default async (req, context) => {
 
   /* eslint-disable no-undef */
-  // const resendKey = Netlify.env.get('RESEND_KEY');
-  const resendKey = process.env.RESEND_KEY;
+  const resendKey = Netlify.env.get('RESEND_KEY');
   /* eslint-enable no-undef */
 
   const resend = new Resend(resendKey);
