@@ -7,5 +7,5 @@ export default defineConfig({
     setupNodeEvents() {},
     /* eslint-enable no-empty-function */
   },
-  projectId: 'zvf8v5',
+  projectId: 'ziuyjr',
 });
