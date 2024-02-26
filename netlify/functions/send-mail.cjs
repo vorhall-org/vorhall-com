@@ -6,8 +6,6 @@ export default async (req, context) => {
   // const resendKey = Netlify.env.get('RESEND_KEY');
   const resendKey = process.env.RESEND_KEY;
   /* eslint-enable no-undef */
-  console.log('------------- >>>>>>>>>>> log comes here');
-  console.log(resendKey);
 
   const resend = new Resend(resendKey);
   const requestData = await req.text();
