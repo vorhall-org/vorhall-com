@@ -14,7 +14,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: npm run netlify:cli
-          wait-on: 'http://localhost:8888/.netlify/functions/send-mail'
+          wait-on: 'http://localhost:8888/'
         env:
           RESEND_KEY: ${{secrets.RESEND_KEY}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
