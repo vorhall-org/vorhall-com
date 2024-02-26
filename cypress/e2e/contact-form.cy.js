@@ -9,6 +9,7 @@ describe('contact form', () => {
     so the page should never reload.
     Until now, did not figure out why this happens.
   */
+
   /*
   it('shows error for non-valid email address', () => {
     cy.visit('http://localhost:8888/contact/');
