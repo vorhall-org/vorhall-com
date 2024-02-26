@@ -7,6 +7,8 @@ export default async (req, context) => {
   const resendKey = process.env.RESEND_KEY;
   /* eslint-enable no-undef */
 
+  console.log(resendKey);
+
   const resend = new Resend(resendKey);
   const requestData = await req.text();
   const requestDataParsed = JSON.parse(requestData);
