@@ -1,6 +1,11 @@
 import { Resend } from 'resend';
 
 export default async (req, context) => {
+  if (req.method === 'GET') {
+    return new Response(JSON.stringify({
+      statusCode: 200,
+    }));
+  }
 
   /* eslint-disable no-undef */
   const resendKey = Netlify.env.get('RESEND_KEY');
