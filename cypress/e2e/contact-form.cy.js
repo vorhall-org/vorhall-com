@@ -36,11 +36,12 @@ describe('contact form', () => {
     cy.intercept('POST', '/.netlify/functions/send-mail')
       .as('netlifyFunctionInvoke');
 
-    cy.visit({
-      retryOnStatusCodeFailure: true,
-      timeout: '10000',
-      url: '/',
-    });
+    // cy.visit({
+    //   retryOnStatusCodeFailure: true,
+    //   timeout: '10000',
+    //   url: '/',
+    // });
+    cy.visit('/');
 
     const formElement = cy
       .get('[data-cy="form"]');
