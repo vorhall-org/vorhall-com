@@ -67,6 +67,7 @@ describe('contact form', () => {
       .wait('@netlifyFunctionInvoke')
       .its('response.body')
       .should('include', '{"statusCode":200}');
+
   });
 });
 
