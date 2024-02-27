@@ -49,7 +49,7 @@ export default {
       We support you in making and operating your digital services
       resource-efficient through conscious ecological decisions.
     `,
-    docTitle: 'Digital Sustainability & Carbon Aware Computing',
+    docTitle: 'Sustainable Digitalization & Carbon Aware Computing',
     lead: `
     We are currently experiencing a significant global shift towards both
     sustainability and digitization - the so called twin transformation -
@@ -93,6 +93,6 @@ export default {
         software with minimal emissions.
       </p>
     `,
-    title: 'Digital Sustainability & Carbon Aware Computing',
+    title: 'Sustainable Digitalization & Carbon Aware Computing',
   },
 };

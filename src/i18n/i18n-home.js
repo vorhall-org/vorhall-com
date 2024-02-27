@@ -35,7 +35,7 @@ export default {
         The digital transformation increasingly comes at the expense of the environment, even though
         we may not yet feel this equally everywhere in the world. As an experienced professional, I
         now consider it my duty to use my expertise and knowledge to the best of my ability to mitigate
-        the negative impacts of the web and help shape the path towards a more sustainable digitization.
+        the negative impacts of the web and help shape the path towards a more sustainable digitalization.
         The internet should continue to be the open, creative, and accessible place that I had the
         privilege to discover and make my profession over 20 years ago.
       `,
@@ -153,14 +153,14 @@ export default {
         browsing for all and conserve resources efficiently.
       `,
       serviceCard3Title: 'Web Performance<br> (Monitoring)',
-      serviceCard4ButtonAriaLabel: 'Read more about our Digital Sustainability offering',
+      serviceCard4ButtonAriaLabel: 'Read more about our Sustainable Digitalization offering',
       serviceCard4ButtonLabel: 'Read more',
       serviceCard4Text: `
-        Software eats the world" has tangible environmental impacts today. We help you make your digital
+        "Software eats the world" has tangible environmental impacts today. We help you make your digital
         services and products more resource-efficient through conscious environmental decisions and
         operations, thereby reducing their CO2e footprint.
       `,
-      serviceCard4Title: 'Digital<br> Sustainability',
+      serviceCard4Title: 'Sustainable<br> Digitalization',
       serviceCard5ButtonAriaLabel: 'Read more about our Design Systems offering',
       serviceCard5ButtonLabel: 'Read more',
       serviceCard5Text: `

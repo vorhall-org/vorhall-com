@@ -42,3 +42,13 @@
 [[edge_functions]]
   path = "/*"
   function = "csp-headers-for-html-only"
+
+[[redirects]]
+from = "/services/digital-sustainability/"
+to = "/services/sustainable-digitalization/"
+status = 301
+
+[[redirects]]
+from = "/de/services/digital-sustainability/"
+to = "/de/services/sustainable-digitalization/"
+status = 301
