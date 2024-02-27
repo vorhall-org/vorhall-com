@@ -11,7 +11,9 @@
     "lint": "npm run lint:styles && npm run lint:js",
     "lint:styles": "npx stylelint '**/*.astro'",
     "lint:js": "eslint . --ext .js,.mjs,.astro",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "storybook dev -p 6006",
+    "cypress:open": "cypress open",
+    "cypress": "cypress run"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.0.4",
@@ -21,11 +23,14 @@
     "@storybook/blocks": "^7.6.16",
     "@storybook/testing-library": "^0.2.2",
     "astro-i18n-aut": "^0.7.0",
+    "cypress": "^13.6.6",
     "eslint": "^8.51.0",
     "eslint-plugin-astro": "^0.31.4",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-solid": "^0.13.1",
     "eslint-plugin-storybook": "^0.6.15",
+    "netlify-cli": "^17.16.1",
+    "netlify-plugin-cypress": "^2.2.1",
     "postcss-html": "^1.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -1,0 +1,19 @@
+[dev]
+    command = "npm run dev"
+    framework = "#custom"
+    targetPort = 4321
+
+[build]
+    command = "npm run build"
+    publish = "dist"
+
+[build.environment]
+    CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+    TERM = "xterm"
+
+[[plugins]]
+    package = "netlify-plugin-cypress"
+    [plugins.inputs]
+        # run E2E tests against the deployed URL
+        record = true
+        group = 'deployed'
