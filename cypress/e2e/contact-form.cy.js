@@ -66,7 +66,7 @@ describe('contact form', () => {
     cy
       .wait('@netlifyFunctionInvoke')
       .its('response.body')
-      .should('include', '{"statusCode":201}');
+      .should('include', '{"statusCode":200}');
 
   });
 });
