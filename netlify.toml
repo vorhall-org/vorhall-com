@@ -12,7 +12,7 @@
     TERM = "xterm"
 
 [[plugins]]
-package = "netlify-plugin-cypress"
+    package = "netlify-plugin-cypress"
     [plugins.inputs.onSuccess]
-    enable = true
-    record = true
+        enable = true
+        record = true
