@@ -44,7 +44,7 @@ export default {
         <li>
           Wir setzen euch ein semantisches, <a href="https://vorhall.com/de/services/web-performance">schnelles</a>,
           <a href="https://vorhall.com/de/services/accessibility">barrierefreies</a> und
-          <a href="https://vorhall.com/de/services/digital-sustainability">ressourcenschonendes</a>
+          <a href="https://vorhall.com/de/services/sustainable-digitalization">ressourcenschonendes</a>
           Frontend um.
         </li>
         <li>
@@ -105,7 +105,7 @@ export default {
         <li>
           We can realise semantic, <a href="https://vorhall.com/services/web-performance">fast</a>,
           <a href="https://vorhall.com/services/accessibility">accessible</a> and
-          <a href="https://vorhall.com/services/digital-sustainability">resource-saving</a> front-ends.
+          <a href="https://vorhall.com/services/sustainable-digitalization">resource-saving</a> front-ends.
         </li>
         <li>
           We can offer technical search engine optimisation (SEO) know-how, including

@@ -132,7 +132,7 @@ export default (locale) => {
       color: 'primary',
       externalLink: false,
       externalLinkText: '',
-      href: pageRoutes(locale).serviceDigitalSustainability,
+      href: pageRoutes(locale).serviceSustainableDigitalization,
       iconAfter: {
         name: 'arrowRight',
       },

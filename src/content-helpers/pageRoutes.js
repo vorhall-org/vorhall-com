@@ -7,7 +7,7 @@ export const pageRoutes = (lang) => ({
   imprint: langRoute(lang, 'imprint'),
   serviceAccessibility: langRoute(lang, 'services/accessibility'),
   serviceDesignSystems: langRoute(lang, 'services/design-systems'),
-  serviceDigitalSustainability: langRoute(lang, 'services/digital-sustainability'),
   serviceFrontend: langRoute(lang, 'services/frontend'),
+  serviceSustainableDigitalization: langRoute(lang, 'services/sustainable-digitalization'),
   serviceWebPerformance: langRoute(lang, 'services/web-performance'),
 });
