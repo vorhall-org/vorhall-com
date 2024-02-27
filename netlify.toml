@@ -1,7 +1,15 @@
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "object-src 'none'; base-uri 'self';"
+[dev]
+    command = "npm run dev"
+    framework = "#custom"
+    targetPort = 4321
+
+[build]
+    command = "npm run build"
+    publish = "dist"
+
+[build.environment]
+    CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+    TERM = "xterm"
 
 [[plugins]]
   package = "@netlify/plugin-csp-nonce"
@@ -18,6 +26,18 @@
     path = "/*"
     reportOnly = false
     unsafeEval = true
+
+[[plugins]]
+    package = "netlify-plugin-cypress"
+    [plugins.inputs]
+        # run E2E tests against the deployed URL
+        record = true
+        group = 'deployed'
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "object-src 'none'; base-uri 'self';"
 
 [[edge_functions]]
   path = "/*"

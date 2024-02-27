@@ -114,6 +114,7 @@ export default function CustomForm(componentProps) {
                 [componentProps.classes]: componentProps.classes,
               }}
               onSubmit={handleSubmit}
+              data-cy='form'
             >
               <For each={componentProps.fieldsets}>
                 {(fieldset) => (
@@ -154,6 +155,7 @@ export default function CustomForm(componentProps) {
                   {...componentProps.button}
                   disabled={formDisabled()}
                   loading={formDisabled()}
+                  data-cy='submit'
                 />
               </Show>
 
