@@ -20,7 +20,7 @@ export default function Avatar(props) {
         height={props.height}
         loading='lazy'
         sizes='(min-width: 768px) 300px, (min-width: 500px) 600px, 300px'
-        src={props.image}
+        src={props.src}
         role='presentation'
         width={props.width}
       />
