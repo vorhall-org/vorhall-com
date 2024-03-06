@@ -38,6 +38,7 @@
   for = "/*"
   [headers.values]
     Content-Security-Policy = "object-src 'none'; base-uri 'self';"
+    X-Content-Type-Options = 'nosniff'
 
 [[edge_functions]]
   path = "/*"
