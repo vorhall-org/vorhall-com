@@ -30,7 +30,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-solid": "^0.13.1",
     "eslint-plugin-storybook": "^0.8.0",
-    "netlify-cli": "^17.17.1",
+    "netlify-cli": "^17.19.0",
     "netlify-plugin-cypress": "^2.2.1",
     "postcss-html": "^1.5.0",
     "react": "^18.2.0",
