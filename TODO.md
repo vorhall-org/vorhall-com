@@ -1,10 +1,3 @@
-TODO:
-- Content Security Policies? -> there is a netlify integration. needs further study (Yves)
-
-RIGHT AFTER GO LIVE:
-- Remove no-index meta, set proper index
-- Check Tracking integration for prod
-
 OPTIONAL:
 - form captcha?
 - Color schema toggle?
