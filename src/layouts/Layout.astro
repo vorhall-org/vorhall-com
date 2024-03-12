@@ -31,6 +31,9 @@ const metaTags = [
 
 const title = pageTitle || generalData.siteData.title;
 
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
+  .toString();
+
 ---
 
 <!doctype html>
@@ -51,6 +54,7 @@ const title = pageTitle || generalData.siteData.title;
     </style>
 
     <link rel="icon" type="image/svg+xml" href="/favicon-beta.svg" />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="sitemap" href="https://vorhall.com/sitemap-index.xml" />
     <link rel="preconnect" href="https://cdn.squeaky.ai" crossorigin />
     <link rel="preconnect" href="https://api.squeaky.ai/graphql" crossorigin />
