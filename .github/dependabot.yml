@@ -11,4 +11,4 @@ updates:
         dependency-type: "development"
     ignore:
       - dependency-name: 'eslint'
-      update-types: semver-major
+        update-types: semver-major
