@@ -136,22 +136,11 @@ export default {
         jederzeit widerrufen werden, was jedoch keine Auswirkung auf bereits erfolgte Datenbearbeitungen hat.
       </p>
       <h2>
-        4. Cookies / Tracking und andere Technologien im Zusammenhang mit der Nutzung unserer Website
+        4. Cookies und andere Technologien im Zusammenhang mit der Nutzung unserer Website
       </h2>
       <p>
         Unsere Website <a href="https://vorhall.com">https://vorhall.com</a> verwendet derzeit keine
-        Cookies. Auf der Website läuft der Analytics-Dienst von <a aria-label="Squeaky AI,
-        Linkziel in englischer Sprache, öffnet sich in einem neuen Fenster." href="https://squeaky.ai/"
-        target="_blank" rel="external noopener nofollow">Squeaky AI.</a> Dies ist
-        eine Dienstleistung von Dritten mit Sitz in den Niederlanden, mit welcher wir die Nutzung der
-        Website (nicht personenbezogen) messen und auswerten können. Squeaky nutzt ebenfalls keine Cookies
-        und erfüllt die europäische General Data Protection Regulation (GDPR). Die Analytics-Daten werden
-        in Irland gespeichert und das Tracking erfolgt dabei in anonymisierter Form. Mehr Informationen
-        zur <a aria-label="Squeaky AI Privacy Police, Linkziel in englischer Sprache, öffnet sich in einem neuen Fenster"
-        href="https://squeaky.ai/legal/privacy-policy/" target="_blank" rel="external noopener nofollow">Squeaky AI Privacy
-        Police</a> und <a aria-label="Squaky AI GDPR Compliance, Linkziel in englischer Sprache, öffnet sich
-        in einem neuen Fenster." href="https://squeaky.ai/legal/gdpr/" target="_blank" rel="external
-        noopener nofollow">Squaky AI GDPR-Compliance</a>.
+        Cookies.
       </p>
       <h2>
         5. Datenweitergabe und Datenübermittlung ins Ausland
@@ -416,21 +405,11 @@ export default {
         prior to withdrawal.
       </p>
       <h2>
-        4. Cookies / Tracking and Other Techniques Regarding the Use of our Website
+        4. Cookies and Other Techniques Regarding the Use of our Website
       </h2>
       <p>
         Our website <a href="https://vorhall.com">https://vorhall.com</a> currently does not use any
-        cookies. The analytics service running on the website is provided by <a aria-label="Squeaky AI,
-        link target opens in a new window." href="https://squeaky.ai/" target="_blank" rel="external
-        noopener nofollow">Squeaky AI.</a> This is a third-party service based in the Netherlands, which
-        allows us to measure and analyze the usage of the website (non-personally identifiable). Squeaky
-        also does not use any cookies and complies with the European General Data Protection Regulation (GDPR).
-        The analytics data is stored in Ireland, and tracking is done in an anonymized form. For more
-        information on the <a aria-label="Squeaky AI Privacy Policy, link target opens in a new window"
-        href="https://squeaky.ai/legal/privacy-policy/" target="_blank" rel="external noopener nofollow">
-        Squeaky AI Privacy Policy</a> and <a aria-label="Squaky AI GDPR Compliance, Link target opens in a
-        new window." href="https://squeaky.ai/legal/gdpr/" target="_blank" rel="external noopener
-        nofollow">Squaky AI GDPR Compliance</a>.
+        cookies.
       </p>
       <h2>
           5. Datatransfer and Transfer of Data Abroad

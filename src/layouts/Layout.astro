@@ -1,5 +1,4 @@
 ---
-import Tracking from '../page-helpers/Tracking.astro';
 import { generalMetaTags } from '../content-helpers/metaTags';
 import { getLocale } from 'astro-i18n-aut';
 import generalDataGetter from '../content-helpers/general';
@@ -56,8 +55,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
     <link rel="icon" type="image/svg+xml" href="/favicon-beta.svg" />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="sitemap" href="https://vorhall.com/sitemap-index.xml" />
-    <link rel="preconnect" href="https://cdn.squeaky.ai" crossorigin />
-    <link rel="preconnect" href="https://api.squeaky.ai/graphql" crossorigin />
 
   </head>
   <body>
@@ -99,8 +96,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
     </Main>
 
     <Footer {...generalData.footerData(locale, path)}/>
-
-    <Tracking />
 
     {isHome &&
       <script
