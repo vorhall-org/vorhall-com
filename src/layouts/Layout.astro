@@ -30,7 +30,19 @@ const metaTags = [
 
 const title = pageTitle || generalData.siteData.title;
 
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
+const pathName = Astro.url.pathname;
+let canonicalUrl = pathName;
+let alternateUrl = pathName;
+
+if (locale === 'de') {
+  canonicalUrl = pathName.replace('/de/', '');
+} else {
+  alternateUrl = `de${pathName}`;
+}
+
+canonicalUrl = new URL(canonicalUrl, Astro.site)
+  .toString();
+alternateUrl = new URL(alternateUrl, Astro.site)
   .toString();
 
 ---
@@ -54,6 +66,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 
     <link rel="icon" type="image/svg+xml" href="/favicon-beta.svg" />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" href={alternateUrl} hreflang="de" />
     <link rel="sitemap" href="https://vorhall.com/sitemap-index.xml" />
 
   </head>
