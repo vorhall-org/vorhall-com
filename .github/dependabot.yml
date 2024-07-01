@@ -9,6 +9,3 @@ updates:
         dependency-type: "production"
       development-dependencies:
         dependency-type: "development"
-    ignore:
-      - dependency-name: 'eslint'
-        update-types: ["version-update:semver-major"]
