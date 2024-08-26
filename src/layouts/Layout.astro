@@ -30,14 +30,20 @@ const metaTags = [
 
 const title = pageTitle || generalData.siteData.title;
 
-const pathName = Astro.url.pathname;
-let canonicalUrl = pathName;
-let alternateUrl = pathName;
+let canonicalUrl = path;
+let alternateUrl = path;
+let alernateLang = 'de';
 
 if (locale === 'de') {
-  canonicalUrl = pathName.replace('/de/', '');
+  if (path.toString() === '') {
+    canonicalUrl = '/de/';
+  }
+
+  alternateUrl = path.replace('/de/', '');
+  alernateLang = 'en';
+
 } else {
-  alternateUrl = `de${pathName}`;
+  alternateUrl = `de${path}`;
 }
 
 canonicalUrl = new URL(canonicalUrl, Astro.site)
@@ -66,7 +72,7 @@ alternateUrl = new URL(alternateUrl, Astro.site)
 
     <link rel="icon" type="image/svg+xml" href="/favicon-beta.svg" />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" href={alternateUrl} hreflang="de" />
+    <link rel="alternate" href={alternateUrl} hreflang={alernateLang} />
     <link rel="sitemap" href="https://vorhall.com/sitemap-index.xml" />
 
   </head>

@@ -5,7 +5,7 @@ export default {
       bewusster ökologischer Entscheidungen ressourcenschonend zu
       gestalten und zu betreiben.
     `,
-    docTitle: 'Nachhaltige Digitalisierung & Carbon Aware Computing',
+    docTitle: 'Nachhaltige Digitalisierung, Green Coding & Carbon Aware Computing',
     lead: `
       Wir erleben aktuell eine bedeutende globale Bewegung hin zu einer
       Kombination aus Nachhaltigkeit und Digitalisierung - auch bekannt
@@ -42,14 +42,14 @@ export default {
         Umsetzung von möglichst emissionsarmer Software.
       </p>
 `,
-    title: 'Nachhaltige Digitalisierung & Carbon Aware Computing',
+    title: 'Nachhaltige Digitalisierung, Green Coding & Carbon Aware Computing',
   },
   en: {
     description: `
       We support you in making and operating your digital services
       resource-efficient through conscious ecological decisions.
     `,
-    docTitle: 'Sustainable Digitalization & Carbon Aware Computing',
+    docTitle: 'Sustainable Digitalization, Green Coding & Carbon Aware Computing',
     lead: `
     We are currently experiencing a significant global shift towards both
     sustainability and digitization - the so called twin transformation -
@@ -93,6 +93,6 @@ export default {
         software with minimal emissions.
       </p>
     `,
-    title: 'Sustainable Digitalization & Carbon Aware Computing',
+    title: 'Sustainable Digitalization, Green Coding & Carbon Aware Computing',
   },
 };
