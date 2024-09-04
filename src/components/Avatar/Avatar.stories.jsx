@@ -8,14 +8,14 @@ const defaultArgs = {
   alt: 'avatar alt text',
   classes: '',
   height: '100',
-  src: '/images/yves.jpg',
+  src: '/images/vorhall-yves-tscherry.jpg',
   srcSetAvif: {
-    large: '/images/yves-600x600.avif 600w',
-    small: '/images/yves-300x300.avif 300w',
+    large: '/images/vorhall-yves-tscherry-600x600.avif 600w',
+    small: '/images/vorhall-yves-tscherry-300x300.avif 300w',
   },
   srcSetWebP: {
-    large: '/images/yves-600x600.webp 600w',
-    small: '/images/yves-300x300.webp 300w',
+    large: '/images/vorhall-yves-tscherry-600x600.webp 600w',
+    small: '/images/vorhall-yves-tscherry-300x300.webp 300w',
   },
   width: '100',
 };
@@ -35,14 +35,14 @@ export const Marius = {
   args: {
     ...defaultArgs,
     alt: 'Portrait Marius Bleuer',
-    src: '/images/marius.jpg',
+    src: '/images/vorhall-marius-bleuer.jpg',
     srcSetAvif: {
-      large: '/images/marius-600x600.avif 600w',
-      small: '/images/marius-300x300.avif 300w',
+      large: '/images/vorhall-marius-bleuer-600x600.avif 600w',
+      small: '/images/vorhall-marius-bleuer-300x300.avif 300w',
     },
     srcSetWebP: {
-      large: '/images/marius-600x600.webp 600w',
-      small: '/images/marius-300x300.webp 300w',
+      large: '/images/vorhall-marius-bleuer-600x600.webp 600w',
+      small: '/images/vorhall-marius-bleuer-300x300.webp 300w',
     },
   },
 };
