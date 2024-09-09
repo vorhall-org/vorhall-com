@@ -74,6 +74,11 @@ alternateUrl = new URL(alternateUrl, Astro.site)
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" href={canonicalUrl} hreflang={locale} />
     <link rel="alternate" href={alternateUrl} hreflang={alernateLang} />
+    <link rel="alternate" href={
+      locale === 'en'
+        ? canonicalUrl
+        : alternateUrl
+    } hreflang="x-default" />
     <link rel="sitemap" href="https://vorhall.com/sitemap-index.xml" />
 
   </head>
