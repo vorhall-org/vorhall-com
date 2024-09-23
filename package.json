@@ -30,7 +30,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-solid": "^0.14.3",
     "eslint-plugin-storybook": "^0.8.0",
-    "netlify-cli": "^17.36.0",
+    "netlify-cli": "^17.36.2",
     "netlify-plugin-cypress": "^2.2.1",
     "postcss-html": "^1.7.0",
     "react": "^18.3.1",
@@ -47,7 +47,7 @@
   "dependencies": {
     "@astrojs/solid-js": "^4.4.1",
     "@modular-forms/solid": "^0.23.0",
-    "astro": "^4.15.6",
+    "astro": "^4.15.8",
     "solid-js": "^1.8.22",
     "solid-transition-group": "^0.2.3"
   }
