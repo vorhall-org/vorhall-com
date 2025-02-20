@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "sass:string";
+@use "sass:meta";
+
 // ##############################
 // Reduced Motion
 // ##############################
@@ -93,8 +97,8 @@ $mq-breakpoints: (
 $mq-media-type: all !default;
 
 @function mq-get-breakpoint-width($name, $breakpoints: $mq-breakpoints) {
-  @if map-has-key($breakpoints, $name) {
-    @return map-get($breakpoints, $name);
+  @if map.has-key($breakpoints, $name) {
+    @return map.get($breakpoints, $name);
   } @else {
     @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
   }
@@ -113,7 +117,7 @@ $mq-media-type: all !default;
 
   // From: this breakpoint (inclusive)
   @if $from {
-    @if type-of($from) == number {
+    @if meta.type-of($from) == number {
       $min-width: $from * 1px;
     } @else {
       $min-width: mq-get-breakpoint-width($from, $breakpoints) * 1px;
@@ -122,7 +126,7 @@ $mq-media-type: all !default;
 
   // Until: that breakpoint (exclusive)
   @if $to {
-    @if type-of($to) == number {
+    @if meta.type-of($to) == number {
       $max-width: $to * 1px;
     } @else {
       $max-width: mq-get-breakpoint-width($to, $breakpoints) * 1px;
@@ -140,7 +144,7 @@ $mq-media-type: all !default;
     $media-type: '';
 
     /* stylelint-disable scss/no-global-function-names */
-    $media-query: str-slice($media-query, 6);
+    $media-query: string.slice($media-query, 6);
     /* stylelint-enable scss/no-global-function-names */
   }
 

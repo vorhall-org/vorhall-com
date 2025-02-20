@@ -32,25 +32,36 @@
 
 @mixin container-l {
   @include container-centered;
-  max-width: fn.to-rem(calc(var(--content-max-width-l) + 2 * var(--section-spacing-h)));
+
+  & {
+    max-width: fn.to-rem(calc(var(--content-max-width-l) + 2 * var(--section-spacing-h)));
+  }
 }
 
 @mixin container-m {
   @include container-centered;
-  max-width: fn.to-rem(calc(var(--content-max-width-m) + 2 * var(--section-spacing-h)));
+
+  & {
+    max-width: fn.to-rem(calc(var(--content-max-width-m) + 2 * var(--section-spacing-h)));
+  }
 }
 
 @mixin container-s {
   @include container-centered;
-  max-width: fn.to-rem(calc(var(--content-max-width-s) + 2 * var(--section-spacing-h)));
+
+  & {
+    max-width: fn.to-rem(calc(var(--content-max-width-s) + 2 * var(--section-spacing-h)));
+  }
 }
 
 @mixin container-full-width {
   @include container-centered;
 
-  max-width: 100%;
-  padding-right: 0;
-  padding-left: 0;
+  & {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 @mixin container-vertical-spacing {
@@ -131,10 +142,12 @@
 }
 
 @mixin card-variables {
-  --card-bg-color: var(--color-white);
-  --card-border-color: var(--color-gray-200);
-  --card-color: var(--color-gray-500);
-  --card-width: 100%;
+  & {
+    --card-bg-color: var(--color-white);
+    --card-border-color: var(--color-gray-200);
+    --card-color: var(--color-gray-500);
+    --card-width: 100%;
+  }
 
   @include mq.color-scheme-dark {
     --card-bg-color: var(--color-gray-800);
@@ -261,7 +274,10 @@
   color: var(--link-color);
 
   @include default-transition;
-  transition-property: color;
+
+  & {
+    transition-property: color;
+  }
 
   @include hover-focus {
     color: var(--link-color-hover);

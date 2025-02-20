@@ -14,13 +14,16 @@
 
 .success-message {
   @include mx.card;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: fn.to-rem(var(--spacing-4));
-  padding: fn.to-rem(var(--spacing-6));
-  color: var(--success-message-color);
+
+  & {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: fn.to-rem(var(--spacing-4));
+    padding: fn.to-rem(var(--spacing-6));
+    color: var(--success-message-color);
+  }
 
   &__icon {
     width: fn.to-rem(var(--spacing-12));

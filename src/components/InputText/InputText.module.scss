@@ -47,7 +47,10 @@
     font-size: fn.to-rem(--text-base);
 
     @include mx.default-transition;
-    transition-property: color, border-color, background-color;
+
+    & {
+      transition-property: color, border-color, background-color;
+    }
 
     &::placeholder {
       color: var(--input-placeholder-color);
