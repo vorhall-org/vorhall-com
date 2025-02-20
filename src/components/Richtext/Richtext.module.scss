@@ -6,7 +6,9 @@
   @include mx.heading-variables;
   @include mx.link-variables;
 
-  --richtext-color: var(--color-gray-500);
+  & {
+    --richtext-color: var(--color-gray-500);
+  }
 
   @include mq.color-scheme-dark {
     --richtext-color: var(--color-gray-300);
