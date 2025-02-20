@@ -64,7 +64,7 @@ export default {
   footer: {
     de: {
       ariaLabel: 'Fusszeile',
-      copyright: '©2024 Vorhall KLG. Daheim in Bern (Schweiz).',
+      copyright: '2025 Vorhall KLG. Daheim in Bern (Schweiz).',
       langSwitchText: 'Change to english',
       linkDataPrivacy: 'Datenschutzerklärung',
       linkGithub: 'Besuche Vorhall auf Github',
@@ -73,7 +73,7 @@ export default {
     },
     en: {
       ariaLabel: 'Footer',
-      copyright: '©2024 Vorhall KLG. Based in Berne (Switzerland).',
+      copyright: '2025 Vorhall KLG. Based in Berne (Switzerland).',
       langSwitchText: 'Auf Deutsch wechseln',
       linkDataPrivacy: 'Data Protection',
       linkGithub: 'Visit Vorhall on Github',
