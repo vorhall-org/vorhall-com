@@ -8,7 +8,10 @@
 
 .content-card {
   @include mx.card;
-  padding: fn.to-rem(var(--spacing-6));
+
+  & {
+    padding: fn.to-rem(var(--spacing-6));
+  }
 
   &__icon {
     width: fn.to-rem(var(--spacing-10));

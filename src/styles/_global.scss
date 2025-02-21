@@ -1,7 +1,7 @@
 @use './mediaqueries' as mq;
 @use './functions' as fn;
 @use './mixins' as mx;
-@import './variables/variables';
+@forward './variables/variables';
 
 :root {
   --color-foreground: var(--color-gray-900);

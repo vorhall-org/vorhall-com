@@ -2,10 +2,12 @@
 @use '/src/styles/mediaqueries' as mq;
 
 @mixin container-centered-variables {
-  --section-spacing-h: var(--spacing-4);
-  --section-spacing-v-small: var(--spacing-12);
-  --section-spacing-v-medium: var(--spacing-16);
-  --section-spacing-v-large: var(--spacing-24);
+  & {
+    --section-spacing-h: var(--spacing-4);
+    --section-spacing-v-small: var(--spacing-12);
+    --section-spacing-v-medium: var(--spacing-16);
+    --section-spacing-v-large: var(--spacing-24);
+  }
 
   @include mq.breakpoint($from: sm) {
     --section-spacing-h: var(--spacing-8);
@@ -32,25 +34,36 @@
 
 @mixin container-l {
   @include container-centered;
-  max-width: fn.to-rem(calc(var(--content-max-width-l) + 2 * var(--section-spacing-h)));
+
+  & {
+    max-width: fn.to-rem(calc(var(--content-max-width-l) + 2 * var(--section-spacing-h)));
+  }
 }
 
 @mixin container-m {
   @include container-centered;
-  max-width: fn.to-rem(calc(var(--content-max-width-m) + 2 * var(--section-spacing-h)));
+
+  & {
+    max-width: fn.to-rem(calc(var(--content-max-width-m) + 2 * var(--section-spacing-h)));
+  }
 }
 
 @mixin container-s {
   @include container-centered;
-  max-width: fn.to-rem(calc(var(--content-max-width-s) + 2 * var(--section-spacing-h)));
+
+  & {
+    max-width: fn.to-rem(calc(var(--content-max-width-s) + 2 * var(--section-spacing-h)));
+  }
 }
 
 @mixin container-full-width {
   @include container-centered;
 
-  max-width: 100%;
-  padding-right: 0;
-  padding-left: 0;
+  & {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 @mixin container-vertical-spacing {
@@ -131,10 +144,12 @@
 }
 
 @mixin card-variables {
-  --card-bg-color: var(--color-white);
-  --card-border-color: var(--color-gray-200);
-  --card-color: var(--color-gray-500);
-  --card-width: 100%;
+  & {
+    --card-bg-color: var(--color-white);
+    --card-border-color: var(--color-gray-200);
+    --card-color: var(--color-gray-500);
+    --card-width: 100%;
+  }
 
   @include mq.color-scheme-dark {
     --card-bg-color: var(--color-gray-800);
@@ -170,13 +185,15 @@
 }
 
 @mixin heading-variables {
-  --heading-color: var(--color-gray-900);
-  --heading-1-font-size: var(--text-4xl);
-  --heading-2-font-size: var(--text-3xl);
-  --heading-3-font-size: var(--text-2xl);
-  --heading-4-font-size: var(--text-xl);
-  --heading-5-font-size: var(--text-l);
-  --heading-6-font-size: var(--text-base);
+  & {
+    --heading-color: var(--color-gray-900);
+    --heading-1-font-size: var(--text-4xl);
+    --heading-2-font-size: var(--text-3xl);
+    --heading-3-font-size: var(--text-2xl);
+    --heading-4-font-size: var(--text-xl);
+    --heading-5-font-size: var(--text-l);
+    --heading-6-font-size: var(--text-base);
+  }
 
   @include mq.color-scheme-dark {
     --heading-color: var(--color-white);
@@ -246,8 +263,10 @@
 }
 
 @mixin link-variables {
-  --link-color: var(--color-blue-600);
-  --link-color-hover: var(--color-blue-800);
+  & {
+    --link-color: var(--color-blue-600);
+    --link-color-hover: var(--color-blue-800);
+  }
 
   @include mq.color-scheme-dark {
     --link-color: var(--color-blue-500);
@@ -261,7 +280,10 @@
   color: var(--link-color);
 
   @include default-transition;
-  transition-property: color;
+
+  & {
+    transition-property: color;
+  }
 
   @include hover-focus {
     color: var(--link-color-hover);
