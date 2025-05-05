@@ -45,10 +45,10 @@
     "stylelint-config-standard-scss": "^14.0.0"
   },
   "dependencies": {
-    "@astrojs/solid-js": "^5.0.8",
+    "@astrojs/solid-js": "^5.0.10",
     "@modular-forms/solid": "^0.25.1",
-    "astro": "^5.7.4",
-    "solid-js": "^1.9.5",
+    "astro": "^5.7.10",
+    "solid-js": "^1.9.6",
     "solid-transition-group": "^0.3.0"
   }
 }
