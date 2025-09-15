@@ -6,7 +6,7 @@ export default {
     richtext: `
       <p>
         <strong>Vorhall KLG</strong><br>
-        Brückfeldstrasse 40<br>CH-3012 Bern<br>Schweiz
+        Dittlingerweg 6<br>CH-3005 Bern<br>Schweiz
       </p>
       <p>
         <strong>Kontaktmöglichkeit</strong><br>
@@ -30,7 +30,7 @@ export default {
     richtext: `
       <p>
         <strong>Vorhall KLG</strong><br>
-        Brückfeldstrasse 40<br>CH-3012 Berne<br>Switzerland
+        Dittlingerweg 6<br>CH-3005 Berne<br>Switzerland
       </p>
       <p>
         <strong>Contact</strong><br>
