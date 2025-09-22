@@ -34,8 +34,8 @@ export default {
       </p>
       <p>
         Vorhall KLG<br>
-        Brückfeldstrasse 40<br>
-        CH-3012 Bern<br>
+        Dittlingerweg 6<br>
+        CH-3005 Bern<br>
         <a href="mailto:info@vorhall.com">info@vorhall.com</a>
       </p>
       <h2>
@@ -308,8 +308,8 @@ export default {
       </p>
       <p>
         Vorhall KLG<br>
-        Brückfeldstrasse 40<br>
-        CH-3012 Berne<br>
+        Dittlingerweg 6<br>
+        CH-3005 Berne<br>
         <a href="mailto:info@vorhall.com">info@vorhall.com</a>
       </p>
       <h2>
