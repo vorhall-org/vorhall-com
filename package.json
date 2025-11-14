@@ -43,7 +43,7 @@
     "@storybook/addon-docs": "^9.1.15"
   },
   "dependencies": {
-    "@astrojs/solid-js": "^5.1.2",
+    "@astrojs/solid-js": "^5.1.3",
     "@modular-forms/solid": "^0.25.1",
     "astro": "^5.15.6",
     "solid-js": "^1.9.10",
