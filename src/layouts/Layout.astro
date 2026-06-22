@@ -106,7 +106,7 @@ alternateUrl = new URL(alternateUrl, Astro.site)
           <Jumbotron {...generalData.jumbotronContact} />
 
           <Form
-            client:load
+            client:only="solid-js"
             {...generalData.contactFormData}
           >
 
