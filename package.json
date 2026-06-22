@@ -2,6 +2,11 @@
   "name": "vorhall-com",
   "type": "module",
   "version": "0.0.1",
+  "overrides": {
+    "astro-i18n-aut": {
+      "astro": "$astro"
+    }
+  },
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev --host",
