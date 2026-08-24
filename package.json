@@ -50,8 +50,8 @@
   "dependencies": {
     "@astrojs/solid-js": "^7.0.2",
     "@modular-forms/solid": "^0.25.1",
-    "astro": "^7.2.2",
-    "solid-js": "^1.9.14",
+    "astro": "^7.2.4",
+    "solid-js": "^1.9.15",
     "solid-transition-group": "^0.3.0"
   }
 }
