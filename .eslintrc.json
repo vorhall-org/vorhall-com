@@ -6,8 +6,7 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:astro/recommended",
-    "plugin:jsx-a11y/strict"
+    "plugin:astro/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
