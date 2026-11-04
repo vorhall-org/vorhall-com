@@ -16,13 +16,14 @@ const config = {
   },
   stories: ['../src/**/*.stories.@(js|jsx)'],
 
-  viteFinal: (config) => {
-    config.resolve = config.resolve || {};
-    config.resolve.alias = {
-      ...config.resolve.alias,
+  viteFinal: (viteConfig) => {
+    viteConfig.resolve = viteConfig.resolve || {};
+    viteConfig.resolve.alias = {
+      ...viteConfig.resolve.alias,
       '@': path.resolve(__dirname, '../src'),
     };
-    return config;
+
+    return viteConfig;
   },
 };
 
