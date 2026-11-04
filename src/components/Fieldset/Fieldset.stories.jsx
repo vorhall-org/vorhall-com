@@ -1,4 +1,4 @@
-import Comp from './Fieldset.jsx';
+import Comp from '@/components/Fieldset/Fieldset.jsx';
 
 const render = (args) => <Comp {...args}>
   <p>some fieldset content</p>

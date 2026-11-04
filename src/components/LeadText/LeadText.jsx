@@ -1,4 +1,4 @@
-import styles from './LeadText.module.scss';
+import styles from '@/components/LeadText/LeadText.module.scss';
 
 export default function LeadText(props) {
   return (

@@ -1,8 +1,7 @@
-import styles from './Icon.module.scss';
-import iconsFixed from './IconsFixed';
-import iconsColorizable from './IconsColorizable';
+import styles from '@/components/Icon/Icon.module.scss';
+import iconsFixed from '@/components/Icon/IconsFixed';
+import iconsColorizable from '@/components/Icon/IconsColorizable';
 
-/* eslint-disable solid/no-innerhtml */
 export default function Icon(props) {
   return (
     <span
@@ -19,4 +18,3 @@ export default function Icon(props) {
     />
   );
 }
-/* eslint-enable solid/no-innerhtml */

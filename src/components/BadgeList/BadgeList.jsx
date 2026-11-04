@@ -1,6 +1,6 @@
-import styles from './BadgeList.module.scss';
+import styles from '@/components/BadgeList/BadgeList.module.scss';
 import { For } from 'solid-js';
-import Badge from '../Badge/Badge';
+import Badge from '@/components/Badge/Badge';
 
 export default function BadgeList(props) {
   return (

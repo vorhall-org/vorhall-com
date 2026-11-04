@@ -1,7 +1,7 @@
-import i18n from '../i18n/i18n-home';
-import i18nGeneral from '../i18n/i18n-general';
-import { useTranslations } from '../i18n/utils';
-import { pageRoutes } from './pageRoutes';
+import i18n from '@/i18n/i18n-home';
+import i18nGeneral from '@/i18n/i18n-general';
+import { useTranslations } from '@/i18n/utils';
+import { pageRoutes } from '@/content-helpers/pageRoutes';
 
 export default (locale) => {
   const tAbout = useTranslations(locale, i18n.about);

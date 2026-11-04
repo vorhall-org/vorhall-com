@@ -1,4 +1,4 @@
-import Comp from './Navigation.jsx';
+import Comp from '@/components/Navigation/Navigation.jsx';
 
 export default {
   component: Comp,

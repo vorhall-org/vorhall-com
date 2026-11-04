@@ -1,4 +1,4 @@
-import Comp from './Icon.jsx';
+import Comp from '@/components/Icon/Icon.jsx';
 
 export default {
   component: Comp,

@@ -1,4 +1,4 @@
-import Comp from './FormError.jsx';
+import Comp from '@/components/FormError/FormError.jsx';
 
 export default {
   component: Comp,

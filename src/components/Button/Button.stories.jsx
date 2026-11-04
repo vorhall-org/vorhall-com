@@ -1,6 +1,6 @@
-import Comp from './Button.jsx';
-import * as icon from '../Icon/Icon.stories.jsx';
-import { disableArgType } from '../../helpers/storybook/storybook.js';
+import Comp from '@/components/Button/Button.jsx';
+import * as icon from '@/components/Icon/Icon.stories.jsx';
+import { disableArgType } from '@/helpers/storybook/storybook.js';
 
 const iconsFixedColor = {
   de: {

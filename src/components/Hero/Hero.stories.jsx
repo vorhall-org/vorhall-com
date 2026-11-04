@@ -1,6 +1,6 @@
-import Comp from './Hero.jsx';
-import * as heading from '../Heading/Heading.stories.jsx';
-import * as leadText from '../LeadText/LeadText.stories.jsx';
+import Comp from '@/components/Hero/Hero.jsx';
+import * as heading from '@/components/Heading/Heading.stories.jsx';
+import * as leadText from '@/components/LeadText/LeadText.stories.jsx';
 
 export default {
   component: Comp,

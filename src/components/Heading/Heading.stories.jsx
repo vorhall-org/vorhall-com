@@ -1,4 +1,4 @@
-import Comp from './Heading.jsx';
+import Comp from '@/components/Heading/Heading.jsx';
 
 export default {
   argTypes: {

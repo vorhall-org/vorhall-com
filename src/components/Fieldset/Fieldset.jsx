@@ -1,4 +1,4 @@
-import styles from './Fieldset.module.scss';
+import styles from '@/components/Fieldset/Fieldset.module.scss';
 
 export default function Fieldset(props) {
   return (

@@ -1,4 +1,4 @@
-import styles from './FormError.module.scss';
+import styles from '@/components/FormError/FormError.module.scss';
 import { Show } from 'solid-js';
 
 export default function FormError(props) {

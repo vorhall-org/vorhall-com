@@ -1,7 +1,7 @@
-import styles from './AvatarCard.module.scss';
-import Avatar from '../Avatar/Avatar';
-import Heading from '../Heading/Heading';
-import SocialLinks from '../SocialLinks/SocialLinks';
+import styles from '@/components/AvatarCard/AvatarCard.module.scss';
+import Avatar from '@/components/Avatar/Avatar';
+import Heading from '@/components/Heading/Heading';
+import SocialLinks from '@/components/SocialLinks/SocialLinks';
 
 export default function AvatarCard(props) {
   return (

@@ -1,4 +1,4 @@
-import Comp from './Richtext.jsx';
+import Comp from '@/components/Richtext/Richtext.jsx';
 
 export default {
   component: Comp,

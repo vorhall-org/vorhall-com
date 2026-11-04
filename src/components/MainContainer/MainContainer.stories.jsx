@@ -1,4 +1,4 @@
-import Comp from './MainContainer.jsx';
+import Comp from '@/components/MainContainer/MainContainer.jsx';
 
 export default {
   component: Comp,

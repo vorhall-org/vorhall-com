@@ -1,4 +1,4 @@
-import styles from './Form.module.scss';
+import styles from '@/components/Form/Form.module.scss';
 import { Dynamic } from 'solid-js/web';
 import { Transition } from 'solid-transition-group';
 import {
@@ -15,13 +15,13 @@ import {
   Switch,
 } from 'solid-js';
 
-import Button from '../Button/Button';
-import Fieldset from '../Fieldset/Fieldset';
-import InputText from '../InputText/InputText';
-import Textarea from '../Textarea/Textarea';
-import SuccessMessage from '../SuccessMessage/SuccessMessage';
-import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import { submitForm } from './form-actions';
+import Button from '@/components/Button/Button';
+import Fieldset from '@/components/Fieldset/Fieldset';
+import InputText from '@/components/InputText/InputText';
+import Textarea from '@/components/Textarea/Textarea';
+import SuccessMessage from '@/components/SuccessMessage/SuccessMessage';
+import ErrorMessage from '@/components//ErrorMessage/ErrorMessage';
+import { submitForm } from '@/components/Form/form-actions';
 
 const getFormElementFromName = (elementName) => {
   let comp;

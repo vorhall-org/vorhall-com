@@ -1,4 +1,4 @@
-import Comp from './Section.jsx';
+import Comp from '@/components/Section/Section.jsx';
 
 export default {
   component: Comp,

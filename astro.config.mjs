@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 import {
   defaultLocale,
   locales,
-} from './src/i18n/utils';
+} from '@/i18n/utils';
 import solidJs from '@astrojs/solid-js';
 
 export default defineConfig({

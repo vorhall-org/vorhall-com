@@ -1,4 +1,4 @@
-import Comp from './SuccessMessage.jsx';
+import Comp from '@/components/SuccessMessage/SuccessMessage.jsx';
 
 export default {
   component: Comp,

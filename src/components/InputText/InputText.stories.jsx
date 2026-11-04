@@ -1,5 +1,5 @@
-import Comp from './InputText.jsx';
-import * as formLabel from '../FormLabel/FormLabel.stories.jsx';
+import Comp from '@/components/InputText/InputText.jsx';
+import * as formLabel from '@/components/FormLabel/FormLabel.stories.jsx';
 
 export default {
   argTypes: {

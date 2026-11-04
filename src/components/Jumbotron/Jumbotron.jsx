@@ -1,6 +1,6 @@
-import styles from './Jumbotron.module.scss';
-import Heading from '../Heading/Heading';
-import LeadText from '../LeadText/LeadText';
+import styles from '@/components/Jumbotron/Jumbotron.module.scss';
+import Heading from '@/components/Heading/Heading';
+import LeadText from '@/components/LeadText/LeadText';
 
 export default function Jumbotron(props) {
   return (

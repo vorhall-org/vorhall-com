@@ -1,4 +1,4 @@
-import styles from './MainContainer.module.scss';
+import styles from '@/components/MainContainer/MainContainer.module.scss';
 
 export default function MainContainer(props) {
   return (

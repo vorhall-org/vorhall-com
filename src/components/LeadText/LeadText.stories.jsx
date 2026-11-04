@@ -1,4 +1,4 @@
-import Comp from './LeadText.jsx';
+import Comp from '@/components/LeadText/LeadText.jsx';
 
 export default {
   component: Comp,

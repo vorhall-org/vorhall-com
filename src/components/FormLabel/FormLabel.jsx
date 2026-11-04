@@ -1,4 +1,4 @@
-import styles from './FormLabel.module.scss';
+import styles from '@/components/FormLabel/FormLabel.module.scss';
 
 export default function FormLabel(props) {
   return (
