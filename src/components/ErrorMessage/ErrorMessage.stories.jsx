@@ -1,4 +1,4 @@
-import Comp from './ErrorMessage.jsx';
+import Comp from '@/components/ErrorMessage/ErrorMessage.jsx';
 
 export default {
   component: Comp,

@@ -1,4 +1,4 @@
-import styles from './Navigation.module.scss';
+import styles from '@/components/Navigation/Navigation.module.scss';
 
 export default function Navigation(props) {
 

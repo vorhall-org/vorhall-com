@@ -1,5 +1,5 @@
-import styles from './ErrorMessage.module.scss';
-import Icon from '../Icon/Icon';
+import styles from '@/components/ErrorMessage/ErrorMessage.module.scss';
+import Icon from '@/components//Icon/Icon';
 import { onMount } from 'solid-js';
 
 export default function ErrorMessage(props) {

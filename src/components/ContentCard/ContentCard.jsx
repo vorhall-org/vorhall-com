@@ -1,7 +1,7 @@
-import styles from './ContentCard.module.scss';
-import Button from '../Button/Button';
-import Heading from '../Heading/Heading';
-import Icon from '../Icon/Icon';
+import styles from '@/components/ContentCard/ContentCard.module.scss';
+import Button from '@/components/Button/Button';
+import Heading from '@/components/Heading/Heading';
+import Icon from '@/components/Icon/Icon';
 
 export default function ContentCard(props) {
   return (

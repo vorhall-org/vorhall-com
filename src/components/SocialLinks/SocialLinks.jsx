@@ -1,6 +1,6 @@
 import { For } from 'solid-js';
-import Button from '../Button/Button';
-import styles from './SocialLinks.module.scss';
+import Button from '@/components/Button/Button';
+import styles from '@/components/SocialLinks/SocialLinks.module.scss';
 
 export default function SocialLinks(props) {
   return (

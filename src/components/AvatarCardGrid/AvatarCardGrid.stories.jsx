@@ -1,6 +1,6 @@
-import Comp from './AvatarCardGrid.jsx';
-import * as avatarCard from '../AvatarCard/AvatarCard.stories.jsx';
-import AvatarCard from '../AvatarCard/AvatarCard.jsx';
+import Comp from '@/components/AvatarCardGrid/AvatarCardGrid.jsx';
+import * as avatarCard from '@/components/AvatarCard/AvatarCard.stories.jsx';
+import AvatarCard from '@/components/AvatarCard/AvatarCard.jsx';
 
 export default {
   component: Comp,

@@ -1,5 +1,5 @@
-import Comp from './SocialLinks.jsx';
-import * as button from '../Button/Button.stories.jsx';
+import Comp from '@/components/SocialLinks/SocialLinks.jsx';
+import * as button from '@/components/Button/Button.stories.jsx';
 
 export default {
   component: Comp,

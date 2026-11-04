@@ -1,4 +1,4 @@
-import Comp from './Avatar.jsx';
+import Comp from '@/components/Avatar/Avatar.jsx';
 
 export default {
   component: Comp,

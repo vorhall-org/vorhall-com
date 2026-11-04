@@ -1,4 +1,4 @@
-import styles from './AvatarCardGrid.module.scss';
+import styles from '@/components/AvatarCardGrid/AvatarCardGrid.module.scss';
 
 export default function AvatarCardGrid(props) {
   return (

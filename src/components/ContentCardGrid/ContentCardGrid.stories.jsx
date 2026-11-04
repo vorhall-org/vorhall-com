@@ -1,6 +1,6 @@
-import Comp from './ContentCardGrid.jsx';
-import * as contentCard from '../ContentCard/ContentCard.stories.jsx';
-import ContentCard from '../ContentCard/ContentCard.jsx';
+import Comp from '@/components/ContentCardGrid/ContentCardGrid.jsx';
+import * as contentCard from '@/components/ContentCard/ContentCard.stories.jsx';
+import ContentCard from '@/components/ContentCard/ContentCard.jsx';
 
 export default {
   component: Comp,

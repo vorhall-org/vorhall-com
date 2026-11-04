@@ -1,4 +1,4 @@
-import Comp from './FormLabel.jsx';
+import Comp from '@/components/FormLabel/FormLabel.jsx';
 
 export default {
   component: Comp,

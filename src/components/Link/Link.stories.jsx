@@ -1,4 +1,4 @@
-import Comp from './Link.jsx';
+import Comp from '@/components/Link/Link.jsx';
 
 export default {
   component: Comp,

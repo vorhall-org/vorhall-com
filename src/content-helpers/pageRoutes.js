@@ -1,4 +1,4 @@
-import { langRoute } from '../i18n/utils';
+import { langRoute } from '@/i18n/utils';
 
 export const pageRoutes = (lang) => ({
   contact: langRoute(lang, 'contact'),

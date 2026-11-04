@@ -1,4 +1,4 @@
-import styles from './Badge.module.scss';
+import styles from '@/components/Badge/Badge.module.scss';
 
 export default function Badge(props) {
   return (

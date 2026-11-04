@@ -1,5 +1,5 @@
-import Comp from './Footer.jsx';
-import * as socialLinks from '../SocialLinks/SocialLinks.stories.jsx';
+import Comp from '@/components/Footer/Footer.jsx';
+import * as socialLinks from '@/components/SocialLinks/SocialLinks.stories.jsx';
 
 export default {
   component: Comp,

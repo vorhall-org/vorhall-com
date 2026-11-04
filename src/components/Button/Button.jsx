@@ -1,6 +1,6 @@
 import { Dynamic } from 'solid-js/web';
-import styles from './Button.module.scss';
-import Icon from '../Icon/Icon';
+import styles from '@/components/Button/Button.module.scss';
+import Icon from '@/components/Icon/Icon';
 
 export default function Button(props) {
 

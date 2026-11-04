@@ -1,7 +1,7 @@
-import Comp from './AvatarCard.jsx';
-import * as heading from '../Heading/Heading.stories.jsx';
-import * as avatar from '../Avatar/Avatar.stories.jsx';
-import * as socialLinks from '../SocialLinks/SocialLinks.stories.jsx';
+import Comp from '@/components/AvatarCard/AvatarCard.jsx';
+import * as heading from '@/components/Heading/Heading.stories.jsx';
+import * as avatar from '@/components/Avatar/Avatar.stories.jsx';
+import * as socialLinks from '@/components/SocialLinks/SocialLinks.stories.jsx';
 
 export default {
   component: Comp,

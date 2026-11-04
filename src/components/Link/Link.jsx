@@ -1,4 +1,4 @@
-import styles from './Link.module.scss';
+import styles from '@/components/Link/Link.module.scss';
 
 export default function Link(props) {
   return (

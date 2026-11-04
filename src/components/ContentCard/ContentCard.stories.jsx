@@ -1,7 +1,7 @@
-import Comp from './ContentCard.jsx';
-import * as button from '../Button/Button.stories.jsx';
-import * as heading from '../Heading/Heading.stories.jsx';
-import * as icon from '../Icon/Icon.stories.jsx';
+import Comp from '@/components/ContentCard/ContentCard.jsx';
+import * as button from '@/components/Button/Button.stories.jsx';
+import * as heading from '@/components/Heading/Heading.stories.jsx';
+import * as icon from '@/components/Icon/Icon.stories.jsx';
 
 export default {
   component: Comp,

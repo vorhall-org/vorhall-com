@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 describe('contact form', () => {
 
   /*
@@ -71,4 +70,3 @@ describe('contact form', () => {
   });
 });
 
-/* eslint-enable no-undef */

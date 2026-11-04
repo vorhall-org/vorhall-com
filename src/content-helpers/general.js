@@ -1,6 +1,6 @@
-import i18n from '../i18n/i18n-general';
-import { useTranslations } from '../i18n/utils';
-import { pageRoutes } from './pageRoutes';
+import i18n from '@/i18n/i18n-general';
+import { useTranslations } from '@/i18n/utils';
+import { pageRoutes } from '@/content-helpers/pageRoutes';
 
 export default (locale) => {
   const tContact = useTranslations(locale, i18n.contact);
@@ -26,7 +26,6 @@ export default (locale) => {
 
     fieldsets: [
       {
-        /* eslint-disable quote-props */
         fields: [
           {
             element: {
@@ -115,7 +114,6 @@ export default (locale) => {
             ],
           },
         ],
-        /* eslint-enable quote-props */
         legend: {
           hidden: true,
           text: tContact('legend'),
@@ -180,13 +178,9 @@ export default (locale) => {
 
   const footerData = (lang, path) => {
 
-    let langSwitchLink = path;
-
-    if (lang === 'de') {
-      langSwitchLink = path.replace('/de/', '/');
-    } else {
-      langSwitchLink = `/de${path}`;
-    }
+    const langSwitchLink = lang === 'de'
+      ? path.replace('/de/', '/')
+      : `/de${path}`;
 
     return {
       ariaLabel: tFooter('ariaLabel'),

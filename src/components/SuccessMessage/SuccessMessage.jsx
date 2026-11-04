@@ -1,5 +1,5 @@
-import styles from './SuccessMessage.module.scss';
-import Icon from '../Icon/Icon';
+import styles from '@/components/SuccessMessage/SuccessMessage.module.scss';
+import Icon from '@/components/Icon/Icon';
 import { onMount } from 'solid-js';
 
 export default function SuccessMessage(props) {

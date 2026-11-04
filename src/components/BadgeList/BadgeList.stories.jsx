@@ -1,4 +1,4 @@
-import Comp from './BadgeList.jsx';
+import Comp from '@/components/BadgeList/BadgeList.jsx';
 
 export default {
   component: Comp,

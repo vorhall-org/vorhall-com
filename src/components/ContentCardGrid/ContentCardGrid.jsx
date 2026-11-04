@@ -1,4 +1,4 @@
-import styles from './ContentCardGrid.module.scss';
+import styles from '@/components/ContentCardGrid/ContentCardGrid.module.scss';
 
 export default function ContentCardGrid(props) {
   return (

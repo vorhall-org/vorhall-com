@@ -1,4 +1,4 @@
-import './flying-focus.scss';
+import '@/helpers/flying-focus/flying-focus.scss';
 
 export const HELPER_FADE_TIME = 200;
 export const MONITOR_INTERVAL = 250;

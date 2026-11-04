@@ -1,8 +1,8 @@
 import { For } from 'solid-js';
-import Button from '../Button/Button';
-import Link from '../Link/Link';
-import SocialLinks from '../SocialLinks/SocialLinks';
-import styles from './Footer.module.scss';
+import Button from '@/components/Button/Button';
+import Link from '@/components/Link/Link';
+import SocialLinks from '@/components/SocialLinks/SocialLinks';
+import styles from '@/components/Footer/Footer.module.scss';
 
 export default function Footer(props) {
   return (

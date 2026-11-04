@@ -1,4 +1,4 @@
-import styles from './Richtext.module.scss';
+import styles from '@/components/Richtext/Richtext.module.scss';
 
 export default function Richtext(props) {
 

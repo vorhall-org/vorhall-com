@@ -1,4 +1,4 @@
-import styles from './Section.module.scss';
+import styles from '@/components/Section/Section.module.scss';
 
 export default function Section(props) {
   return (

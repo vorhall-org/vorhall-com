@@ -1,9 +1,9 @@
-import Comp from './Form.jsx';
-import * as fieldsetStories from '../Fieldset/Fieldset.stories.jsx';
-import * as inputTextStories from '../InputText/InputText.stories.jsx';
-import * as textareaStories from '../Textarea/Textarea.stories.jsx';
-import * as buttonStories from '../Button/Button.stories.jsx';
-import Link from '../Link/Link.jsx';
+import Comp from '@/components/Form/Form.jsx';
+import * as fieldsetStories from '@/components/Fieldset/Fieldset.stories.jsx';
+import * as inputTextStories from '@/components/InputText/InputText.stories.jsx';
+import * as textareaStories from '@/components/Textarea/Textarea.stories.jsx';
+import * as buttonStories from '@/components/Button/Button.stories.jsx';
+import Link from '@/components/Link/Link.jsx';
 
 export default {
   component: Comp,

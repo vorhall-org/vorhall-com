@@ -1,5 +1,5 @@
-import Comp from './Textarea.jsx';
-import * as formLabel from '../FormLabel/FormLabel.stories.jsx';
+import Comp from '@/components/Textarea/Textarea.jsx';
+import * as formLabel from '@/components/FormLabel/FormLabel.stories.jsx';
 
 export default {
   argTypes: {

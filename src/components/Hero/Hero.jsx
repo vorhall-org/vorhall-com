@@ -1,6 +1,6 @@
-import styles from './Hero.module.scss';
-import Heading from '../Heading/Heading';
-import LeadText from '../LeadText/LeadText';
+import styles from '@/components/Hero/Hero.module.scss';
+import Heading from '@/components/Heading/Heading';
+import LeadText from '@/components/LeadText/LeadText';
 
 export default function Hero(props) {
   return (

@@ -1,5 +1,5 @@
 import { Dynamic } from 'solid-js/web';
-import styles from './Heading.module.scss';
+import styles from '@/components/Heading/Heading.module.scss';
 
 export default function Heading(props) {
   return (

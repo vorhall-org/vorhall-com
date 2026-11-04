@@ -1,4 +1,4 @@
-import styles from './Avatar.module.scss';
+import styles from '@/components/Avatar/Avatar.module.scss';
 
 export default function Avatar(props) {
   return (

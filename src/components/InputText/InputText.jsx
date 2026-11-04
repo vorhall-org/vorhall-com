@@ -1,6 +1,6 @@
-import styles from './InputText.module.scss';
-import FormLabel from '../FormLabel/FormLabel';
-import FormError from '../FormError/FormError';
+import styles from '@/components/InputText/InputText.module.scss';
+import FormLabel from '@/components/FormLabel/FormLabel';
+import FormError from '@/components/FormError/FormError';
 import { splitProps } from 'solid-js';
 
 export default function InputText(props) {

@@ -1,4 +1,4 @@
-import Comp from './Badge.jsx';
+import Comp from '@/components/Badge/Badge.jsx';
 
 export default {
   argTypes: {
