@@ -26,7 +26,6 @@ export default (locale) => {
 
     fieldsets: [
       {
-        /* eslint-disable quote-props */
         fields: [
           {
             element: {
@@ -115,7 +114,6 @@ export default (locale) => {
             ],
           },
         ],
-        /* eslint-enable quote-props */
         legend: {
           hidden: true,
           text: tContact('legend'),
