@@ -12,7 +12,7 @@ To test locally:
 npm install netlify-cli -g
 ```
 
-3. Start the netlify dev envivonment:
+3. Start the netlify dev environment:
 
 ```bash
 netlify dev
