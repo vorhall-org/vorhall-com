@@ -21,7 +21,7 @@
     "lint:js": "eslint . --ext .js,.mjs,.jsx",
     "storybook": "storybook dev -p 6006",
     "cypress:open": "cypress open",
-    "cypress": "cypress run"
+    "cypress": "cypress run --browser chrome"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.7.4",
