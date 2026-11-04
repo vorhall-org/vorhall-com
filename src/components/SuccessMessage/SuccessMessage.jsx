@@ -1,12 +1,9 @@
 import styles from '@/components/SuccessMessage/SuccessMessage.module.scss';
 import Icon from '@/components/Icon/Icon';
-import {
-  createRef,
-  onMount,
-} from 'solid-js';
+import { onMount } from 'solid-js';
 
 export default function SuccessMessage(props) {
-  const messageElement = createRef();
+  let messageElement;
 
   onMount(() => {
     messageElement.focus();
